@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "UCLA STATS 10: Introduction to Statistical Reasoning (Winter 2023)"
+  },
+  {
+    "objectID": "teaching.html#previous-courses",
+    "href": "teaching.html#previous-courses",
+    "title": "Jose Toledo Luna",
+    "section": "Previous Courses",
+    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\nSTATS 10: Introduction to Statistical Reasoning (Fall 2022)\nSTATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Summer 2022)\n\n\n\nCalifornia State University, Fullerton\n\nMath 115: College Algebra (Fall 2019)\nMath 120: Elementary Statistics (Spring 2020, Fall 2020)\nMath 338: Statistics Applied to Natural Sciences (Spring 2021)"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [link]"
+  },
+  {
+    "objectID": "research.html#software",
+    "href": "research.html#software",
+    "title": "Jose Toledo Luna",
+    "section": "Software",
+    "text": "Software\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "I am currently a second year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
+  }
+]
