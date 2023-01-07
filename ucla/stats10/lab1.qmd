@@ -1,0 +1,576 @@
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4,
+  eval = FALSE
+)
+```
+
+
+# Section 1 -- R Basics
+
+This section consists of fundamental concepts in learning R
+
+## Variables
+
+A variable provides us with named objects that our programs can manipulate. A valid variable name consists of letters, numbers and the dot or underline characters. It is important to note variable names are case sensitive. That is, `var1` and `Var1` are different variables. Below are appropriate variable names in R
+
+| Valid Variable Name | Reason                                                 |
+|------------------------|-----------------------------------------------|
+| variable_name       | Contains letters and underscore                        |
+| long.variable_name  | Contains letters, dot, and underscore                  |
+| var                 | Contains letters                                       |
+| var1                | Contains letters and numbers                           |
+| long.variable_name2 | Contains letters, numbers, dot and underscore          |
+| var1_name.1         | Contains letters, numbers, dot and underscore          |
+| .var_name           | Can start with period, contains letters and underscore |
+
+This is a good starting point for valid variable names. Next we demonstrate a few examples where variable names are invalid.
+
+| Invalid Variable Names | Reason                                                                     |
+|-------------------|-----------------------------------------------------|
+| 2var                   | Starts with a number                                                       |
+| \_varname              | Starts with underscore                                                     |
+| .2var_name             | While starting with a (.) dot is valid, it can not be followed by a number |
+
+Now that we have an idea of how to name variables, lets discuss variable assignments. Variables can be assigned values using leftward `(<-)`, rightward `(->)` and equal `(=)` operators. However, we will only stick with the leftward and equal assignment operators.
+
+```{r,eval=FALSE}
+var_name1 <- 10
+var2 = 20
+var.name3 <- 30
+var_name_4 = 40
+```
+
+## Vectors
+
+The easiest method to create any type of vector in R is using `c()` (as in concatenate). We primarily focus on two types of vectors; *numeric* and *character*
+
+### Numeric vectors
+
+```{r}
+num_vec <- c(0,1,2,3,4)
+typeof(num_vec)
+class(num_vec)
+```
+
+Using `c()` is not the only way to generate a vector, we can also generate the above vector using `seq()` as follows
+
+```{r}
+seq(from=0,to=4)
+```
+
+Another approach to generate the same sequence can be done using `0:4`
+
+```{r}
+0:4
+```
+
+or more generally `a:b`, where `a` is the starting number and `b` is the last number in the sequence
+
+We can apply arithmetic operations to our numerical vector `num_vec`, such as addition, subtraction, multiplication, division, and exponentiation. These operations will be applied to each element in the vector *(element-wise)*.
+
+| Operator | Description                       |
+|----------|-----------------------------------|
+| \+       | Addition                          |
+| \-       | Subtraction                       |
+| \*       | Multiplication                    |
+| /        | Division                          |
+| \^       | Exponent                          |
+| %%       | Modulus (Remainder from division) |
+| %/%      | Integer Division                  |
+
+Arithmetic operations applied to numeric vectors follow PEMDAS order of operations, demonstrated in the following example
+
+*Subtract 1 from each element*
+
+```{r}
+(num_vec-1)
+```
+
+*Subtract 1 from each element, then square them*
+
+```{r}
+(num_vec-1)^2
+```
+
+*Subtract 1 from each element, square them, then double each element*
+
+```{r}
+ 2*(num_vec - 1)^2
+```
+
+*Subtract 1 from each element, square them, double them, then add 1 to each element*
+
+```{r}
+2*(num_vec - 1)^2 + 1
+```
+
+```{r}
+pemdas_vec <- 2*(num_vec - 1)^2 + 1
+pemdas_vec
+```
+
+Generating an odd sequence from 1 to 9, we can use `c()` or `seq()`
+
+```{r}
+c(1,3,5,7,9)
+seq(from =1,to=10,by=2)
+```
+
+Note if you know the ordering of the arguments of a function it is not necessary to specify them. For example, it is optional to write `from` and `to` arguments in the `seq()` function
+
+```{r}
+seq(from = 1,to = 10)
+seq(1,10)
+```
+
+### Character vectors
+
+```{r}
+chr_vec <- c('A','B',"C")
+typeof(chr_vec)
+class(chr_vec)
+```
+
+## Extracting elements from a vector
+
+```{r}
+big_vec <- 1:100
+big_vec[1]
+big_vec[10] # extract the 10th element in your vector
+
+# vector[inidices you want to extract]
+# vector[condtion]
+
+big_vec[ c(1,5,10) ]
+big_vec[ 1:10 ] # what are the first 10 elements ?
+
+head(big_vec,10) # glimpse of first 10 elements
+tail(big_vec,10) # glimpse of last 10 elements
+
+#c() can combine same type of objects
+
+num_vec
+pemdas_vec
+
+c(num_vec,pemdas_vec) # combined the elements of these vectors
+c(pemdas_vec,num_vec)
+```
+
+## Replacing elements in place
+
+```{r}
+chr_vec
+chr_vec[1] <- 'a'
+chr_vec
+```
+
+```{r}
+num_vec
+num_vec[3] <- 10
+num_vec
+num_vec[ c(1,3) ] <- c(100,200)
+num_vec
+num_vec[c(1,2,3)] <- 0
+num_vec
+```
+
+## Importing data
+
+We will now import a `csv` file into R, to do this we'll use the `read.csv` function. A simple template to follow is
+
+```{r,eval=FALSE}
+read.csv(file = 'path where csv is located at in your computer')
+```
+
+An easy way to find the location of your data *(or any file)* is using the `file.choose()` function in R. `file.choose()` will bring up a file explorer window that allows you to interactively choose a file path to work with.
+
+In your console, run the following command
+
+```{r,eval=FALSE}
+file.choose()
+```
+
+For example, after running the above command the `births` data set provided in class, is located in
+
+```{r,echo=FALSE}
+birth_data_location <- here::here("static", "data", "births.csv")
+birth_data_location
+```
+
+*Note: Depending on your location and operating system the directory will be different.*
+
+Therefore, to read the `births` data set I would copy/paste the directory of the csv location and run the following command
+
+```{r,eval=FALSE}
+birth_dat <- read.csv(file='/Users/toledo60/Desktop/Projects/personal-site/static/data/births.csv')
+```
+
+```{r,echo=FALSE}
+birth_dat <- read.csv(birth_data_location)
+```
+
+```{r,eval=FALSE}
+birth_dat
+```
+
+```{r,echo=FALSE}
+birth_dat |> head()
+```
+
+**Warning:** The above tutorial assumes the data set is a `csv` file in working condition. That is we assume the default settings for `read.csv`. In some cases we may need to change the header, specify the field separator and more. See `?read.csv` for further details and examples.
+
+We are not just limited to `csv` files, we can import data from Excel (in `csv`, `XLSX`, or `txt` format), `SAS`, `Stata`, `SPSS`, or others. A good reference to import various data formats can be found on [datacamp r-data-import tutorial](https://www.datacamp.com/tutorial/r-data-import-tutorial)
+
+## Installing packages
+
+While base R contains a wide collection of useful functions and datasets, it might be necessary to install additional R packages to increase the power of R by improving existing base R functionalities, or by adding new ones.
+
+In general, you can use this template to install a package in R:
+
+```{r,eval=FALSE}
+install.packages('package_name')
+```
+
+For example, in this lab we will need functions/datasets from the following package: `maps`. To install we simply type in our console
+
+```{r,eval=FALSE}
+install.packages('maps')
+```
+
+After running the above command you should get something similar to the output below. The messages appeared will depend on what operating system you are using, the dependencies, and if the package was successfully installed.
+
+```{r,eval=FALSE}
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/maps_3.4.0.tgz'
+Content type 'application/x-gzip' length 3105764 bytes (3.0 MB)
+==================================================
+downloaded 3.0 MB
+
+
+The downloaded binary packages are in
+	/var/folders/mc/rznpg9ks30sd6wdh7rchs4v40000gn/T//RtmpLUHvkq/downloaded_packages
+```
+
+Once the package was installed successfully we now have access to all of its functionalities/datasets. To access them we load the package into memory using the command `library()`
+
+```{r}
+library(maps)
+```
+
+However, if we only need to access say a specific function/dataset a few times we can do so using the notation `packagename::functionname()`. For example, if we only need to access the Canada cities data set in the `maps` package we run the following command
+
+```{r,eval=FALSE}
+maps::canada.cities
+```
+
+```{r,echo=FALSE}
+maps::canada.cities |> head(5)
+```
+
+Alternatively, if you loaded the entire package using `library(maps)` we can access the Canada cities data set using the following command
+
+```{r,eval=FALSE}
+canada.cities
+```
+
+```{r,echo=FALSE}
+canada.cities |> head(5)
+```
+
+# Overview of Births dataset
+
+For **Section 2** and **Section 3** we consider the `births` dataset provided in class. The `births` dataset is a sample of information about babies born in North Carolina. It is considered a data frame because it contains numeric information about each baby, as well as various pieces of categorical data such as the race of the parents, and whether the mom has a smoking habit.
+
+```{r,eval=FALSE,eval=FALSE}
+birth_dat <- read.csv(file='/Users/toledo60/Desktop/Projects/personal-site/static/data/births.csv')
+```
+
+```{r,eval=FALSE}
+birth_dat
+```
+
+We can view the structure of our dataset using `str()` function
+
+```{r}
+str(birth_dat) 
+```
+
+We can see there are 1992 rows and 21 columns, and the datatypes for each variable *(column)*. Those with `int` are considered numerical variables and those with `chr` are considered categorical variables.
+
+*Note:* While looking at the structure of the data using `str()` we primarily saw two types of variables: `chr` and `int` to denote character and integer data types, respectively. However we can also have `factor` and `double`.
+
+`factor` will be considered as a categorical variable and `double` would be considered as a numerical variable.
+
+We can use the `$` operator to access values from a data frame column. For example, if we want to extract the values from the `Gender` column from our dataset, we run the following command
+
+```{r,eval=FALSE}
+birth_dat$Gender
+```
+
+If we save these values into a variable we will be able to manipulate them without altering the dataset itself.
+
+```{r}
+births_gender <- birth_dat$Gender
+```
+
+# Section 2 -- Summarizing and visualizing data (one variable)
+
+We will use the `births` data set to summarize and visualize numerical and categorical variables using the *base R* approach
+
+## Numerical variables
+
+One way to extract all the numerical columns is using both `Filter` and `is.numeric` functions. Below are the first five rows of all the numerical columns in `birth_dat`
+
+```{r,eval=FALSE}
+Filter(is.numeric,birth_dat)
+```
+
+```{r,echo=FALSE}
+Filter(is.numeric,birth_dat) |> head(5)
+```
+
+The names of the numerical columns can be obtained using `colnames()` function in combination with the above statement
+
+```{r}
+colnames(Filter(is.numeric,birth_dat) )
+```
+
+We will only consider the `weight` variable from our dataset to demonstrate methods to summarize and visualize a numerical variable.
+
+Functions for numerical summaries include, but not limited to,
+
+| Function    |                                    Description                                     |
+|-------------|:----------------------------------------------------------------------------------:|
+| `mean()`    |                                        mean                                        |
+| `median()`  |                                       median                                       |
+| `mode()`    |                                        mode                                        |
+| `sd()`      |                                 standard deviation                                 |
+| `var()`     |                                      variance                                      |
+| `min()`     |                                      minimum                                       |
+| `max()`     |                                      maximum                                       |
+| `summary()` | Computes the following: *Minimum ,1st Quartile, Median,Mean ,3rd Quartile,Maximum* |
+
+Next, we'll save the values from `weight` column into a separate variable and compute several numerical summaries listed above
+
+```{r}
+birth_weight <- birth_dat$weight
+```
+
+
+```{r}
+mean(birth_weight)
+median(birth_weight)
+min(birth_weight)
+max(birth_weight)
+```
+
+```{r}
+summary(birth_weight)
+```
+
+While `summary()` give us a quick numerical summary of our distribution, it is important to also visualize the overall distribution using a plot such as a boxplot
+
+```{r}
+boxplot(birth_weight)
+```
+
+or a histogram
+
+```{r}
+hist(birth_weight)
+```
+
+From the histogram above, while the overall distribution of the birth weights is symmetrical there are outliers causing the distribution to be skewed to the left. 
+
+For `boxplot()` and `hist()` we used the default settings, while they are informative we can alter their appearance to be more professional.
+
+For example, we changed the x-axis label and y-axis label using `xlab`,`ylab` arguments,respectively. We changed the title with `main` and the color of the boxplot with `col`. The `col` argument can take values such as `red`,`blue` or any HEX code, see `?boxplot` for further customization. 
+
+```{r}
+boxplot(birth_weight,
+        main='Boxplot of Birth Weights',
+        xlab ='birth weights', ylab='ounces',
+        col='#61b1ed')
+```
+
+*Resource: For a collection of R colors by name refer to [Rcolors](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). Another approach is to search 'color picker' in google and copy/paste the hex code*
+
+
+We can apply similar customization to our histogram
+
+```{r}
+hist(birth_weight,
+     main='Histogram of Birth Weights',
+     xlab ='birth weights',
+     col='#d1584f',
+     breaks=20)
+```
+
+The `hist` function uses the Sturges method by default to determine the number of `breaks` on the histogram. We can manually change the number of breaks, but we should be careful not to specify a low or high number of breaks. Usually the default setting is appropriate for most scenarios. 
+
+## Categorical variables
+
+One way to extract all the character columns is using both `Filter` and `is.character` functions. A similar argument can be said for any columns that are factors, but instead we'd use `is.factor`. 
+
+Below are the first five rows of all the character columns in `birth_dat`
+
+```{r,eval=FALSE}
+Filter(is.character,birth_dat)
+```
+
+```{r,echo=FALSE}
+Filter(is.character,birth_dat) |> head(5)
+```
+
+The names of the character columns can be obtained using `colnames()` function in combination with the above statement
+
+```{r}
+colnames(Filter(is.character,birth_dat) )
+```
+
+
+We will only consider the `Hispmom` variable from our dataset to demonstrate methods to summarize and visualize a character variable.
+
+First, we'll save the values from `Hispmom` column into a separate variable and compute several categorical summaries
+
+
+```{r}
+hispanic_mom <- birth_dat$Hispmom
+```
+
+The `table()` function in R can be used to quickly create frequency tables.
+
+```{r}
+table(hispanic_mom)
+```
+
+From the above frequency table we observe there were 25 mom who were Mexican, 1693 non Hispanic, and 84 were other types of Hispanic. We can easily convert the frequency table into a frequency table of proportions using `prop.table()`. The input for `prop.table()` is a table created using `table()`.
+
+```{r}
+prop.table(table(hispanic_mom))
+```
+
+Now, we observe roughly 10.79% of moms were Mexican, 84.99% were non Hispanic and 4.22% were other types of Hispanic. Note that all of the proportions should add up to 1. 
+
+```{r}
+sum(prop.table(table(hispanic_mom)))
+```
+
+
+While the above method works, it is not the only way to obtain frequency tables. We can obtain the same results using `tally()` from the `mosaic` library.
+
+```{r,message=FALSE}
+mosaic::tally(hispanic_mom)
+```
+
+If we want frequency tables of proportions, we need to use the argument `format` and specify `format = 'proportion'`. There are other formats such as `'count'`, `'percent'` etc.. for more details run `?mosaicCore::tally()`
+
+```{r}
+mosaic::tally(hispanic_mom,format='proportion')
+```
+
+To plot a single categorical variable we can use `barplot()`. The input for `barplot()` when dealing with categorical data is a `table`, like the ones we created above
+
+```{r}
+barplot(table(hispanic_mom))
+```
+
+Instead of the frequency counts, we can plot frequency of proportions by inputting a frequency tables of proportions. 
+
+```{r}
+barplot(prop.table(table(hispanic_mom)),
+        main = 'Ethnicity Proportions of Moms',
+        col = '#d59cdb')
+```
+
+
+
+# Section 3 - Summarizing and visualizing data (two variables)
+
+## Numerical variables
+
+We consider the following two numerical variables: `Feduc` and `Meduc`, which is the highest education for fathers and mothers in this dataset, respectively.
+
+```{r}
+father_eduction <- birth_dat$Feduc
+mother_education <- birth_dat$Meduc
+```
+
+
+We can compare their distributions in a single plot as we did in *Section 2* with boxplots
+
+```{r}
+boxplot(father_eduction,mother_education,
+        names = c('father','mother'),
+        col=c('#f5d376','#f5767c'),
+        main = 'Highest Education for Parernts',
+        ylab = 'Year')
+```
+
+For boxplots its pretty straight forward to compare two numerical distributions using the syntax `boxplot(v1,v2,...)`. For histograms it requires a bit more work.
+
+We start by creating a histogram for the first variable, then creating another histrogam for the second variable but using the argument `add=TRUE`. We must specify a unique color for each histogram representing the variables. In order for both of the histograms to fit properly on the same plot we must take into account the lowest and highest values among the multiple numerical variables. 
+
+```{r}
+low_x <- min(father_eduction,mother_education)
+high_x <- max(father_eduction,mother_education)
+```
+
+Lastly, we must specify a legend to appropriately distinguish the multiple histograms using the function `legend()`. 
+
+```{r}
+hist(father_eduction, col='lightcoral',
+     xlim=c(low_x,high_x),
+     main='Education for Parents', xlab='Year')
+hist(mother_education, col='lightblue', add=TRUE)
+legend('topright', legend = c('father', 'mother'), 
+       fill=c('lightcoral', 'lightblue'))
+```
+
+
+**Warning:** When using `legend()` it is important that you specify the correct ordering of colors for each group, otherwise the legend would be incorrect. For example, in our first histogram we chose "lightcoral" to represent "female" and "lightblue" to represent "male" distributions.
+Which is why we used the arguments: 
+`legend=c('father','mother'), fill = c('lightcoral','lightblue')` in that order
+
+
+
+We can also consider a *scatter plot* to visualize the relationship between two numerical variables. We consider the two numerical variables `Gained` and `weight`. `Gained` describes the weight gained during the pregnancy term and `weight` describe the weight of the baby at birth.
+
+```{r}
+plot(x = birth_dat$Gained,y = birth_dat$weight,
+     main = 'Baby weight vs pregnancy weight gain',
+     xlab = 'weight gained during pregnancy',
+     ylab = 'Baby weight (oz.)',
+     col='lightcoral')
+```
+
+
+## Categorical variables
+
+For this example, we consider the following two character variables `Hispdad` and `Habit`. `Hispdad` determines whether the father of the baby was Hispanic or not. In particular, are they Mexican, non-Hispanic, or other type of Hispanic ethnicity. `Habit` determines whether or not the subject had a smoking habit or not.
+
+When dealing with two categorical variables we can create a two-way table using `table(v1,v2)`. Below is the table of frequency for both `Habit` and `Hispdad`.
+
+```{r}
+table(birth_dat$Habit,birth_dat$Hispdad)
+```
+
+From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 12346 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.
+
+We can obtain a frequency table of proportions using `prop.table()`
+
+```{r}
+prop.table(table(birth_dat$Habit,birth_dat$Hispdad))
+```
+
+You will notice that summing each cell will give us 1
+
+```{r}
+sum(prop.table(table(birth_dat$Habit,birth_dat$Hispdad)))
+```
+
+

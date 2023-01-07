@@ -1,6 +1,6 @@
 ## Current Courses
 
-- UCLA STATS 10: [Introduction to Statistical Reasoning](/ucla-stats10/) *(Winter 2023)* 
+- UCLA STATS 10: [Introduction to Statistical Reasoning](/ucla/stats10/intro.qmd) *(Winter 2023)* 
 
 ## Previous Courses
 
