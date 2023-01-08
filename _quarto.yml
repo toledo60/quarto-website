@@ -24,4 +24,6 @@ format:
     theme: simplex
     css: styles.css
     toc: false
+    
+freeze: auto
 

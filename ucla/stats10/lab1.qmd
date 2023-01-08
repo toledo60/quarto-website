@@ -1,4 +1,6 @@
-
+---
+toc: true
+---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -10,9 +12,9 @@ knitr::opts_chunk$set(
 ```
 
 
-# Section 1 -- R Basics
+# R Basics
 
-This section consists of fundamental concepts in learning R
+This lab consists of learning fundamental concepts in R
 
 ## Variables
 
@@ -136,32 +138,38 @@ typeof(chr_vec)
 class(chr_vec)
 ```
 
-## Extracting elements from a vector
+## Manipulating vectors
+
+There are multiple ways to access or replace values in vectors. The most common approach is through "indexing". It is important to know in \verb|R| starts with index 1.
 
 ```{r}
 big_vec <- 1:100
 big_vec[1]
 big_vec[10] # extract the 10th element in your vector
+```
 
-# vector[inidices you want to extract]
-# vector[condtion]
+For accessing elements in a vector we can think 
+`vector[indices you want to extract]` the way we extract certain elements can be through some condition, that is `vector[condtion]`
 
+
+```{r}
 big_vec[ c(1,5,10) ]
 big_vec[ 1:10 ] # what are the first 10 elements ?
+```
 
-head(big_vec,10) # glimpse of first 10 elements
-tail(big_vec,10) # glimpse of last 10 elements
 
-#c() can combine same type of objects
+Using `c()` we can concatenate elements from one vector into another vector. For example, we can add the elements from `pemdas_vec` into the existing vector  `num_vec`
 
-num_vec
-pemdas_vec
+```{r}
+c(num_vec,pemdas_vec)
+```
 
-c(num_vec,pemdas_vec) # combined the elements of these vectors
+Alternatively, we can add the elements from `num_vec` into the existing vector `pemdas_vec`
+```{r}
 c(pemdas_vec,num_vec)
 ```
 
-## Replacing elements in place
+You will notice the order in which we concatenate the elements from the vectors does matter
 
 ```{r}
 chr_vec
@@ -222,7 +230,9 @@ birth_dat
 birth_dat |> head()
 ```
 
-**Warning:** The above tutorial assumes the data set is a `csv` file in working condition. That is we assume the default settings for `read.csv`. In some cases we may need to change the header, specify the field separator and more. See `?read.csv` for further details and examples.
+:::callout-warning
+The above tutorial assumes the data set is a `csv` file in working condition. That is we assume the default settings for `read.csv`. In some cases we may need to change the header, specify the field separator and more. See `?read.csv` for further details and examples.
+:::
 
 We are not just limited to `csv` files, we can import data from Excel (in `csv`, `XLSX`, or `txt` format), `SAS`, `Stata`, `SPSS`, or others. A good reference to import various data formats can be found on [datacamp r-data-import tutorial](https://www.datacamp.com/tutorial/r-data-import-tutorial)
 
@@ -317,7 +327,7 @@ If we save these values into a variable we will be able to manipulate them witho
 births_gender <- birth_dat$Gender
 ```
 
-# Section 2 -- Summarizing and visualizing data (one variable)
+# Summarizing and visualizing data (one variable)
 
 We will use the `births` data set to summarize and visualize numerical and categorical variables using the *base R* approach
 
@@ -489,7 +499,7 @@ barplot(prop.table(table(hispanic_mom)),
 
 
 
-# Section 3 - Summarizing and visualizing data (two variables)
+# Summarizing and visualizing data (two variables)
 
 ## Numerical variables
 
@@ -532,11 +542,11 @@ legend('topright', legend = c('father', 'mother'),
 ```
 
 
-**Warning:** When using `legend()` it is important that you specify the correct ordering of colors for each group, otherwise the legend would be incorrect. For example, in our first histogram we chose "lightcoral" to represent "female" and "lightblue" to represent "male" distributions.
+:::callout-warning
+When using `legend()` it is important that you specify the correct ordering of colors for each group, otherwise the legend would be incorrect. For example, in our first histogram we chose "lightcoral" to represent "father" and "lightblue" to represent "mother" distributions.
 Which is why we used the arguments: 
 `legend=c('father','mother'), fill = c('lightcoral','lightblue')` in that order
-
-
+:::
 
 We can also consider a *scatter plot* to visualize the relationship between two numerical variables. We consider the two numerical variables `Gained` and `weight`. `Gained` describes the weight gained during the pregnancy term and `weight` describe the weight of the baby at birth.
 

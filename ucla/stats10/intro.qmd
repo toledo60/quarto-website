@@ -9,11 +9,10 @@ title: "Welcome To STATS10"
 Useful Links
 
 - [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
-For office hours virtually
-- [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu) All lab material will be posted here
-- [campuswire](https://campuswire.com) Ask any questions regarding this course
-- [gradescope](https://www.gradescope.com) Submit assignments *(PDF only)*
-
+For online discussion and/or virtual office hours
+- [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu) All material for the labs will be posted here
+- [campuswire](https://campuswire.com) Have discussions or ask questions regarding this course
+- [gradescope](https://www.gradescope.com) Submit homework and lab assignments *(PDF only)*
 :::
 
 
@@ -30,21 +29,21 @@ M/W: 12:00pm-12:50pm
 
 **Email**: toledo60@g.ucla.edu
 
-
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu) 
 
 
 For general questions or specific questions about the labs use [campuswire](https://campuswire.com). Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS
 
 
-All lab assignments are to be turned in using [gradescope](https://www.gradescope.com)
+All lab assignments are to be turned in through [gradescope](https://www.gradescope.com)
 
 Below are all the labs regrading this course. 
-In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs are to be done using R and documented with R markdown.
+In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.
 
 ::: callout-warning
 Lab tutorials are a work in progress and are constantly being updated
 :::
+
 - [Lab 1: Introduction to R](/ucla/stats10/lab1.qmd)
 
 
