@@ -4,7 +4,6 @@ title: "Welcome To STATS10"
 
 ## Introduction to Statistical Reasoning
 
-
 :::callout-important
 Useful Links
 

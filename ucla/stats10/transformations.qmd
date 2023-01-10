@@ -1,0 +1,107 @@
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4
+)
+```
+
+
+In this lab, you will learn
+
+1. To apply transformations to your data
+
+Suppose you have a response variable $y$ which needs to be transformed, say for variance stabilization purposes. Some basic transformations are listed below
+
+| Transformation | R Function | Transformed Response | Domain           |
+|----------------|------------|----------------------|------------------|
+| Reciprocal     | *y\^(-1)*  | $\frac{1}{y}$        | $y \neq 0$       |
+| Log            | *log(y)*   | $\log y$             | $y >0$           |
+| Square Root    | *sqrt(y)*  | $\sqrt{y}$           | $y \geq 0$       |
+| Square         | *y\^2*     | $y^2$                | All real numbers |
+| Exponential    | *exp(y)*   | $e^y$                | All real numbers |
+
+Depending on the application some transformations may be more appropriate than others.
+
+First, lets generate a random response variable $y$ with 50 values. We specify a seed using `set.seed()` in order to reproduce similar results shown below
+
+```{r}
+set.seed(18)
+y <- rgamma(50,2,10)
+y
+```
+
+## Log transformation
+
+If we apply the log transformation to our response variable we simply calculate $log(y)$
+
+```{r}
+log_y <- log(y)
+log_y
+
+```
+
+Using histograms we can visualize the distributions to see the differences in our response variable after applying a *log-transformation*
+
+```{r}
+#| layout-ncol: 2
+hist(y,main='Original',
+     xlab = 'y',
+     col = '#f56356')
+
+hist(log_y,main='Log-Transformation',
+     xlab = 'log(y)',
+     col = '#568bf5')
+```
+
+After applying the log-transformation you'll notice that it is more normally distributed *(bell-shaped curve)* compared to the original distribution.
+
+It is important to take into account the domain for which the transformation is valid. For the log-transformation we need all values from our response variable to be greater than zero, otherwise we will obtain the following errors
+
+```{r}
+log(0)
+log(-1)
+```
+
+## Square root transformation
+
+Another transformation to consider is the *square root transformation*. This can be done using `sqrt()`
+
+```{r}
+sqrt_y <- sqrt(y)
+```
+
+```{r}
+#| layout-ncol: 2
+hist(y,main='Original',
+     xlab = 'y',
+     col = '#f56356')
+
+hist(sqrt_y,main='Square Root-Transformation',
+     xlab = 'sqrt(y)',
+     col = '#568bf5')
+```
+
+
+## Square transformation
+
+The last transformation we consider is the *square transformation*. This can be done using `y^2`. In general any power transformation can be applied in a similar manner, $y^{(a)}$ where $a$ is any real number
+
+```{r}
+y_squared <- y^2
+```
+
+```{r}
+#| layout-ncol: 2
+hist(y,main='Original',
+     xlab = 'y',
+     col = '#f56356')
+
+hist(y_squared,main='Square Transformation',
+     xlab = 'y^2',
+     col = '#568bf5')
+```
+
+Since we are squaring small numbers the resulting distribution will be more skewed right than the original distribution
+
