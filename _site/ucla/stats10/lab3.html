@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Jose Toledo Luna – lab3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jose Toledo Luna</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/toledo60"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<!---
+In this lab, you will
+
+1. Understand linear regression in R and verify linear regression assumptions
+2. Plotting time series to analyse trends
+3. Use R for sampling and simulation
+
+Throughout this tutorial we will utilize the `penguins` dataset found in `palmerpenguins` package
+
+
+::: {.cell}
+
+```{.r .cell-code}
+install.packages('palmerpenguins')
+```
+:::
+
+Loading the library will now give us access to the penguins dataset
+
+
+::: {.cell}
+
+```{.r .cell-code}
+library(palmerpenguins)
+```
+:::
+
+
+see `?penguins`  or @palmer, for more info on this dataset
+
+
+## Simple Linear Regression
+
+Simple linear regression is a statistical method which allows us to predict a quantitative outcome $y$ on the basis of a single predictor variable $x$. 
+
+* Sometimes $x$ is regarded as the *predictor, explanatory,* or *independent variable*.
+
+* Similarly, $y$ is regarded as the *response, outcome,* or *dependent variable*
+
+We will only use *predictor* and *response* to denote our variables of interest. The goal is to define a statistical model that defines the response variable (*y*) as a function of the predictor (*x*) variable.
+Once, we built a statistically significant model, it’s possible to use it for predicting outcomes on the basis of new predictor values.
+
+Below are all the numerical variables in our dataset
+
+
+::: {.cell}
+
+```{.r .cell-code}
+colnames(Filter(is.numeric,penguins))
+```
+:::
+
+
+For our simple linear regression model, we will consider the body mass *(grams)* of the penguins as the response variable and the length of the length of the the penguin's flipper *(millimeters)* as our single predictor variable
+
+Our model takes the form 
+$$
+(body_{mass}) = \beta_0 + \beta_1 \cdot (flipper_{length}) + \epsilon
+$$
+where 
+
+* $\beta_0$ is the intercept of the regression line, (when flipper_length_mm =0)
+* $\beta_1$ is the slope of the regression line
+* $\epsilon$ is the error terms
+
+
+For simplicity we will remove any missing data from our variables of interest
+
+::: {.cell}
+
+```{.r .cell-code}
+na_flipper  <- is.na(penguins$flipper_length_mm)
+na_body_mass <- is.na(penguins$body_mass_g)
+```
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+which(na_flipper)
+which(na_body_mass)
+```
+:::
+
+
+we will remove rows 4 and 272 from both body mass and flipper length since they have missing data
+
+
+::: {.cell}
+
+```{.r .cell-code}
+flipper_length_mm <- penguins$flipper_length_mm[!na_flipper]
+body_mass_g <- penguins$body_mass_g[!na_body_mass]
+```
+:::
+
+
+In most cases missing data can occur in different rows for various variables, so it not recommended to remove missing data like we did above. Since we are only considering flipper length and body mass for our linear model, and both share missing data from the same row entries we can remove them as we did above.
+
+More examples on removing missing data can be found on this [sparkbyexamples](https://sparkbyexamples.com/r-programming/remove-rows-with-na-in-r/) tutorial
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+plot(flipper_length_mm,body_mass_g,
+     xlab = 'Flipper length (mm)',
+     ylab = 'Body mass (grams)')
+```
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+simple_lm <- lm(body_mass_g ~ flipper_length_mm)
+simple_lm
+```
+:::
+
+
+The model can be written as `body_mass_g = -5780.83 + 49.69*flipper_length_mm`, this is our line of best fit. We can then plot our line of best fit as shown below
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+plot(flipper_length_mm,body_mass_g,
+     xlab = 'Flipper length (mm)',
+     ylab = 'Body mass (grams)')
+abline(simple_lm,col = 'red',lwd =2)
+```
+:::
+
+
+
+Moreover, we can use the `summary()` function to quickly check whether our predictor is significantly associated with the response variable. If so, we can further assess how well our model fits our actual data by utilizing metrics provided by the summary output
+
+
+### Model Summary
+
+
+::: {.cell}
+
+```{.r .cell-code}
+lm_summary <- summary(simple_lm)
+lm_summary
+```
+:::
+
+
+
+The '*' symbols indicate the level of significance for the respective term. The significance codes below the line shows the definitions for the level of significance; one star means $0.01 < p < 0.05$, two stars mean $0.001 < p < 0.01$, and similar interpretations for the remaining symbols
+
+
+Breaking down the `summary` output, it contains the following components *(Extract using `$` operator)*
+
+### Call
+The function (formula) used to compute the regression model
+
+
+::: {.cell}
+
+```{.r .cell-code}
+lm_summary$call
+```
+:::
+
+
+### Residuals
+
+The difference between predicted values for the response variable using our constructed model and the observed response values from our original data. Mathematically, 
+$$
+r_i = y_i - \hat{y}_i
+$$
+
+If the residual is 
+
+* *Positive:* The predicted value was an underestimate of the observed response
+* *Negative:* The predicted value was an overestimate of the observed response
+* *Zero:* The predicted value is exactly the same as the observed response
+
+
+<details><summary>Show Code</summary>
+
+
+::: {.cell}
+
+```{.r .cell-code}
+dat <- cbind.data.frame(flipper_length_mm,body_mass_g)
+
+p1 <- ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_smooth(method = "lm", se = FALSE, 
+              color = "lightgrey",formula = 'y~x') +
+  geom_segment(aes(xend = flipper_length_mm, 
+                   yend = predict(simple_lm)), alpha = .2) +
+  geom_point(aes(color=residuals(simple_lm))) +
+  guides(color = 'none') + 
+  scale_color_gradient2(low = "blue", mid = "white", high = "red") +
+  labs(x = 'Flipper length (mm)',
+       y = 'Body mass (grams)')+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank())
+```
+:::
+
+</details>
+
+
+
+::: {.cell}
+
+:::
+
+
+
+The figure above shows the magnitude of the resulting residuals from our fitted model. The darker the red points the more positive the residuals were, the darker the blue points the more negative the residuals were.
+
+Assuming our line is the "line of best fit" the sum of the residuals always equals zero
+
+
+::: {.cell}
+
+```{.r .cell-code}
+sum(lm_summary$residuals)
+```
+:::
+
+
+A few plots of the residuals to assess our regression assumptions:
+
+Residuals vs fitted values plot is used to detect non-linearity, unequal error variances, and possible outliers
+
+The residuals should form a "horizontal band" around the y=0 line, suggesting the assumption that the relationship is linear is reasonable as well that the variances of the error terms are equal
+
+
+::: {.cell}
+
+```{.r .cell-code}
+plot(body_mass_g,simple_lm$residuals,
+     xlab = 'Fitted values',
+     ylab = 'Residuals',
+     main = 'Residuals vs Fitted Values')
+abline(a = 0, b = 0, col = 'red', lwd = 2)
+```
+:::
+
+
+
+The following histogram of residuals suggests that the residuals (and hence the error terms) are normally distributed
+
+<details><summary>Show Code</summary>
+
+::: {.cell}
+
+```{.r .cell-code}
+lm_residuals <- simple_lm$residuals
+h <- hist(lm_residuals,
+          main = 'Distribution of Residuals',
+          xlab = 'Residuals')
+xfit <- seq(min(lm_residuals), max(lm_residuals), length = 40) 
+yfit <- dnorm(xfit, mean = mean(lm_residuals), sd = sd(lm_residuals))
+yfit <- yfit * diff(h$mids[1:2]) * length(lm_residuals) 
+lines(xfit, yfit, col = "red", lwd = 2)
+```
+:::
+
+</details>
+
+
+::: {.cell}
+
+:::
+
+
+
+### Coefficients
+
+Estimated regression beta coefficients $(\hat{\beta}_0, \hat{\beta}_1)$, alongside their standard errors, $t$-test, and $p$-values. 
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+lm_summary$coefficients
+```
+:::
+
+
+From the output above:
+
+* the model can be written as `body_mass_g = -5780.831 + 49.686*flipper_length_mm`
+
+* the intercept $\beta_0$ is -5780.831. It can be interpreted as the predicted body mass in grams for a flipper length of zero millimeters. In most scenarios the interpretation of the intercept coefficient will not make sense. For example, when the length of the flipper is zero millimeters we predict the weight of the penguin will be about -5780 grams
+
+
+* the regression beta coefficient for the variable `flipper_length_mm` $\beta_1  is 49.686. That is, for each additional millimeter of the flipper we expect the penguin to gain 49.686 grams of body mass. For example, if the length of the flipper is 200 millimeters then we expect the penguin's body mass to be about `-5780.831 + 49.686 *200 = 4156.369` grams
+
+
+### Model Performance
+
+*Residual standard error (RSE), R-squared, Adjusted R-squared*, and the *F-statistic* are metrics used to check our model performance. That is, how well does our model fit the data.
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+metrics <- c(lm_summary$sigma,lm_summary$r.squared,
+             lm_summary$adj.r.squared,
+             lm_summary$fstatistic['value'])
+
+names(metrics) <- c('RSE','R_squared','Adj_R_squared','F_statistic')
+```
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+metrics
+```
+:::
+
+
+#### Residual standard error
+
+The average variation of the observations points around the fitted regression line. This is the standard deviation of residual errors
+The closer to this value is to zero the better.
+
+#### R-squared/Adjusted R-squared
+
+The proportion of information *(i.e. variation)* in the data that can be explained by the model. The adjusted R-squared adjusts for the degrees of freedom. The higher these values are the better.
+
+In the simple linear regression setting *R-squared* is the square of the Pearson correlation coefficient 
+
+
+::: {.cell}
+
+```{.r .cell-code}
+cor(flipper_length_mm,body_mass_g)^2
+```
+:::
+
+
+
+####  F-statistic 
+
+The *F-statistic* gives the overall significance of the model. It assess whether at least one predictor variable has a non-zero coefficient. The higher this value the better. However,this test only becomes more important when dealing with multiple predictors instead of a single predictor found in a simple linear regression.
+
+A large *F-statistic* will corresponds to a statistically significant *p-value* $(p < 0.05)$. In our example, the *F-statistic* equal 1070.74 producing a *p-value* less than  $2.2e-16$, which is highly significant
+
+
+--->
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-right">© 2023, Jose Toledo Luna</div>
+  </div>
+</footer>
+
+
+
+</body></html>
