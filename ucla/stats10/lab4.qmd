@@ -1,0 +1,13 @@
+In this lab you will:
+
+1.  Reinforce understanding of simulating and random sampling
+
+2.  Demonstrate the Central Limit Theorem's application to means
+
+
+The corresponding tutorials are listed below
+
+- [Normal Distribution](/ucla/stats10/normal_distribution.qmd)
+- [CLT](/ucla/stats10/CLT.qmd)
+
+

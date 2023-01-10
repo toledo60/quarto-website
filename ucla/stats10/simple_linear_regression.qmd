@@ -1,0 +1,286 @@
+---
+toc: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4,
+  warning = FALSE,
+  eval = FALSE
+)
+library(ggplot2)
+```
+
+<!---
+In this lab, you will
+
+1. Understand linear regression in R and verify linear regression assumptions
+2. Plotting time series to analyse trends
+
+Throughout this tutorial we will utilize the `penguins` dataset found in `palmerpenguins` package
+
+```{r,eval=FALSE}
+install.packages('palmerpenguins')
+```
+Loading the library will now give us access to the penguins dataset
+
+```{r}
+library(palmerpenguins)
+```
+
+see `?penguins`  or @palmer, for more info on this dataset
+
+
+## Simple Linear Regression
+
+Simple linear regression is a statistical method which allows us to predict a quantitative outcome $y$ on the basis of a single predictor variable $x$. 
+
+* Sometimes $x$ is regarded as the *predictor, explanatory,* or *independent variable*.
+
+* Similarly, $y$ is regarded as the *response, outcome,* or *dependent variable*
+
+We will only use *predictor* and *response* to denote our variables of interest. The goal is to define a statistical model that defines the response variable (*y*) as a function of the predictor (*x*) variable.
+Once, we built a statistically significant model, it’s possible to use it for predicting outcomes on the basis of new predictor values.
+
+Below are all the numerical variables in our dataset
+
+```{r}
+colnames(Filter(is.numeric,penguins))
+```
+
+For our simple linear regression model, we will consider the body mass *(grams)* of the penguins as the response variable and the length of the length of the the penguin's flipper *(millimeters)* as our single predictor variable
+
+Our model takes the form 
+$$
+(body_{mass}) = \beta_0 + \beta_1 \cdot (flipper_{length}) + \epsilon
+$$
+where 
+
+* $\beta_0$ is the intercept of the regression line, (when flipper_length_mm =0)
+* $\beta_1$ is the slope of the regression line
+* $\epsilon$ is the error terms
+
+
+For simplicity we will remove any missing data from our variables of interest
+```{r}
+na_flipper  <- is.na(penguins$flipper_length_mm)
+na_body_mass <- is.na(penguins$body_mass_g)
+```
+
+```{r}
+which(na_flipper)
+which(na_body_mass)
+```
+
+we will remove rows 4 and 272 from both body mass and flipper length since they have missing data
+
+```{r}
+flipper_length_mm <- penguins$flipper_length_mm[!na_flipper]
+body_mass_g <- penguins$body_mass_g[!na_body_mass]
+```
+
+In most cases missing data can occur in different rows for various variables, so it not recommended to remove missing data like we did above. Since we are only considering flipper length and body mass for our linear model, and both share missing data from the same row entries we can remove them as we did above.
+
+More examples on removing missing data can be found on this [sparkbyexamples](https://sparkbyexamples.com/r-programming/remove-rows-with-na-in-r/) tutorial
+
+
+```{r}
+plot(flipper_length_mm,body_mass_g,
+     xlab = 'Flipper length (mm)',
+     ylab = 'Body mass (grams)')
+```
+
+
+```{r}
+simple_lm <- lm(body_mass_g ~ flipper_length_mm)
+simple_lm
+```
+
+The model can be written as `body_mass_g = -5780.83 + 49.69*flipper_length_mm`, this is our line of best fit. We can then plot our line of best fit as shown below
+
+
+```{r}
+plot(flipper_length_mm,body_mass_g,
+     xlab = 'Flipper length (mm)',
+     ylab = 'Body mass (grams)')
+abline(simple_lm,col = 'red',lwd =2)
+```
+
+
+Moreover, we can use the `summary()` function to quickly check whether our predictor is significantly associated with the response variable. If so, we can further assess how well our model fits our actual data by utilizing metrics provided by the summary output
+
+
+### Model Summary
+
+```{r}
+lm_summary <- summary(simple_lm)
+lm_summary
+```
+
+
+The '*' symbols indicate the level of significance for the respective term. The significance codes below the line shows the definitions for the level of significance; one star means $0.01 < p < 0.05$, two stars mean $0.001 < p < 0.01$, and similar interpretations for the remaining symbols
+
+
+Breaking down the `summary` output, it contains the following components *(Extract using `$` operator)*
+
+### Call
+The function (formula) used to compute the regression model
+
+```{r}
+lm_summary$call
+```
+
+### Residuals
+
+The difference between predicted values for the response variable using our constructed model and the observed response values from our original data. Mathematically, 
+$$
+r_i = y_i - \hat{y}_i
+$$
+
+If the residual is 
+
+* *Positive:* The predicted value was an underestimate of the observed response
+* *Negative:* The predicted value was an overestimate of the observed response
+* *Zero:* The predicted value is exactly the same as the observed response
+
+
+<details><summary>Show Code</summary>
+
+```{r}
+dat <- cbind.data.frame(flipper_length_mm,body_mass_g)
+
+p1 <- ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_smooth(method = "lm", se = FALSE, 
+              color = "lightgrey",formula = 'y~x') +
+  geom_segment(aes(xend = flipper_length_mm, 
+                   yend = predict(simple_lm)), alpha = .2) +
+  geom_point(aes(color=residuals(simple_lm))) +
+  guides(color = 'none') + 
+  scale_color_gradient2(low = "blue", mid = "white", high = "red") +
+  labs(x = 'Flipper length (mm)',
+       y = 'Body mass (grams)')+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank())
+```
+</details>
+
+
+```{r,echo=FALSE}
+p1
+```
+
+
+The figure above shows the magnitude of the resulting residuals from our fitted model. The darker the red points the more positive the residuals were, the darker the blue points the more negative the residuals were.
+
+Assuming our line is the "line of best fit" the sum of the residuals always equals zero
+
+```{r}
+sum(lm_summary$residuals)
+```
+
+A few plots of the residuals to assess our regression assumptions:
+
+Residuals vs fitted values plot is used to detect non-linearity, unequal error variances, and possible outliers
+
+The residuals should form a "horizontal band" around the y=0 line, suggesting the assumption that the relationship is linear is reasonable as well that the variances of the error terms are equal
+
+```{r}
+plot(body_mass_g,simple_lm$residuals,
+     xlab = 'Fitted values',
+     ylab = 'Residuals',
+     main = 'Residuals vs Fitted Values')
+abline(a = 0, b = 0, col = 'red', lwd = 2)
+```
+
+
+The following histogram of residuals suggests that the residuals (and hence the error terms) are normally distributed
+
+<details><summary>Show Code</summary>
+```{r,eval=FALSE}
+lm_residuals <- simple_lm$residuals
+h <- hist(lm_residuals,
+          main = 'Distribution of Residuals',
+          xlab = 'Residuals')
+xfit <- seq(min(lm_residuals), max(lm_residuals), length = 40) 
+yfit <- dnorm(xfit, mean = mean(lm_residuals), sd = sd(lm_residuals))
+yfit <- yfit * diff(h$mids[1:2]) * length(lm_residuals) 
+lines(xfit, yfit, col = "red", lwd = 2)
+```
+</details>
+
+```{r,echo=FALSE}
+lm_residuals <- simple_lm$residuals
+h <- hist(lm_residuals,
+          main = 'Distribution of Residuals',
+          xlab = 'Residuals')
+xfit <- seq(min(lm_residuals), max(lm_residuals), length = 40) 
+yfit <- dnorm(xfit, mean = mean(lm_residuals), sd = sd(lm_residuals))
+yfit <- yfit * diff(h$mids[1:2]) * length(lm_residuals) 
+lines(xfit, yfit, col = "red", lwd = 2)
+```
+
+
+### Coefficients
+
+Estimated regression beta coefficients $(\hat{\beta}_0, \hat{\beta}_1)$, alongside their standard errors, $t$-test, and $p$-values. 
+
+
+```{r}
+lm_summary$coefficients
+```
+
+From the output above:
+
+* the model can be written as `body_mass_g = -5780.831 + 49.686*flipper_length_mm`
+
+* the intercept $\beta_0$ is -5780.831. It can be interpreted as the predicted body mass in grams for a flipper length of zero millimeters. In most scenarios the interpretation of the intercept coefficient will not make sense. For example, when the length of the flipper is zero millimeters we predict the weight of the penguin will be about -5780 grams
+
+
+* the regression beta coefficient for the variable `flipper_length_mm` $\beta_1  is 49.686. That is, for each additional millimeter of the flipper we expect the penguin to gain 49.686 grams of body mass. For example, if the length of the flipper is 200 millimeters then we expect the penguin's body mass to be about `-5780.831 + 49.686 *200 = 4156.369` grams
+
+
+### Model Performance
+
+*Residual standard error (RSE), R-squared, Adjusted R-squared*, and the *F-statistic* are metrics used to check our model performance. That is, how well does our model fit the data.
+
+
+```{r}
+metrics <- c(lm_summary$sigma,lm_summary$r.squared,
+             lm_summary$adj.r.squared,
+             lm_summary$fstatistic['value'])
+
+names(metrics) <- c('RSE','R_squared','Adj_R_squared','F_statistic')
+```
+
+```{r}
+metrics
+```
+
+#### Residual standard error
+
+The average variation of the observations points around the fitted regression line. This is the standard deviation of residual errors
+The closer to this value is to zero the better.
+
+#### R-squared/Adjusted R-squared
+
+The proportion of information *(i.e. variation)* in the data that can be explained by the model. The adjusted R-squared adjusts for the degrees of freedom. The higher these values are the better.
+
+In the simple linear regression setting *R-squared* is the square of the Pearson correlation coefficient 
+
+```{r}
+cor(flipper_length_mm,body_mass_g)^2
+```
+
+
+####  F-statistic 
+
+The *F-statistic* gives the overall significance of the model. It assess whether at least one predictor variable has a non-zero coefficient. The higher this value the better. However,this test only becomes more important when dealing with multiple predictors instead of a single predictor found in a simple linear regression.
+
+A large *F-statistic* will corresponds to a statistically significant *p-value* $(p < 0.05)$. In our example, the *F-statistic* equal 1070.74 producing a *p-value* less than  $2.2e-16$, which is highly significant
+
+
+--->
+
