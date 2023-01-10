@@ -185,19 +185,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#character-vectors" id="toc-character-vectors" class="nav-link" data-scroll-target="#character-vectors">Character vectors</a></li>
   </ul></li>
   <li><a href="#manipulating-vectors" id="toc-manipulating-vectors" class="nav-link" data-scroll-target="#manipulating-vectors">Manipulating vectors</a></li>
-  <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data">Importing data</a></li>
   <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link" data-scroll-target="#installing-packages">Installing packages</a></li>
   </ul></li>
-  <li><a href="#overview-of-births-dataset" id="toc-overview-of-births-dataset" class="nav-link" data-scroll-target="#overview-of-births-dataset">Overview of Births dataset</a></li>
-  <li><a href="#summarizing-and-visualizing-data-one-variable" id="toc-summarizing-and-visualizing-data-one-variable" class="nav-link" data-scroll-target="#summarizing-and-visualizing-data-one-variable">Summarizing and visualizing data (one variable)</a>
+  <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data">Importing Data</a>
+  <ul class="collapse">
+  <li><a href="#overview-of-births-dataset" id="toc-overview-of-births-dataset" class="nav-link" data-scroll-target="#overview-of-births-dataset">Overview of Births Dataset</a></li>
+  </ul></li>
+  <li><a href="#summarizing-and-visualizing-data" id="toc-summarizing-and-visualizing-data" class="nav-link" data-scroll-target="#summarizing-and-visualizing-data">Summarizing and visualizing data</a>
+  <ul class="collapse">
+  <li><a href="#single-variable" id="toc-single-variable" class="nav-link" data-scroll-target="#single-variable">Single variable</a>
   <ul class="collapse">
   <li><a href="#numerical-variables" id="toc-numerical-variables" class="nav-link" data-scroll-target="#numerical-variables">Numerical variables</a></li>
   <li><a href="#categorical-variables" id="toc-categorical-variables" class="nav-link" data-scroll-target="#categorical-variables">Categorical variables</a></li>
   </ul></li>
-  <li><a href="#summarizing-and-visualizing-data-two-variables" id="toc-summarizing-and-visualizing-data-two-variables" class="nav-link" data-scroll-target="#summarizing-and-visualizing-data-two-variables">Summarizing and visualizing data (two variables)</a>
+  <li><a href="#two-variables" id="toc-two-variables" class="nav-link" data-scroll-target="#two-variables">Two variables</a>
   <ul class="collapse">
   <li><a href="#numerical-variables-1" id="toc-numerical-variables-1" class="nav-link" data-scroll-target="#numerical-variables-1">Numerical variables</a></li>
   <li><a href="#categorical-variables-1" id="toc-categorical-variables-1" class="nav-link" data-scroll-target="#categorical-variables-1">Categorical variables</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -297,16 +302,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="numeric-vectors">Numeric vectors</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>num_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(num_vec)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(num_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(num_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "double"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(num_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "numeric"</code></pre>
+</div>
 </div>
 <p>Using <code>c()</code> is not the only way to generate a vector, we can also generate the above vector using <code>seq()</code> as follows</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0 1 2 3 4</code></pre>
+</div>
 </div>
 <p>Another approach to generate the same sequence can be done using <code>0:4</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span><span class="sc">:</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span><span class="sc">:</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0 1 2 3 4</code></pre>
+</div>
 </div>
 <p>or more generally <code>a:b</code>, where <code>a</code> is the starting number and <code>b</code> is the last number in the sequence</p>
 <p>We can apply arithmetic operations to our numerical vector <code>num_vec</code>, such as addition, subtraction, multiplication, division, and exponentiation. These operations will be applied to each element in the vector <em>(element-wise)</em>.</p>
@@ -351,41 +368,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Arithmetic operations applied to numeric vectors follow PEMDAS order of operations, demonstrated in the following example</p>
 <p><em>Subtract 1 from each element</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(num_vec<span class="dv">-1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>(num_vec<span class="dv">-1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] -1  0  1  2  3</code></pre>
+</div>
 </div>
 <p><em>Subtract 1 from each element, then square them</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(num_vec<span class="dv">-1</span>)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>(num_vec<span class="dv">-1</span>)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1 0 1 4 9</code></pre>
+</div>
 </div>
 <p><em>Subtract 1 from each element, square them, then double each element</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span><span class="sc">*</span>(num_vec <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span><span class="sc">*</span>(num_vec <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  2  0  2  8 18</code></pre>
+</div>
 </div>
 <p><em>Subtract 1 from each element, square them, double them, then add 1 to each element</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span>(num_vec <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span>(num_vec <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  3  1  3  9 19</code></pre>
+</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pemdas_vec <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>(num_vec <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pemdas_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>pemdas_vec <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>(num_vec <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>pemdas_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  3  1  3  9 19</code></pre>
+</div>
 </div>
 <p>Generating an odd sequence from 1 to 9, we can use <code>c()</code> or <code>seq()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">9</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span><span class="dv">1</span>,<span class="at">to=</span><span class="dv">10</span>,<span class="at">by=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1 3 5 7 9</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span><span class="dv">1</span>,<span class="at">to=</span><span class="dv">10</span>,<span class="at">by=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1 3 5 7 9</code></pre>
+</div>
 </div>
 <p>Note if you know the ordering of the arguments of a function it is not necessary to specify them. For example, it is optional to write <code>from</code> and <code>to</code> arguments in the <code>seq()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>,<span class="at">to =</span> <span class="dv">10</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>,<span class="at">to =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
 </div>
 </section>
 <section id="character-vectors" class="level3">
 <h3 class="anchored" data-anchor-id="character-vectors">Character vectors</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>chr_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'A'</span>,<span class="st">'B'</span>,<span class="st">"C"</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(chr_vec)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(chr_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>chr_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'A'</span>,<span class="st">'B'</span>,<span class="st">"C"</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(chr_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(chr_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "character"</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -393,67 +443,189 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="manipulating-vectors">Manipulating vectors</h2>
 <p>There are multiple ways to access or replace values in vectors. The most common approach is through “indexing”. It is important to know in starts with index 1.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>big_vec <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>big_vec[<span class="dv">1</span>]</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>big_vec[<span class="dv">10</span>] <span class="co"># extract the 10th element in your vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>big_vec <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>big_vec[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>big_vec[<span class="dv">10</span>] <span class="co"># extract the 10th element in your vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 10</code></pre>
+</div>
 </div>
 <p>For accessing elements in a vector we can think <code>vector[indices you want to extract]</code> the way we extract certain elements can be through some condition, that is <code>vector[condtion]</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>big_vec[ <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">10</span>) ]</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>big_vec[ <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> ] <span class="co"># what are the first 10 elements ?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>big_vec[ <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">10</span>) ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  1  5 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>big_vec[ <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> ] <span class="co"># what are the first 10 elements ?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
 </div>
 <p>Using <code>c()</code> we can concatenate elements from one vector into another vector. For example, we can add the elements from <code>pemdas_vec</code> into the existing vector <code>num_vec</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(num_vec,pemdas_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(num_vec,pemdas_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1]  0  1  2  3  4  3  1  3  9 19</code></pre>
+</div>
 </div>
 <p>Alternatively, we can add the elements from <code>num_vec</code> into the existing vector <code>pemdas_vec</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(pemdas_vec,num_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(pemdas_vec,num_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1]  3  1  3  9 19  0  1  2  3  4</code></pre>
+</div>
 </div>
 <p>You will notice the order in which we concatenate the elements from the vectors does matter</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>chr_vec</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>chr_vec[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">'a'</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>chr_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>chr_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "A" "B" "C"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>chr_vec[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">'a'</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>chr_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "a" "B" "C"</code></pre>
+</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>num_vec</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>num_vec[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>num_vec</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>num_vec[ <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>) ] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>,<span class="dv">200</span>)</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>num_vec</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>num_vec[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>num_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>num_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0 1 2 3 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>num_vec[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>num_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  0  1 10  3  4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>num_vec[ <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>) ] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>,<span class="dv">200</span>)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>num_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 100   1 200   3   4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>num_vec[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>num_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0 0 0 3 4</code></pre>
+</div>
 </div>
 </section>
-<section id="importing-data" class="level2">
-<h2 class="anchored" data-anchor-id="importing-data">Importing data</h2>
+<section id="installing-packages" class="level2">
+<h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
+<p>While base R contains a wide collection of useful functions and datasets, it might be necessary to install additional R packages to increase the power of R by improving existing base R functionalities, or by adding new ones.</p>
+<p>In general, you can use this template to install a package in R:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'package_name'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For example, in this lab we will need functions/datasets from the following package: <code>maps</code>. To install we simply type in our console</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'maps'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After running the above command you should get something similar to the output below. The messages appeared will depend on what operating system you are using, the dependencies, and if the package was successfully installed.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>trying URL <span class="st">'https://cran.rstudio.com/bin/macosx/contrib/4.2/maps_3.4.0.tgz'</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>Content type <span class="st">'application/x-gzip'</span> length <span class="dv">3105764</span> <span class="fu">bytes</span> (<span class="fl">3.0</span> MB)</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>downloaded <span class="fl">3.0</span> MB</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>The downloaded binary packages are <span class="cf">in</span></span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>    <span class="sc">/</span>var<span class="sc">/</span>folders<span class="sc">/</span>mc<span class="sc">/</span>rznpg9ks30sd6wdh7rchs4v40000gn<span class="sc">/</span>T<span class="sc">/</span><span class="er">/</span>RtmpLUHvkq<span class="sc">/</span>downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Once the package was installed successfully we now have access to all of its functionalities/datasets. To access them we load the package into memory using the command <code>library()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(maps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>However, if we only need to access say a specific function/dataset a few times we can do so using the notation <code>packagename::functionname()</code>. For example, if we only need to access the Canada cities data set in the <code>maps</code> package we run the following command</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>maps<span class="sc">::</span>canada.cities</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;            name country.etc    pop   lat    long capital
+#&gt; 1 Abbotsford BC          BC 157795 49.06 -122.30       0
+#&gt; 2      Acton ON          ON   8308 43.63  -80.03       0
+#&gt; 3 Acton Vale QC          QC   5153 45.63  -72.57       0
+#&gt; 4    Airdrie AB          AB  25863 51.30 -114.02       0
+#&gt; 5    Aklavik NT          NT    643 68.22 -135.00       0</code></pre>
+</div>
+</div>
+<p>Alternatively, if you loaded the entire package using <code>library(maps)</code> we can access the Canada cities data set using the following command</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>canada.cities</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;            name country.etc    pop   lat    long capital
+#&gt; 1 Abbotsford BC          BC 157795 49.06 -122.30       0
+#&gt; 2      Acton ON          ON   8308 43.63  -80.03       0
+#&gt; 3 Acton Vale QC          QC   5153 45.63  -72.57       0
+#&gt; 4    Airdrie AB          AB  25863 51.30 -114.02       0
+#&gt; 5    Aklavik NT          NT    643 68.22 -135.00       0</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="importing-data" class="level1">
+<h1>Importing Data</h1>
 <p>We will now import a <code>csv</code> file into R, to do this we’ll use the <code>read.csv</code> function. A simple template to follow is</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">'path where csv is located at in your computer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">'path where csv is located at in your computer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>An easy way to find the location of your data <em>(or any file)</em> is using the <code>file.choose()</code> function in R. <code>file.choose()</code> will bring up a file explorer window that allows you to interactively choose a file path to work with.</p>
 <p>In your console, run the following command</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file.choose</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file.choose</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>For example, after running the above command the <code>births</code> data set provided in class, is located in</p>
+<p>For example, after running the above command the <code>births</code> dataset is located in</p>
 <div class="cell">
-
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv"</code></pre>
 </div>
-<p><em>Note: Depending on your location and operating system the directory will be different.</em></p>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Depending on your location and operating system the directory will be different</p>
+</div>
+</div>
 <p>Therefore, to read the <code>births</code> data set I would copy/paste the directory of the csv location and run the following command</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>birth_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">'/Users/toledo60/Desktop/Projects/personal-site/static/data/births.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>birth_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   Gender Premie weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits   Marital
+#&gt; 1   Male     No    124      8   31   25    13    14       1     13   Married
+#&gt; 2 Female     No    177      8   36   26     9    12       2     11 Unmarried
+#&gt; 3   Male     No    107      3   30   16    12     8       2     10 Unmarried
+#&gt; 4 Female     No    144      6   33   37    12    14       2     12 Unmarried
+#&gt; 5   Male     No    117      9   36   33    10    16       2     19   Married
+#&gt; 6 Female     No     98      4   31   29    14    16       3     20   Married
+#&gt;   Racemom Racedad Hispmom Hispdad Gained     Habit MomPriorCond BirthDef
+#&gt; 1   White   White NotHisp NotHisp     40 NonSmoker         None     None
+#&gt; 2   White   White Mexican Mexican     20 NonSmoker         None     None
+#&gt; 3   White Unknown Mexican Unknown     70 NonSmoker At Least One     None
+#&gt; 4   White   White NotHisp NotHisp     50 NonSmoker         None     None
+#&gt; 5   White   Black NotHisp NotHisp     40 NonSmoker At Least One     None
+#&gt; 6   White   White NotHisp NotHisp     21 NonSmoker         None     None
+#&gt;      DelivComp BirthComp
+#&gt; 1 At Least One      None
+#&gt; 2 At Least One      None
+#&gt; 3 At Least One      None
+#&gt; 4 At Least One      None
+#&gt; 5         None      None
+#&gt; 6         None      None</code></pre>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>birth_dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-
 </div>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -469,89 +641,111 @@ Warning
 </div>
 </div>
 <p>We are not just limited to <code>csv</code> files, we can import data from Excel (in <code>csv</code>, <code>XLSX</code>, or <code>txt</code> format), <code>SAS</code>, <code>Stata</code>, <code>SPSS</code>, or others. A good reference to import various data formats can be found on <a href="https://www.datacamp.com/tutorial/r-data-import-tutorial">datacamp r-data-import tutorial</a></p>
-</section>
-<section id="installing-packages" class="level2">
-<h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
-<p>While base R contains a wide collection of useful functions and datasets, it might be necessary to install additional R packages to increase the power of R by improving existing base R functionalities, or by adding new ones.</p>
-<p>In general, you can use this template to install a package in R:</p>
+<section id="overview-of-births-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-births-dataset">Overview of Births Dataset</h2>
+<p>The <code>births</code> dataset is a sample of information about babies born in North Carolina. It is considered a data frame because it contains numeric information about each baby, as well as various pieces of categorical data such as the race of the parents, and whether the parents had a smoking habit.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'package_name'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>For example, in this lab we will need functions/datasets from the following package: <code>maps</code>. To install we simply type in our console</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'maps'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>After running the above command you should get something similar to the output below. The messages appeared will depend on what operating system you are using, the dependencies, and if the package was successfully installed.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>trying URL <span class="st">'https://cran.rstudio.com/bin/macosx/contrib/4.2/maps_3.4.0.tgz'</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>Content type <span class="st">'application/x-gzip'</span> length <span class="dv">3105764</span> <span class="fu">bytes</span> (<span class="fl">3.0</span> MB)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>downloaded <span class="fl">3.0</span> MB</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>The downloaded binary packages are <span class="cf">in</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="sc">/</span>var<span class="sc">/</span>folders<span class="sc">/</span>mc<span class="sc">/</span>rznpg9ks30sd6wdh7rchs4v40000gn<span class="sc">/</span>T<span class="sc">/</span><span class="er">/</span>RtmpLUHvkq<span class="sc">/</span>downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Once the package was installed successfully we now have access to all of its functionalities/datasets. To access them we load the package into memory using the command <code>library()</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(maps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>However, if we only need to access say a specific function/dataset a few times we can do so using the notation <code>packagename::functionname()</code>. For example, if we only need to access the Canada cities data set in the <code>maps</code> package we run the following command</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>maps<span class="sc">::</span>canada.cities</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>birth_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
-</div>
-<p>Alternatively, if you loaded the entire package using <code>library(maps)</code> we can access the Canada cities data set using the following command</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>canada.cities</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>birth_dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   Gender Premie weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits   Marital
+#&gt; 1   Male     No    124      8   31   25    13    14       1     13   Married
+#&gt; 2 Female     No    177      8   36   26     9    12       2     11 Unmarried
+#&gt; 3   Male     No    107      3   30   16    12     8       2     10 Unmarried
+#&gt; 4 Female     No    144      6   33   37    12    14       2     12 Unmarried
+#&gt; 5   Male     No    117      9   36   33    10    16       2     19   Married
+#&gt;   Racemom Racedad Hispmom Hispdad Gained     Habit MomPriorCond BirthDef
+#&gt; 1   White   White NotHisp NotHisp     40 NonSmoker         None     None
+#&gt; 2   White   White Mexican Mexican     20 NonSmoker         None     None
+#&gt; 3   White Unknown Mexican Unknown     70 NonSmoker At Least One     None
+#&gt; 4   White   White NotHisp NotHisp     50 NonSmoker         None     None
+#&gt; 5   White   Black NotHisp NotHisp     40 NonSmoker At Least One     None
+#&gt;      DelivComp BirthComp
+#&gt; 1 At Least One      None
+#&gt; 2 At Least One      None
+#&gt; 3 At Least One      None
+#&gt; 4 At Least One      None
+#&gt; 5         None      None</code></pre>
 </div>
-</section>
-</section>
-<section id="overview-of-births-dataset" class="level1">
-<h1>Overview of Births dataset</h1>
-<p>For <strong>Section 2</strong> and <strong>Section 3</strong> we consider the <code>births</code> dataset provided in class. The <code>births</code> dataset is a sample of information about babies born in North Carolina. It is considered a data frame because it contains numeric information about each baby, as well as various pieces of categorical data such as the race of the parents, and whether the mom has a smoking habit.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>birth_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">'/Users/toledo60/Desktop/Projects/personal-site/static/data/births.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>birth_dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can view the structure of our dataset using <code>str()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(birth_dat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(birth_dat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 'data.frame':    1992 obs. of  21 variables:
+#&gt;  $ Gender      : chr  "Male" "Female" "Male" "Female" ...
+#&gt;  $ Premie      : chr  "No" "No" "No" "No" ...
+#&gt;  $ weight      : int  124 177 107 144 117 98 147 138 104 123 ...
+#&gt;  $ Apgar1      : int  8 8 3 6 9 4 8 9 9 9 ...
+#&gt;  $ Fage        : int  31 36 30 33 36 31 33 22 30 23 ...
+#&gt;  $ Mage        : int  25 26 16 37 33 29 30 20 21 18 ...
+#&gt;  $ Feduc       : int  13 9 12 12 10 14 12 14 12 12 ...
+#&gt;  $ Meduc       : int  14 12 8 14 16 16 9 14 12 12 ...
+#&gt;  $ TotPreg     : int  1 2 2 2 2 3 4 1 1 1 ...
+#&gt;  $ Visits      : int  13 11 10 12 19 20 16 10 30 16 ...
+#&gt;  $ Marital     : chr  "Married" "Unmarried" "Unmarried" "Unmarried" ...
+#&gt;  $ Racemom     : chr  "White" "White" "White" "White" ...
+#&gt;  $ Racedad     : chr  "White" "White" "Unknown" "White" ...
+#&gt;  $ Hispmom     : chr  "NotHisp" "Mexican" "Mexican" "NotHisp" ...
+#&gt;  $ Hispdad     : chr  "NotHisp" "Mexican" "Unknown" "NotHisp" ...
+#&gt;  $ Gained      : int  40 20 70 50 40 21 22 20 11 19 ...
+#&gt;  $ Habit       : chr  "NonSmoker" "NonSmoker" "NonSmoker" "NonSmoker" ...
+#&gt;  $ MomPriorCond: chr  "None" "None" "At Least One" "None" ...
+#&gt;  $ BirthDef    : chr  "None" "None" "None" "None" ...
+#&gt;  $ DelivComp   : chr  "At Least One" "At Least One" "At Least One" "At Least One" ...
+#&gt;  $ BirthComp   : chr  "None" "None" "None" "None" ...</code></pre>
 </div>
-<p>We can see there are 1992 rows and 21 columns, and the datatypes for each variable <em>(column)</em>. Those with <code>int</code> are considered numerical variables and those with <code>chr</code> are considered categorical variables.</p>
+</div>
+<p>There are 1992 rows and 21 columns, and we can see the datatypes for each variable <em>(column)</em>. Those with <code>int</code> are considered numerical variables and those with <code>chr</code> are considered categorical variables.</p>
 <p><em>Note:</em> While looking at the structure of the data using <code>str()</code> we primarily saw two types of variables: <code>chr</code> and <code>int</code> to denote character and integer data types, respectively. However we can also have <code>factor</code> and <code>double</code>.</p>
 <p><code>factor</code> will be considered as a categorical variable and <code>double</code> would be considered as a numerical variable.</p>
 <p>We can use the <code>$</code> operator to access values from a data frame column. For example, if we want to extract the values from the <code>Gender</code> column from our dataset, we run the following command</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "Male"   "Female" "Male"   "Female" "Male"   "Female" "Male"   "Male"</code></pre>
+</div>
 </div>
 <p>If we save these values into a variable we will be able to manipulate them without altering the dataset itself.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>births_gender <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>genders <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="summarizing-and-visualizing-data-one-variable" class="level1">
-<h1>Summarizing and visualizing data (one variable)</h1>
+</section>
+<section id="summarizing-and-visualizing-data" class="level1">
+<h1>Summarizing and visualizing data</h1>
 <p>We will use the <code>births</code> data set to summarize and visualize numerical and categorical variables using the <em>base R</em> approach</p>
-<section id="numerical-variables" class="level2">
-<h2 class="anchored" data-anchor-id="numerical-variables">Numerical variables</h2>
+<section id="single-variable" class="level2">
+<h2 class="anchored" data-anchor-id="single-variable">Single variable</h2>
+<section id="numerical-variables" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-variables">Numerical variables</h3>
 <p>One way to extract all the numerical columns is using both <code>Filter</code> and <code>is.numeric</code> functions. Below are the first five rows of all the numerical columns in <code>birth_dat</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Filter</span>(is.numeric,birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Filter</span>(is.numeric,birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits Gained
+#&gt; 1    124      8   31   25    13    14       1     13     40
+#&gt; 2    177      8   36   26     9    12       2     11     20
+#&gt; 3    107      3   30   16    12     8       2     10     70
+#&gt; 4    144      6   33   37    12    14       2     12     50
+#&gt; 5    117      9   36   33    10    16       2     19     40</code></pre>
+</div>
 </div>
 <p>The names of the numerical columns can be obtained using <code>colnames()</code> function in combination with the above statement</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.numeric,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.numeric,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "weight"  "Apgar1"  "Fage"    "Mage"    "Feduc"   "Meduc"   "TotPreg"
+#&gt; [8] "Visits"  "Gained"</code></pre>
+</div>
 </div>
 <p>We will only consider the <code>weight</code> variable from our dataset to demonstrate methods to summarize and visualize a numerical variable.</p>
 <p>Functions for numerical summaries include, but not limited to,</p>
@@ -603,127 +797,208 @@ Warning
 </table>
 <p>Next, we’ll save the values from <code>weight</code> column into a separate variable and compute several numerical summaries listed above</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>birth_weight <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>birth_weight <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(birth_weight)</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(birth_weight)</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(birth_weight)</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 116.0512</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 117</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 14</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 177</code></pre>
+</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;    14.0   106.0   117.0   116.1   129.0   177.0</code></pre>
+</div>
 </div>
 <p>While <code>summary()</code> give us a quick numerical summary of our distribution, it is important to also visualize the overall distribution using a plot such as a boxplot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 <p>or a histogram</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 <p>From the histogram above, while the overall distribution of the birth weights is symmetrical there are outliers causing the distribution to be skewed to the left.</p>
 <p>For <code>boxplot()</code> and <code>hist()</code> we used the default settings, while they are informative we can alter their appearance to be more professional.</p>
 <p>For example, we changed the x-axis label and y-axis label using <code>xlab</code>,<code>ylab</code> arguments,respectively. We changed the title with <code>main</code> and the color of the boxplot with <code>col</code>. The <code>col</code> argument can take values such as <code>red</code>,<code>blue</code> or any HEX code, see <code>?boxplot</code> for further customization.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(birth_weight,</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">'Boxplot of Birth Weights'</span>,</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span><span class="st">'birth weights'</span>, <span class="at">ylab=</span><span class="st">'ounces'</span>,</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="st">'#61b1ed'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(birth_weight,</span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">'Boxplot of Birth Weights'</span>,</span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span><span class="st">'birth weights'</span>, <span class="at">ylab=</span><span class="st">'ounces'</span>,</span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="st">'#61b1ed'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 <p><em>Resource: For a collection of R colors by name refer to <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">Rcolors</a>. Another approach is to search ‘color picker’ in google and copy/paste the hex code</em></p>
 <p>We can apply similar customization to our histogram</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight,</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'Histogram of Birth Weights'</span>,</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span><span class="st">'birth weights'</span>,</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">'#d1584f'</span>,</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight,</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'Histogram of Birth Weights'</span>,</span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span><span class="st">'birth weights'</span>,</span>
+<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">'#d1584f'</span>,</span>
+<span id="cb95-5"><a href="#cb95-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 <p>The <code>hist</code> function uses the Sturges method by default to determine the number of <code>breaks</code> on the histogram. We can manually change the number of breaks, but we should be careful not to specify a low or high number of breaks. Usually the default setting is appropriate for most scenarios.</p>
 </section>
-<section id="categorical-variables" class="level2">
-<h2 class="anchored" data-anchor-id="categorical-variables">Categorical variables</h2>
+<section id="categorical-variables" class="level3">
+<h3 class="anchored" data-anchor-id="categorical-variables">Categorical variables</h3>
 <p>One way to extract all the character columns is using both <code>Filter</code> and <code>is.character</code> functions. A similar argument can be said for any columns that are factors, but instead we’d use <code>is.factor</code>.</p>
 <p>Below are the first five rows of all the character columns in <code>birth_dat</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Filter</span>(is.character,birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Filter</span>(is.character,birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   Gender Premie   Marital Racemom Racedad Hispmom Hispdad     Habit
+#&gt; 1   Male     No   Married   White   White NotHisp NotHisp NonSmoker
+#&gt; 2 Female     No Unmarried   White   White Mexican Mexican NonSmoker
+#&gt; 3   Male     No Unmarried   White Unknown Mexican Unknown NonSmoker
+#&gt; 4 Female     No Unmarried   White   White NotHisp NotHisp NonSmoker
+#&gt; 5   Male     No   Married   White   Black NotHisp NotHisp NonSmoker
+#&gt;   MomPriorCond BirthDef    DelivComp BirthComp
+#&gt; 1         None     None At Least One      None
+#&gt; 2         None     None At Least One      None
+#&gt; 3 At Least One     None At Least One      None
+#&gt; 4         None     None At Least One      None
+#&gt; 5 At Least One     None         None      None</code></pre>
+</div>
 </div>
 <p>The names of the character columns can be obtained using <code>colnames()</code> function in combination with the above statement</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.character,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.character,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1] "Gender"       "Premie"       "Marital"      "Racemom"      "Racedad"     
+#&gt;  [6] "Hispmom"      "Hispdad"      "Habit"        "MomPriorCond" "BirthDef"    
+#&gt; [11] "DelivComp"    "BirthComp"</code></pre>
+</div>
 </div>
 <p>We will only consider the <code>Hispmom</code> variable from our dataset to demonstrate methods to summarize and visualize a character variable.</p>
 <p>First, we’ll save the values from <code>Hispmom</code> column into a separate variable and compute several categorical summaries</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>hispanic_mom <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Hispmom</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>hispanic_mom <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Hispmom</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>table()</code> function in R can be used to quickly create frequency tables.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(hispanic_mom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(hispanic_mom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; hispanic_mom
+#&gt;   Mexican   NotHisp OtherHisp 
+#&gt;       215      1693        84</code></pre>
+</div>
 </div>
 <p>From the above frequency table we observe there were 25 mom who were Mexican, 1693 non Hispanic, and 84 were other types of Hispanic. We can easily convert the frequency table into a frequency table of proportions using <code>prop.table()</code>. The input for <code>prop.table()</code> is a table created using <code>table()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; hispanic_mom
+#&gt;    Mexican    NotHisp  OtherHisp 
+#&gt; 0.10793173 0.84989960 0.04216867</code></pre>
+</div>
 </div>
 <p>Now, we observe roughly 10.79% of moms were Mexican, 84.99% were non Hispanic and 4.22% were other types of Hispanic. Note that all of the proportions should add up to 1.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1</code></pre>
+</div>
 </div>
 <p>While the above method works, it is not the only way to obtain frequency tables. We can obtain the same results using <code>tally()</code> from the <code>mosaic</code> library.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">tally</span>(hispanic_mom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">tally</span>(hispanic_mom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; X
+#&gt;   Mexican   NotHisp OtherHisp 
+#&gt;       215      1693        84</code></pre>
+</div>
 </div>
 <p>If we want frequency tables of proportions, we need to use the argument <code>format</code> and specify <code>format = 'proportion'</code>. There are other formats such as <code>'count'</code>, <code>'percent'</code> etc.. for more details run <code>?mosaicCore::tally()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">tally</span>(hispanic_mom,<span class="at">format=</span><span class="st">'proportion'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">tally</span>(hispanic_mom,<span class="at">format=</span><span class="st">'proportion'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; X
+#&gt;    Mexican    NotHisp  OtherHisp 
+#&gt; 0.10793173 0.84989960 0.04216867</code></pre>
+</div>
 </div>
 <p>To plot a single categorical variable we can use <code>barplot()</code>. The input for <code>barplot()</code> when dealing with categorical data is a <code>table</code>, like the ones we created above</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(hispanic_mom))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(hispanic_mom))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-58-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 <p>Instead of the frequency counts, we can plot frequency of proportions by inputting a frequency tables of proportions.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom)),</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">'Ethnicity Proportions of Moms'</span>,</span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">'#d59cdb'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom)),</span>
+<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">'Ethnicity Proportions of Moms'</span>,</span>
+<span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">'#d59cdb'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-59-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 </section>
 </section>
-<section id="summarizing-and-visualizing-data-two-variables" class="level1">
-<h1>Summarizing and visualizing data (two variables)</h1>
-<section id="numerical-variables-1" class="level2">
-<h2 class="anchored" data-anchor-id="numerical-variables-1">Numerical variables</h2>
+<section id="two-variables" class="level2">
+<h2 class="anchored" data-anchor-id="two-variables">Two variables</h2>
+<section id="numerical-variables-1" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-variables-1">Numerical variables</h3>
 <p>We consider the following two numerical variables: <code>Feduc</code> and <code>Meduc</code>, which is the highest education for fathers and mothers in this dataset, respectively.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>father_eduction <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Feduc</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>mother_education <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Meduc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a>father_eduction <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Feduc</span>
+<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a>mother_education <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Meduc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can compare their distributions in a single plot as we did in <em>Section 2</em> with boxplots</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(father_eduction,mother_education,</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">names =</span> <span class="fu">c</span>(<span class="st">'father'</span>,<span class="st">'mother'</span>),</span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="fu">c</span>(<span class="st">'#f5d376'</span>,<span class="st">'#f5767c'</span>),</span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">'Highest Education for Parernts'</span>,</span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">'Year'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(father_eduction,mother_education,</span>
+<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">names =</span> <span class="fu">c</span>(<span class="st">'father'</span>,<span class="st">'mother'</span>),</span>
+<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="fu">c</span>(<span class="st">'#f5d376'</span>,<span class="st">'#f5767c'</span>),</span>
+<span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">'Highest Education for Parernts'</span>,</span>
+<span id="cb114-5"><a href="#cb114-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">'Year'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 <p>For boxplots its pretty straight forward to compare two numerical distributions using the syntax <code>boxplot(v1,v2,...)</code>. For histograms it requires a bit more work.</p>
 <p>We start by creating a histogram for the first variable, then creating another histrogam for the second variable but using the argument <code>add=TRUE</code>. We must specify a unique color for each histogram representing the variables. In order for both of the histograms to fit properly on the same plot we must take into account the lowest and highest values among the multiple numerical variables.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>low_x <span class="ot">&lt;-</span> <span class="fu">min</span>(father_eduction,mother_education)</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>high_x <span class="ot">&lt;-</span> <span class="fu">max</span>(father_eduction,mother_education)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>low_x <span class="ot">&lt;-</span> <span class="fu">min</span>(father_eduction,mother_education)</span>
+<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a>high_x <span class="ot">&lt;-</span> <span class="fu">max</span>(father_eduction,mother_education)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Lastly, we must specify a legend to appropriately distinguish the multiple histograms using the function <code>legend()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(father_eduction, <span class="at">col=</span><span class="st">'lightcoral'</span>,</span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim=</span><span class="fu">c</span>(low_x,high_x),</span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'Education for Parents'</span>, <span class="at">xlab=</span><span class="st">'Year'</span>)</span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(mother_education, <span class="at">col=</span><span class="st">'lightblue'</span>, <span class="at">add=</span><span class="cn">TRUE</span>)</span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'topright'</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">'father'</span>, <span class="st">'mother'</span>), </span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill=</span><span class="fu">c</span>(<span class="st">'lightcoral'</span>, <span class="st">'lightblue'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(father_eduction, <span class="at">col=</span><span class="st">'lightcoral'</span>,</span>
+<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim=</span><span class="fu">c</span>(low_x,high_x),</span>
+<span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'Education for Parents'</span>, <span class="at">xlab=</span><span class="st">'Year'</span>)</span>
+<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(mother_education, <span class="at">col=</span><span class="st">'lightblue'</span>, <span class="at">add=</span><span class="cn">TRUE</span>)</span>
+<span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'topright'</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">'father'</span>, <span class="st">'mother'</span>), </span>
+<span id="cb116-6"><a href="#cb116-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill=</span><span class="fu">c</span>(<span class="st">'lightcoral'</span>, <span class="st">'lightblue'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -740,31 +1015,50 @@ Warning
 </div>
 <p>We can also consider a <em>scatter plot</em> to visualize the relationship between two numerical variables. We consider the two numerical variables <code>Gained</code> and <code>weight</code>. <code>Gained</code> describes the weight gained during the pregnancy term and <code>weight</code> describe the weight of the baby at birth.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> birth_dat<span class="sc">$</span>Gained,<span class="at">y =</span> birth_dat<span class="sc">$</span>weight,</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Baby weight vs pregnancy weight gain'</span>,</span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'weight gained during pregnancy'</span>,</span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">'Baby weight (oz.)'</span>,</span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">'lightcoral'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> birth_dat<span class="sc">$</span>Gained,<span class="at">y =</span> birth_dat<span class="sc">$</span>weight,</span>
+<span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Baby weight vs pregnancy weight gain'</span>,</span>
+<span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'weight gained during pregnancy'</span>,</span>
+<span id="cb117-4"><a href="#cb117-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">'Baby weight (oz.)'</span>,</span>
+<span id="cb117-5"><a href="#cb117-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">'lightcoral'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-64-1.png" class="img-fluid" width="576"></p>
+</div>
 </div>
 </section>
-<section id="categorical-variables-1" class="level2">
-<h2 class="anchored" data-anchor-id="categorical-variables-1">Categorical variables</h2>
+<section id="categorical-variables-1" class="level3">
+<h3 class="anchored" data-anchor-id="categorical-variables-1">Categorical variables</h3>
 <p>For this example, we consider the following two character variables <code>Hispdad</code> and <code>Habit</code>. <code>Hispdad</code> determines whether the father of the baby was Hispanic or not. In particular, are they Mexican, non-Hispanic, or other type of Hispanic ethnicity. <code>Habit</code> determines whether or not the subject had a smoking habit or not.</p>
 <p>When dealing with two categorical variables we can create a two-way table using <code>table(v1,v2)</code>. Below is the table of frequency for both <code>Habit</code> and <code>Hispdad</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;            
+#&gt;             Mexican NotHisp OtherHisp Unknown
+#&gt;   NonSmoker     184    1236        78     307
+#&gt;   Smoker          5     117         2      63</code></pre>
+</div>
 </div>
 <p>From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 12346 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.</p>
 <p>We can obtain a frequency table of proportions using <code>prop.table()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;            
+#&gt;                 Mexican     NotHisp   OtherHisp     Unknown
+#&gt;   NonSmoker 0.092369478 0.620481928 0.039156627 0.154116466
+#&gt;   Smoker    0.002510040 0.058734940 0.001004016 0.031626506</code></pre>
+</div>
 </div>
 <p>You will notice that summing each cell will give us 1</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1</code></pre>
+</div>
 </div>
 
 
+</section>
 </section>
 </section>
 

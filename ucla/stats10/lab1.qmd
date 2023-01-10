@@ -7,7 +7,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.width = 6,
   fig.height = 4,
-  eval = FALSE
+  eval = TRUE
 )
 ```
 
@@ -187,55 +187,6 @@ num_vec[c(1,2,3)] <- 0
 num_vec
 ```
 
-## Importing data
-
-We will now import a `csv` file into R, to do this we'll use the `read.csv` function. A simple template to follow is
-
-```{r,eval=FALSE}
-read.csv(file = 'path where csv is located at in your computer')
-```
-
-An easy way to find the location of your data *(or any file)* is using the `file.choose()` function in R. `file.choose()` will bring up a file explorer window that allows you to interactively choose a file path to work with.
-
-In your console, run the following command
-
-```{r,eval=FALSE}
-file.choose()
-```
-
-For example, after running the above command the `births` data set provided in class, is located in
-
-```{r,echo=FALSE}
-birth_data_location <- here::here("static", "data", "births.csv")
-birth_data_location
-```
-
-*Note: Depending on your location and operating system the directory will be different.*
-
-Therefore, to read the `births` data set I would copy/paste the directory of the csv location and run the following command
-
-```{r,eval=FALSE}
-birth_dat <- read.csv(file='/Users/toledo60/Desktop/Projects/personal-site/static/data/births.csv')
-```
-
-```{r,echo=FALSE}
-birth_dat <- read.csv(birth_data_location)
-```
-
-```{r,eval=FALSE}
-birth_dat
-```
-
-```{r,echo=FALSE}
-birth_dat |> head()
-```
-
-:::callout-warning
-The above tutorial assumes the data set is a `csv` file in working condition. That is we assume the default settings for `read.csv`. In some cases we may need to change the header, specify the field separator and more. See `?read.csv` for further details and examples.
-:::
-
-We are not just limited to `csv` files, we can import data from Excel (in `csv`, `XLSX`, or `txt` format), `SAS`, `Stata`, `SPSS`, or others. A good reference to import various data formats can be found on [datacamp r-data-import tutorial](https://www.datacamp.com/tutorial/r-data-import-tutorial)
-
 ## Installing packages
 
 While base R contains a wide collection of useful functions and datasets, it might be necessary to install additional R packages to increase the power of R by improving existing base R functionalities, or by adding new ones.
@@ -291,16 +242,67 @@ canada.cities
 canada.cities |> head(5)
 ```
 
-# Overview of Births dataset
+# Importing Data
 
-For **Section 2** and **Section 3** we consider the `births` dataset provided in class. The `births` dataset is a sample of information about babies born in North Carolina. It is considered a data frame because it contains numeric information about each baby, as well as various pieces of categorical data such as the race of the parents, and whether the mom has a smoking habit.
+We will now import a `csv` file into R, to do this we'll use the `read.csv` function. A simple template to follow is
 
-```{r,eval=FALSE,eval=FALSE}
-birth_dat <- read.csv(file='/Users/toledo60/Desktop/Projects/personal-site/static/data/births.csv')
+```{r,eval=FALSE}
+read.csv(file = 'path where csv is located at in your computer')
+```
+
+An easy way to find the location of your data *(or any file)* is using the `file.choose()` function in R. `file.choose()` will bring up a file explorer window that allows you to interactively choose a file path to work with.
+
+In your console, run the following command
+
+```{r,eval=FALSE}
+file.choose()
+```
+
+For example, after running the above command the `births` dataset is located in
+
+```{r,echo=FALSE}
+birth_data_location <- here::here("ucla","stats10","data", "births.csv")
+birth_data_location
+```
+
+:::callout-warning
+Depending on your location and operating system the directory will be different
+:::
+
+Therefore, to read the `births` data set I would copy/paste the directory of the csv location and run the following command
+
+
+```{r}
+birth_dat <- read.csv(file = "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv")
+```
+
+
+```{r,echo=FALSE}
+birth_dat |> head()
+```
+
+:::callout-warning
+The above tutorial assumes the data set is a `csv` file in working condition. That is we assume the default settings for `read.csv`. In some cases we may need to change the header, specify the field separator and more. See `?read.csv` for further details and examples.
+:::
+
+We are not just limited to `csv` files, we can import data from Excel (in `csv`, `XLSX`, or `txt` format), `SAS`, `Stata`, `SPSS`, or others. A good reference to import various data formats can be found on [datacamp r-data-import tutorial](https://www.datacamp.com/tutorial/r-data-import-tutorial)
+
+
+## Overview of Births Dataset
+
+The `births` dataset is a sample of information about babies born in North Carolina. It is considered a data frame because it contains numeric information about each baby, as well as various pieces of categorical data such as the race of the parents, and whether the parents had a smoking habit.
+
+```{r, eval=FALSE}
+birth_dat <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv")
 ```
 
 ```{r,eval=FALSE}
 birth_dat
+```
+
+
+```{r,echo=FALSE}
+birth_dat |> head(5)
 ```
 
 We can view the structure of our dataset using `str()` function
@@ -309,7 +311,7 @@ We can view the structure of our dataset using `str()` function
 str(birth_dat) 
 ```
 
-We can see there are 1992 rows and 21 columns, and the datatypes for each variable *(column)*. Those with `int` are considered numerical variables and those with `chr` are considered categorical variables.
+There are 1992 rows and 21 columns, and we can see the datatypes for each variable *(column)*. Those with `int` are considered numerical variables and those with `chr` are considered categorical variables.
 
 *Note:* While looking at the structure of the data using `str()` we primarily saw two types of variables: `chr` and `int` to denote character and integer data types, respectively. However we can also have `factor` and `double`.
 
@@ -321,17 +323,23 @@ We can use the `$` operator to access values from a data frame column. For examp
 birth_dat$Gender
 ```
 
+```{r,echo=FALSE}
+birth_dat$Gender[1:8]
+```
+
 If we save these values into a variable we will be able to manipulate them without altering the dataset itself.
 
 ```{r}
-births_gender <- birth_dat$Gender
+genders <- birth_dat$Gender
 ```
 
-# Summarizing and visualizing data (one variable)
+# Summarizing and visualizing data 
 
 We will use the `births` data set to summarize and visualize numerical and categorical variables using the *base R* approach
 
-## Numerical variables
+## Single variable
+
+### Numerical variables
 
 One way to extract all the numerical columns is using both `Filter` and `is.numeric` functions. Below are the first five rows of all the numerical columns in `birth_dat`
 
@@ -422,7 +430,7 @@ hist(birth_weight,
 
 The `hist` function uses the Sturges method by default to determine the number of `breaks` on the histogram. We can manually change the number of breaks, but we should be careful not to specify a low or high number of breaks. Usually the default setting is appropriate for most scenarios. 
 
-## Categorical variables
+### Categorical variables
 
 One way to extract all the character columns is using both `Filter` and `is.character` functions. A similar argument can be said for any columns that are factors, but instead we'd use `is.factor`. 
 
@@ -498,10 +506,9 @@ barplot(prop.table(table(hispanic_mom)),
 ```
 
 
+##  Two variables
 
-# Summarizing and visualizing data (two variables)
-
-## Numerical variables
+### Numerical variables
 
 We consider the following two numerical variables: `Feduc` and `Meduc`, which is the highest education for fathers and mothers in this dataset, respectively.
 
@@ -559,7 +566,7 @@ plot(x = birth_dat$Gained,y = birth_dat$weight,
 ```
 
 
-## Categorical variables
+### Categorical variables
 
 For this example, we consider the following two character variables `Hispdad` and `Habit`. `Hispdad` determines whether the father of the baby was Hispanic or not. In particular, are they Mexican, non-Hispanic, or other type of Hispanic ethnicity. `Habit` determines whether or not the subject had a smoking habit or not.
 
