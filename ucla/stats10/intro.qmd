@@ -21,16 +21,17 @@ For online discussion and/or virtual office hours
  <br/>
 **4B** M/W: 1:00pm-1:50pm (PAB 1749)
 
-
 **Office Hours:** <br/>
-TBD @MS8349 <br/>
-M/W: 12:00pm-12:50pm
+M/W: 12:00pm-12:50pm <br/>
+@MS8349 or
 [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
 
 **Email**: toledo60@g.ucla.edu
 
-Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu) 
 
+- [Lecture Recordings](/zoom.qmd)
+
+Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu) 
 
 For general questions or specific questions about the labs use [campuswire](https://campuswire.com). Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS
 
