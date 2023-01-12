@@ -5,7 +5,6 @@ project:
 website:
   title: "Jose Toledo Luna"
   navbar:
-    search: false
     left:
       - href: index.qmd
         text: About
