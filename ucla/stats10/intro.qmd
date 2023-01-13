@@ -13,7 +13,6 @@ For online discussion and/or virtual office hours
 - [campuswire](https://campuswire.com) Have discussions or ask questions regarding this course
 :::
 
-
 **Discussions:** <br/>
 **4A** M/W: 12:00pm-12:50pm (Online)
  <br/>
@@ -26,18 +25,20 @@ M/W: 12:00pm-12:50pm <br/>
 
 **Email**: toledo60@g.ucla.edu
 
-
 - [Lecture Recordings](/zoom.qmd)
 
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu)
 
 For general questions or specific questions about the labs use [campuswire](https://campuswire.com). Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS
 
-
 All lab assignments will be turned in directly on CANVAS
 
 Below are all the labs regrading this course. 
 In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.
+
+Here is a quick [tutorial on R markdown](https://ucla.zoom.us/rec/share/fexC9zZMvnHTG7-81ktg-yLV6WcaaAAzFFhx4z1YcNJJ1Ogp6JaaVHtU7BKr447w.sa1bj0LvC00c00ql)
+to help you get started writing your lab report solutions 
+
 
 ::: callout-warning
 Lab tutorials are a work in progress and are constantly being updated
