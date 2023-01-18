@@ -1,6 +1,6 @@
-| Week   | Date        | Topic                              | Link                                                                                                                          |
-|---------|---------------|------------------------|-------------------------------------------------|
-| Week 1 | Mon, Jan 09 | Lab 1: *Installing R and R studio* | [Lecture 1](https://ucla.zoom.us/rec/share/QR82Ljlj6nxvdGvlqVic9ngnOMsz6TrTzkkbFQDS_ykSiw_kAO5g_1A11QIiT7JT.V5dpnIQJ8z1JPsLI) |
-|        | Wed, Jan 11 | Lab 1: *Variables, vectors*        | [Lecture 2](https://ucla.zoom.us/rec/share/DSwFPNQh2Yq_IxubSHsFDl-p1NH2stnYm5O9oHhlq3Z2TNyKjH3rZHaJFDkE3956.99FxQyT1hDuHtJzY) |
-| Week 2 | Mon, Jan 16 | *HOLIDAY*                          |                                                                                                                               |
-|        | Wed, Jan 18 |                                    |                                                                                                                               |
+| Week   | Date        | Topic                                                                  | Link                                                                                                                          |
+|--------------|--------------|---------------------|-------------------------------|
+| Week 1 | Mon, Jan 09 | Lab 1: *Installing R and R studio*                                     | [Lecture 1](https://ucla.zoom.us/rec/share/QR82Ljlj6nxvdGvlqVic9ngnOMsz6TrTzkkbFQDS_ykSiw_kAO5g_1A11QIiT7JT.V5dpnIQJ8z1JPsLI) |
+|        | Wed, Jan 11 | Lab 1: *Variables, vectors*                                            | [Lecture 2](https://ucla.zoom.us/rec/share/DSwFPNQh2Yq_IxubSHsFDl-p1NH2stnYm5O9oHhlq3Z2TNyKjH3rZHaJFDkE3956.99FxQyT1hDuHtJzY) |
+| Week 2 | Mon, Jan 16 | *HOLIDAY*                                                              |                                                                                                                               |
+|        | Wed, Jan 18 | Lab 1: *Importing data, summarize/visualize single numerical variable* | [Lecture 3](https://ucla.zoom.us/rec/share/c1gOX80nUKxPT8RsGCL94lghdsDcCVdpfFA8PNfsaowwcX3JZW87c06cdcXKmSLT.k07mSfxvTgtgEmn6) |
