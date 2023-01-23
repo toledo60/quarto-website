@@ -7,15 +7,15 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.width = 6,
   fig.height = 4,
-  eval = FALSE
+  eval = TRUE
 )
 ```
 
-<!---
+
 
 In this lab, you will
 
-1.  Understand logical statements and be able to apply them in order to subset our data
+1.  Understand logical statements and be able to apply them in order to subset your data
 
 ## Logical Statements
 
@@ -411,7 +411,10 @@ Create a logical vector to determine if the baby had at least one defect
 ```{r}
 has_defect <- (birth_dat$BirthDef == 'At Least One')
 ```
-*Note: We must spell "At Least One" with correct upper/lower cases including spaces*
+
+:::callout-note
+We must spell "At Least One" with correct upper/lower cases including spaces
+:::
 
 ```{r}
 has_defect[1:5]
@@ -425,6 +428,4 @@ mean( birth_dat[has_defect,'weight'] )
 *Interpretation: Average weight of babies with at least one birth defect*
 
 
-
---->
 

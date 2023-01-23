@@ -46,5 +46,6 @@ Lab tutorials are a work in progress and are constantly being updated
 :::
 
 - [Lab 1: Introduction to R](/ucla/stats10/lab1.qmd)
+- [Lab 2: Logical Statements with Applications](/ucla/stats10/lab2.qmd)
 
 

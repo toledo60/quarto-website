@@ -415,8 +415,9 @@ boxplot(birth_weight,
         col='#61b1ed')
 ```
 
-*Resource: For a collection of R colors by name refer to [Rcolors](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). Another approach is to search 'color picker' in google and copy/paste the hex code*
-
+:::callout-tip
+For a collection of R colors by name refer to [Rcolors](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). Another approach is to search 'color picker' in google and copy/paste the hex code
+:::
 
 We can apply similar customization to our histogram
 
@@ -576,7 +577,7 @@ When dealing with two categorical variables we can create a two-way table using 
 table(birth_dat$Habit,birth_dat$Hispdad)
 ```
 
-From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 12346 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.
+From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 1236 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.
 
 We can obtain a frequency table of proportions using `prop.table()`
 

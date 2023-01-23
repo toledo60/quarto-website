@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -109,661 +172,569 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#logical-statements" id="toc-logical-statements" class="nav-link active" data-scroll-target="#logical-statements">Logical Statements</a>
+  <ul class="collapse">
+  <li><a href="#relational-operators" id="toc-relational-operators" class="nav-link" data-scroll-target="#relational-operators">Relational operators</a></li>
+  <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators">Logical operators</a></li>
+  </ul></li>
+  <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting">Subsetting</a>
+  <ul class="collapse">
+  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">Vectors</a></li>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames">Data frames</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-
-<!---
-
-In this lab, you will
-
-1.  Understand logical statements and be able to apply them in order to subset our data
-
-## Logical Statements
-
-There are only two logical values, `TRUE` and `FALSE`. In R, we can abbreviate `TRUE` with `T` and `FALSE` with `F`. They can be interpreted as any option corresponding to a binary choice. For example, yes/no, do/don't, satisfied/not satisfied or even `1/0`.
-
-A basic way to define a logical statement is using a **relational operator** to compare two expressions. For example, we may ask ourselves *"is x less than a certain number ?"* or using a real world example from the `mtcars` dataset *"how many cars have more than 18 miles per gallon?"*
-
-### Relational operators
-
-The table below summarizes some of the **relational operators** available in R:
-
-| Operator | Interpretation           | Basic Example | Result  |
-|----------|--------------------------|---------------|---------|
-| ==       | Equal to                 | 5 == 5        | `TRUE`  |
-| !=       | Not equal to             | 4 != 5        | `TRUE`  |
-| \>       | Greater than             | 4 \> 5        | `FALSE` |
-| \<       | Less than                | 4 \< 5        | `TRUE`  |
-| \<=      | Less than or equal to    | 4 \<= 5       | `TRUE`  |
-| \>=      | Greater than or equal to | 4 \>= 5       | `FALSE` |
-
-From the table above we consider single numbers as our two expression to compare, but we can extend this idea to vectors, data.frames, matrices of various data types. When applying relational operators to vectors it is important to know they are being compared *element-wise*.
-
-We first start off by comparing a vector with a single number
-
-
-::: {.cell}
-
-```{.r .cell-code}
-c(1,3,5,7,9) < 5
-```
-:::
-
-
-*Interpretation: Is 1 less than 5? is 3 less than 5? is 5 less than 5? is 7 less than 5? is 9 less than 5?*
-
-The output from the above example is a `logical` vector
-
-
-::: {.cell}
-
-```{.r .cell-code}
-class(c(1,3,5,7,9) < 5)
-```
-:::
-
-
-with `TRUE/FALSE` if the given condition was satisfied or not. What if we were given the question *"How many values of x are smaller than some number?"*
-
-
-::: {.cell}
-
-```{.r .cell-code}
-sum( c(1,3,5,7,9) < 5 )
-```
-:::
-
-
-we can then apply the `sum()` function to count how many `TRUE` were in our logical vector. This will be very useful when we have very large vectors and we can't count how many `TRUE` were in our vector manually.
-
-Below are some examples applying relational operators to compare two vectors of the same length
-
-
-::: {.cell}
-
-```{.r .cell-code}
-c(1,2,3,4) < c(5,4,3,2)
-```
-:::
-
-
-*Interpretation: Is 1 less than 5? is 2 less than 4? is 3 less than 3? is 4 less than 2?*
-
-
-::: {.cell}
-
-```{.r .cell-code}
-c(1,2,3,4) <= c(5,4,3,2)
-```
-:::
-
-
-*Interpretation: Is 1 less than or equal to 5? is 2 less than or equal to 4? is 3 less than or equal to 3? is 4 less than or equal to 2?*
-
-
-Another topic to consider is comparing two strings. While this can be a more advance topic we only consider the simplest scenario in which we compare case-sensitive strings.
-
-
-::: {.cell}
-
-```{.r .cell-code}
-string1 <- 'Hello'
-string2 <- 'hello'
-```
-:::
-
-
-while the above strings contain the same characters in the same order, if we compare them directly they will be considered different 
-
-
-::: {.cell}
-
-```{.r .cell-code}
-string1 == string2
-```
-:::
-
-*Interpretation: are string1 and string2 identical?*
-
-However, if were are interested in seeing if they contain the same characters regardless of the case sensitivity, we can use `tolower()` function as follows
-
-
-::: {.cell}
-
-```{.r .cell-code}
-tolower(string1)
-tolower(string2)
-```
-:::
-
-
-`tolower()` will convert any upper-case character in a vector into lower-case character.
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-tolower(string1) == tolower(string2)
-```
-:::
-
-
-Since all the characters are now lower-case, and both strings contain the same characters in the same order then they are now identical.
-
-For more advanced examples in comparing strings check out the following [blog post](https://www.r-bloggers.com/2022/01/how-to-compare-strings-in-r-with-examples/) *(Optional)*
-
-
-### Logical operators
-
-In practice, we often need to use multiple conditions to make certain decisions. For example, you have a personal rule that if there is no homework *AND* you don't have class, then you will go out with your friends. Now, explore what happens to this rule when *OR* is used instead of *AND*, also what happens when negation (*NOT* ) is added to one or both clauses.
-
-The table below summarizes some of these logical operators
-
-+---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
-| Operator      | Interpretation                                                                           | Basic Example         | Result                |
-+:=============:+==========================================================================================+=======================+=======================+
-| !             | **NOT** <br> *If the condition is true,* <br>*logical NOT operator returns as false*     | ! (5 == 5)            | `FALSE`               |
-+---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
-| &             | **AND**<br> *(element-wise)* <br> *Returns true when both conditions are true*           | TRUE `&` TRUE         | `TRUE`                |
-|               |                                                                                          |                       |                       |
-|               |                                                                                          | TRUE `&` FALSE        | `FALSE`               |
-|               |                                                                                          |                       |                       |
-|               |                                                                                          | FALSE `&` TRUE        | `FALSE`               |
-|               |                                                                                          |                       |                       |
-|               |                                                                                          | FALSE `&` FALSE       | `FALSE`               |
-+---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
-| &&            | **AND**<br> *(single comparison)* <br> *Same as above but for single comparison*         | *(same as `&` above)* | *(same as `&` above)* |
-+---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
-| \|            | **OR**<br> *(element-wise)* <br> *Returns true when at-least one of conditions is true*  | TRUE `|`TRUE          | `TRUE`                |
-|               |                                                                                          |                       |                       |
-|               |                                                                                          | TRUE `|` FALSE        | `TRUE`                |
-|               |                                                                                          |                       |                       |
-|               |                                                                                          | FALSE `|` TRUE        | `TRUE`                |
-|               |                                                                                          |                       |                       |
-|               |                                                                                          | FALSE `|` FALSE       | `FALSE`               |
-+---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
-| \|\|          | **OR** <br> *(single comparison)* <br> *Same as above but for single comparison*         | *(same as `|` above)* | *(same as `|` above)* |
-+---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
-
-
-The difference between *element-wise* and *single comparison* can be seen in the examples below
-
-
-::: {.cell}
-
-```{.r .cell-code}
-c(TRUE,TRUE,FALSE,FALSE) | c(TRUE,FALSE,TRUE,FALSE)
-```
-:::
-
-*Interpretation: TRUE or FALSE, TRUE or FALSE, FALSE or TRUE, FALSE or FALSE*
-
-*Element-wise* will return a vector of logical values, one for each pair of logicals combined. Whereas, *single comparison* only compares the first two elements of the logical vectors and will return a single logical value.
-
-
-::: {.cell}
-
-```{.r .cell-code}
-c(TRUE,TRUE,FALSE,FALSE) || c(TRUE,FALSE,TRUE,FALSE)
-```
-:::
-
-*Interpretation: TRUE or TRUE*
-
-The above will output `TRUE` since it only considers the first elements of the respective vectors, but it will warn us that the length of the vectors have more than one element.  A better example for single comparisons would be as follows
-
-
-::: {.cell}
-
-```{.r .cell-code}
-age <- 20
-age > 10 && age < 30
-```
-:::
-
-*Interpretation: Is age greater than AND less than 30?*
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-age == 18 || age <= 21
-```
-:::
-
-*Interpretation: Is age 18 OR less than or equal to 21 ?*
-
-
-Consider a more complicated example of holding office in the United States.
-The president must be a natural-born citizen of the United States, be at least 35 years old, and have been a resident of the United States for 14 years
-
-
-::: {.cell}
-
-```{.r .cell-code}
-candidate_age <- 40
-candidate_birth <- 'United States'
-candidate_residance_years <- 10
-```
-:::
-
-
-We have a candidate who is 40 years old, was born in the United States but for some reason they have only been a resident of the United States for 10 years. Clearly, this candidate is not eligible to become our next president. We demonstrate this using logical operators
-
-
-::: {.cell}
-
-```{.r .cell-code}
-candidate_age >= 35
-```
-:::
-
-*Interpretation: Is the candidate at least 35 years old?*
-
-
-::: {.cell}
-
-```{.r .cell-code}
-candidate_birth == 'United States'
-```
-:::
-
-*Interpretation: Is the candidate born in United States?*
-
-
-::: {.cell}
-
-```{.r .cell-code}
-candidate_residance_years >= 14
-```
-:::
-
-*Interpretation: Has the candidate been a resident for at least 14 years?*
-
-Putting all of the above together,
-
-
-::: {.cell}
-
-```{.r .cell-code}
-(candidate_age >= 35) && (candidate_birth == 'United States') && (candidate_residance_years >= 14)
-```
-:::
-
-*Interpretation: TRUE AND TRUE AND FALSE*
-
-Since one of the conditions fails the entire statement will be false.
-
-## Subsetting
-
-### Vectors
-
-Now that we have an idea of how to construct logical statements, we can apply them to subset our data based on a given condition
-
-Consider the following vector `dat` with 18 values
-
-
-::: {.cell}
-
-```{.r .cell-code}
-dat <- c(11, 13, 18, 3, 2, 24, 10, 8, 5, 
-         13, 3, 23, 7, 25, 17, 20, 11, 17)
-```
-:::
-
-
-We will subset `dat` based on the following conditions:
-
-**1.  How many values are bigger than 10?**
-
-
-::: {.cell}
-
-```{.r .cell-code}
-dat > 10 
-sum(dat > 10 )
-```
-:::
-
-
-while knowing how many values are bigger than 10 is useful, we may only want to keep those values and not the ones that are smaller than 10.
-
-**2.  Keep the values that are bigger than 10?**
-
-If given a vector, the way to subset it based on a condition is as follows: <br> `vector[ condtion ]`. Our condition is all the values that are bigger than 10, that is `dat > 10`
-
-
-::: {.cell}
-
-```{.r .cell-code}
-dat[ dat > 10 ]
-```
-:::
-
-
-**3. How many values are exactly 11 ?**
-
-Our condition is `dat == 11`,this should only return two `TRUE`, and after using the `sum()` function to count them we obtain
-
-
-::: {.cell}
-
-```{.r .cell-code}
-sum(dat == 11)
-```
-:::
-
-
-If we wanted to extract these values from `dat` we would run
-
-
-::: {.cell}
-
-```{.r .cell-code}
-dat[ dat == 11 ]
-```
-:::
-
-
-
-Next we use the `birth` dataset for the following examples
-
-**4. How many females were in this dataset?**
-
-
-::: {.cell}
-
-```{.r .cell-code}
-birth_dat <- read.csv(file = "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv")
-```
-:::
-
-
-First we extract the values from the `Gender` column and store them in a variable called `gender_vec`
-
-
-::: {.cell}
-
-```{.r .cell-code}
-gender_vec <- birth_dat$Gender
-```
-:::
-
-::: {.cell}
-
-```{.r .cell-code}
-unique(gender_vec)
-```
-:::
-
-
-:::callout-warning
-Recall strings are case-sensitive, so you must spell 'Female' exactly as it appears above
-:::
-
-Then we subset this vector to only include females
-
-
-::: {.cell}
-
-```{.r .cell-code}
-females_vec <- gender_vec[gender_vec == 'Female']
-```
-:::
-
-::: {.cell}
-
-```{.r .cell-code}
-unique(females_vec)
-```
-:::
-
-
-Now our vector only contains females, we can use `length()` to count how many females were in this dataset
-
-
-::: {.cell}
-
-```{.r .cell-code}
-length(females_vec)
-```
-:::
-
-
-An easier approach would be to simply create the variable `gender_vec` and count how many females are in that vector
-
-
-::: {.cell}
-
-```{.r .cell-code}
-sum(gender_vec == 'Female')
-```
-:::
-
-
-
-### Data frames
-
-Considering *example 4* in the [vectors](#vectors) section of subsetting, we are extracting solely the values from a specific column based on a given condition. However, in some scenarios we may want to preserve all other information *(columns)* from our dataset after subsetting our data.
-
-Data frames have the following structure `data[rows,columns]`. The first 
-argument inside the brackets will specify the rows and the second argument will specify the columns. We can apply all of the subsetting techniques we covered in the [vectors](#section) within the rows, columns, or both rows and columns
-`data[condition for rows, condition for columns]`
-
-
-For example, if we wanted to subset the `births` dataset to only include females
-
-
-::: {.cell}
-
-```{.r .cell-code}
-is_female <- birth_dat$Gender == 'Female'
-```
-:::
-
-::: {.cell}
-
-```{.r .cell-code}
-birth_dat[is_female, ]
-```
-:::
-
-*Interpretation: Subset the rows to only include females, keep all the other columns*
-
-
-::: {.cell}
-
-:::
-
-
-You will notice that we only applied a condition to the rows argument and not the columns argument. In the case where one of the arguments is left blank, then no condition will be applied to the respective argument.
-
-For practice, consider the following examples
-
-**1. Create a new data frame containing the columns: Gender, weight, and Habit**
-
-We can use `colnames()`
-
-
-::: {.cell}
-
-```{.r .cell-code}
-colnames(birth_dat)
-```
-:::
-
-
-to make sure we have the correct spelling of the appropriate columns we want to keep. 
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-birth2 <- birth_dat[ , c('Gender','weight','Habit')]
-```
-:::
-
-*Interpretation: Keep all the rows, but only keep the columns: Gender, weight, and Habit*
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-head(birth2,3)
-```
-:::
-
-
-We created a character vector with the names of the columns we wanted to keep and used it as the condition in the columns argument.
-
-
-
-**2. Split `birth_dat` into two parts: One for which the individual was a smoker and another for which they were not a smoker**
-
-The variable `Habit` contains information on whether or not the individual was a smoker.
-
-
-::: {.cell}
-
-```{.r .cell-code}
-unique(birth_dat$Habit)
-```
-:::
-
-
-First we create a logical vector to determine if the individual was a smoker 
-
-
-::: {.cell}
-
-```{.r .cell-code}
-is_smoker <- birth_dat$Habit == 'Smoker'
-```
-:::
-
-::: {.cell}
-
-```{.r .cell-code}
-is_smoker[1:5]
-```
-:::
-
-*Interpretation: Return TRUE if Habit is smoker, otherwise FALSE*
-
-We use the negation [logical operator](#logical-operators) to obtain all the non-smokers from our logical vector `is_smoker` without having to create a new variable
-
-
-::: {.cell}
-
-```{.r .cell-code}
-!is_smoker[1:5]
-```
-:::
-
-
-To subset our data into keeping only the smokers we input our logical vector `is_smoker` into the rows argument
-
-
-::: {.cell}
-
-```{.r .cell-code}
-smokers <- birth_dat[is_smoker, ]
-```
-:::
-
-*Interpretation: Only keep the rows in which the individual is a smoker*
-
-
-::: {.cell}
-
-```{.r .cell-code}
-head(smokers,3)
-```
-:::
-
-
-To subset our data into keeping only the non-smokers we input our logical vector `!is_smoker` into the rows argument
-
-
-::: {.cell}
-
-```{.r .cell-code}
-not_smokers <- birth_dat[!is_smoker, ]
-```
-:::
-
-*Interpretation: Only keep the rows in which the individual is NOT a smoker*
-
-
-::: {.cell}
-
-```{.r .cell-code}
-head(not_smokers,3)
-```
-:::
-
-
-
-**3. What is the average weight of babies with at least one birth defect?**
-
-The variable `BirthDef` determines if the baby had no birth defects or had at least one defect
-
-
-::: {.cell}
-
-```{.r .cell-code}
-unique(birth_dat$BirthDef)
-```
-:::
-
-
-Create a logical vector to determine if the baby had at least one defect
-
-
-::: {.cell}
-
-```{.r .cell-code}
-has_defect <- (birth_dat$BirthDef == 'At Least One')
-```
-:::
-
-*Note: We must spell "At Least One" with correct upper/lower cases including spaces*
-
-
-::: {.cell}
-
-```{.r .cell-code}
-has_defect[1:5]
-```
-:::
-
-
-Subset our data to include rows with babies with at least one defect, then select only the `weight` column. Lastly compute the mean.
-
-
-::: {.cell}
-
-```{.r .cell-code}
-mean( birth_dat[has_defect,'weight'] )
-```
-:::
-
-*Interpretation: Average weight of babies with at least one birth defect*
-
-
-
---->
-
-
+<p>In this lab, you will</p>
+<ol type="1">
+<li>Understand logical statements and be able to apply them in order to subset your data</li>
+</ol>
+<section id="logical-statements" class="level2">
+<h2 class="anchored" data-anchor-id="logical-statements">Logical Statements</h2>
+<p>There are only two logical values, <code>TRUE</code> and <code>FALSE</code>. In R, we can abbreviate <code>TRUE</code> with <code>T</code> and <code>FALSE</code> with <code>F</code>. They can be interpreted as any option corresponding to a binary choice. For example, yes/no, do/don’t, satisfied/not satisfied or even <code>1/0</code>.</p>
+<p>A basic way to define a logical statement is using a <strong>relational operator</strong> to compare two expressions. For example, we may ask ourselves <em>“is x less than a certain number ?”</em> or using a real world example from the <code>mtcars</code> dataset <em>“how many cars have more than 18 miles per gallon?”</em></p>
+<section id="relational-operators" class="level3">
+<h3 class="anchored" data-anchor-id="relational-operators">Relational operators</h3>
+<p>The table below summarizes some of the <strong>relational operators</strong> available in R:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Interpretation</th>
+<th>Basic Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>==</td>
+<td>Equal to</td>
+<td>5 == 5</td>
+<td><code>TRUE</code></td>
+</tr>
+<tr class="even">
+<td>!=</td>
+<td>Not equal to</td>
+<td>4 != 5</td>
+<td><code>TRUE</code></td>
+</tr>
+<tr class="odd">
+<td>&gt;</td>
+<td>Greater than</td>
+<td>4 &gt; 5</td>
+<td><code>FALSE</code></td>
+</tr>
+<tr class="even">
+<td>&lt;</td>
+<td>Less than</td>
+<td>4 &lt; 5</td>
+<td><code>TRUE</code></td>
+</tr>
+<tr class="odd">
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+<td>4 &lt;= 5</td>
+<td><code>TRUE</code></td>
+</tr>
+<tr class="even">
+<td>&gt;=</td>
+<td>Greater than or equal to</td>
+<td>4 &gt;= 5</td>
+<td><code>FALSE</code></td>
+</tr>
+</tbody>
+</table>
+<p>From the table above we consider single numbers as our two expression to compare, but we can extend this idea to vectors, data.frames, matrices of various data types. When applying relational operators to vectors it is important to know they are being compared <em>element-wise</em>.</p>
+<p>We first start off by comparing a vector with a single number</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">9</span>) <span class="sc">&lt;</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  TRUE  TRUE FALSE FALSE FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Is 1 less than 5? is 3 less than 5? is 5 less than 5? is 7 less than 5? is 9 less than 5?</em></p>
+<p>The output from the above example is a <code>logical</code> vector</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">9</span>) <span class="sc">&lt;</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "logical"</code></pre>
+</div>
+</div>
+<p>with <code>TRUE/FALSE</code> if the given condition was satisfied or not. What if we were given the question <em>“How many values of x are smaller than some number?”</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>( <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">9</span>) <span class="sc">&lt;</span> <span class="dv">5</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 2</code></pre>
+</div>
+</div>
+<p>we can then apply the <code>sum()</code> function to count how many <code>TRUE</code> were in our logical vector. This will be very useful when we have very large vectors and we can’t count how many <code>TRUE</code> were in our vector manually.</p>
+<p>Below are some examples applying relational operators to compare two vectors of the same length</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>) <span class="sc">&lt;</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  TRUE  TRUE FALSE FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Is 1 less than 5? is 2 less than 4? is 3 less than 3? is 4 less than 2?</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>) <span class="sc">&lt;=</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  TRUE  TRUE  TRUE FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Is 1 less than or equal to 5? is 2 less than or equal to 4? is 3 less than or equal to 3? is 4 less than or equal to 2?</em></p>
+<p>Another topic to consider is comparing two strings. While this can be a more advance topic we only consider the simplest scenario in which we compare case-sensitive strings.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>string1 <span class="ot">&lt;-</span> <span class="st">'Hello'</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>string2 <span class="ot">&lt;-</span> <span class="st">'hello'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>while the above strings contain the same characters in the same order, if we compare them directly they will be considered different</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>string1 <span class="sc">==</span> string2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: are string1 and string2 identical?</em></p>
+<p>However, if were are interested in seeing if they contain the same characters regardless of the case sensitivity, we can use <code>tolower()</code> function as follows</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tolower</span>(string1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "hello"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tolower</span>(string2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "hello"</code></pre>
+</div>
+</div>
+<p><code>tolower()</code> will convert any upper-case character in a vector into lower-case character.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tolower</span>(string1) <span class="sc">==</span> <span class="fu">tolower</span>(string2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE</code></pre>
+</div>
+</div>
+<p>Since all the characters are now lower-case, and both strings contain the same characters in the same order then they are now identical.</p>
+<p>For more advanced examples in comparing strings check out the following <a href="https://www.r-bloggers.com/2022/01/how-to-compare-strings-in-r-with-examples/">blog post</a> <em>(Optional)</em></p>
+</section>
+<section id="logical-operators" class="level3">
+<h3 class="anchored" data-anchor-id="logical-operators">Logical operators</h3>
+<p>In practice, we often need to use multiple conditions to make certain decisions. For example, you have a personal rule that if there is no homework <em>AND</em> you don’t have class, then you will go out with your friends. Now, explore what happens to this rule when <em>OR</em> is used instead of <em>AND</em>, also what happens when negation (<em>NOT</em> ) is added to one or both clauses.</p>
+<p>The table below summarizes some of these logical operators</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 57%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Operator</th>
+<th>Interpretation</th>
+<th>Basic Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">!</td>
+<td><strong>NOT</strong> <br> <em>If the condition is true,</em> <br><em>logical NOT operator returns as false</em></td>
+<td>! (5 == 5)</td>
+<td><code>FALSE</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">&amp;</td>
+<td><strong>AND</strong><br> <em>(element-wise)</em> <br> <em>Returns true when both conditions are true</em></td>
+<td><p>TRUE <code>&amp;</code> TRUE</p>
+<p>TRUE <code>&amp;</code> FALSE</p>
+<p>FALSE <code>&amp;</code> TRUE</p>
+<p>FALSE <code>&amp;</code> FALSE</p></td>
+<td><p><code>TRUE</code></p>
+<p><code>FALSE</code></p>
+<p><code>FALSE</code></p>
+<p><code>FALSE</code></p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&amp;&amp;</td>
+<td><strong>AND</strong><br> <em>(single comparison)</em> <br> <em>Same as above but for single comparison</em></td>
+<td><em>(same as <code>&amp;</code> above)</em></td>
+<td><em>(same as <code>&amp;</code> above)</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">|</td>
+<td><strong>OR</strong><br> <em>(element-wise)</em> <br> <em>Returns true when at-least one of conditions is true</em></td>
+<td><p>TRUE <code>|</code>TRUE</p>
+<p>TRUE <code>|</code> FALSE</p>
+<p>FALSE <code>|</code> TRUE</p>
+<p>FALSE <code>|</code> FALSE</p></td>
+<td><p><code>TRUE</code></p>
+<p><code>TRUE</code></p>
+<p><code>TRUE</code></p>
+<p><code>FALSE</code></p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">||</td>
+<td><strong>OR</strong> <br> <em>(single comparison)</em> <br> <em>Same as above but for single comparison</em></td>
+<td><em>(same as <code>|</code> above)</em></td>
+<td><em>(same as <code>|</code> above)</em></td>
+</tr>
+</tbody>
+</table>
+<p>The difference between <em>element-wise</em> and <em>single comparison</em> can be seen in the examples below</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">FALSE</span>) <span class="sc">|</span> <span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  TRUE  TRUE  TRUE FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: TRUE or FALSE, TRUE or FALSE, FALSE or TRUE, FALSE or FALSE</em></p>
+<p><em>Element-wise</em> will return a vector of logical values, one for each pair of logicals combined. Whereas, <em>single comparison</em> only compares the first two elements of the logical vectors and will return a single logical value.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">FALSE</span>) <span class="sc">||</span> <span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>#&gt; Warning in c(TRUE, TRUE, FALSE, FALSE) || c(TRUE, FALSE, TRUE, FALSE):
+#&gt; 'length(x) = 4 &gt; 1' in coercion to 'logical(1)'</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: TRUE or TRUE</em></p>
+<p>The above will output <code>TRUE</code> since it only considers the first elements of the respective vectors, but it will warn us that the length of the vectors have more than one element. A better example for single comparisons would be as follows</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>age <span class="sc">&gt;</span> <span class="dv">10</span> <span class="sc">&amp;&amp;</span> age <span class="sc">&lt;</span> <span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Is age greater than AND less than 30?</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>age <span class="sc">==</span> <span class="dv">18</span> <span class="sc">||</span> age <span class="sc">&lt;=</span> <span class="dv">21</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Is age 18 OR less than or equal to 21 ?</em></p>
+<p>Consider a more complicated example of holding office in the United States. The president must be a natural-born citizen of the United States, be at least 35 years old, and have been a resident of the United States for 14 years</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>candidate_age <span class="ot">&lt;-</span> <span class="dv">40</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>candidate_birth <span class="ot">&lt;-</span> <span class="st">'United States'</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>candidate_residance_years <span class="ot">&lt;-</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We have a candidate who is 40 years old, was born in the United States but for some reason they have only been a resident of the United States for 10 years. Clearly, this candidate is not eligible to become our next president. We demonstrate this using logical operators</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>candidate_age <span class="sc">&gt;=</span> <span class="dv">35</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Is the candidate at least 35 years old?</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>candidate_birth <span class="sc">==</span> <span class="st">'United States'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Is the candidate born in United States?</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>candidate_residance_years <span class="sc">&gt;=</span> <span class="dv">14</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Has the candidate been a resident for at least 14 years?</em></p>
+<p>Putting all of the above together,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>(candidate_age <span class="sc">&gt;=</span> <span class="dv">35</span>) <span class="sc">&amp;&amp;</span> (candidate_birth <span class="sc">==</span> <span class="st">'United States'</span>) <span class="sc">&amp;&amp;</span> (candidate_residance_years <span class="sc">&gt;=</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: TRUE AND TRUE AND FALSE</em></p>
+<p>Since one of the conditions fails the entire statement will be false.</p>
+</section>
+</section>
+<section id="subsetting" class="level2">
+<h2 class="anchored" data-anchor-id="subsetting">Subsetting</h2>
+<section id="vectors" class="level3">
+<h3 class="anchored" data-anchor-id="vectors">Vectors</h3>
+<p>Now that we have an idea of how to construct logical statements, we can apply them to subset our data based on a given condition</p>
+<p>Consider the following vector <code>dat</code> with 18 values</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">18</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">24</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>, </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>         <span class="dv">13</span>, <span class="dv">3</span>, <span class="dv">23</span>, <span class="dv">7</span>, <span class="dv">25</span>, <span class="dv">17</span>, <span class="dv">20</span>, <span class="dv">11</span>, <span class="dv">17</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We will subset <code>dat</code> based on the following conditions:</p>
+<p><strong>1. How many values are bigger than 10?</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">&gt;</span> <span class="dv">10</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1]  TRUE  TRUE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE
+#&gt; [13] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(dat <span class="sc">&gt;</span> <span class="dv">10</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 11</code></pre>
+</div>
+</div>
+<p>while knowing how many values are bigger than 10 is useful, we may only want to keep those values and not the ones that are smaller than 10.</p>
+<p><strong>2. Keep the values that are bigger than 10?</strong></p>
+<p>If given a vector, the way to subset it based on a condition is as follows: <br> <code>vector[ condtion ]</code>. Our condition is all the values that are bigger than 10, that is <code>dat &gt; 10</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>dat[ dat <span class="sc">&gt;</span> <span class="dv">10</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1] 11 13 18 24 13 23 25 17 20 11 17</code></pre>
+</div>
+</div>
+<p><strong>3. How many values are exactly 11 ?</strong></p>
+<p>Our condition is <code>dat == 11</code>,this should only return two <code>TRUE</code>, and after using the <code>sum()</code> function to count them we obtain</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(dat <span class="sc">==</span> <span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 2</code></pre>
+</div>
+</div>
+<p>If we wanted to extract these values from <code>dat</code> we would run</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>dat[ dat <span class="sc">==</span> <span class="dv">11</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 11 11</code></pre>
+</div>
+</div>
+<p>Next we use the <code>birth</code> dataset for the following examples</p>
+<p><strong>4. How many females were in this dataset?</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>birth_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>First we extract the values from the <code>Gender</code> column and store them in a variable called <code>gender_vec</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>gender_vec <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(gender_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "Male"   "Female"</code></pre>
+</div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Recall strings are case-sensitive, so you must spell ‘Female’ exactly as it appears above</p>
+</div>
+</div>
+<p>Then we subset this vector to only include females</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>females_vec <span class="ot">&lt;-</span> gender_vec[gender_vec <span class="sc">==</span> <span class="st">'Female'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(females_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "Female"</code></pre>
+</div>
+</div>
+<p>Now our vector only contains females, we can use <code>length()</code> to count how many females were in this dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(females_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 957</code></pre>
+</div>
+</div>
+<p>An easier approach would be to simply create the variable <code>gender_vec</code> and count how many females are in that vector</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(gender_vec <span class="sc">==</span> <span class="st">'Female'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 957</code></pre>
+</div>
+</div>
+</section>
+<section id="data-frames" class="level3">
+<h3 class="anchored" data-anchor-id="data-frames">Data frames</h3>
+<p>Considering <em>example 4</em> in the <a href="#vectors">vectors</a> section of subsetting, we are extracting solely the values from a specific column based on a given condition. However, in some scenarios we may want to preserve all other information <em>(columns)</em> from our dataset after subsetting our data.</p>
+<p>Data frames have the following structure <code>data[rows,columns]</code>. The first argument inside the brackets will specify the rows and the second argument will specify the columns. We can apply all of the subsetting techniques we covered in the <a href="#section">vectors</a> within the rows, columns, or both rows and columns <code>data[condition for rows, condition for columns]</code></p>
+<p>For example, if we wanted to subset the <code>births</code> dataset to only include females</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>is_female <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Gender <span class="sc">==</span> <span class="st">'Female'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>birth_dat[is_female, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><em>Interpretation: Subset the rows to only include females, keep all the other columns</em></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   Gender Premie weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits   Marital
+#&gt; 2 Female     No    177      8   36   26     9    12       2     11 Unmarried
+#&gt; 4 Female     No    144      6   33   37    12    14       2     12 Unmarried
+#&gt; 6 Female     No     98      4   31   29    14    16       3     20   Married
+#&gt;   Racemom Racedad Hispmom Hispdad Gained     Habit MomPriorCond BirthDef
+#&gt; 2   White   White Mexican Mexican     20 NonSmoker         None     None
+#&gt; 4   White   White NotHisp NotHisp     50 NonSmoker         None     None
+#&gt; 6   White   White NotHisp NotHisp     21 NonSmoker         None     None
+#&gt;      DelivComp BirthComp
+#&gt; 2 At Least One      None
+#&gt; 4 At Least One      None
+#&gt; 6         None      None</code></pre>
+</div>
+</div>
+<p>You will notice that we only applied a condition to the rows argument and not the columns argument. In the case where one of the arguments is left blank, then no condition will be applied to the respective argument.</p>
+<p>For practice, consider the following examples</p>
+<p><strong>1. Create a new data frame containing the columns: Gender, weight, and Habit</strong></p>
+<p>We can use <code>colnames()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  [1] "Gender"       "Premie"       "weight"       "Apgar1"       "Fage"        
+#&gt;  [6] "Mage"         "Feduc"        "Meduc"        "TotPreg"      "Visits"      
+#&gt; [11] "Marital"      "Racemom"      "Racedad"      "Hispmom"      "Hispdad"     
+#&gt; [16] "Gained"       "Habit"        "MomPriorCond" "BirthDef"     "DelivComp"   
+#&gt; [21] "BirthComp"</code></pre>
+</div>
+</div>
+<p>to make sure we have the correct spelling of the appropriate columns we want to keep.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>birth2 <span class="ot">&lt;-</span> birth_dat[ , <span class="fu">c</span>(<span class="st">'Gender'</span>,<span class="st">'weight'</span>,<span class="st">'Habit'</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><em>Interpretation: Keep all the rows, but only keep the columns: Gender, weight, and Habit</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(birth2,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   Gender weight     Habit
+#&gt; 1   Male    124 NonSmoker
+#&gt; 2 Female    177 NonSmoker
+#&gt; 3   Male    107 NonSmoker</code></pre>
+</div>
+</div>
+<p>We created a character vector with the names of the columns we wanted to keep and used it as the condition in the columns argument.</p>
+<p><strong>2. Split <code>birth_dat</code> into two parts: One for which the individual was a smoker and another for which they were not a smoker</strong></p>
+<p>The variable <code>Habit</code> contains information on whether or not the individual was a smoker.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(birth_dat<span class="sc">$</span>Habit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "NonSmoker" "Smoker"</code></pre>
+</div>
+</div>
+<p>First we create a logical vector to determine if the individual was a smoker</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>is_smoker <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Habit <span class="sc">==</span> <span class="st">'Smoker'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>is_smoker[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] FALSE FALSE FALSE FALSE FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Return TRUE if Habit is smoker, otherwise FALSE</em></p>
+<p>We use the negation <a href="#logical-operators">logical operator</a> to obtain all the non-smokers from our logical vector <code>is_smoker</code> without having to create a new variable</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>is_smoker[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+</div>
+</div>
+<p>To subset our data into keeping only the smokers we input our logical vector <code>is_smoker</code> into the rows argument</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>smokers <span class="ot">&lt;-</span> birth_dat[is_smoker, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><em>Interpretation: Only keep the rows in which the individual is a smoker</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(smokers,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;    Gender Premie weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits   Marital
+#&gt; 15 Female     No    106      8   28   29    13    12       3     15   Married
+#&gt; 17 Female     No    115      8   30   18    12    10       1     20 Unmarried
+#&gt; 18   Male     No    128      9   21   19    12    12       2     13 Unmarried
+#&gt;    Racemom Racedad Hispmom Hispdad Gained  Habit MomPriorCond BirthDef
+#&gt; 15   White   White NotHisp NotHisp     37 Smoker         None     None
+#&gt; 17   White Unknown NotHisp Unknown     45 Smoker         None     None
+#&gt; 18   White   Black NotHisp NotHisp     35 Smoker         None     None
+#&gt;       DelivComp BirthComp
+#&gt; 15         None      None
+#&gt; 17         None      None
+#&gt; 18 At Least One      None</code></pre>
+</div>
+</div>
+<p>To subset our data into keeping only the non-smokers we input our logical vector <code>!is_smoker</code> into the rows argument</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>not_smokers <span class="ot">&lt;-</span> birth_dat[<span class="sc">!</span>is_smoker, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><em>Interpretation: Only keep the rows in which the individual is NOT a smoker</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(not_smokers,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   Gender Premie weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits   Marital
+#&gt; 1   Male     No    124      8   31   25    13    14       1     13   Married
+#&gt; 2 Female     No    177      8   36   26     9    12       2     11 Unmarried
+#&gt; 3   Male     No    107      3   30   16    12     8       2     10 Unmarried
+#&gt;   Racemom Racedad Hispmom Hispdad Gained     Habit MomPriorCond BirthDef
+#&gt; 1   White   White NotHisp NotHisp     40 NonSmoker         None     None
+#&gt; 2   White   White Mexican Mexican     20 NonSmoker         None     None
+#&gt; 3   White Unknown Mexican Unknown     70 NonSmoker At Least One     None
+#&gt;      DelivComp BirthComp
+#&gt; 1 At Least One      None
+#&gt; 2 At Least One      None
+#&gt; 3 At Least One      None</code></pre>
+</div>
+</div>
+<p><strong>3. What is the average weight of babies with at least one birth defect?</strong></p>
+<p>The variable <code>BirthDef</code> determines if the baby had no birth defects or had at least one defect</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(birth_dat<span class="sc">$</span>BirthDef)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "None"         "At Least One"</code></pre>
+</div>
+</div>
+<p>Create a logical vector to determine if the baby had at least one defect</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>has_defect <span class="ot">&lt;-</span> (birth_dat<span class="sc">$</span>BirthDef <span class="sc">==</span> <span class="st">'At Least One'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We must spell “At Least One” with correct upper/lower cases including spaces</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>has_defect[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] FALSE FALSE FALSE FALSE FALSE</code></pre>
+</div>
+</div>
+<p>Subset our data to include rows with babies with at least one defect, then select only the <code>weight</code> column. Lastly compute the mean.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>( birth_dat[has_defect,<span class="st">'weight'</span>] )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 115.8</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Average weight of babies with at least one birth defect</em></p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

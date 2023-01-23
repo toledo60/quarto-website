@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -850,7 +850,19 @@ Warning
 <p><img src="lab1_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
-<p><em>Resource: For a collection of R colors by name refer to <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">Rcolors</a>. Another approach is to search ‘color picker’ in google and copy/paste the hex code</em></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For a collection of R colors by name refer to <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">Rcolors</a>. Another approach is to search ‘color picker’ in google and copy/paste the hex code</p>
+</div>
+</div>
 <p>We can apply similar customization to our histogram</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight,</span>
@@ -1038,7 +1050,7 @@ Warning
 #&gt;   Smoker          5     117         2      63</code></pre>
 </div>
 </div>
-<p>From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 12346 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.</p>
+<p>From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 1236 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.</p>
 <p>We can obtain a frequency table of proportions using <code>prop.table()</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
