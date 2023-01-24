@@ -32,7 +32,7 @@
     "href": "zoom.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Week\nDate\nTopic\nLink\n\n\n\n\nWeek 1\nMon, Jan 09\nLab 1: Installing R and R studio\nLecture 1\n\n\n\nWed, Jan 11\nLab 1: Variables, vectors\nLecture 2\n\n\nWeek 2\nMon, Jan 16\nHOLIDAY\n\n\n\n\nWed, Jan 18\nLab 1: Importing data, summarize/visualize single numerical variable\nLecture 3\n\n\nWeek 3\nMon, Jan 23\nLab1: Summarize Two numerical variables, One categorical variable\nLecture 4\n\n\n\nWed, Jan 25"
+    "text": "Week\nDate\nTopic\nLink\n\n\n\n\nWeek 1\nMon, Jan 09\nLab 1: Installing R and R studio\nLecture 1\n\n\n\nWed, Jan 11\nLab 1: Variables, vectors\nLecture 2\n\n\nWeek 2\nMon, Jan 16\nHOLIDAY\nR markdown tutorial\n\n\n\nWed, Jan 18\nLab 1: Importing data, summarize/visualize single numerical variable\nLecture 3\n\n\nWeek 3\nMon, Jan 23\nLab1: Summarize Two numerical variables, One categorical variable\nLecture 4\n\n\n\nWed, Jan 25"
   },
   {
     "objectID": "index.html",
@@ -46,7 +46,7 @@
     "href": "ucla/stats10/intro.html",
     "title": "Welcome To STATS10",
     "section": "",
-    "text": "Important\n\n\n\nUseful Links\n\nZoom For online discussion and/or virtual office hours\nBox Folder All material for the labs will be posted here\ncampuswire Have discussions or ask questions regarding this course\n\n\n\nDiscussions:  4A M/W: 12:00pm-12:50pm (Online)  4B M/W: 1:00pm-1:50pm (PAB 1749)\nOffice Hours:  M/W: 12:00pm-12:50pm  @MS8349 or Zoom  or by appointment (Email me)\nEmail: toledo60@g.ucla.edu\n\nLecture Recordings\n\nMaterial from this course can be downloaded from this Box Folder\nFor general questions or specific questions about the labs use campuswire. Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS\nAll lab assignments will be turned in directly on CANVAS\nBelow are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.\nHere is a quick tutorial on R markdown to help you get started writing your lab report solutions\n\n\n\n\n\n\nWarning\n\n\n\nLab tutorials are a work in progress and are constantly being updated\n\n\n\nLab 1: Introduction to R\nLab 2: Logical Statements with Applications"
+    "text": "Useful Links\n\n\n\n\nZoom For online discussion and/or virtual office hours\nBox Folder All material for the labs will be posted here\ncampuswire Have discussions or ask questions regarding this course\nLecture Recordings Recordings of lectures and other tutorials\n\n\n\nDiscussions:  4A M/W: 12:00pm-12:50pm (Online)  4B M/W: 1:00pm-1:50pm (PAB 1749)\nOffice Hours:  M/W: 12:00pm-12:50pm  @MS8349 or Zoom  or by appointment (Email me)\nEmail: toledo60@g.ucla.edu\nMaterial from this course can be downloaded from this Box Folder\nFor general questions or specific questions about the labs use campuswire. Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS\nAll lab assignments will be turned in directly on CANVAS\nBelow are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.\n\n\n\n\n\n\nWarning\n\n\n\nLab tutorials are a work in progress and are constantly being updated\n\n\n\nLab 1: Introduction to R\nLab 2: Logical Statements with Applications"
   },
   {
     "objectID": "ucla/stats10/lab1.html",

@@ -5,12 +5,14 @@ title: "Welcome To STATS10"
 ## Introduction to Statistical Reasoning
 
 :::callout-important
-Useful Links
+## Useful Links
+
 
 - [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
 For online discussion and/or virtual office hours
 - [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu) All material for the labs will be posted here
 - [campuswire](https://campuswire.com) Have discussions or ask questions regarding this course
+- [Lecture Recordings](/zoom.qmd) Recordings of lectures and other tutorials
 :::
 
 **Discussions:** <br/>
@@ -26,8 +28,6 @@ or by appointment *(Email me)*
 
 **Email**: toledo60@g.ucla.edu
 
-- [Lecture Recordings](/zoom.qmd)
-
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu)
 
 For general questions or specific questions about the labs use [campuswire](https://campuswire.com). Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS
@@ -36,9 +36,6 @@ All lab assignments will be turned in directly on CANVAS
 
 Below are all the labs regrading this course. 
 In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.
-
-Here is a quick [tutorial on R markdown](https://ucla.zoom.us/rec/share/fexC9zZMvnHTG7-81ktg-yLV6WcaaAAzFFhx4z1YcNJJ1Ogp6JaaVHtU7BKr447w.sa1bj0LvC00c00ql)
-to help you get started writing your lab report solutions 
 
 
 ::: callout-warning
