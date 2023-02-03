@@ -7,7 +7,7 @@ feel free to set up an appointment with me.
 
 Hello Jose,
 
-*(Reason for wanting to meet outside office hours)*
+*(Reason for wanting to meet)*
 
 My available times this week are
 
@@ -31,5 +31,5 @@ Can we setup an appointment? Im struggling with the assignment
 
 
 In the *not appropriate email* example, I reply yes then give you my available times, afterwards you reply you can't meet during those times so you send me your available times, and then I proceed to agree with those times etc...
-This long and tedious process can be avoid from the start if you just follow the first example :)
+This long and tedious process can be avoided from the start if you just follow the first example :)
 
