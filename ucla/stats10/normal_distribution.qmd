@@ -5,11 +5,9 @@ knitr::opts_chunk$set(
   fig.width = 6,
   fig.height = 4,
   warning = FALSE,
-  eval = FALSE
+  eval = TRUE
 )
-library(ggplot2)
 ```
-
 
 Packages required for this tutorial
 
@@ -288,9 +286,6 @@ and lastly, three standard deviations away from the mean
 ```{r}
 pnorm(3) - pnorm(-3)
 ```
-
-
-
 
 
 ### qnorm

@@ -8,12 +8,12 @@ knitr::opts_chunk$set(
   fig.width = 6,
   fig.height = 4,
   warning = FALSE,
-  eval = FALSE
+  eval = TRUE
 )
 library(ggplot2)
 ```
 
-<!---
+
 In this lab, you will
 
 1. Understand linear regression in R and verify linear regression assumptions
@@ -281,6 +281,4 @@ The *F-statistic* gives the overall significance of the model. It assess whether
 
 A large *F-statistic* will corresponds to a statistically significant *p-value* $(p < 0.05)$. In our example, the *F-statistic* equal 1070.74 producing a *p-value* less than  $2.2e-16$, which is highly significant
 
-
---->
 

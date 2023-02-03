@@ -24,7 +24,7 @@ For online discussion and/or virtual office hours
 M/W: 12:00pm-12:50pm <br/>
 @MS8349 or
 [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) <br/>
-or by appointment *(Email me)*
+or by [appointment](/email.qmd)
 
 **Email**: toledo60@g.ucla.edu
 
@@ -44,5 +44,6 @@ Lab tutorials are a work in progress and are constantly being updated
 
 - [Lab 1: Introduction to R](/ucla/stats10/lab1.qmd)
 - [Lab 2: Logical Statements with Applications](/ucla/stats10/lab2.qmd)
+- [Lab 3: Introduction to Linear Regression and Sampling](/ucla/stats10/lab3.qmd)
 
 

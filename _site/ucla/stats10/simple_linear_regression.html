@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -59,6 +122,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -109,370 +173,298 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#simple-linear-regression" id="toc-simple-linear-regression" class="nav-link active" data-scroll-target="#simple-linear-regression">Simple Linear Regression</a>
+  <ul class="collapse">
+  <li><a href="#model-summary" id="toc-model-summary" class="nav-link" data-scroll-target="#model-summary">Model Summary</a></li>
+  <li><a href="#call" id="toc-call" class="nav-link" data-scroll-target="#call">Call</a></li>
+  <li><a href="#residuals" id="toc-residuals" class="nav-link" data-scroll-target="#residuals">Residuals</a></li>
+  <li><a href="#coefficients" id="toc-coefficients" class="nav-link" data-scroll-target="#coefficients">Coefficients</a></li>
+  <li><a href="#model-performance" id="toc-model-performance" class="nav-link" data-scroll-target="#model-performance">Model Performance</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<!---
-In this lab, you will
-
-1. Understand linear regression in R and verify linear regression assumptions
-2. Plotting time series to analyse trends
-
-Throughout this tutorial we will utilize the `penguins` dataset found in `palmerpenguins` package
-
-
-::: {.cell}
-
-```{.r .cell-code}
-install.packages('palmerpenguins')
-```
-:::
-
-Loading the library will now give us access to the penguins dataset
-
-
-::: {.cell}
-
-```{.r .cell-code}
-library(palmerpenguins)
-```
-:::
-
-
-see `?penguins`  or @palmer, for more info on this dataset
-
-
-## Simple Linear Regression
-
-Simple linear regression is a statistical method which allows us to predict a quantitative outcome $y$ on the basis of a single predictor variable $x$. 
-
-* Sometimes $x$ is regarded as the *predictor, explanatory,* or *independent variable*.
-
-* Similarly, $y$ is regarded as the *response, outcome,* or *dependent variable*
-
-We will only use *predictor* and *response* to denote our variables of interest. The goal is to define a statistical model that defines the response variable (*y*) as a function of the predictor (*x*) variable.
-Once, we built a statistically significant model, it’s possible to use it for predicting outcomes on the basis of new predictor values.
-
-Below are all the numerical variables in our dataset
-
-
-::: {.cell}
-
-```{.r .cell-code}
-colnames(Filter(is.numeric,penguins))
-```
-:::
-
-
-For our simple linear regression model, we will consider the body mass *(grams)* of the penguins as the response variable and the length of the length of the the penguin's flipper *(millimeters)* as our single predictor variable
-
-Our model takes the form 
-$$
+<p>In this lab, you will</p>
+<ol type="1">
+<li>Understand linear regression in R and verify linear regression assumptions</li>
+<li>Plotting time series to analyse trends</li>
+</ol>
+<p>Throughout this tutorial we will utilize the <code>penguins</code> dataset found in <code>palmerpenguins</code> package</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'palmerpenguins'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Loading the library will now give us access to the penguins dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>see <code>?penguins</code> or <span class="citation" data-cites="palmer">@palmer</span>, for more info on this dataset</p>
+<section id="simple-linear-regression" class="level2">
+<h2 class="anchored" data-anchor-id="simple-linear-regression">Simple Linear Regression</h2>
+<p>Simple linear regression is a statistical method which allows us to predict a quantitative outcome <span class="math inline">\(y\)</span> on the basis of a single predictor variable <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li><p>Sometimes <span class="math inline">\(x\)</span> is regarded as the <em>predictor, explanatory,</em> or <em>independent variable</em>.</p></li>
+<li><p>Similarly, <span class="math inline">\(y\)</span> is regarded as the <em>response, outcome,</em> or <em>dependent variable</em></p></li>
+</ul>
+<p>We will only use <em>predictor</em> and <em>response</em> to denote our variables of interest. The goal is to define a statistical model that defines the response variable (<em>y</em>) as a function of the predictor (<em>x</em>) variable. Once, we built a statistically significant model, it’s possible to use it for predicting outcomes on the basis of new predictor values.</p>
+<p>Below are all the numerical variables in our dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.numeric,penguins))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "bill_length_mm"    "bill_depth_mm"     "flipper_length_mm"
+#&gt; [4] "body_mass_g"       "year"</code></pre>
+</div>
+</div>
+<p>For our simple linear regression model, we will consider the body mass <em>(grams)</em> of the penguins as the response variable and the length of the length of the the penguin’s flipper <em>(millimeters)</em> as our single predictor variable</p>
+<p>Our model takes the form <span class="math display">\[
 (body_{mass}) = \beta_0 + \beta_1 \cdot (flipper_{length}) + \epsilon
-$$
-where 
-
-* $\beta_0$ is the intercept of the regression line, (when flipper_length_mm =0)
-* $\beta_1$ is the slope of the regression line
-* $\epsilon$ is the error terms
-
-
-For simplicity we will remove any missing data from our variables of interest
-
-::: {.cell}
-
-```{.r .cell-code}
-na_flipper  <- is.na(penguins$flipper_length_mm)
-na_body_mass <- is.na(penguins$body_mass_g)
-```
-:::
-
-::: {.cell}
-
-```{.r .cell-code}
-which(na_flipper)
-which(na_body_mass)
-```
-:::
-
-
-we will remove rows 4 and 272 from both body mass and flipper length since they have missing data
-
-
-::: {.cell}
-
-```{.r .cell-code}
-flipper_length_mm <- penguins$flipper_length_mm[!na_flipper]
-body_mass_g <- penguins$body_mass_g[!na_body_mass]
-```
-:::
-
-
-In most cases missing data can occur in different rows for various variables, so it not recommended to remove missing data like we did above. Since we are only considering flipper length and body mass for our linear model, and both share missing data from the same row entries we can remove them as we did above.
-
-More examples on removing missing data can be found on this [sparkbyexamples](https://sparkbyexamples.com/r-programming/remove-rows-with-na-in-r/) tutorial
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-plot(flipper_length_mm,body_mass_g,
-     xlab = 'Flipper length (mm)',
-     ylab = 'Body mass (grams)')
-```
-:::
-
-::: {.cell}
-
-```{.r .cell-code}
-simple_lm <- lm(body_mass_g ~ flipper_length_mm)
-simple_lm
-```
-:::
-
-
-The model can be written as `body_mass_g = -5780.83 + 49.69*flipper_length_mm`, this is our line of best fit. We can then plot our line of best fit as shown below
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-plot(flipper_length_mm,body_mass_g,
-     xlab = 'Flipper length (mm)',
-     ylab = 'Body mass (grams)')
-abline(simple_lm,col = 'red',lwd =2)
-```
-:::
-
-
-
-Moreover, we can use the `summary()` function to quickly check whether our predictor is significantly associated with the response variable. If so, we can further assess how well our model fits our actual data by utilizing metrics provided by the summary output
-
-
-### Model Summary
-
-
-::: {.cell}
-
-```{.r .cell-code}
-lm_summary <- summary(simple_lm)
-lm_summary
-```
-:::
-
-
-
-The '*' symbols indicate the level of significance for the respective term. The significance codes below the line shows the definitions for the level of significance; one star means $0.01 < p < 0.05$, two stars mean $0.001 < p < 0.01$, and similar interpretations for the remaining symbols
-
-
-Breaking down the `summary` output, it contains the following components *(Extract using `$` operator)*
-
-### Call
-The function (formula) used to compute the regression model
-
-
-::: {.cell}
-
-```{.r .cell-code}
-lm_summary$call
-```
-:::
-
-
-### Residuals
-
-The difference between predicted values for the response variable using our constructed model and the observed response values from our original data. Mathematically, 
-$$
+\]</span> where</p>
+<ul>
+<li><span class="math inline">\(\beta_0\)</span> is the intercept of the regression line, (when flipper_length_mm =0)</li>
+<li><span class="math inline">\(\beta_1\)</span> is the slope of the regression line</li>
+<li><span class="math inline">\(\epsilon\)</span> is the error terms</li>
+</ul>
+<p>For simplicity we will remove any missing data from our variables of interest</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>na_flipper  <span class="ot">&lt;-</span> <span class="fu">is.na</span>(penguins<span class="sc">$</span>flipper_length_mm)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>na_body_mass <span class="ot">&lt;-</span> <span class="fu">is.na</span>(penguins<span class="sc">$</span>body_mass_g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(na_flipper)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]   4 272</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(na_body_mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]   4 272</code></pre>
+</div>
+</div>
+<p>we will remove rows 4 and 272 from both body mass and flipper length since they have missing data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>flipper_length_mm <span class="ot">&lt;-</span> penguins<span class="sc">$</span>flipper_length_mm[<span class="sc">!</span>na_flipper]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>body_mass_g <span class="ot">&lt;-</span> penguins<span class="sc">$</span>body_mass_g[<span class="sc">!</span>na_body_mass]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In most cases missing data can occur in different rows for various variables, so it not recommended to remove missing data like we did above. Since we are only considering flipper length and body mass for our linear model, and both share missing data from the same row entries we can remove them as we did above.</p>
+<p>More examples on removing missing data can be found on this <a href="https://sparkbyexamples.com/r-programming/remove-rows-with-na-in-r/">sparkbyexamples</a> tutorial</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(flipper_length_mm,body_mass_g,</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Flipper length (mm)'</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">'Body mass (grams)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="simple_linear_regression_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>simple_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> flipper_length_mm)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>simple_lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 
+#&gt; Call:
+#&gt; lm(formula = body_mass_g ~ flipper_length_mm)
+#&gt; 
+#&gt; Coefficients:
+#&gt;       (Intercept)  flipper_length_mm  
+#&gt;          -5780.83              49.69</code></pre>
+</div>
+</div>
+<p>The model can be written as <code>body_mass_g = -5780.83 + 49.69*flipper_length_mm</code>, this is our line of best fit. We can then plot our line of best fit as shown below</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(flipper_length_mm,body_mass_g,</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Flipper length (mm)'</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">'Body mass (grams)'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(simple_lm,<span class="at">col =</span> <span class="st">'red'</span>,<span class="at">lwd =</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="simple_linear_regression_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>Moreover, we can use the <code>summary()</code> function to quickly check whether our predictor is significantly associated with the response variable. If so, we can further assess how well our model fits our actual data by utilizing metrics provided by the summary output</p>
+<section id="model-summary" class="level3">
+<h3 class="anchored" data-anchor-id="model-summary">Model Summary</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>lm_summary <span class="ot">&lt;-</span> <span class="fu">summary</span>(simple_lm)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>lm_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 
+#&gt; Call:
+#&gt; lm(formula = body_mass_g ~ flipper_length_mm)
+#&gt; 
+#&gt; Residuals:
+#&gt;      Min       1Q   Median       3Q      Max 
+#&gt; -1058.80  -259.27   -26.88   247.33  1288.69 
+#&gt; 
+#&gt; Coefficients:
+#&gt;                    Estimate Std. Error t value Pr(&gt;|t|)    
+#&gt; (Intercept)       -5780.831    305.815  -18.90   &lt;2e-16 ***
+#&gt; flipper_length_mm    49.686      1.518   32.72   &lt;2e-16 ***
+#&gt; ---
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+#&gt; 
+#&gt; Residual standard error: 394.3 on 340 degrees of freedom
+#&gt; Multiple R-squared:  0.759,  Adjusted R-squared:  0.7583 
+#&gt; F-statistic:  1071 on 1 and 340 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>The ’*’ symbols indicate the level of significance for the respective term. The significance codes below the line shows the definitions for the level of significance; one star means <span class="math inline">\(0.01 &lt; p &lt; 0.05\)</span>, two stars mean <span class="math inline">\(0.001 &lt; p &lt; 0.01\)</span>, and similar interpretations for the remaining symbols</p>
+<p>Breaking down the <code>summary</code> output, it contains the following components <em>(Extract using <code>$</code> operator)</em></p>
+</section>
+<section id="call" class="level3">
+<h3 class="anchored" data-anchor-id="call">Call</h3>
+<p>The function (formula) used to compute the regression model</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>lm_summary<span class="sc">$</span>call</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; lm(formula = body_mass_g ~ flipper_length_mm)</code></pre>
+</div>
+</div>
+</section>
+<section id="residuals" class="level3">
+<h3 class="anchored" data-anchor-id="residuals">Residuals</h3>
+<p>The difference between predicted values for the response variable using our constructed model and the observed response values from our original data. Mathematically, <span class="math display">\[
 r_i = y_i - \hat{y}_i
-$$
-
-If the residual is 
-
-* *Positive:* The predicted value was an underestimate of the observed response
-* *Negative:* The predicted value was an overestimate of the observed response
-* *Zero:* The predicted value is exactly the same as the observed response
-
-
-<details><summary>Show Code</summary>
-
-
-::: {.cell}
-
-```{.r .cell-code}
-dat <- cbind.data.frame(flipper_length_mm,body_mass_g)
-
-p1 <- ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g)) +
-  geom_smooth(method = "lm", se = FALSE, 
-              color = "lightgrey",formula = 'y~x') +
-  geom_segment(aes(xend = flipper_length_mm, 
-                   yend = predict(simple_lm)), alpha = .2) +
-  geom_point(aes(color=residuals(simple_lm))) +
-  guides(color = 'none') + 
-  scale_color_gradient2(low = "blue", mid = "white", high = "red") +
-  labs(x = 'Flipper length (mm)',
-       y = 'Body mass (grams)')+
-  theme_bw()+
-  theme(panel.grid.minor = element_blank(),
-        panel.grid.major = element_blank())
-```
-:::
-
+\]</span></p>
+<p>If the residual is</p>
+<ul>
+<li><em>Positive:</em> The predicted value was an underestimate of the observed response</li>
+<li><em>Negative:</em> The predicted value was an overestimate of the observed response</li>
+<li><em>Zero:</em> The predicted value is exactly the same as the observed response</li>
+</ul>
+<details>
+<summary>
+Show Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">cbind.data.frame</span>(flipper_length_mm,body_mass_g)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"lightgrey"</span>,<span class="at">formula =</span> <span class="st">'y~x'</span>) <span class="sc">+</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">xend =</span> flipper_length_mm, </span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">yend =</span> <span class="fu">predict</span>(simple_lm)), <span class="at">alpha =</span> .<span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span><span class="fu">residuals</span>(simple_lm))) <span class="sc">+</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">'none'</span>) <span class="sc">+</span> </span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_gradient2</span>(<span class="at">low =</span> <span class="st">"blue"</span>, <span class="at">mid =</span> <span class="st">"white"</span>, <span class="at">high =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">'Flipper length (mm)'</span>,</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">'Body mass (grams)'</span>)<span class="sc">+</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
-
-
-
-::: {.cell}
-
-:::
-
-
-
-The figure above shows the magnitude of the resulting residuals from our fitted model. The darker the red points the more positive the residuals were, the darker the blue points the more negative the residuals were.
-
-Assuming our line is the "line of best fit" the sum of the residuals always equals zero
-
-
-::: {.cell}
-
-```{.r .cell-code}
-sum(lm_summary$residuals)
-```
-:::
-
-
-A few plots of the residuals to assess our regression assumptions:
-
-Residuals vs fitted values plot is used to detect non-linearity, unequal error variances, and possible outliers
-
-The residuals should form a "horizontal band" around the y=0 line, suggesting the assumption that the relationship is linear is reasonable as well that the variances of the error terms are equal
-
-
-::: {.cell}
-
-```{.r .cell-code}
-plot(body_mass_g,simple_lm$residuals,
-     xlab = 'Fitted values',
-     ylab = 'Residuals',
-     main = 'Residuals vs Fitted Values')
-abline(a = 0, b = 0, col = 'red', lwd = 2)
-```
-:::
-
-
-
-The following histogram of residuals suggests that the residuals (and hence the error terms) are normally distributed
-
-<details><summary>Show Code</summary>
-
-::: {.cell}
-
-```{.r .cell-code}
-lm_residuals <- simple_lm$residuals
-h <- hist(lm_residuals,
-          main = 'Distribution of Residuals',
-          xlab = 'Residuals')
-xfit <- seq(min(lm_residuals), max(lm_residuals), length = 40) 
-yfit <- dnorm(xfit, mean = mean(lm_residuals), sd = sd(lm_residuals))
-yfit <- yfit * diff(h$mids[1:2]) * length(lm_residuals) 
-lines(xfit, yfit, col = "red", lwd = 2)
-```
-:::
-
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="simple_linear_regression_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>The figure above shows the magnitude of the resulting residuals from our fitted model. The darker the red points the more positive the residuals were, the darker the blue points the more negative the residuals were.</p>
+<p>Assuming our line is the “line of best fit” the sum of the residuals always equals zero</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(lm_summary<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 2.494005e-12</code></pre>
+</div>
+</div>
+<p>A few plots of the residuals to assess our regression assumptions:</p>
+<p>Residuals vs fitted values plot is used to detect non-linearity, unequal error variances, and possible outliers</p>
+<p>The residuals should form a “horizontal band” around the y=0 line, suggesting the assumption that the relationship is linear is reasonable as well that the variances of the error terms are equal</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(body_mass_g,simple_lm<span class="sc">$</span>residuals,</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Fitted values'</span>,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">'Residuals'</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Residuals vs Fitted Values'</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a =</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">'red'</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="simple_linear_regression_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>The following histogram of residuals suggests that the residuals (and hence the error terms) are normally distributed</p>
+<details>
+<summary>
+Show Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>lm_residuals <span class="ot">&lt;-</span> simple_lm<span class="sc">$</span>residuals</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="fu">hist</span>(lm_residuals,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">main =</span> <span class="st">'Distribution of Residuals'</span>,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">'Residuals'</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>xfit <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(lm_residuals), <span class="fu">max</span>(lm_residuals), <span class="at">length =</span> <span class="dv">40</span>) </span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>yfit <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(xfit, <span class="at">mean =</span> <span class="fu">mean</span>(lm_residuals), <span class="at">sd =</span> <span class="fu">sd</span>(lm_residuals))</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>yfit <span class="ot">&lt;-</span> yfit <span class="sc">*</span> <span class="fu">diff</span>(h<span class="sc">$</span>mids[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="sc">*</span> <span class="fu">length</span>(lm_residuals) </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(xfit, yfit, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="simple_linear_regression_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+</section>
+<section id="coefficients" class="level3">
+<h3 class="anchored" data-anchor-id="coefficients">Coefficients</h3>
+<p>Estimated regression beta coefficients <span class="math inline">\((\hat{\beta}_0, \hat{\beta}_1)\)</span>, alongside their standard errors, <span class="math inline">\(t\)</span>-test, and <span class="math inline">\(p\)</span>-values.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>lm_summary<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;                      Estimate Std. Error   t value      Pr(&gt;|t|)
+#&gt; (Intercept)       -5780.83136 305.814504 -18.90306  5.587301e-55
+#&gt; flipper_length_mm    49.68557   1.518404  32.72223 4.370681e-107</code></pre>
+</div>
+</div>
+<p>From the output above:</p>
+<ul>
+<li><p>the model can be written as <code>body_mass_g = -5780.831 + 49.686*flipper_length_mm</code></p></li>
+<li><p>the intercept <span class="math inline">\(\beta_0\)</span> is -5780.831. It can be interpreted as the predicted body mass in grams for a flipper length of zero millimeters. In most scenarios the interpretation of the intercept coefficient will not make sense. For example, when the length of the flipper is zero millimeters we predict the weight of the penguin will be about -5780 grams</p></li>
+<li><p>the regression beta coefficient for the variable <code>flipper_length_mm</code> $_1 is 49.686. That is, for each additional millimeter of the flipper we expect the penguin to gain 49.686 grams of body mass. For example, if the length of the flipper is 200 millimeters then we expect the penguin’s body mass to be about <code>-5780.831 + 49.686 *200 = 4156.369</code> grams</p></li>
+</ul>
+</section>
+<section id="model-performance" class="level3">
+<h3 class="anchored" data-anchor-id="model-performance">Model Performance</h3>
+<p><em>Residual standard error (RSE), R-squared, Adjusted R-squared</em>, and the <em>F-statistic</em> are metrics used to check our model performance. That is, how well does our model fit the data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>metrics <span class="ot">&lt;-</span> <span class="fu">c</span>(lm_summary<span class="sc">$</span>sigma,lm_summary<span class="sc">$</span>r.squared,</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>             lm_summary<span class="sc">$</span>adj.r.squared,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>             lm_summary<span class="sc">$</span>fstatistic[<span class="st">'value'</span>])</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(metrics) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'RSE'</span>,<span class="st">'R_squared'</span>,<span class="st">'Adj_R_squared'</span>,<span class="st">'F_statistic'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>metrics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;           RSE     R_squared Adj_R_squared   F_statistic 
+#&gt;   394.2781775     0.7589925     0.7582837  1070.7445922</code></pre>
+</div>
+</div>
+<section id="residual-standard-error" class="level4">
+<h4 class="anchored" data-anchor-id="residual-standard-error">Residual standard error</h4>
+<p>The average variation of the observations points around the fitted regression line. This is the standard deviation of residual errors The closer to this value is to zero the better.</p>
+</section>
+<section id="r-squaredadjusted-r-squared" class="level4">
+<h4 class="anchored" data-anchor-id="r-squaredadjusted-r-squared">R-squared/Adjusted R-squared</h4>
+<p>The proportion of information <em>(i.e.&nbsp;variation)</em> in the data that can be explained by the model. The adjusted R-squared adjusts for the degrees of freedom. The higher these values are the better.</p>
+<p>In the simple linear regression setting <em>R-squared</em> is the square of the Pearson correlation coefficient</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(flipper_length_mm,body_mass_g)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.7589925</code></pre>
+</div>
+</div>
+</section>
+<section id="f-statistic" class="level4">
+<h4 class="anchored" data-anchor-id="f-statistic">F-statistic</h4>
+<p>The <em>F-statistic</em> gives the overall significance of the model. It assess whether at least one predictor variable has a non-zero coefficient. The higher this value the better. However,this test only becomes more important when dealing with multiple predictors instead of a single predictor found in a simple linear regression.</p>
+<p>A large <em>F-statistic</em> will corresponds to a statistically significant <em>p-value</em> <span class="math inline">\((p &lt; 0.05)\)</span>. In our example, the <em>F-statistic</em> equal 1070.74 producing a <em>p-value</em> less than <span class="math inline">\(2.2e-16\)</span>, which is highly significant</p>
 
 
-::: {.cell}
-
-:::
-
-
-
-### Coefficients
-
-Estimated regression beta coefficients $(\hat{\beta}_0, \hat{\beta}_1)$, alongside their standard errors, $t$-test, and $p$-values. 
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-lm_summary$coefficients
-```
-:::
-
-
-From the output above:
-
-* the model can be written as `body_mass_g = -5780.831 + 49.686*flipper_length_mm`
-
-* the intercept $\beta_0$ is -5780.831. It can be interpreted as the predicted body mass in grams for a flipper length of zero millimeters. In most scenarios the interpretation of the intercept coefficient will not make sense. For example, when the length of the flipper is zero millimeters we predict the weight of the penguin will be about -5780 grams
-
-
-* the regression beta coefficient for the variable `flipper_length_mm` $\beta_1  is 49.686. That is, for each additional millimeter of the flipper we expect the penguin to gain 49.686 grams of body mass. For example, if the length of the flipper is 200 millimeters then we expect the penguin's body mass to be about `-5780.831 + 49.686 *200 = 4156.369` grams
-
-
-### Model Performance
-
-*Residual standard error (RSE), R-squared, Adjusted R-squared*, and the *F-statistic* are metrics used to check our model performance. That is, how well does our model fit the data.
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-metrics <- c(lm_summary$sigma,lm_summary$r.squared,
-             lm_summary$adj.r.squared,
-             lm_summary$fstatistic['value'])
-
-names(metrics) <- c('RSE','R_squared','Adj_R_squared','F_statistic')
-```
-:::
-
-::: {.cell}
-
-```{.r .cell-code}
-metrics
-```
-:::
-
-
-#### Residual standard error
-
-The average variation of the observations points around the fitted regression line. This is the standard deviation of residual errors
-The closer to this value is to zero the better.
-
-#### R-squared/Adjusted R-squared
-
-The proportion of information *(i.e. variation)* in the data that can be explained by the model. The adjusted R-squared adjusts for the degrees of freedom. The higher these values are the better.
-
-In the simple linear regression setting *R-squared* is the square of the Pearson correlation coefficient 
-
-
-::: {.cell}
-
-```{.r .cell-code}
-cor(flipper_length_mm,body_mass_g)^2
-```
-:::
-
-
-
-####  F-statistic 
-
-The *F-statistic* gives the overall significance of the model. It assess whether at least one predictor variable has a non-zero coefficient. The higher this value the better. However,this test only becomes more important when dealing with multiple predictors instead of a single predictor found in a simple linear regression.
-
-A large *F-statistic* will corresponds to a statistically significant *p-value* $(p < 0.05)$. In our example, the *F-statistic* equal 1070.74 producing a *p-value* less than  $2.2e-16$, which is highly significant
-
-
---->
-
-
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

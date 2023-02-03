@@ -7,8 +7,3 @@ The corresponding tutorials are listed below
 
 - [Simple Linear Regression](/ucla/stats10/simple_linear_regression.qmd)
 - [Sampling and Simulation](/ucla/stats10/sampling_simulation.qmd)
-
-
-
-
-
