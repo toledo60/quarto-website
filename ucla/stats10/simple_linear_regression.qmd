@@ -188,7 +188,7 @@ Residuals vs fitted values plot is used to detect non-linearity, unequal error v
 The residuals should form a "horizontal band" around the y=0 line, suggesting the assumption that the relationship is linear is reasonable as well that the variances of the error terms are equal
 
 ```{r}
-plot(body_mass_g,simple_lm$residuals,
+plot(fitted(simple_lm),simple_lm$residuals,
      xlab = 'Fitted values',
      ylab = 'Residuals',
      main = 'Residuals vs Fitted Values')
@@ -196,7 +196,7 @@ abline(a = 0, b = 0, col = 'red', lwd = 2)
 ```
 
 
-The following histogram of residuals suggests that the residuals (and hence the error terms) are normally distributed
+The following histogram of residuals suggests the residuals (and hence the error terms) are normally distributed
 
 <details><summary>Show Code</summary>
 ```{r,eval=FALSE}
@@ -222,6 +222,15 @@ yfit <- yfit * diff(h$mids[1:2]) * length(lm_residuals)
 lines(xfit, yfit, col = "red", lwd = 2)
 ```
 
+A more commonly used plot to test the normality of our residuals, is using a so-called Q-Q plot
+
+```{r}
+qqnorm(simple_lm$residuals)
+qqline(simple_lm$residuals) 
+```
+
+To determine normality, if the residuals in the plot fall along the plotted line, then the data is normally distributed
+
 
 ### Coefficients
 
@@ -239,7 +248,7 @@ From the output above:
 * the intercept $\beta_0$ is -5780.831. It can be interpreted as the predicted body mass in grams for a flipper length of zero millimeters. In most scenarios the interpretation of the intercept coefficient will not make sense. For example, when the length of the flipper is zero millimeters we predict the weight of the penguin will be about -5780 grams
 
 
-* the regression beta coefficient for the variable `flipper_length_mm` $\beta_1  is 49.686. That is, for each additional millimeter of the flipper we expect the penguin to gain 49.686 grams of body mass. For example, if the length of the flipper is 200 millimeters then we expect the penguin's body mass to be about `-5780.831 + 49.686 *200 = 4156.369` grams
+* the regression beta coefficient for the variable `flipper_length_mm` $\beta_1$ is 49.686. That is, for each additional millimeter of the flipper we expect the penguin to gain 49.686 grams of body mass. For example, if the length of the flipper is 200 millimeters then we expect the penguin's body mass to be about `-5780.831 + 49.686 *200 = 4156.369` grams
 
 
 ### Model Performance

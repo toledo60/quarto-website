@@ -375,7 +375,7 @@ Show Code
 <p>Residuals vs fitted values plot is used to detect non-linearity, unequal error variances, and possible outliers</p>
 <p>The residuals should form a “horizontal band” around the y=0 line, suggesting the assumption that the relationship is linear is reasonable as well that the variances of the error terms are equal</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(body_mass_g,simple_lm<span class="sc">$</span>residuals,</span>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">fitted</span>(simple_lm),simple_lm<span class="sc">$</span>residuals,</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Fitted values'</span>,</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">'Residuals'</span>,</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Residuals vs Fitted Values'</span>)</span>
@@ -384,7 +384,7 @@ Show Code
 <p><img src="simple_linear_regression_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
-<p>The following histogram of residuals suggests that the residuals (and hence the error terms) are normally distributed</p>
+<p>The following histogram of residuals suggests the residuals (and hence the error terms) are normally distributed</p>
 <details>
 <summary>
 Show Code
@@ -405,12 +405,21 @@ Show Code
 <p><img src="simple_linear_regression_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
+<p>A more commonly used plot to test the normality of our residuals, is using a so-called Q-Q plot</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(simple_lm<span class="sc">$</span>residuals)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(simple_lm<span class="sc">$</span>residuals) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="simple_linear_regression_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>To determine normality, if the residuals in the plot fall along the plotted line, then the data is normally distributed</p>
 </section>
 <section id="coefficients" class="level3">
 <h3 class="anchored" data-anchor-id="coefficients">Coefficients</h3>
 <p>Estimated regression beta coefficients <span class="math inline">\((\hat{\beta}_0, \hat{\beta}_1)\)</span>, alongside their standard errors, <span class="math inline">\(t\)</span>-test, and <span class="math inline">\(p\)</span>-values.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>lm_summary<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>lm_summary<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;                      Estimate Std. Error   t value      Pr(&gt;|t|)
 #&gt; (Intercept)       -5780.83136 305.814504 -18.90306  5.587301e-55
@@ -421,21 +430,21 @@ Show Code
 <ul>
 <li><p>the model can be written as <code>body_mass_g = -5780.831 + 49.686*flipper_length_mm</code></p></li>
 <li><p>the intercept <span class="math inline">\(\beta_0\)</span> is -5780.831. It can be interpreted as the predicted body mass in grams for a flipper length of zero millimeters. In most scenarios the interpretation of the intercept coefficient will not make sense. For example, when the length of the flipper is zero millimeters we predict the weight of the penguin will be about -5780 grams</p></li>
-<li><p>the regression beta coefficient for the variable <code>flipper_length_mm</code> $_1 is 49.686. That is, for each additional millimeter of the flipper we expect the penguin to gain 49.686 grams of body mass. For example, if the length of the flipper is 200 millimeters then we expect the penguin’s body mass to be about <code>-5780.831 + 49.686 *200 = 4156.369</code> grams</p></li>
+<li><p>the regression beta coefficient for the variable <code>flipper_length_mm</code> <span class="math inline">\(\beta_1\)</span> is 49.686. That is, for each additional millimeter of the flipper we expect the penguin to gain 49.686 grams of body mass. For example, if the length of the flipper is 200 millimeters then we expect the penguin’s body mass to be about <code>-5780.831 + 49.686 *200 = 4156.369</code> grams</p></li>
 </ul>
 </section>
 <section id="model-performance" class="level3">
 <h3 class="anchored" data-anchor-id="model-performance">Model Performance</h3>
 <p><em>Residual standard error (RSE), R-squared, Adjusted R-squared</em>, and the <em>F-statistic</em> are metrics used to check our model performance. That is, how well does our model fit the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>metrics <span class="ot">&lt;-</span> <span class="fu">c</span>(lm_summary<span class="sc">$</span>sigma,lm_summary<span class="sc">$</span>r.squared,</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>             lm_summary<span class="sc">$</span>adj.r.squared,</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>             lm_summary<span class="sc">$</span>fstatistic[<span class="st">'value'</span>])</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(metrics) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'RSE'</span>,<span class="st">'R_squared'</span>,<span class="st">'Adj_R_squared'</span>,<span class="st">'F_statistic'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>metrics <span class="ot">&lt;-</span> <span class="fu">c</span>(lm_summary<span class="sc">$</span>sigma,lm_summary<span class="sc">$</span>r.squared,</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>             lm_summary<span class="sc">$</span>adj.r.squared,</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>             lm_summary<span class="sc">$</span>fstatistic[<span class="st">'value'</span>])</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(metrics) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'RSE'</span>,<span class="st">'R_squared'</span>,<span class="st">'Adj_R_squared'</span>,<span class="st">'F_statistic'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>metrics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>metrics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;           RSE     R_squared Adj_R_squared   F_statistic 
 #&gt;   394.2781775     0.7589925     0.7582837  1070.7445922</code></pre>
@@ -450,7 +459,7 @@ Show Code
 <p>The proportion of information <em>(i.e.&nbsp;variation)</em> in the data that can be explained by the model. The adjusted R-squared adjusts for the degrees of freedom. The higher these values are the better.</p>
 <p>In the simple linear regression setting <em>R-squared</em> is the square of the Pearson correlation coefficient</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(flipper_length_mm,body_mass_g)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(flipper_length_mm,body_mass_g)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 0.7589925</code></pre>
 </div>
