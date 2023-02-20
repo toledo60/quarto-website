@@ -4,10 +4,17 @@ knitr::opts_chunk$set(
   fig.width = 6,
   fig.height = 4,
   warning = FALSE,
-  eval = FALSE
+  eval = TRUE
 )
 ```
 
+Packages used throughout this tutorial
+
+```{r}
+library(ggplot2)
+library(patchwork)
+library(palmerpenguins)
+```
 
 
 ## Sampling Distributions
@@ -125,6 +132,29 @@ sampling_dist1000 <- ggplot(data.frame(sample_means),aes(sample_means))+
 ```
 
 ```{r}
+n_samples <- 5000
+sample_means <- numeric(n_samples)
+
+for(i in 1:n_samples){
+  sample_i =  rnorm(n = n_samples, mean = 0, sd=1) # generate a new sample
+  sample_means[i] = mean(sample_i) # obtain mean for each sample
+}
+
+sample_mean <- round(mean(sample_means),3)
+standard_error <- round(sd(sample_means),3)
+
+sampling_dist5000 <- ggplot(data.frame(sample_means),aes(sample_means))+
+  geom_histogram(fill = 'steelblue',alpha = 0.3,
+                 color = 'black',bins=30)+
+  labs(title = 'Sampling distribution',
+       x = 'Sample means',y = '',
+       subtitle = paste0('mean=',sample_mean,
+                         ', standard error=',standard_error))+
+  facet_grid(~5000)
+```
+
+
+```{r}
 n_samples <- 10000
 sample_means <- numeric(n_samples)
 
@@ -148,31 +178,8 @@ sampling_dist10000 <- ggplot(data.frame(sample_means),aes(sample_means))+
 
 
 ```{r}
-n_samples <- 20000
-sample_means <- numeric(n_samples)
-
-for(i in 1:n_samples){
-  sample_i =  rnorm(n = n_samples, mean = 0, sd=1) # generate a new sample
-  sample_means[i] = mean(sample_i) # obtain mean for each sample
-}
-
-sample_mean <- round(mean(sample_means),3)
-standard_error <- round(sd(sample_means),3)
-
-sampling_dist20000 <- ggplot(data.frame(sample_means),aes(sample_means))+
-  geom_histogram(fill = 'steelblue',alpha = 0.3,
-                 color = 'black',bins=30)+
-  labs(title = 'Sampling distribution',
-       x = 'Sample means',y = '',
-       subtitle = paste0('mean=',sample_mean,
-                         ', standard error=',standard_error))+
-  facet_grid(~20000)
-```
-
-
-```{r}
-plots <- sampling_dist100 + sampling_dist1000 + sampling_dist10000 +
-  sampling_dist20000 + plot_layout(nrow=2, ncol=2)
+plots <- sampling_dist100 + sampling_dist1000 + sampling_dist5000 +
+  sampling_dist10000 + plot_layout(nrow=2, ncol=2)
 ```
 
 </details>

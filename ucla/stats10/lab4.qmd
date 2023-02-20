@@ -2,7 +2,7 @@ In this lab you will:
 
 1.  Reinforce understanding of simulating and random sampling
 
-2.  Demonstrate the Central Limit Theorem's application to means
+2.  Be introduced to Central Limit Theorem and its applications
 
 
 The corresponding tutorials are listed below
