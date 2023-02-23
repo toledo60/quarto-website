@@ -8,6 +8,6 @@ In this lab you will:
 The corresponding tutorials are listed below
 
 - [Normal Distribution](/ucla/stats10/normal_distribution.qmd)
-- [CLT](/ucla/stats10/CLT.qmd)
+- [Central Limit Theorem](/ucla/stats10/CLT.qmd)
 
 

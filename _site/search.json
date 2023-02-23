@@ -32,28 +32,28 @@
     "href": "email.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "I can promise 30 minutes per appointment, longer if needed depending on the issues. I am not your personal tutor, so please try attending assigned office hours, asking questions first on our campuswire, and collaborating with classmates. If you are still struggling or can’t resolve the issues you are having, feel free to set up an appointment with me."
+    "text": "I can promise 30 minutes per appointment, longer if needed depending on the issues. I am not your personal tutor, so please try attending assigned office hours, asking questions first on our campuswire, and collaborating with classmates. If you are still struggling or can’t resolve your issues feel free to set up an appointment with me."
   },
   {
     "objectID": "email.html#appropriate-email",
     "href": "email.html#appropriate-email",
     "title": "Jose Toledo Luna",
     "section": "Appropriate Email",
-    "text": "Appropriate Email\nHello Jose,\n(Reason for wanting to meet)\nMy available times this week are\n\nMonday: ANYTIME\nTueday: 10am-12pm, 2-3pm\nWednesday: 10am-1pm\nThursday: ANYTIME\nFriday, 8am-2pm\n\nDo any of these times work for you?\nyour signature"
+    "text": "Appropriate Email\nHello Jose,\nBriefly explain what you are struggling with and insert screenshots of error messages (If its R code related)\nMy available times this week are\n\nMonday: ANYTIME\nTueday: 10am-12pm, 2-3pm\nWednesday: 10am-1pm\nThursday: ANYTIME\nFriday, 8am-2pm\n\nDo any of these times work for you?\nyour signature"
   },
   {
     "objectID": "email.html#not-appropriate-email",
     "href": "email.html#not-appropriate-email",
     "title": "Jose Toledo Luna",
     "section": "Not Appropriate Email",
-    "text": "Not Appropriate Email\nHello Jose,\nCan we setup an appointment? Im struggling with the assignment\nIn the not appropriate email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
+    "text": "Not Appropriate Email\nHello Jose,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)\n\n\n\n\n\n\nWarning\n\n\n\nIf you fail to follow the format of the appropriate email example, by\n\nnot including your available times\nnot including images of code errors (if its R code related only)\n\nThen I will reply to your email with a link to this page so you can try again"
   },
   {
     "objectID": "zoom.html",
     "href": "zoom.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Week\nDate\nTopic\nLink\n\n\n\n\nWeek 1\nMon, Jan 09\nLab 1: Installing R and R studio\nLecture 1\n\n\n\nWed, Jan 11\nLab 1: Variables, vectors\nLecture 2\n\n\nWeek 2\nMon, Jan 16\nHOLIDAY\nR markdown tutorial\n\n\n\nWed, Jan 18\nLab 1: Importing data, summarize/visualize single numerical variable\nLecture 3\n\n\nWeek 3\nMon, Jan 23\nLab 1: Summarize Two numerical variables, One categorical variable\nLecture 4\n\n\n\nWed, Jan 25\nLab 1: Summarize two categorical variables\nLab 2: Introduction to relational operators\nLecture 5\n\n\nWeek 4\nMon, Jan 30\nLab 2: Logical operators and subsetting\nLecture 6\n\n\n\nWed, Feb 1\nLab 2: Subsetting dataframes\nLecture 7\n\n\nWeek 5\nMon, Feb 6\nIntroduction to ggplot2\nOptional Lecture\n\n\n\nWed, Feb 8\nLab 3: Simple linear regression\nLecture 8\n\n\nWeek 6\nMon, Feb 13\nLab 3: Introduction to sampling, writing own R functions\nLecture 9\n\n\n\nWed, Feb 15\nLab 3:\nSimulation\nLecture 10\n\n\nWeek 7\nMon, Feb 20\nHOLIDAY\nNO LECTURE\n\n\n\nWed, Feb 22"
+    "text": "Week\nDate\nTopic\nLink\n\n\n\n\nWeek 1\nMon, Jan 09\nLab 1: Installing R and R studio\nLecture 1\n\n\n\nWed, Jan 11\nLab 1: Variables, vectors\nLecture 2\n\n\nWeek 2\nMon, Jan 16\nHOLIDAY\nR markdown tutorial\n\n\n\nWed, Jan 18\nLab 1: Importing data, summarize/visualize single numerical variable\nLecture 3\n\n\nWeek 3\nMon, Jan 23\nLab 1: Summarize Two numerical variables, One categorical variable\nLecture 4\n\n\n\nWed, Jan 25\nLab 1: Summarize two categorical variables\nLab 2: Introduction to relational operators\nLecture 5\n\n\nWeek 4\nMon, Jan 30\nLab 2: Logical operators and subsetting\nLecture 6\n\n\n\nWed, Feb 1\nLab 2: Subsetting dataframes\nLecture 7\n\n\nWeek 5\nMon, Feb 6\nIntroduction to ggplot2\nOptional Lecture\n\n\n\nWed, Feb 8\nLab 3: Simple linear regression\nLecture 8\n\n\nWeek 6\nMon, Feb 13\nLab 3: Introduction to sampling, writing own R functions\nLecture 9\n\n\n\nWed, Feb 15\nLab 3:\nSimulation\nLecture 10\n\n\nWeek 7\nMon, Feb 20\nHOLIDAY\nNO LECTURE\n\n\n\nWed, Feb 22\nLab 4:\nNormal Distribution, Overview of CLT\nLecture 11\n\n\nWeek 8\nMon, Feb 27\n\n\n\n\n\nWed, March 1"
   },
   {
     "objectID": "index.html",
@@ -144,14 +144,14 @@
     "href": "ucla/stats10/lab4.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "In this lab you will:\n\nReinforce understanding of simulating and random sampling\nBe introduced to Central Limit Theorem and its applications\n\nThe corresponding tutorials are listed below\n\nNormal Distribution\nCLT"
+    "text": "In this lab you will:\n\nReinforce understanding of simulating and random sampling\nBe introduced to Central Limit Theorem and its applications\n\nThe corresponding tutorials are listed below\n\nNormal Distribution\nCentral Limit Theorem"
   },
   {
     "objectID": "ucla/stats10/normal_distribution.html",
     "href": "ucla/stats10/normal_distribution.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Packages required for this tutorial"
+    "text": "The following packages were used for this tutorial but are not required for your lab"
   },
   {
     "objectID": "ucla/stats10/normal_distribution.html#normal-distribution",
