@@ -8,13 +8,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-Packages used throughout this tutorial
+The following packages were used for this tutorial but are not required for your lab
 
+<details>
+
+<summary>Show Code</summary>
 ```{r}
 library(ggplot2)
 library(patchwork)
 library(palmerpenguins)
 ```
+</details>
 
 
 ## Sampling Distributions
@@ -194,78 +198,9 @@ To interactively visualize how the sampling distribution of the
 sample mean builds up one sample at a time and see when the Central Limit Theorem start to kick in, I highly recommend the [art of stats](https://artofstat.com/web-apps) sampling distributions and Central Limit Theorem web applications.
 
 
-
-### Sample proportions
-
-The idea behind generating a sampling distribution for sample proportions is very similar to the procedure described in [Sample means](#sample-mean) section.
-
-To obtain the sampling distribution for the sample proportions;
-
-For the total number of samples do the following:
-
-(1) Generate a random sample of size $n$ from the population
-(2) Compute the sample proportion and store the result in a variable, say `sample_proportions`
-(3) Plot each of the `sample_proportions` using a histogram
-
-Here the sample proportion is the fraction of samples which were success. We will take a large number of random samples from the population, where the population is generated from a binomial distribution with 10 trials and probability of success $p=0.25$ for each trial.
-
-
-```{r}
-n_samples <- 10000
-sample_size <- 100 # each sample will be of size 100
-sample_proportions <- numeric(n_samples)
-
-for(i in 1:n_samples){
-  sample_i =  rbinom(n = sample_size, size= 10, 
-                     prob = 0.25)/sample_size # generate a new sample
-  sample_proportions[i] = mean(sample_i) # obtain proportion for each sample
-}
-```
-
-<details>
-<summary>Show Code</summary>
-```{r}
-sampling_dist_prop <- ggplot(data.frame(sample_proportions),
-                             aes(sample_proportions))+
-  geom_histogram(fill = 'steelblue',alpha = 0.3,
-                 color = 'black',bins=30)+
-  labs(title = 'Sampling distribution',
-       x = 'Sample proportions',y = '')
-```
-</details>
-
-
-```{r,echo=FALSE}
-sampling_dist_prop
-```
-
-The plot above is the distribution of sample proportions after taking 10,000 samples with size $n=100$ from the population. The overall distribution appears to be normally distributed *(bell shaped curve)*.
-
-
-Through the *CLT*, the sampling distribution for the sample proportions will be distributed with mean $p$ and standard error $\sqrt{\frac{p(1-p)}{n}}$, $\hat{p} \sim N(p,\sqrt{\frac{p(1-p)}{n}} )$
-
-
-```{r}
-mean(sample_proportions)
-```
-
-which is approximately the population parameter $p=0.25$.
-
-The standard error is 
-
-```{r}
-sd(sample_proportions)
-```
-
-
-
-
-
-## Applications
+### Application: Sample Mean
 
 Now we will apply the the concepts of generating a sampling distribution for the sample mean using a real world dataset. In particular, we will use the `penguins` dataset from the `palmerpenguins` package.
-
-### Sample mean
 
 Using the penguins dataset we will generate a sampling distribution for the sample mean of the penguins' body mass *(grams)*
 
@@ -330,7 +265,74 @@ sd(body_mass_xbar)
 ```
 
 
-### Sample proportion
+
+
+### Sample proportions
+
+The idea behind generating a sampling distribution for sample proportions is very similar to the procedure described in [Sample means](#sample-mean) section.
+
+To obtain the sampling distribution for the sample proportions;
+
+For the total number of samples do the following:
+
+(1) Generate a random sample of size $n$ from the population
+(2) Compute the sample proportion and store the result in a variable, say `sample_proportions`
+(3) Plot each of the `sample_proportions` using a histogram
+
+Here the sample proportion is the fraction of samples which were success. We will take a large number of random samples from the population, where the population is generated from a binomial distribution with 10 trials and probability of success $p=0.25$ for each trial.
+
+
+```{r}
+n_samples <- 10000
+sample_size <- 100 # each sample will be of size 100
+n_trials <- 10
+sample_proportions <- numeric(n_samples)
+
+for(i in 1:n_samples){
+  sample_i =  rbinom(n = sample_size, size= n_trials, 
+                     prob = 0.25) # generate a new sample
+  sample_proportions[i] = mean(sample_i)/n_trials # obtain proportion for each sample
+}
+```
+
+<details>
+<summary>Show Code</summary>
+```{r}
+sampling_dist_prop <- ggplot(data.frame(sample_proportions),
+                             aes(sample_proportions))+
+  geom_histogram(fill = 'steelblue',alpha = 0.3,
+                 color = 'black',bins=30)+
+  labs(title = 'Sampling distribution',
+       x = 'Sample proportions',y = '')
+```
+</details>
+
+
+```{r,echo=FALSE}
+sampling_dist_prop
+```
+
+The plot above is the distribution of sample proportions after taking 10,000 samples with size $n=100$ from the population. The overall distribution appears to be normally distributed *(bell shaped curve)*.
+
+
+Through the *CLT*, the sampling distribution for the sample proportions will be distributed with mean $p$ and standard error $\sqrt{\frac{p(1-p)}{n}}$, $\hat{p} \sim N(p,\sqrt{\frac{p(1-p)}{n}} )$
+
+
+```{r}
+mean(sample_proportions)
+```
+
+which is approximately the population parameter $p=0.25$.
+
+The standard error is 
+
+```{r}
+sd(sample_proportions)
+```
+
+
+
+### Application: Sample proportion
 
 
 Using the penguins dataset we will generate a sampling distribution for the sample proportion of the Adelie penguins
@@ -359,7 +361,7 @@ adelie_proportions <- numeric(n_samples)
 
 for(i in 1:n_samples){
   sample_i =  sample(species, size = sample_size) # generate a new sample from the population
-  adelie_proportions[i] = mean(sample_i == 'Adelie') # obtain mean for each sample
+  adelie_proportions[i] = mean(sample_i == 'Adelie') # obtain proportion for each sample
 }
 
 sampling_dist <- ggplot(data.frame(adelie_proportions),
