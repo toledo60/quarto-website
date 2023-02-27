@@ -1,0 +1,69 @@
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4,
+  warning = FALSE,
+  eval = TRUE
+)
+```
+
+The following packages were used for this tutorial but are not required for your lab
+
+<details>
+
+<summary>Show Code</summary>
+
+```{r}
+library(ggplot2)
+library(patchwork)
+```
+
+```{r}
+theme_set(theme_bw())
+theme_replace(panel.grid.minor = element_blank(),
+              panel.grid.major = element_blank())
+```
+
+</details>
+
+## Binomial Distribution
+
+The binomial distribution is a discrete probability distribution. It describes the outcome of $n$ independent trials in an experiment. Each trial is assumed to have only two outcomes, either success or failure. If the probability of a successful trial is $p$, then the probability of having $x$ successful outcomes in an experiment of $n$ independent trials is as follows
+
+$$
+P(X = x) = \frac{n!}{(n-x)! \, x!} p^x (1-p)^{n-k}
+$$
+where $x =0,1,2,\dots,n$
+
+Let $X \sim Bin(n,p)$ be a random variable following a binomial distribution with mean $np$ and standard deviation $\sqrt{np(1-p)}$. In R, the following functions described in the table below, allows us to summarize the function relating to the binomial distribution
+
++------------+------------------------------------------------+
+| Function   | Description                                    |
++============+================================================+
+| dbinom     | Binomial density\                              |
+|            | (Probability Density Function)                 |
++------------+------------------------------------------------+
+| pbinom     | Binomial distribution\                         |
+|            | (Cumulative Distribution Function)             |
++------------+------------------------------------------------+
+| qbinom     | Quantile function of the Binomial distribution |
++------------+------------------------------------------------+
+| rbinom     | Binomial random number generation              |
++------------+------------------------------------------------+
+
+
+
+
+## dbinom
+
+
+
+## pbinom
+
+
+## qbinom
+
+
+## rbinom
+

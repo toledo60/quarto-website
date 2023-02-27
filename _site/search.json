@@ -53,7 +53,7 @@
     "href": "zoom.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Week\nDate\nTopic\nLink\n\n\n\n\nWeek 1\nMon, Jan 09\nLab 1: Installing R and R studio\nLecture 1\n\n\n\nWed, Jan 11\nLab 1: Variables, vectors\nLecture 2\n\n\nWeek 2\nMon, Jan 16\nHOLIDAY\nR markdown tutorial\n\n\n\nWed, Jan 18\nLab 1: Importing data, summarize/visualize single numerical variable\nLecture 3\n\n\nWeek 3\nMon, Jan 23\nLab 1: Summarize Two numerical variables, One categorical variable\nLecture 4\n\n\n\nWed, Jan 25\nLab 1: Summarize two categorical variables\nLab 2: Introduction to relational operators\nLecture 5\n\n\nWeek 4\nMon, Jan 30\nLab 2: Logical operators and subsetting\nLecture 6\n\n\n\nWed, Feb 1\nLab 2: Subsetting dataframes\nLecture 7\n\n\nWeek 5\nMon, Feb 6\nIntroduction to ggplot2\nOptional Lecture\n\n\n\nWed, Feb 8\nLab 3: Simple linear regression\nLecture 8\n\n\nWeek 6\nMon, Feb 13\nLab 3: Introduction to sampling, writing own R functions\nLecture 9\n\n\n\nWed, Feb 15\nLab 3:\nSimulation\nLecture 10\n\n\nWeek 7\nMon, Feb 20\nHOLIDAY\nNO LECTURE\n\n\n\nWed, Feb 22\nLab 4:\nNormal Distribution, Overview of CLT\nLecture 11\n\n\nWeek 8\nMon, Feb 27\n\n\n\n\n\nWed, March 1"
+    "text": "Week\nDate\nTopic\nLink\n\n\n\n\nWeek 1\nMon, Jan 09\nLab 1: Installing R and R studio\nLecture 1\n\n\n\nWed, Jan 11\nLab 1: Variables, vectors\nLecture 2\n\n\nWeek 2\nMon, Jan 16\nHOLIDAY\nR markdown tutorial\n\n\n\nWed, Jan 18\nLab 1: Importing data, summarize/visualize single numerical variable\nLecture 3\n\n\nWeek 3\nMon, Jan 23\nLab 1: Summarize Two numerical variables, One categorical variable\nLecture 4\n\n\n\nWed, Jan 25\nLab 1: Summarize two categorical variables\nLab 2: Introduction to relational operators\nLecture 5\n\n\nWeek 4\nMon, Jan 30\nLab 2: Logical operators and subsetting\nLecture 6\n\n\n\nWed, Feb 1\nLab 2: Subsetting dataframes\nLecture 7\n\n\nWeek 5\nMon, Feb 6\nIntroduction to ggplot2\nOptional Lecture\n\n\n\nWed, Feb 8\nLab 3: Simple linear regression\nLecture 8\n\n\nWeek 6\nMon, Feb 13\nLab 3: Introduction to sampling, writing own R functions\nLecture 9\n\n\n\nWed, Feb 15\nLab 3:\nSimulation\nLecture 10\n\n\nWeek 7\nMon, Feb 20\nHOLIDAY\nNO LECTURE\n\n\n\nWed, Feb 22\nLab 4:\nNormal Distribution, Overview of CLT\nLecture 11\n\n\nWeek 8\nMon, Feb 27\nLab 4:\nCLT Sample Means\nLecture 12\n\n\n\nWed, March 1"
   },
   {
     "objectID": "index.html",
@@ -145,6 +145,48 @@
     "title": "Jose Toledo Luna",
     "section": "",
     "text": "In this lab you will:\n\nReinforce understanding of simulating and random sampling\nBe introduced to Central Limit Theorem and its applications\n\nThe corresponding tutorials are listed below\n\nNormal Distribution\nCentral Limit Theorem"
+  },
+  {
+    "objectID": "ucla/stats10/binomial.html",
+    "href": "ucla/stats10/binomial.html",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "The following packages were used for this tutorial but are not required for your lab"
+  },
+  {
+    "objectID": "ucla/stats10/binomial.html#binomial-distribution",
+    "href": "ucla/stats10/binomial.html#binomial-distribution",
+    "title": "Jose Toledo Luna",
+    "section": "Binomial Distribution",
+    "text": "Binomial Distribution\nThe binomial distribution is a discrete probability distribution. It describes the outcome of \\(n\\) independent trials in an experiment. Each trial is assumed to have only two outcomes, either success or failure. If the probability of a successful trial is \\(p\\), then the probability of having \\(x\\) successful outcomes in an experiment of \\(n\\) independent trials is as follows\n\\[\nP(X = x) = \\frac{n!}{(n-x)! \\, x!} p^x (1-p)^{n-k}\n\\] where \\(x =0,1,2,\\dots,n\\)\nLet \\(X \\sim Bin(n,p)\\) be a random variable following a binomial distribution with mean \\(np\\) and standard deviation \\(\\sqrt{np(1-p)}\\). In R, the following functions described in the table below, allows us to summarize the function relating to the binomial distribution\n\n\n\n\n\n\n\nFunction\nDescription\n\n\n\n\ndbinom\nBinomial density\n(Probability Density Function)\n\n\npbinom\nBinomial distribution\n(Cumulative Distribution Function)\n\n\nqbinom\nQuantile function of the Binomial distribution\n\n\nrbinom\nBinomial random number generation"
+  },
+  {
+    "objectID": "ucla/stats10/binomial.html#dbinom",
+    "href": "ucla/stats10/binomial.html#dbinom",
+    "title": "Jose Toledo Luna",
+    "section": "dbinom",
+    "text": "dbinom"
+  },
+  {
+    "objectID": "ucla/stats10/binomial.html#pbinom",
+    "href": "ucla/stats10/binomial.html#pbinom",
+    "title": "Jose Toledo Luna",
+    "section": "pbinom",
+    "text": "pbinom"
+  },
+  {
+    "objectID": "ucla/stats10/binomial.html#qbinom",
+    "href": "ucla/stats10/binomial.html#qbinom",
+    "title": "Jose Toledo Luna",
+    "section": "qbinom",
+    "text": "qbinom"
+  },
+  {
+    "objectID": "ucla/stats10/binomial.html#rbinom",
+    "href": "ucla/stats10/binomial.html#rbinom",
+    "title": "Jose Toledo Luna",
+    "section": "rbinom",
+    "text": "rbinom"
   },
   {
     "objectID": "ucla/stats10/normal_distribution.html",
