@@ -218,8 +218,7 @@ For the total number of samples do the following:
 (2) Compute the sample mean of the penguins body mass and store the result in a variable, say `body_mass_xbar`
 (3) Plot each of the `body_mass_xbar` using a histogram
 
-<details>
-<summary>Show Code</summary>
+
 ```{r}
 n_samples <- 10000
 sample_size <- 50
@@ -230,7 +229,11 @@ for(i in 1:n_samples){
   sample_i =  sample(body_mass_g, size = sample_size) # generate a new sample
   body_mass_xbar[i] = mean(sample_i) # obtain mean for each sample
 }
+```
 
+<details>
+<summary>Show Code</summary>
+```{r}
 sampling_dist <- ggplot(data.frame(body_mass_xbar),
                         aes(body_mass_xbar))+
   geom_histogram(fill = 'steelblue',alpha = 0.3,
