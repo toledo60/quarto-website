@@ -351,8 +351,7 @@ For the total number of samples do the following:
 (2) Compute the sample proportion of the penguins Adelie species and store the result in a variable, say `adelie_proportions`
 (3) Plot each of the `adelie_proportions` using a histogram
 
-<details>
-<summary>Show Code</summary>
+
 ```{r}
 n_samples <- 10000
 sample_size <- 50
@@ -363,7 +362,11 @@ for(i in 1:n_samples){
   sample_i =  sample(species, size = sample_size) # generate a new sample from the population
   adelie_proportions[i] = mean(sample_i == 'Adelie') # obtain proportion for each sample
 }
+```
 
+<details>
+<summary>Show Code</summary>
+```{r}
 sampling_dist <- ggplot(data.frame(adelie_proportions),
                         aes(adelie_proportions))+
   geom_bar(fill = 'steelblue',alpha = 0.3,
