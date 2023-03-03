@@ -189,6 +189,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data">Importing Data</a>
   <ul class="collapse">
+  <li><a href="#comma-seperated-values-csv" id="toc-comma-seperated-values-csv" class="nav-link" data-scroll-target="#comma-seperated-values-csv">Comma-Seperated Values (CSV)</a></li>
+  <li><a href="#text-file-txt" id="toc-text-file-txt" class="nav-link" data-scroll-target="#text-file-txt">Text File (TXT)</a></li>
   <li><a href="#overview-of-births-dataset" id="toc-overview-of-births-dataset" class="nav-link" data-scroll-target="#overview-of-births-dataset">Overview of Births Dataset</a></li>
   </ul></li>
   <li><a href="#summarizing-and-visualizing-data" id="toc-summarizing-and-visualizing-data" class="nav-link" data-scroll-target="#summarizing-and-visualizing-data">Summarizing and visualizing data</a>
@@ -570,9 +572,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="importing-data" class="level1">
 <h1>Importing Data</h1>
-<p>We will now import a <code>csv</code> file into R, to do this we’ll use the <code>read.csv</code> function. A simple template to follow is</p>
+<section id="comma-seperated-values-csv" class="level2">
+<h2 class="anchored" data-anchor-id="comma-seperated-values-csv">Comma-Seperated Values (CSV)</h2>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This tutorial assumes the data set is in working condition. That is we assume the default settings for <code>read.csv</code>. In some cases we may need to change the header, specify the field separator and more. See <code>?read.csv</code> for further details and examples.</p>
+</div>
+</div>
+<p>We will now import a <code>csv</code> file, to do this we will use the <code>read.csv</code> function. A simple template to follow is</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">'path where csv is located at in your computer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">'path where csv is located in your computer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>An easy way to find the location of your data <em>(or any file)</em> is using the <code>file.choose()</code> function in R. <code>file.choose()</code> will bring up a file explorer window that allows you to interactively choose a file path to work with.</p>
 <p>In your console, run the following command</p>
@@ -627,28 +644,71 @@ Warning
 #&gt; 6         None      None</code></pre>
 </div>
 </div>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The above tutorial assumes the data set is a <code>csv</code> file in working condition. That is we assume the default settings for <code>read.csv</code>. In some cases we may need to change the header, specify the field separator and more. See <code>?read.csv</code> for further details and examples.</p>
-</div>
-</div>
 <p>We are not just limited to <code>csv</code> files, we can import data from Excel (in <code>csv</code>, <code>XLSX</code>, or <code>txt</code> format), <code>SAS</code>, <code>Stata</code>, <code>SPSS</code>, or others. A good reference to import various data formats can be found on <a href="https://www.datacamp.com/tutorial/r-data-import-tutorial">datacamp r-data-import tutorial</a></p>
+</section>
+<section id="text-file-txt" class="level2">
+<h2 class="anchored" data-anchor-id="text-file-txt">Text File (TXT)</h2>
+<p>Next, we consider importing a <code>.txt</code> file. To do so we will use the <code>read.table</code> function instead of the <code>read.csv</code> function. For this example, we consider the <code>ozone.txt</code> file from our course website</p>
+<p>A simple template to follow is</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">'path where txt file is located in your computer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After running <code>file.choose()</code> on our console and locating the path in which we stored our data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file.choose</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/ozone.txt"</code></pre>
+</div>
+</div>
+<p>we can copy/paste the path as follows</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>ozone_dat <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/ozone.txt"</span>, </span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">header =</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>ozone_dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;           x       y    o3
+#&gt; 1 -120.0258 34.4622 0.044
+#&gt; 2 -119.7413 36.7055 0.081
+#&gt; 3 -121.7333 36.4819 0.035
+#&gt; 4 -119.2908 36.3325 0.080
+#&gt; 5 -117.1289 32.8364 0.053</code></pre>
+</div>
+</div>
+<p>You will notice we now used an additional argument <code>header = TRUE</code> in our <code>read.table</code> function. We use <code>header=TRUE</code>, whenever the text tile contains names of the variables as its first line.</p>
+<p>If we forget to use <code>header=TRUE</code>, the first line of the text file will be treated as a row of the dataset and <code>read.table</code> will automatically create the variable names for us</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>wrong_ozone_dat <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/ozone.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>wrong_ozone_dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;          V1      V2    V3
+#&gt; 1         x       y    o3
+#&gt; 2 -120.0258 34.4622 0.044
+#&gt; 3 -119.7413 36.7055 0.081
+#&gt; 4 -121.7333 36.4819 0.035
+#&gt; 5 -119.2908 36.3325  0.08</code></pre>
+</div>
+</div>
+<p>In the above example, <code>read.table</code> automatically create the variable names <code>V1,V2,V2</code> for each column and the first row has values <code>x,y,o3</code> <em>(which is incorrect)</em>.</p>
+<p>In conclusion, some text files do not have variable names in the first row and only contain the actual data. As a result, it is our responsibility to import the data in a suitable manner.</p>
+</section>
 <section id="overview-of-births-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="overview-of-births-dataset">Overview of Births Dataset</h2>
 <p>The <code>births</code> dataset is a sample of information about babies born in North Carolina. It is considered a data frame because it contains numeric information about each baby, as well as various pieces of categorical data such as the race of the parents, and whether the parents had a smoking habit.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>birth_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>birth_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>birth_dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>birth_dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -674,7 +734,7 @@ Warning
 </div>
 <p>We can view the structure of our dataset using <code>str()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(birth_dat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(birth_dat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 'data.frame':    1992 obs. of  21 variables:
 #&gt;  $ Gender      : chr  "Male" "Female" "Male" "Female" ...
@@ -705,7 +765,7 @@ Warning
 <p><code>factor</code> will be considered as a categorical variable and <code>double</code> would be considered as a numerical variable.</p>
 <p>We can use the <code>$</code> operator to access values from a data frame column. For example, if we want to extract the values from the <code>Gender</code> column from our dataset, we run the following command</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -714,7 +774,7 @@ Warning
 </div>
 <p>If we save these values into a variable we will be able to manipulate them without altering the dataset itself.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>genders <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>genders <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -727,7 +787,7 @@ Warning
 <h3 class="anchored" data-anchor-id="numerical-variables">Numerical variables</h3>
 <p>One way to extract all the numerical columns is using both <code>Filter</code> and <code>is.numeric</code> functions. Below are the first five rows of all the numerical columns in <code>birth_dat</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Filter</span>(is.numeric,birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Filter</span>(is.numeric,birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -741,7 +801,7 @@ Warning
 </div>
 <p>The names of the numerical columns can be obtained using <code>colnames()</code> function in combination with the above statement</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.numeric,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.numeric,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] "weight"  "Apgar1"  "Fage"    "Mage"    "Feduc"   "Meduc"   "TotPreg"
 #&gt; [8] "Visits"  "Gained"</code></pre>
@@ -797,28 +857,28 @@ Warning
 </table>
 <p>Next, we’ll save the values from <code>weight</code> column into a separate variable and compute several numerical summaries listed above</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>birth_weight <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>birth_weight <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 116.0512</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 117</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 14</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 177</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #&gt;    14.0   106.0   117.0   116.1   129.0   177.0</code></pre>
@@ -826,28 +886,28 @@ Warning
 </div>
 <p>While <code>summary()</code> give us a quick numerical summary of our distribution, it is important to also visualize the overall distribution using a plot such as a boxplot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 <p>or a histogram</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 <p>From the histogram above, while the overall distribution of the birth weights is symmetrical there are outliers causing the distribution to be skewed to the left.</p>
 <p>For <code>boxplot()</code> and <code>hist()</code> we used the default settings, while they are informative we can alter their appearance to be more professional.</p>
 <p>For example, we changed the x-axis label and y-axis label using <code>xlab</code>,<code>ylab</code> arguments,respectively. We changed the title with <code>main</code> and the color of the boxplot with <code>col</code>. The <code>col</code> argument can take values such as <code>red</code>,<code>blue</code> or any HEX code, see <code>?boxplot</code> for further customization.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(birth_weight,</span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">'Boxplot of Birth Weights'</span>,</span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span><span class="st">'birth weights'</span>, <span class="at">ylab=</span><span class="st">'ounces'</span>,</span>
-<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="st">'#61b1ed'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(birth_weight,</span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">'Boxplot of Birth Weights'</span>,</span>
+<span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span><span class="st">'birth weights'</span>, <span class="at">ylab=</span><span class="st">'ounces'</span>,</span>
+<span id="cb103-4"><a href="#cb103-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="st">'#61b1ed'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -865,13 +925,13 @@ Tip
 </div>
 <p>We can apply similar customization to our histogram</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight,</span>
-<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'Histogram of Birth Weights'</span>,</span>
-<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span><span class="st">'birth weights'</span>,</span>
-<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">'#d1584f'</span>,</span>
-<span id="cb95-5"><a href="#cb95-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(birth_weight,</span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'Histogram of Birth Weights'</span>,</span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span><span class="st">'birth weights'</span>,</span>
+<span id="cb104-4"><a href="#cb104-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">'#d1584f'</span>,</span>
+<span id="cb104-5"><a href="#cb104-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 <p>The <code>hist</code> function uses the Sturges method by default to determine the number of <code>breaks</code> on the histogram. We can manually change the number of breaks, but we should be careful not to specify a low or high number of breaks. Usually the default setting is appropriate for most scenarios.</p>
@@ -881,7 +941,7 @@ Tip
 <p>One way to extract all the character columns is using both <code>Filter</code> and <code>is.character</code> functions. A similar argument can be said for any columns that are factors, but instead we’d use <code>is.factor</code>.</p>
 <p>Below are the first five rows of all the character columns in <code>birth_dat</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Filter</span>(is.character,birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Filter</span>(is.character,birth_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -901,7 +961,7 @@ Tip
 </div>
 <p>The names of the character columns can be obtained using <code>colnames()</code> function in combination with the above statement</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.character,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.character,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;  [1] "Gender"       "Premie"       "Marital"      "Racemom"      "Racedad"     
 #&gt;  [6] "Hispmom"      "Hispdad"      "Habit"        "MomPriorCond" "BirthDef"    
@@ -911,11 +971,11 @@ Tip
 <p>We will only consider the <code>Hispmom</code> variable from our dataset to demonstrate methods to summarize and visualize a character variable.</p>
 <p>First, we’ll save the values from <code>Hispmom</code> column into a separate variable and compute several categorical summaries</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>hispanic_mom <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Hispmom</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>hispanic_mom <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Hispmom</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>table()</code> function in R can be used to quickly create frequency tables.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(hispanic_mom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(hispanic_mom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; hispanic_mom
 #&gt;   Mexican   NotHisp OtherHisp 
@@ -924,7 +984,7 @@ Tip
 </div>
 <p>From the above frequency table we observe there were 25 mom who were Mexican, 1693 non Hispanic, and 84 were other types of Hispanic. We can easily convert the frequency table into a frequency table of proportions using <code>prop.table()</code>. The input for <code>prop.table()</code> is a table created using <code>table()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; hispanic_mom
 #&gt;    Mexican    NotHisp  OtherHisp 
@@ -933,14 +993,14 @@ Tip
 </div>
 <p>Now, we observe roughly 10.79% of moms were Mexican, 84.99% were non Hispanic and 4.22% were other types of Hispanic. Note that all of the proportions should add up to 1.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 1</code></pre>
 </div>
 </div>
 <p>While the above method works, it is not the only way to obtain frequency tables. We can obtain the same results using <code>tally()</code> from the <code>mosaic</code> library.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">tally</span>(hispanic_mom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">tally</span>(hispanic_mom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; X
 #&gt;   Mexican   NotHisp OtherHisp 
@@ -949,7 +1009,7 @@ Tip
 </div>
 <p>If we want frequency tables of proportions, we need to use the argument <code>format</code> and specify <code>format = 'proportion'</code>. There are other formats such as <code>'count'</code>, <code>'percent'</code> etc.. for more details run <code>?mosaicCore::tally()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">tally</span>(hispanic_mom,<span class="at">format=</span><span class="st">'proportion'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">tally</span>(hispanic_mom,<span class="at">format=</span><span class="st">'proportion'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; X
 #&gt;    Mexican    NotHisp  OtherHisp 
@@ -958,18 +1018,18 @@ Tip
 </div>
 <p>To plot a single categorical variable we can use <code>barplot()</code>. The input for <code>barplot()</code> when dealing with categorical data is a <code>table</code>, like the ones we created above</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(hispanic_mom))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(hispanic_mom))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-58-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-67-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 <p>Instead of the frequency counts, we can plot frequency of proportions by inputting a frequency tables of proportions.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom)),</span>
-<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">'Ethnicity Proportions of Moms'</span>,</span>
-<span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">'#d59cdb'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(hispanic_mom)),</span>
+<span id="cb121-2"><a href="#cb121-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">'Ethnicity Proportions of Moms'</span>,</span>
+<span id="cb121-3"><a href="#cb121-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">'#d59cdb'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-59-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-68-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 </section>
@@ -980,36 +1040,36 @@ Tip
 <h3 class="anchored" data-anchor-id="numerical-variables-1">Numerical variables</h3>
 <p>We consider the following two numerical variables: <code>Feduc</code> and <code>Meduc</code>, which is the highest education for fathers and mothers in this dataset, respectively.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a>father_eduction <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Feduc</span>
-<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a>mother_education <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Meduc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>father_eduction <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Feduc</span>
+<span id="cb122-2"><a href="#cb122-2" aria-hidden="true" tabindex="-1"></a>mother_education <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Meduc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can compare their distributions in a single plot as we did in <em>Section 2</em> with boxplots</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(father_eduction,mother_education,</span>
-<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">names =</span> <span class="fu">c</span>(<span class="st">'father'</span>,<span class="st">'mother'</span>),</span>
-<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="fu">c</span>(<span class="st">'#f5d376'</span>,<span class="st">'#f5767c'</span>),</span>
-<span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">'Highest Education for Parernts'</span>,</span>
-<span id="cb114-5"><a href="#cb114-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">'Year'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb123"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(father_eduction,mother_education,</span>
+<span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">names =</span> <span class="fu">c</span>(<span class="st">'father'</span>,<span class="st">'mother'</span>),</span>
+<span id="cb123-3"><a href="#cb123-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="fu">c</span>(<span class="st">'#f5d376'</span>,<span class="st">'#f5767c'</span>),</span>
+<span id="cb123-4"><a href="#cb123-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">'Highest Education for Parernts'</span>,</span>
+<span id="cb123-5"><a href="#cb123-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">'Year'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-70-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 <p>For boxplots its pretty straight forward to compare two numerical distributions using the syntax <code>boxplot(v1,v2,...)</code>. For histograms it requires a bit more work.</p>
 <p>We start by creating a histogram for the first variable, then creating another histrogam for the second variable but using the argument <code>add=TRUE</code>. We must specify a unique color for each histogram representing the variables. In order for both of the histograms to fit properly on the same plot we must take into account the lowest and highest values among the multiple numerical variables.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>low_x <span class="ot">&lt;-</span> <span class="fu">min</span>(father_eduction,mother_education)</span>
-<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a>high_x <span class="ot">&lt;-</span> <span class="fu">max</span>(father_eduction,mother_education)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a>low_x <span class="ot">&lt;-</span> <span class="fu">min</span>(father_eduction,mother_education)</span>
+<span id="cb124-2"><a href="#cb124-2" aria-hidden="true" tabindex="-1"></a>high_x <span class="ot">&lt;-</span> <span class="fu">max</span>(father_eduction,mother_education)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Lastly, we must specify a legend to appropriately distinguish the multiple histograms using the function <code>legend()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(father_eduction, <span class="at">col=</span><span class="st">'lightcoral'</span>,</span>
-<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim=</span><span class="fu">c</span>(low_x,high_x),</span>
-<span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'Education for Parents'</span>, <span class="at">xlab=</span><span class="st">'Year'</span>)</span>
-<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(mother_education, <span class="at">col=</span><span class="st">'lightblue'</span>, <span class="at">add=</span><span class="cn">TRUE</span>)</span>
-<span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'topright'</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">'father'</span>, <span class="st">'mother'</span>), </span>
-<span id="cb116-6"><a href="#cb116-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill=</span><span class="fu">c</span>(<span class="st">'lightcoral'</span>, <span class="st">'lightblue'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(father_eduction, <span class="at">col=</span><span class="st">'lightcoral'</span>,</span>
+<span id="cb125-2"><a href="#cb125-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim=</span><span class="fu">c</span>(low_x,high_x),</span>
+<span id="cb125-3"><a href="#cb125-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'Education for Parents'</span>, <span class="at">xlab=</span><span class="st">'Year'</span>)</span>
+<span id="cb125-4"><a href="#cb125-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(mother_education, <span class="at">col=</span><span class="st">'lightblue'</span>, <span class="at">add=</span><span class="cn">TRUE</span>)</span>
+<span id="cb125-5"><a href="#cb125-5" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'topright'</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">'father'</span>, <span class="st">'mother'</span>), </span>
+<span id="cb125-6"><a href="#cb125-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill=</span><span class="fu">c</span>(<span class="st">'lightcoral'</span>, <span class="st">'lightblue'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-72-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 <div class="callout-warning callout callout-style-default callout-captioned">
@@ -1027,13 +1087,13 @@ Warning
 </div>
 <p>We can also consider a <em>scatter plot</em> to visualize the relationship between two numerical variables. We consider the two numerical variables <code>Gained</code> and <code>weight</code>. <code>Gained</code> describes the weight gained during the pregnancy term and <code>weight</code> describe the weight of the baby at birth.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> birth_dat<span class="sc">$</span>Gained,<span class="at">y =</span> birth_dat<span class="sc">$</span>weight,</span>
-<span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Baby weight vs pregnancy weight gain'</span>,</span>
-<span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'weight gained during pregnancy'</span>,</span>
-<span id="cb117-4"><a href="#cb117-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">'Baby weight (oz.)'</span>,</span>
-<span id="cb117-5"><a href="#cb117-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">'lightcoral'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb126"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> birth_dat<span class="sc">$</span>Gained,<span class="at">y =</span> birth_dat<span class="sc">$</span>weight,</span>
+<span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Baby weight vs pregnancy weight gain'</span>,</span>
+<span id="cb126-3"><a href="#cb126-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'weight gained during pregnancy'</span>,</span>
+<span id="cb126-4"><a href="#cb126-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">'Baby weight (oz.)'</span>,</span>
+<span id="cb126-5"><a href="#cb126-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">'lightcoral'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="lab1_files/figure-html/unnamed-chunk-64-1.png" class="img-fluid" width="576"></p>
+<p><img src="lab1_files/figure-html/unnamed-chunk-73-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 </section>
@@ -1042,7 +1102,7 @@ Warning
 <p>For this example, we consider the following two character variables <code>Hispdad</code> and <code>Habit</code>. <code>Hispdad</code> determines whether the father of the baby was Hispanic or not. In particular, are they Mexican, non-Hispanic, or other type of Hispanic ethnicity. <code>Habit</code> determines whether or not the subject had a smoking habit or not.</p>
 <p>When dealing with two categorical variables we can create a two-way table using <code>table(v1,v2)</code>. Below is the table of frequency for both <code>Habit</code> and <code>Hispdad</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;            
 #&gt;             Mexican NotHisp OtherHisp Unknown
@@ -1053,7 +1113,7 @@ Warning
 <p>From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 1236 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.</p>
 <p>We can obtain a frequency table of proportions using <code>prop.table()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;            
 #&gt;                 Mexican     NotHisp   OtherHisp     Unknown
@@ -1063,7 +1123,7 @@ Warning
 </div>
 <p>You will notice that summing each cell will give us 1</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 1</code></pre>
 </div>
