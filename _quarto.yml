@@ -23,6 +23,7 @@ format:
   html:
     theme: simplex
     css: styles.css
+    linkcolor: "#ba303e"
     toc: false
     
 freeze: auto

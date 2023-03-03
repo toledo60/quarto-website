@@ -1,6 +1,6 @@
 ## Publications
 
-1.  **Luna, J**. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. [Statistics in Medicine](https://onlinelibrary.wiley.com/doi/10.1002/sim.9423). 2022; 1- 18 [PDF](/docs/publications/Orthogonal array composite designs for drug combination experiments.pdf "PDF")
+1.  **Luna, J**. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. [Statistics in Medicine](https://onlinelibrary.wiley.com/doi/10.1002/sim.9423). 2022; 1- 18 [[PDF]](/docs/publications/Orthogonal array composite designs for drug combination experiments.pdf "PDF")
 
 
 ## Software 
