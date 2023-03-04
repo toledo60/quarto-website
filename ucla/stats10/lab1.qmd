@@ -638,22 +638,97 @@ For this example, we consider the following two character variables `Hispdad` an
 
 When dealing with two categorical variables we can create a two-way table using `table(v1,v2)`. Below is the table of frequency for both `Habit` and `Hispdad`.
 
+*Note: We save the table as a variable so we can use it later*
+
 ```{r}
-table(birth_dat$Habit,birth_dat$Hispdad)
+smoker_hispanic_dad <- table(birth_dat$Habit,birth_dat$Hispdad)
+smoker_hispanic_dad
 ```
 
 From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 1236 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.
 
-We can obtain a frequency table of proportions using `prop.table()`
+We can obtain a table of proportions using `prop.table()`
 
 ```{r}
-prop.table(table(birth_dat$Habit,birth_dat$Hispdad))
+prop.table(smoker_hispanic_dad)
 ```
 
-You will notice that summing each cell will give us 1
+
+Now, lets plot the results of our table using the default `barplot` settings
 
 ```{r}
-sum(prop.table(table(birth_dat$Habit,birth_dat$Hispdad)))
+barplot(smoker_hispanic_dad)
 ```
+
+It is difficult to understand the meaning of the black and gray filled sections of the barplot. Although we may have a general understanding that the gray portion represents smokers and the black portion represents non-smokers based on the accompanying table, we should not assume that the reader will automatically make this connection.
+
+We can add a legend by using the argument `legend.text=TRUE`, and `barplot` will use the row names of our table to make the legend. Moreover, we add appropriate labels to our plot
+
+```{r}
+barplot(smoker_hispanic_dad,
+        legend.text = TRUE,
+        xlab = 'Ethnicity',
+        ylab = 'Counts')
+```
+
+
+The above figure shows a stacked bar plot. If we wanted the bars next to each other, rather than on top of each other, we can use the argument `beside=TRUE`. 
+
+
+```{r}
+barplot(smoker_hispanic_dad,
+        legend.text = TRUE,
+        beside = TRUE,
+        xlab = 'Ethnicity',
+        ylab = 'Counts')
+```
+
+
+It is evident that the number of non-smokers exceeds that of smokers across all ethnicities. However, we may be able to obtain a more comprehensive understanding of the data by altering the grouping order of the bars. Specifically, we should examine which ethnic group has a higher count for each smoking category.
+
+
+We can change the order of our table by taking the *tranpose*, that is we swap the columns and rows. In R, we can transpose any table-like object using the function `t()`
+
+```{r}
+t(smoker_hispanic_dad)
+```
+
+From this point of view, we can observe the number of counts in each smoking habit category for each ethnicity. For example, there were 184 Mexican fathers who are non-smokers and 5 Mexican fathers that did smoke. Similar, interpretations can be made for other ethnic groups.
+
+We can now use `barplot` on this new transposed table
+
+```{r}
+barplot(t(smoker_hispanic_dad),
+        legend.text = TRUE,
+        beside = TRUE,
+        xlab = 'Smoking Habit',
+        ylab = 'Counts')
+```
+
+We can clearly see the non-Hispanic fathers make up the highest counts for non-smokers and smokers. While the default color palette is color-blind friendly it can be hard to distinguish the categories based on these colors. 
+
+
+With a quick google search of  "four color palettes" you can find great palettes for 4 categories. For example, the following color palette was obtain from [colorhunt.co](https://colorhunt.co)
+
+```{r}
+barplot(t(smoker_hispanic_dad),
+        legend.text = TRUE,
+        col =c('#4E6E81','#F9DBBB','#FF0303','#2E3840'),
+        beside = TRUE,
+        xlab = 'Smoking Habit',
+        ylab = 'Counts')
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -1101,8 +1101,10 @@ Warning
 <h3 class="anchored" data-anchor-id="categorical-variables-1">Categorical variables</h3>
 <p>For this example, we consider the following two character variables <code>Hispdad</code> and <code>Habit</code>. <code>Hispdad</code> determines whether the father of the baby was Hispanic or not. In particular, are they Mexican, non-Hispanic, or other type of Hispanic ethnicity. <code>Habit</code> determines whether or not the subject had a smoking habit or not.</p>
 <p>When dealing with two categorical variables we can create a two-way table using <code>table(v1,v2)</code>. Below is the table of frequency for both <code>Habit</code> and <code>Hispdad</code>.</p>
+<p><em>Note: We save the table as a variable so we can use it later</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a>smoker_hispanic_dad <span class="ot">&lt;-</span> <span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)</span>
+<span id="cb127-2"><a href="#cb127-2" aria-hidden="true" tabindex="-1"></a>smoker_hispanic_dad</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;            
 #&gt;             Mexican NotHisp OtherHisp Unknown
@@ -1111,9 +1113,9 @@ Warning
 </div>
 </div>
 <p>From the above frequency table of counts you will notice that there were 184 Mexican dads who were non-smokers, 5 Mexican dads who were smokers, 1236 non-Hispanics who were non-smokers, 117 non-Hispanics who were smokers and similar interpretations can be made for the remaining cells.</p>
-<p>We can obtain a frequency table of proportions using <code>prop.table()</code></p>
+<p>We can obtain a table of proportions using <code>prop.table()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(smoker_hispanic_dad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;            
 #&gt;                 Mexican     NotHisp   OtherHisp     Unknown
@@ -1121,11 +1123,71 @@ Warning
 #&gt;   Smoker    0.002510040 0.058734940 0.001004016 0.031626506</code></pre>
 </div>
 </div>
-<p>You will notice that summing each cell will give us 1</p>
+<p>Now, lets plot the results of our table using the default <code>barplot</code> settings</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(birth_dat<span class="sc">$</span>Habit,birth_dat<span class="sc">$</span>Hispdad)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(smoker_hispanic_dad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-76-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>It is difficult to understand the meaning of the black and gray filled sections of the barplot. Although we may have a general understanding that the gray portion represents smokers and the black portion represents non-smokers based on the accompanying table, we should not assume that the reader will automatically make this connection.</p>
+<p>We can add a legend by using the argument <code>legend.text=TRUE</code>, and <code>barplot</code> will use the row names of our table to make the legend. Moreover, we add appropriate labels to our plot</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(smoker_hispanic_dad,</span>
+<span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb132-3"><a href="#cb132-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">'Ethnicity'</span>,</span>
+<span id="cb132-4"><a href="#cb132-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">'Counts'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-77-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>The above figure shows a stacked bar plot. If we wanted the bars next to each other, rather than on top of each other, we can use the argument <code>beside=TRUE</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(smoker_hispanic_dad,</span>
+<span id="cb133-2"><a href="#cb133-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb133-3"><a href="#cb133-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">beside =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb133-4"><a href="#cb133-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">'Ethnicity'</span>,</span>
+<span id="cb133-5"><a href="#cb133-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">'Counts'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-78-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>It is evident that the number of non-smokers exceeds that of smokers across all ethnicities. However, we may be able to obtain a more comprehensive understanding of the data by altering the grouping order of the bars. Specifically, we should examine which ethnic group has a higher count for each smoking category.</p>
+<p>We can change the order of our table by taking the <em>tranpose</em>, that is we swap the columns and rows. In R, we can transpose any table-like object using the function <code>t()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(smoker_hispanic_dad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 1</code></pre>
+<pre><code>#&gt;            
+#&gt;             NonSmoker Smoker
+#&gt;   Mexican         184      5
+#&gt;   NotHisp        1236    117
+#&gt;   OtherHisp        78      2
+#&gt;   Unknown         307     63</code></pre>
+</div>
+</div>
+<p>From this point of view, we can observe the number of counts in each smoking habit category for each ethnicity. For example, there were 184 Mexican fathers who are non-smokers and 5 Mexican fathers that did smoke. Similar, interpretations can be made for other ethnic groups.</p>
+<p>We can now use <code>barplot</code> on this new transposed table</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">t</span>(smoker_hispanic_dad),</span>
+<span id="cb136-2"><a href="#cb136-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb136-3"><a href="#cb136-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">beside =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb136-4"><a href="#cb136-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">'Smoking Habit'</span>,</span>
+<span id="cb136-5"><a href="#cb136-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">'Counts'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-80-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p>We can clearly see the non-Hispanic fathers make up the highest counts for non-smokers and smokers. While the default color palette is color-blind friendly it can be hard to distinguish the categories based on these colors.</p>
+<p>With a quick google search of “four color palettes” you can find great palettes for 4 categories. For example, the following color palette was obtain from <a href="https://colorhunt.co">colorhunt.co</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb137"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">t</span>(smoker_hispanic_dad),</span>
+<span id="cb137-2"><a href="#cb137-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb137-3"><a href="#cb137-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span><span class="fu">c</span>(<span class="st">'#4E6E81'</span>,<span class="st">'#F9DBBB'</span>,<span class="st">'#FF0303'</span>,<span class="st">'#2E3840'</span>),</span>
+<span id="cb137-4"><a href="#cb137-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">beside =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb137-5"><a href="#cb137-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">'Smoking Habit'</span>,</span>
+<span id="cb137-6"><a href="#cb137-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">'Counts'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lab1_files/figure-html/unnamed-chunk-81-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 
