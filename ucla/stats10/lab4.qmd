@@ -1,3 +1,10 @@
+---
+author: Jose Toledo Luna
+date: today
+title: Lab 4
+toc: true
+---
+
 In this lab you will:
 
 1.  Reinforce understanding of simulating and random sampling

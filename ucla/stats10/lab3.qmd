@@ -1,3 +1,10 @@
+---
+author: Jose Toledo Luna
+date: today
+title: Lab 3
+toc: true
+---
+
 In this lab, you will
 
 1. Understand linear regression in R and verify linear regression assumptions

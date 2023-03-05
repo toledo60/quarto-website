@@ -1,0 +1,30 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/ucla/stats10/intro.html",
+      "/ucla/stats10/lab1.html",
+      "/ucla/stats10/lab3.html",
+      "/ucla/stats10/lab2.html",
+      "/ucla/stats10/simple_linear_regression.html",
+      "/ucla/stats10/lab4.html",
+      "/ucla/stats10/binomial.html",
+      "/ucla/stats10/normal_distribution.html",
+      "/ucla/stats10/transformations.html",
+      "/ucla/stats10/sampling_simulation.html",
+      "/ucla/stats10/fundamentals.html",
+      "/ucla/stats10/intro_categorical_variables.html",
+      "/ucla/stats10/CLT.html",
+      "/ucla/stats10/intro_numerical_variables.html",
+      "/ucla/stats10/importing_data.html"
+    ]
+  },
+  {
+    "listing": "/ucla/stats10/intro.html",
+    "items": []
+  },
+  {
+    "listing": "/ucla/stats10/index.html",
+    "items": []
+  }
+]

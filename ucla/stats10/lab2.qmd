@@ -1,4 +1,7 @@
 ---
+author: Jose Toledo Luna
+date: today
+title: Lab 2
 toc: true
 ---
 
