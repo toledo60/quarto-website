@@ -1,0 +1,24 @@
+---
+author: Jose Toledo Luna
+date: today
+title: Lab 5
+description: Introduction to Confidence Intervals and Hypothesis Testing
+toc: true
+---
+
+---
+
+In this lab you will:
+
+1. Learn how to conduct confidence interval for one population proportion
+2. Learn how to conduct hypothesis tests for one population proportion
+
+
+The corresponding tutorials are listed below
+
+- [Confidence Intervals](/ucla/stats10/confidence_intervals.qmd)
+- [Hypothesis Testing](/ucla/stats10/hypothesis_testing.qmd)
+
+
+
+
