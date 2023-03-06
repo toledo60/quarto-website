@@ -1,0 +1,23 @@
+---
+author: Jose Toledo Luna
+date: today
+title: Lab 4
+description: Introduction to Central Limit Theorem
+toc: true
+---
+
+---
+
+In this lab you will:
+
+1.  Reinforce understanding of simulating and random sampling
+
+2.  Be introduced to Central Limit Theorem and its applications
+
+
+The corresponding tutorials are listed below
+
+- [Normal Distribution](/ucla/stats10/normal_distribution.qmd)
+- [Central Limit Theorem](/ucla/stats10/CLT.qmd)
+
+

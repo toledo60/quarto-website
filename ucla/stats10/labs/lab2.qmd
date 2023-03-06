@@ -1,0 +1,431 @@
+---
+author: Jose Toledo Luna
+date: today
+title: Lab 2
+description: Logical Statements with Applications
+toc: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4,
+  eval = TRUE
+)
+```
+
+---
+ 
+## Logical Statements
+
+There are only two logical values, `TRUE` and `FALSE`. In R, we can abbreviate `TRUE` with `T` and `FALSE` with `F`. They can be interpreted as any option corresponding to a binary choice. For example, yes/no, do/don't, satisfied/not satisfied or even `1/0`.
+
+A basic way to define a logical statement is using a **relational operator** to compare two expressions. For example, we may ask ourselves *"is x less than a certain number ?"* or using a real world example from the `mtcars` dataset *"how many cars have more than 18 miles per gallon?"*
+
+### Relational operators
+
+The table below summarizes some of the **relational operators** available in R:
+
+| Operator | Interpretation           | Basic Example | Result  |
+|----------|--------------------------|---------------|---------|
+| ==       | Equal to                 | 5 == 5        | `TRUE`  |
+| !=       | Not equal to             | 4 != 5        | `TRUE`  |
+| \>       | Greater than             | 4 \> 5        | `FALSE` |
+| \<       | Less than                | 4 \< 5        | `TRUE`  |
+| \<=      | Less than or equal to    | 4 \<= 5       | `TRUE`  |
+| \>=      | Greater than or equal to | 4 \>= 5       | `FALSE` |
+
+From the table above we consider single numbers as our two expression to compare, but we can extend this idea to vectors, data.frames, matrices of various data types. When applying relational operators to vectors it is important to know they are being compared *element-wise*.
+
+We first start off by comparing a vector with a single number
+
+```{r}
+c(1,3,5,7,9) < 5
+```
+
+*Interpretation: Is 1 less than 5? is 3 less than 5? is 5 less than 5? is 7 less than 5? is 9 less than 5?*
+
+The output from the above example is a `logical` vector
+
+```{r}
+class(c(1,3,5,7,9) < 5)
+```
+
+with `TRUE/FALSE` if the given condition was satisfied or not. What if we were given the question *"How many values of x are smaller than some number?"*
+
+```{r}
+sum( c(1,3,5,7,9) < 5 )
+```
+
+we can then apply the `sum()` function to count how many `TRUE` were in our logical vector. This will be very useful when we have very large vectors and we can't count how many `TRUE` were in our vector manually.
+
+Below are some examples applying relational operators to compare two vectors of the same length
+
+```{r}
+c(1,2,3,4) < c(5,4,3,2)
+```
+
+*Interpretation: Is 1 less than 5? is 2 less than 4? is 3 less than 3? is 4 less than 2?*
+
+```{r}
+c(1,2,3,4) <= c(5,4,3,2)
+```
+
+*Interpretation: Is 1 less than or equal to 5? is 2 less than or equal to 4? is 3 less than or equal to 3? is 4 less than or equal to 2?*
+
+
+Another topic to consider is comparing two strings. While this can be a more advance topic we only consider the simplest scenario in which we compare case-sensitive strings.
+
+```{r}
+string1 <- 'Hello'
+string2 <- 'hello'
+```
+
+while the above strings contain the same characters in the same order, if we compare them directly they will be considered different 
+
+```{r}
+string1 == string2
+```
+*Interpretation: are string1 and string2 identical?*
+
+However, if were are interested in seeing if they contain the same characters regardless of the case sensitivity, we can use `tolower()` function as follows
+
+```{r}
+tolower(string1)
+tolower(string2)
+```
+
+`tolower()` will convert any upper-case character in a vector into lower-case character.
+
+
+```{r}
+tolower(string1) == tolower(string2)
+```
+
+Since all the characters are now lower-case, and both strings contain the same characters in the same order then they are now identical.
+
+For more advanced examples in comparing strings check out the following [blog post](https://www.r-bloggers.com/2022/01/how-to-compare-strings-in-r-with-examples/) *(Optional)*
+
+
+### Logical operators
+
+In practice, we often need to use multiple conditions to make certain decisions. For example, you have a personal rule that if there is no homework *AND* you don't have class, then you will go out with your friends. Now, explore what happens to this rule when *OR* is used instead of *AND*, also what happens when negation (*NOT* ) is added to one or both clauses.
+
+The table below summarizes some of these logical operators
+
++---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
+| Operator      | Interpretation                                                                           | Basic Example         | Result                |
++:=============:+==========================================================================================+=======================+=======================+
+| !             | **NOT** <br> *If the condition is true,* <br>*logical NOT operator returns as false*     | ! (5 == 5)            | `FALSE`               |
++---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
+| &             | **AND**<br> *(element-wise)* <br> *Returns true when both conditions are true*           | TRUE `&` TRUE         | `TRUE`                |
+|               |                                                                                          |                       |                       |
+|               |                                                                                          | TRUE `&` FALSE        | `FALSE`               |
+|               |                                                                                          |                       |                       |
+|               |                                                                                          | FALSE `&` TRUE        | `FALSE`               |
+|               |                                                                                          |                       |                       |
+|               |                                                                                          | FALSE `&` FALSE       | `FALSE`               |
++---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
+| &&            | **AND**<br> *(single comparison)* <br> *Same as above but for single comparison*         | *(same as `&` above)* | *(same as `&` above)* |
++---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
+| \|            | **OR**<br> *(element-wise)* <br> *Returns true when at-least one of conditions is true*  | TRUE `|`TRUE          | `TRUE`                |
+|               |                                                                                          |                       |                       |
+|               |                                                                                          | TRUE `|` FALSE        | `TRUE`                |
+|               |                                                                                          |                       |                       |
+|               |                                                                                          | FALSE `|` TRUE        | `TRUE`                |
+|               |                                                                                          |                       |                       |
+|               |                                                                                          | FALSE `|` FALSE       | `FALSE`               |
++---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
+| \|\|          | **OR** <br> *(single comparison)* <br> *Same as above but for single comparison*         | *(same as `|` above)* | *(same as `|` above)* |
++---------------+------------------------------------------------------------------------------------------+-----------------------+-----------------------+
+
+
+The difference between *element-wise* and *single comparison* can be seen in the examples below
+
+```{r}
+c(TRUE,TRUE,FALSE,FALSE) | c(TRUE,FALSE,TRUE,FALSE)
+```
+*Interpretation: TRUE or FALSE, TRUE or FALSE, FALSE or TRUE, FALSE or FALSE*
+
+*Element-wise* will return a vector of logical values, one for each pair of logicals combined. Whereas, *single comparison* only compares the first two elements of the logical vectors and will return a single logical value.
+
+```{r}
+c(TRUE,TRUE,FALSE,FALSE) || c(TRUE,FALSE,TRUE,FALSE)
+```
+*Interpretation: TRUE or TRUE*
+
+The above will output `TRUE` since it only considers the first elements of the respective vectors, but it will warn us that the length of the vectors have more than one element.  A better example for single comparisons would be as follows
+
+```{r}
+age <- 20
+age > 10 && age < 30
+```
+*Interpretation: Is age greater than AND less than 30?*
+
+
+```{r}
+age == 18 || age <= 21
+```
+*Interpretation: Is age 18 OR less than or equal to 21 ?*
+
+
+Consider a more complicated example of holding office in the United States.
+The president must be a natural-born citizen of the United States, be at least 35 years old, and have been a resident of the United States for 14 years
+
+```{r}
+candidate_age <- 40
+candidate_birth <- 'United States'
+candidate_residance_years <- 10
+```
+
+We have a candidate who is 40 years old, was born in the United States but for some reason they have only been a resident of the United States for 10 years. Clearly, this candidate is not eligible to become our next president. We demonstrate this using logical operators
+
+```{r}
+candidate_age >= 35
+```
+*Interpretation: Is the candidate at least 35 years old?*
+
+```{r}
+candidate_birth == 'United States'
+```
+*Interpretation: Is the candidate born in United States?*
+
+```{r}
+candidate_residance_years >= 14
+```
+*Interpretation: Has the candidate been a resident for at least 14 years?*
+
+Putting all of the above together,
+
+```{r}
+(candidate_age >= 35) && (candidate_birth == 'United States') && (candidate_residance_years >= 14)
+```
+*Interpretation: TRUE AND TRUE AND FALSE*
+
+Since one of the conditions fails the entire statement will be false.
+
+## Subsetting
+
+### Vectors
+
+Now that we have an idea of how to construct logical statements, we can apply them to subset our data based on a given condition
+
+Consider the following vector `dat` with 18 values
+
+```{r}
+dat <- c(11, 13, 18, 3, 2, 24, 10, 8, 5, 
+         13, 3, 23, 7, 25, 17, 20, 11, 17)
+```
+
+We will subset `dat` based on the following conditions:
+
+**1.  How many values are bigger than 10?**
+
+```{r}
+dat > 10 
+sum(dat > 10 )
+```
+
+while knowing how many values are bigger than 10 is useful, we may only want to keep those values and not the ones that are smaller than 10.
+
+**2.  Keep the values that are bigger than 10?**
+
+If given a vector, the way to subset it based on a condition is as follows: <br> `vector[ condtion ]`. Our condition is all the values that are bigger than 10, that is `dat > 10`
+
+```{r}
+dat[ dat > 10 ]
+```
+
+**3. How many values are exactly 11 ?**
+
+Our condition is `dat == 11`,this should only return two `TRUE`, and after using the `sum()` function to count them we obtain
+
+```{r}
+sum(dat == 11)
+```
+
+If we wanted to extract these values from `dat` we would run
+
+```{r}
+dat[ dat == 11 ]
+```
+
+
+Next we use the `birth` dataset for the following examples
+
+**4. How many females were in this dataset?**
+
+```{r}
+birth_dat <- read.csv(file = "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv")
+```
+
+First we extract the values from the `Gender` column and store them in a variable called `gender_vec`
+
+```{r}
+gender_vec <- birth_dat$Gender
+```
+
+```{r}
+unique(gender_vec)
+```
+
+:::callout-warning
+Recall strings are case-sensitive, so you must spell 'Female' exactly as it appears above
+:::
+
+Then we subset this vector to only include females
+
+```{r}
+females_vec <- gender_vec[gender_vec == 'Female']
+```
+
+```{r}
+unique(females_vec)
+```
+
+Now our vector only contains females, we can use `length()` to count how many females were in this dataset
+
+```{r}
+length(females_vec)
+```
+
+An easier approach would be to simply create the variable `gender_vec` and count how many females are in that vector
+
+```{r}
+sum(gender_vec == 'Female')
+```
+
+
+### Data frames
+
+Considering *example 4* in the [vectors](#vectors) section of subsetting, we are extracting solely the values from a specific column based on a given condition. However, in some scenarios we may want to preserve all other information *(columns)* from our dataset after subsetting our data.
+
+Data frames have the following structure `data[rows,columns]`. The first 
+argument inside the brackets will specify the rows and the second argument will specify the columns. We can apply all of the subsetting techniques we covered in the [vectors](#section) within the rows, columns, or both rows and columns
+`data[condition for rows, condition for columns]`
+
+
+For example, if we wanted to subset the `births` dataset to only include females
+
+```{r}
+is_female <- birth_dat$Gender == 'Female'
+```
+
+```{r,eval=FALSE}
+birth_dat[is_female, ]
+```
+*Interpretation: Subset the rows to only include females, keep all the other columns*
+
+```{r,echo=FALSE}
+head(birth_dat[is_female,],3)
+```
+
+You will notice that we only applied a condition to the rows argument and not the columns argument. In the case where one of the arguments is left blank, then no condition will be applied to the respective argument.
+
+For practice, consider the following examples
+
+**1. Create a new data frame containing the columns: Gender, weight, and Habit**
+
+We can use `colnames()`
+
+```{r}
+colnames(birth_dat)
+```
+
+to make sure we have the correct spelling of the appropriate columns we want to keep. 
+
+
+```{r}
+birth2 <- birth_dat[ , c('Gender','weight','Habit')]
+```
+*Interpretation: Keep all the rows, but only keep the columns: Gender, weight, and Habit*
+
+
+```{r}
+head(birth2,3)
+```
+
+We created a character vector with the names of the columns we wanted to keep and used it as the condition in the columns argument.
+
+
+
+**2. Split `birth_dat` into two parts: One for which the individual was a smoker and another for which they were not a smoker**
+
+The variable `Habit` contains information on whether or not the individual was a smoker.
+
+```{r}
+unique(birth_dat$Habit)
+```
+
+First we create a logical vector to determine if the individual was a smoker 
+
+```{r}
+is_smoker <- birth_dat$Habit == 'Smoker'
+```
+
+```{r}
+is_smoker[1:5]
+```
+*Interpretation: Return TRUE if Habit is smoker, otherwise FALSE*
+
+We use the negation [logical operator](#logical-operators) to obtain all the non-smokers from our logical vector `is_smoker` without having to create a new variable
+
+```{r}
+!is_smoker[1:5]
+```
+
+To subset our data into keeping only the smokers we input our logical vector `is_smoker` into the rows argument
+
+```{r}
+smokers <- birth_dat[is_smoker, ]
+```
+*Interpretation: Only keep the rows in which the individual is a smoker*
+
+```{r}
+head(smokers,3)
+```
+
+To subset our data into keeping only the non-smokers we input our logical vector `!is_smoker` into the rows argument
+
+```{r}
+not_smokers <- birth_dat[!is_smoker, ]
+```
+*Interpretation: Only keep the rows in which the individual is NOT a smoker*
+
+```{r}
+head(not_smokers,3)
+```
+
+
+**3. What is the average weight of babies with at least one birth defect?**
+
+The variable `BirthDef` determines if the baby had no birth defects or had at least one defect
+
+```{r}
+unique(birth_dat$BirthDef)
+```
+
+Create a logical vector to determine if the baby had at least one defect
+
+```{r}
+has_defect <- (birth_dat$BirthDef == 'At Least One')
+```
+
+:::callout-note
+We must spell "At Least One" with correct upper/lower cases including spaces
+:::
+
+```{r}
+has_defect[1:5]
+```
+
+Subset our data to include rows with babies with at least one defect, then select only the `weight` column. Lastly compute the mean.
+
+```{r}
+mean( birth_dat[has_defect,'weight'] )
+```
+*Interpretation: Average weight of babies with at least one birth defect*
+
+
+

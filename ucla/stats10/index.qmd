@@ -1,5 +1,7 @@
 ---
 title: "Welcome To STATS10"
+listing:
+  contents: "labs"
 ---
 
 ## Introduction to Statistical Reasoning
@@ -41,9 +43,3 @@ In labs, you will apply the concepts discussed in lectures but with a focus on c
 ::: callout-warning
 Lab tutorials are a work in progress and are constantly being updated
 :::
-
-- [Lab 1: Introduction to R](/ucla/stats10/lab1.qmd)
-- [Lab 2: Logical Statements with Applications](/ucla/stats10/lab2.qmd)
-- [Lab 3: Introduction to Linear Regression and Sampling](/ucla/stats10/lab3.qmd)
-- [Lab 4: Simulation and Central Limit Theorem](/ucla/stats10/lab4.qmd)
-

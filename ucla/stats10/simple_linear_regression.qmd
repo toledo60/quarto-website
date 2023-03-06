@@ -14,11 +14,6 @@ library(ggplot2)
 ```
 
 
-In this lab, you will
-
-1. Understand linear regression in R and verify linear regression assumptions
-2. Plotting time series to analyse trends
-
 Throughout this tutorial we will utilize the `penguins` dataset found in `palmerpenguins` package
 
 ```{r,eval=FALSE}

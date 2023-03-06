@@ -2,78 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jose-toledo.netlify.app/teaching.html</loc>
-    <lastmod>2023-03-05T20:33:39.686Z</lastmod>
+    <lastmod>2023-03-06T04:38:54.017Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/research.html</loc>
-    <lastmod>2023-03-05T20:33:39.932Z</lastmod>
+    <lastmod>2023-03-06T04:38:54.274Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/email.html</loc>
-    <lastmod>2023-03-05T20:33:40.179Z</lastmod>
+    <lastmod>2023-03-06T04:38:54.524Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/zoom.html</loc>
-    <lastmod>2023-03-05T20:33:40.446Z</lastmod>
+    <lastmod>2023-03-06T04:38:54.784Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/index.html</loc>
-    <lastmod>2023-03-05T20:33:40.689Z</lastmod>
+    <lastmod>2023-03-06T04:38:55.034Z</lastmod>
   </url>
   <url>
-    <loc>https://jose-toledo.netlify.app/ucla/stats10/lab1.html</loc>
-    <lastmod>2023-03-05T20:33:41.162Z</lastmod>
+    <loc>https://jose-toledo.netlify.app/ucla/stats10/labs/lab1.html</loc>
+    <lastmod>2023-03-06T04:38:55.500Z</lastmod>
   </url>
   <url>
-    <loc>https://jose-toledo.netlify.app/ucla/stats10/lab3.html</loc>
-    <lastmod>2023-03-05T20:33:41.437Z</lastmod>
+    <loc>https://jose-toledo.netlify.app/ucla/stats10/labs/lab3.html</loc>
+    <lastmod>2023-03-06T04:38:55.759Z</lastmod>
   </url>
   <url>
-    <loc>https://jose-toledo.netlify.app/ucla/stats10/lab2.html</loc>
-    <lastmod>2023-03-05T20:33:42.076Z</lastmod>
+    <loc>https://jose-toledo.netlify.app/ucla/stats10/labs/lab2.html</loc>
+    <lastmod>2023-03-06T04:38:56.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jose-toledo.netlify.app/ucla/stats10/labs/lab4.html</loc>
+    <lastmod>2023-03-06T04:38:56.627Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/simple_linear_regression.html</loc>
-    <lastmod>2023-03-05T20:33:42.630Z</lastmod>
+    <lastmod>2023-03-06T04:39:01.574Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/index.html</loc>
-    <lastmod>2023-03-05T20:33:42.908Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jose-toledo.netlify.app/ucla/stats10/lab4.html</loc>
-    <lastmod>2023-03-05T20:33:43.138Z</lastmod>
+    <lastmod>2023-03-06T04:39:01.844Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/normal_distribution.html</loc>
-    <lastmod>2023-03-05T20:33:43.597Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jose-toledo.netlify.app/ucla/stats10/transformations.html</loc>
-    <lastmod>2023-03-05T20:33:44.044Z</lastmod>
+    <lastmod>2023-03-06T04:39:02.391Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/sampling_simulation.html</loc>
-    <lastmod>2023-03-05T20:33:44.500Z</lastmod>
+    <lastmod>2023-03-06T04:39:02.881Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/fundamentals.html</loc>
-    <lastmod>2023-03-05T20:33:45.003Z</lastmod>
+    <lastmod>2023-03-06T04:39:03.392Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/intro_categorical_variables.html</loc>
-    <lastmod>2023-03-05T20:33:45.452Z</lastmod>
+    <lastmod>2023-03-06T04:39:03.815Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/CLT.html</loc>
-    <lastmod>2023-03-05T20:33:45.990Z</lastmod>
+    <lastmod>2023-03-06T04:39:04.363Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/intro_numerical_variables.html</loc>
-    <lastmod>2023-03-05T20:33:46.450Z</lastmod>
+    <lastmod>2023-03-06T04:39:04.832Z</lastmod>
   </url>
   <url>
     <loc>https://jose-toledo.netlify.app/ucla/stats10/importing_data.html</loc>
-    <lastmod>2023-03-05T20:33:46.904Z</lastmod>
+    <lastmod>2023-03-06T04:39:05.286Z</lastmod>
   </url>
 </urlset>

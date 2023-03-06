@@ -1,7 +1,6 @@
 project:
   type: website
 
-  
 website:
   title: "Jose Toledo Luna"
   navbar:
