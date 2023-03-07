@@ -143,42 +143,66 @@ In general, for a $100 \times (1-\alpha)\%$ CI the correspond critical value wil
 $78\%$ CI = $100 \times (1-0.22)$ the corresponding critical value would be $z_{1-0.22/2}$
 
 ```{r}
-qnorm(1- 0.22/2)
+qnorm(1-0.22/2)
 ```
 
 We can verify this with the usual confidence interval levels:
 
 For a 90\% CI use $z^* = 1.65$
 ```{r}
-qnorm(1- 0.1/2)
+qnorm(1-0.1/2)
 ```
 
 For a 95\% CI use $z^* = 1.96$
 ```{r}
-qnorm(1- 0.05/2)
+qnorm(1-0.05/2)
 ```
 
-For a 99\% CI use $z^* = 1.96$
+For a 99\% CI use $z^* = 2.58$
 ```{r}
 qnorm(1-0.01/2)
 ```
 
 
+Now that we know how to obtain the critical value, all that is left to do is compute the standard error. The standard error is 
+$$
+SE(\hat{p}) = \sqrt{\frac{p(1-p)}{n}}
+$$
+Therefore, a $100(1-\alpha)\%$ CI becomes
+$$
+\begin{align*}
+100(1-\alpha)\% \, CI &=  
+(LB,UB) \\[5pt]
+&= (\hat{p} - ME, \hat{p}+ME) \\[5pt]
+&= (\hat{p} - z_{1-\alpha/2} \times SE, \, \, \hat{p} + z_{1-\alpha/2} \times SE ) \\[5pt]
+&= \left(\hat{p} - z_{1-\alpha/2}^* \, \sqrt{\frac{p(1-p)}{n}}, \,\,
+\hat{p} + z_{1-\alpha/2}^* \, \, \sqrt{\frac{p(1-p)}{n}} \right)
+\end{align*}
+$$
 
 **Interpretation**
 
 > If repeated samples were taken and the $95\%$ confidence interval computed for each sample, $95\%$ of the intervals would contain the population parameter. Naturally, $5\%$ of the intervals would not contain the population parameter
 
 
+**Procedure**
+
+1. Identify the population of interest and corresponding parameter
+2. Obtain a suitable sample and an initial point estimate
+3. Check validity assumptions to apply CLT
+4. Calculate margin of error
+5. Obtain lower and upper bounds
+6. Interpret your $100(1-\alpha)\%$ interval estimate in the context of the problem
+
+We will use the `pawnee` dataset in our class website to illustrate this procedure.
+
 ## Dataset Description
 
-We will use the `pawnee` dataset in our class website
+A brief description of the dataset
 
 ```{r}
 pawnee <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/pawnee.csv")
 ```
-
-A brief description of the dataset
 
 
 > The Sweetums candy factory in Pawnee, Indiana, is under investigation for violating EPA regulations. Factory workers have improperly disposed of arsenic and sulfur waste from the candy-making process, and the contamination has reached the local water supply! We have data for arsenic and sulfur levels from the water in all houses within a 2-mile radius of the factory
@@ -195,7 +219,114 @@ head(pawnee)
 ```
 
 
+We will construct a confidence interval for the population proportion of of households experiencing a major health issue caused by the EPA violations of the Sweetums candy factory in Pawnee, Indiana.
 
+
+## Constructing a confidence interval
+
+
+**Identify the population of interest and corresponding parameter**
+
+Our population of interest is all houses within a 2-mile radius of Sweetums candy factory in Pawnee, Indiana.
+The parameter is the proportion of houses within a 2-mile radius of Sweetums candy factory in Pawnee, Indiana which experienced a major health issue after the date of contamination
+
+**Obtain a suitable sample and an initial point estimate**
+
+Our sample will consist of 30 randomly chosen households from the `pawnee` dataset
+
+```{r}
+set.seed(1337)
+rows_to_sample <- sample(1:nrow(pawnee), size = 30)
+pawnee_sample <- pawnee[rows_to_sample,]
+n <- nrow(pawnee_sample)
+```
+
+The initial point estimate, i.e the sample proportion of houses within a 2-mile radius of Sweetums candy factory in Pawnee, Indiana which experienced a major health issue after the date of contamination 
+
+```{r}
+p_hat <- mean(pawnee_sample$New_hlth_issue=="Y")
+```
+
+```{r}
+p_hat
+```
+
+
+**Check validity assumptions to apply CLT**
+
+```{r}
+p_hat * n
+(1-p_hat) * n
+```
+
+There were at least 10 failures but not at least 10 successes. However, we have a sufficiently large enough sample size $n \geq 30$ to apply the CLT. Therefore, the sampling distribution of the sample proportion is approximately normal
+
+$$
+\hat{p} \sim N \left(p, \sqrt{\frac{p(1-p)}{n}} \right)
+$$
+
+**Calculate margin of error**
+
+The margin of error is defined as 
+
+$$
+ME = z_{1-\alpha/2} \times SE(\hat{p})
+$$
+We are interested in a 95\% confidence interval for the population proportion 
+
+
+```{r}
+alpha <- 0.05
+critical_value <- qnorm(1-alpha/2)
+SE <- sqrt(p_hat * (1-p_hat)/n)
+```
+
+Putting all of this together, we can compute the margin error 
+
+```{r}
+margin_error <- critical_value * SE
+margin_error
+```
+
+
+**Obtain lower and upper bounds**
+
+The lower bound is *LB = point estimate - margin of error*
+
+```{r}
+lb = p_hat - margin_error
+```
+
+The upper bound is *UB = point estimate + margin of error*
+
+```{r}
+ub = p_hat + margin_error
+```
+
+
+Therefore, our 95\% CI is 
+```{r}
+c(lb,ub)
+```
+
+
+**Interpret your $100(1-\alpha)\%$ interval estimate in the context of the problem**
+
+We are 95\% confident the true population proportion of households within a 2-mile radius of Sweetums candy factory in Pawnee, Indiana which experienced a major health issue after the date of contamination is between 5.69\% and 34.31\%
+
+
+Taking a look at the true population proportion 
+
+```{r}
+p <- mean(pawnee$New_hlth_issue == 'Y')
+p
+```
+
+we see that our constructed confidence interval does contain the true population proportion
+
+```{r}
+p >= lb && p <= ub
+```
 
 
 

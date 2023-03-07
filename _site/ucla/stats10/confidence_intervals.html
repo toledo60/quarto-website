@@ -179,6 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#overview-of-confidence-intervals-for-a-proportion" id="toc-overview-of-confidence-intervals-for-a-proportion" class="nav-link active" data-scroll-target="#overview-of-confidence-intervals-for-a-proportion">Overview of Confidence Intervals for a Proportion</a></li>
   <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link" data-scroll-target="#dataset-description">Dataset Description</a></li>
+  <li><a href="#constructing-a-confidence-interval" id="toc-constructing-a-confidence-interval" class="nav-link" data-scroll-target="#constructing-a-confidence-interval">Constructing a confidence interval</a></li>
   </ul>
 </nav>
     </div>
@@ -291,7 +292,7 @@ Show Code
 </ul>
 <p>In general, for a <span class="math inline">\(100 \times (1-\alpha)\%\)</span> CI the correspond critical value will be <span class="math inline">\(z_{1-\alpha/2}^*\)</span> which can then easily be computed using <code>qnorm</code>. For example, if for some reason we were interested in a <span class="math inline">\(78\%\)</span> CI = <span class="math inline">\(100 \times (1-0.22)\)</span> the corresponding critical value would be <span class="math inline">\(z_{1-0.22/2}\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span> <span class="fl">0.22</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.22</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 1.226528</code></pre>
 </div>
@@ -299,37 +300,58 @@ Show Code
 <p>We can verify this with the usual confidence interval levels:</p>
 <p>For a 90% CI use <span class="math inline">\(z^* = 1.65\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span> <span class="fl">0.1</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.1</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 1.644854</code></pre>
 </div>
 </div>
 <p>For a 95% CI use <span class="math inline">\(z^* = 1.96\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span> <span class="fl">0.05</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 1.959964</code></pre>
 </div>
 </div>
-<p>For a 99% CI use <span class="math inline">\(z^* = 1.96\)</span></p>
+<p>For a 99% CI use <span class="math inline">\(z^* = 2.58\)</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.01</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 2.575829</code></pre>
 </div>
 </div>
+<p>Now that we know how to obtain the critical value, all that is left to do is compute the standard error. The standard error is <span class="math display">\[
+SE(\hat{p}) = \sqrt{\frac{p(1-p)}{n}}
+\]</span> Therefore, a <span class="math inline">\(100(1-\alpha)\%\)</span> CI becomes <span class="math display">\[
+\begin{align*}
+100(1-\alpha)\% \, CI &amp;=  
+(LB,UB) \\[5pt]
+&amp;= (\hat{p} - ME, \hat{p}+ME) \\[5pt]
+&amp;= (\hat{p} - z_{1-\alpha/2} \times SE, \, \, \hat{p} + z_{1-\alpha/2} \times SE ) \\[5pt]
+&amp;= \left(\hat{p} - z_{1-\alpha/2}^* \, \sqrt{\frac{p(1-p)}{n}}, \,\,
+\hat{p} + z_{1-\alpha/2}^* \, \, \sqrt{\frac{p(1-p)}{n}} \right)
+\end{align*}
+\]</span></p>
 <p><strong>Interpretation</strong></p>
 <blockquote class="blockquote">
 <p>If repeated samples were taken and the <span class="math inline">\(95\%\)</span> confidence interval computed for each sample, <span class="math inline">\(95\%\)</span> of the intervals would contain the population parameter. Naturally, <span class="math inline">\(5\%\)</span> of the intervals would not contain the population parameter</p>
 </blockquote>
+<p><strong>Procedure</strong></p>
+<ol type="1">
+<li>Identify the population of interest and corresponding parameter</li>
+<li>Obtain a suitable sample and an initial point estimate</li>
+<li>Check validity assumptions to apply CLT</li>
+<li>Calculate margin of error</li>
+<li>Obtain lower and upper bounds</li>
+<li>Interpret your <span class="math inline">\(100(1-\alpha)\%\)</span> interval estimate in the context of the problem</li>
+</ol>
+<p>We will use the <code>pawnee</code> dataset in our class website to illustrate this procedure.</p>
 </section>
 <section id="dataset-description" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-description">Dataset Description</h2>
-<p>We will use the <code>pawnee</code> dataset in our class website</p>
+<p>A brief description of the dataset</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pawnee <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/pawnee.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>A brief description of the dataset</p>
 <blockquote class="blockquote">
 <p>The Sweetums candy factory in Pawnee, Indiana, is under investigation for violating EPA regulations. Factory workers have improperly disposed of arsenic and sulfur waste from the candy-making process, and the contamination has reached the local water supply! We have data for arsenic and sulfur levels from the water in all houses within a 2-mile radius of the factory</p>
 </blockquote>
@@ -349,6 +371,96 @@ Show Code
 #&gt; 4  4 41.08100 -85.75415       0      0              Y
 #&gt; 5  5 41.07435 -85.70043       0      0              N
 #&gt; 6  6 41.07399 -85.71788       0      0              N</code></pre>
+</div>
+</div>
+<p>We will construct a confidence interval for the population proportion of of households experiencing a major health issue caused by the EPA violations of the Sweetums candy factory in Pawnee, Indiana.</p>
+</section>
+<section id="constructing-a-confidence-interval" class="level2">
+<h2 class="anchored" data-anchor-id="constructing-a-confidence-interval">Constructing a confidence interval</h2>
+<p><strong>Identify the population of interest and corresponding parameter</strong></p>
+<p>Our population of interest is all houses within a 2-mile radius of Sweetums candy factory in Pawnee, Indiana. The parameter is the proportion of houses within a 2-mile radius of Sweetums candy factory in Pawnee, Indiana which experienced a major health issue after the date of contamination</p>
+<p><strong>Obtain a suitable sample and an initial point estimate</strong></p>
+<p>Our sample will consist of 30 randomly chosen households from the <code>pawnee</code> dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1337</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>rows_to_sample <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(pawnee), <span class="at">size =</span> <span class="dv">30</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>pawnee_sample <span class="ot">&lt;-</span> pawnee[rows_to_sample,]</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(pawnee_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The initial point estimate, i.e the sample proportion of houses within a 2-mile radius of Sweetums candy factory in Pawnee, Indiana which experienced a major health issue after the date of contamination</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>p_hat <span class="ot">&lt;-</span> <span class="fu">mean</span>(pawnee_sample<span class="sc">$</span>New_hlth_issue<span class="sc">==</span><span class="st">"Y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>p_hat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.2</code></pre>
+</div>
+</div>
+<p><strong>Check validity assumptions to apply CLT</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>p_hat <span class="sc">*</span> n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>p_hat) <span class="sc">*</span> n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 24</code></pre>
+</div>
+</div>
+<p>There were at least 10 failures but not at least 10 successes. However, we have a sufficiently large enough sample size <span class="math inline">\(n \geq 30\)</span> to apply the CLT. Therefore, the sampling distribution of the sample proportion is approximately normal</p>
+<p><span class="math display">\[
+\hat{p} \sim N \left(p, \sqrt{\frac{p(1-p)}{n}} \right)
+\]</span></p>
+<p><strong>Calculate margin of error</strong></p>
+<p>The margin of error is defined as</p>
+<p><span class="math display">\[
+ME = z_{1-\alpha/2} \times SE(\hat{p})
+\]</span> We are interested in a 95% confidence interval for the population proportion</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>critical_value <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>SE <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p_hat <span class="sc">*</span> (<span class="dv">1</span><span class="sc">-</span>p_hat)<span class="sc">/</span>n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Putting all of this together, we can compute the margin error</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>margin_error <span class="ot">&lt;-</span> critical_value <span class="sc">*</span> SE</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>margin_error</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.1431355</code></pre>
+</div>
+</div>
+<p><strong>Obtain lower and upper bounds</strong></p>
+<p>The lower bound is <em>LB = point estimate - margin of error</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>lb <span class="ot">=</span> p_hat <span class="sc">-</span> margin_error</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The upper bound is <em>UB = point estimate + margin of error</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>ub <span class="ot">=</span> p_hat <span class="sc">+</span> margin_error</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Therefore, our 95% CI is</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(lb,ub)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.05686447 0.34313553</code></pre>
+</div>
+</div>
+<p><strong>Interpret your <span class="math inline">\(100(1-\alpha)\%\)</span> interval estimate in the context of the problem</strong></p>
+<p>We are 95% confident the true population proportion of households within a 2-mile radius of Sweetums candy factory in Pawnee, Indiana which experienced a major health issue after the date of contamination is between 5.69% and 34.31%</p>
+<p>Taking a look at the true population proportion</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">mean</span>(pawnee<span class="sc">$</span>New_hlth_issue <span class="sc">==</span> <span class="st">'Y'</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.2920518</code></pre>
+</div>
+</div>
+<p>we see that our constructed confidence interval does contain the true population proportion</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">&gt;=</span> lb <span class="sc">&amp;&amp;</span> p <span class="sc">&lt;=</span> ub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE</code></pre>
 </div>
 </div>
 
