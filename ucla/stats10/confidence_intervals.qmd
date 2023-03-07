@@ -1,0 +1,26 @@
+## Confidence Interval for a Proportion 
+
+Things to write about:
+
+1. How to sample rows from a dataset
+2. Overview of confidence intervals
+3. Formulas for constructing $(1-\alpha)\%$ CI and give examples for $90, 95,99\%$ CI  
+4. Demonstrate simulation based approach for CI, what does it really mean to be  $(1-\alpha)\%$ confident 
+5. Conclude with simple `prop.test()`
+
+## Questions
+
+1e) generate CI for our sample proportion using the sample results (One Signle CI from on sample)
+
+1g) population proportion
+
+
+
+
+
+
+
+
+
+
+
