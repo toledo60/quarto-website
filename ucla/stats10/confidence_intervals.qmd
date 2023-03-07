@@ -1,20 +1,39 @@
-## Confidence Interval for a Proportion 
+---
+toc: true
+---
 
-Things to write about:
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4,
+  warning = FALSE,
+  eval = TRUE)
+```
 
-1. How to sample rows from a dataset
-2. Overview of confidence intervals
-3. Formulas for constructing $(1-\alpha)\%$ CI and give examples for $90, 95,99\%$ CI  
-4. Demonstrate simulation based approach for CI, what does it really mean to be  $(1-\alpha)\%$ confident 
-5. Conclude with simple `prop.test()`
-
-## Questions
-
-1e) generate CI for our sample proportion using the sample results (One Signle CI from on sample)
-
-1g) population proportion
+## Overview of Confidence Intervals for a Proportion
 
 
+
+## Dataset Description
+
+We will use the `pawnee` dataset in our class website
+
+```{r}
+pawnee <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/pawnee.csv")
+```
+
+A brief description of the dataset
+
+
+> The Sweetums candy factory in Pawnee, Indiana, is under investigation for violating EPA regulations. Factory workers have improperly disposed of arsenic and sulfur waste from the candy-making process, and the contamination has reached the local water supply! We have data for arsenic and sulfur levels from the water in all houses within a 2-mile radius of the factory
+
+
+Some important variables include:
+
+* `Arsenic`: arsenic levels for each home in ppm
+* `Sulfur`: sulfur levels for each home in ppm
+* `New_hlth_issue`: Indicates `Y` is someone living at the home has experienced a major health issue after the date of contamination, `N` if no new health complications
 
 
 

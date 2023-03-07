@@ -38,7 +38,7 @@ We carry out this procedure in the following scenario using the `flint` dataset 
 flint <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/flint.csv")
 ```
 
-Below is a preview of `flint` alonside its dimensions
+Below is a preview of `flint` alongside its dimensions
 ```{r}
 head(flint)
 dim(flint)
@@ -69,6 +69,7 @@ H_0: \pi &= 0.1 \\
 H_a: \pi &> 0.1
 \end{align*}
 $$
+We are interested in testing whether or not the proportion of dangerous lead levels is greater than $10\%$ *(this is our alternative hypothesis)*.
 We perform this hypothesis test at the $\alpha =0.05$ significance level
 
 ```{r}
@@ -79,7 +80,7 @@ alpha <- 0.05
 <br/>
 **Gather a suitable sample for testing our hypothesis, and obtain the corresponding statistic**
 
-We assume the `Flint` data is a random sample used to test our hypothesis
+We assume the `flint` data is a random sample used to test our hypothesis
 
 ```{r}
 n <- nrow(flint)
@@ -87,7 +88,7 @@ dangerous_lead <- (flint$Pb >= 15)
 p_hat <- mean(dangerous_lead)
 ```
 
-Our sample proportion of lead levels in `Flint` that are greater than or equal to 15PPB *(dangerous lead levels)*
+Based on our random sample, the sample proportion of lead levels in `flint` that are greater than or equal to 15PPB *(dangerous lead levels)* is 
 
 ```{r}
 p_hat
@@ -144,7 +145,6 @@ p_value
 ```
 
 
-
 <details>
 <summary>Show Code</summary>
 
@@ -194,7 +194,7 @@ p1
 
 We can make the following decisions in a hypothesis test
 
-* If $p$-value $< \alpha$: reject the null hypothesis 
+* If $p$-value $\leq \alpha$: reject the null hypothesis 
 * If $p$-value $> \alpha$: fail to reject the null hypothesis
 
 
@@ -206,7 +206,7 @@ p_value < alpha
 Since our $p$-value is less than our significance level,we have sufficient evidence to reject the null hypothesis in favor of the alternative hypothesis. That is, we can claim the proportion of dangerous lead levels in Flint is greater than $10\%$
 
 
-While the above process can be tedious,it can easily be performed with a few line of codes in R :)
+While the above process can be tedious,it can easily be performed with a single command in R :)
 
 ```{r}
 n_successes <- sum(dangerous_lead)

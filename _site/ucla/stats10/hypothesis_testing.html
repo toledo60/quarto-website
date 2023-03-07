@@ -208,7 +208,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>flint <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/flint.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Below is a preview of <code>flint</code> alonside its dimensions</p>
+<p>Below is a preview of <code>flint</code> alongside its dimensions</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(flint)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -238,18 +238,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 H_0: \pi &amp;= 0.1 \\
 H_a: \pi &amp;&gt; 0.1
 \end{align*}
-\]</span> We perform this hypothesis test at the <span class="math inline">\(\alpha =0.05\)</span> significance level</p>
+\]</span> We are interested in testing whether or not the proportion of dangerous lead levels is greater than <span class="math inline">\(10\%\)</span> <em>(this is our alternative hypothesis)</em>. We perform this hypothesis test at the <span class="math inline">\(\alpha =0.05\)</span> significance level</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br> <strong>Gather a suitable sample for testing our hypothesis, and obtain the corresponding statistic</strong></p>
-<p>We assume the <code>Flint</code> data is a random sample used to test our hypothesis</p>
+<p>We assume the <code>flint</code> data is a random sample used to test our hypothesis</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(flint)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dangerous_lead <span class="ot">&lt;-</span> (flint<span class="sc">$</span>Pb <span class="sc">&gt;=</span> <span class="dv">15</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>p_hat <span class="ot">&lt;-</span> <span class="fu">mean</span>(dangerous_lead)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Our sample proportion of lead levels in <code>Flint</code> that are greater than or equal to 15PPB <em>(dangerous lead levels)</em></p>
+<p>Based on our random sample, the sample proportion of lead levels in <code>flint</code> that are greater than or equal to 15PPB <em>(dangerous lead levels)</em> is</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>p_hat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -342,7 +342,7 @@ Show Code
 <p><strong>In the context of the investigation, make a conclusion by comparing the <span class="math inline">\(p\)</span>-value to our significance level</strong></p>
 <p>We can make the following decisions in a hypothesis test</p>
 <ul>
-<li>If <span class="math inline">\(p\)</span>-value <span class="math inline">\(&lt; \alpha\)</span>: reject the null hypothesis</li>
+<li>If <span class="math inline">\(p\)</span>-value <span class="math inline">\(\leq \alpha\)</span>: reject the null hypothesis</li>
 <li>If <span class="math inline">\(p\)</span>-value <span class="math inline">\(&gt; \alpha\)</span>: fail to reject the null hypothesis</li>
 </ul>
 <div class="cell">
@@ -352,7 +352,7 @@ Show Code
 </div>
 </div>
 <p>Since our <span class="math inline">\(p\)</span>-value is less than our significance level,we have sufficient evidence to reject the null hypothesis in favor of the alternative hypothesis. That is, we can claim the proportion of dangerous lead levels in Flint is greater than <span class="math inline">\(10\%\)</span></p>
-<p>While the above process can be tedious,it can easily be performed with a few line of codes in R :)</p>
+<p>While the above process can be tedious,it can easily be performed with a single command in R :)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>n_successes <span class="ot">&lt;-</span> <span class="fu">sum</span>(dangerous_lead)</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> n_successes,<span class="at">n =</span> n,<span class="at">p =</span> <span class="fl">0.10</span>,</span>

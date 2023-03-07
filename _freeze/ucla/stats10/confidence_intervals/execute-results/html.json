@@ -1,0 +1,14 @@
+{
+  "hash": "c5cc715d5c60758e655e44cccd8dc3ab",
+  "result": {
+    "markdown": "---\ntoc: true\n---\n\n\n\n\n## Overview of Confidence Intervals for a Proportion\n\n\n\n## Dataset Description\n\nWe will use the `pawnee` dataset in our class website\n\n\n::: {.cell}\n\n```{.r .cell-code}\npawnee <- read.csv(file=\"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/pawnee.csv\")\n```\n:::\n\n\nA brief description of the dataset\n\n\n> The Sweetums candy factory in Pawnee, Indiana, is under investigation for violating EPA regulations. Factory workers have improperly disposed of arsenic and sulfur waste from the candy-making process, and the contamination has reached the local water supply! We have data for arsenic and sulfur levels from the water in all houses within a 2-mile radius of the factory\n\n\nSome important variables include:\n\n* `Arsenic`: arsenic levels for each home in ppm\n* `Sulfur`: sulfur levels for each home in ppm\n* `New_hlth_issue`: Indicates `Y` is someone living at the home has experienced a major health issue after the date of contamination, `N` if no new health complications\n\n\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
