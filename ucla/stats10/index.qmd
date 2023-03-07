@@ -2,6 +2,7 @@
 title: "Welcome To STATS10"
 listing:
   contents: "labs"
+comments: false
 ---
 
 ## Introduction to Statistical Reasoning

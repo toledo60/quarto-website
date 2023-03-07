@@ -19,7 +19,7 @@ website:
     right: "&copy; 2023, Jose Toledo Luna"
   comments:
     utterances:
-      repo: toledo60/jose-toledo.netlify.app
+      repo: toledo60/quarto-website
     
 format:
   html:
