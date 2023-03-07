@@ -17,6 +17,9 @@ website:
         aria-label: GitHub
   page-footer:
     right: "&copy; 2023, Jose Toledo Luna"
+  comments:
+    utterances:
+      repo: toledo60/jose-toledo.netlify.app
     
 format:
   html:

@@ -211,7 +211,8 @@ While the above process can be tedious,it can easily be performed with a single 
 ```{r}
 n_successes <- sum(dangerous_lead)
 prop.test(x = n_successes,n = n,p = 0.10,
-          alternative = 'greater',conf.level = 0.95)
+          alternative = 'greater',conf.level = 0.95,
+          correct = FALSE)
 ```
 
 

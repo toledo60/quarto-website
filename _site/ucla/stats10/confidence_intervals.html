@@ -205,6 +205,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>Sulfur</code>: sulfur levels for each home in ppm</li>
 <li><code>New_hlth_issue</code>: Indicates <code>Y</code> is someone living at the home has experienced a major health issue after the date of contamination, <code>N</code> if no new health complications</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(pawnee)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   ID Latitude Longitude Arsenic Sulfur New_hlth_issue
+#&gt; 1  1 41.09414 -85.60974       0      0              N
+#&gt; 2  2 41.09054 -85.70344       0    130              N
+#&gt; 3  3 41.08601 -85.71996       4    170              N
+#&gt; 4  4 41.08100 -85.75415       0      0              Y
+#&gt; 5  5 41.07435 -85.70043       0      0              N
+#&gt; 6  6 41.07399 -85.71788       0      0              N</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -342,6 +354,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="toledo60/jose-toledo.netlify.app" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

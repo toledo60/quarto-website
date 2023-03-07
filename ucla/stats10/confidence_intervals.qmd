@@ -35,7 +35,9 @@ Some important variables include:
 * `Sulfur`: sulfur levels for each home in ppm
 * `New_hlth_issue`: Indicates `Y` is someone living at the home has experienced a major health issue after the date of contamination, `N` if no new health complications
 
-
+```{r}
+head(pawnee)
+```
 
 
 
