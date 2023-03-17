@@ -1,22 +1,30 @@
 ---
 title: "Welcome To STATS10"
+subtitle: "Introduction to Statistical Reasoning"
+description: "Below are useful links used in this course"
+image: stats.png
 listing:
   contents: "labs"
+about:
+  template: trestles
+  links:
+    - text: Zoom
+      url: "https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
+      icon: camera-video-fill
+    - text: Email
+      url: "mailto:toledo60@g.ucla.edu"
+      icon: inbox-fill
+    - text: CampusWire
+      url: "https://campuswire.com"
+      icon: mortarboard
+    - text: Box Folder
+      url: "https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu"
+      icon: box
 comments: false
 ---
+::: {.column-page}
 
-## Introduction to Statistical Reasoning
-
-:::callout-important
-## Useful Links
-
-
-- [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
-For online discussion and/or virtual office hours
-- [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu) All material for the labs will be posted here
-- [campuswire](https://campuswire.com) Have discussions or ask questions regarding this course
-- [Lecture Recordings](/zoom.qmd) Recordings of lectures and other tutorials
-:::
+**Instructor:** Jose Toledo Luna
 
 **Discussions:** <br/>
 **4A** M/W: 12:00pm-12:50pm (Online)
@@ -25,11 +33,9 @@ For online discussion and/or virtual office hours
 
 **Office Hours:** <br/>
 M/W: 12:00pm-12:50pm <br/>
-@MS8349 or
-[Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) <br/>
-or by [appointment](/email.qmd)
+@MS8349, Zoom or  [appointment](/email.qmd)
 
-**Email**: toledo60@g.ucla.edu
+
 
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu)
 
@@ -43,4 +49,6 @@ In labs, you will apply the concepts discussed in lectures but with a focus on c
 
 ::: callout-warning
 Lab tutorials are a work in progress and are constantly being updated
+:::
+
 :::
