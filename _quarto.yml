@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Jose Toledo Luna"
+  reader-mode: true
   navbar:
     left:
       - href: index.qmd
@@ -13,8 +14,11 @@ website:
         text: Teaching
     right: 
       - icon: github
-        href: https://github.com/toledo60
-        aria-label: GitHub
+        menu:
+          - text: Website Source Code
+            url:  https://github.com/toledo60/quarto-website
+          - text: Github Profile
+            url:  https://github.com/toledo60
   page-footer:
     right: "&copy; 2023, Jose Toledo Luna"
   comments:
@@ -27,6 +31,7 @@ format:
     css: styles.css
     linkcolor: "#ba303e"
     toc: false
-    
-freeze: auto
+
+execute:
+  freeze: auto
 
