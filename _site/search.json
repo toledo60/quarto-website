@@ -11,7 +11,7 @@
     "href": "teaching.html#previous-courses",
     "title": "Jose Toledo Luna",
     "section": "Previous Courses",
-    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\nSTATS 10: Introduction to Statistical Reasoning (Fall 2022)\nSTATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Summer 2022)\n\n\n\nCalifornia State University, Fullerton\n\nMath 115: College Algebra (Fall 2019)\nMath 120: Elementary Statistics (Spring 2020, Fall 2020)\nMath 338: Statistics Applied to Natural Sciences (Spring 2021)"
+    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\nSTATS 10: Introduction to Statistical Reasoning (Fall 2022, Winter 2023)\nSTATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Summer 2022)\n\n\n\nCalifornia State University, Fullerton\n\nMath 115: College Algebra (Fall 2019)\nMath 120: Elementary Statistics (Spring 2020, Fall 2020)\nMath 338: Statistics Applied to Natural Sciences (Spring 2021)"
   },
   {
     "objectID": "research.html",
@@ -47,13 +47,6 @@
     "title": "Jose Toledo Luna",
     "section": "Not Appropriate Email",
     "text": "Not Appropriate Email\nHello Jose,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
-  },
-  {
-    "objectID": "zoom.html",
-    "href": "zoom.html",
-    "title": "Jose Toledo Luna",
-    "section": "",
-    "text": "Week\nDate\nTopic\nLink\n\n\n\n\nWeek 1\nMon, Jan 09\nLab 1: Installing R and R studio\nLecture 1\n\n\n\nWed, Jan 11\nLab 1: Variables, vectors\nLecture 2\n\n\nWeek 2\nMon, Jan 16\nHOLIDAY\nR markdown tutorial\n\n\n\nWed, Jan 18\nLab 1: Importing data, summarize/visualize single numerical variable\nLecture 3\n\n\nWeek 3\nMon, Jan 23\nLab 1: Summarize Two numerical variables, One categorical variable\nLecture 4\n\n\n\nWed, Jan 25\nLab 1: Summarize two categorical variables\nLab 2: Introduction to relational operators\nLecture 5\n\n\nWeek 4\nMon, Jan 30\nLab 2: Logical operators and subsetting\nLecture 6\n\n\n\nWed, Feb 1\nLab 2: Subsetting dataframes\nLecture 7\n\n\nWeek 5\nMon, Feb 6\nIntroduction to ggplot2\nOptional Lecture\n\n\n\nWed, Feb 8\nLab 3: Simple linear regression\nLecture 8\n\n\nWeek 6\nMon, Feb 13\nLab 3: Introduction to sampling, writing own R functions\nLecture 9\n\n\n\nWed, Feb 15\nLab 3:\nSimulation\nLecture 10\n\n\nWeek 7\nMon, Feb 20\nHOLIDAY\nNO LECTURE\n\n\n\nWed, Feb 22\nLab 4:\nNormal Distribution, Overview of CLT\nLecture 11\n\n\nWeek 8\nMon, Feb 27\nLab 4:\nCLT Sample Means\nLecture 12\n\n\n\nWed, March 1\nLab 4:\nCLT Sample Proportions\nLecture 13\n\n\nWeek 9\nMon, March 6\nNO LECTURE\nNO LECTURE\n\n\n\nWed, March 8\nLab 5:\nConfidence Intervals and Hypothesis Testing\nLecture 14"
   },
   {
     "objectID": "index.html",
@@ -109,7 +102,7 @@
     "href": "ucla/stats10/labs/lab5.html",
     "title": "Lab 5",
     "section": "",
-    "text": "In this lab you will:\n\nLearn how to conduct confidence interval for one population proportion\nLearn how to conduct hypothesis tests for one population proportion\n\nThe corresponding tutorials are listed below\n\nConfidence Intervals\nHypothesis Testing\n\nThere is a lot of background material to cover in these tutorials which I am glossing over. For further details on confidence intervals and hypothesis testing for a proportion refer to notes from class.\nAs a supplement here are some notes from a previous course I’ve thought  [Foundations of Inference]"
+    "text": "In this lab you will:\n\nLearn how to conduct confidence interval for one population proportion\nLearn how to conduct hypothesis tests for one population proportion\n\nThe corresponding tutorials are listed below\n\nConfidence Intervals\nHypothesis Testing\n\nThere is a lot of background material to cover in these tutorials which I am glossing over. For further details on confidence intervals and hypothesis testing for a proportion refer to notes from class."
   },
   {
     "objectID": "ucla/stats10/labs/lab4.html",
@@ -172,7 +165,7 @@
     "href": "ucla/stats10/index.html",
     "title": "Welcome To STATS10",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nDiscussions:  4A M/W: 12:00pm-12:50pm (Online)  4B M/W: 1:00pm-1:50pm (PAB 1749)\nOffice Hours:  M/W: 12:00pm-12:50pm  @MS8349, Zoom or appointment\nMaterial from this course can be downloaded from this Box Folder\nFor general questions or specific questions about the labs use campuswire. Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS\nAll lab assignments will be turned in directly on CANVAS\nBelow are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.\n\n\n\n\n\n\nWarning\n\n\n\nLab tutorials are a work in progress and are constantly being updated\n\n\n\n\n\n\n\n\n\n\n\nLab 1\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\nMar 24, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n\n\nLab 2\n\n\n\n\nLogical Statements with Applications\n\n\n\n\n\n\nMar 24, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n\n\nLab 3\n\n\n\n\nIntroduction to Linear Regression and Sampling\n\n\n\n\n\n\nMar 24, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n\n\nLab 4\n\n\n\n\nIntroduction to Central Limit Theorem\n\n\n\n\n\n\nMar 24, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n\n\nLab 5\n\n\n\n\nIntroduction to Confidence Intervals and Hypothesis Testing\n\n\n\n\n\n\nMar 24, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\nNo matching items"
+    "text": "Instructor: Jose Toledo Luna\nDiscussions:  3C T/Th: 10am-10:50am (Online)  3D T/Th: 11:00am-11:50am (PAB 1749)\nOffice Hours:  Monday: 11:00am-12:00pm  Tuesday: 10:00am-10:50am  @MS8349, Zoom or appointment\nMaterial from this course can be downloaded from this Box Folder\nFor general questions or specific questions about the labs use campuswire. Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS\nAll lab assignments will be turned in directly on CANVAS\nBelow are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.\n\n\n\n\n\n\nWarning\n\n\n\nLab tutorials are a work in progress and are constantly being updated\n\n\n\n\n\n\n\n\n\n\n\nLab 1\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\nMar 30, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n\n\nLab 2\n\n\n\n\nLogical Statements with Applications\n\n\n\n\n\n\nMar 30, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n\n\nLab 3\n\n\n\n\nIntroduction to Linear Regression and Sampling\n\n\n\n\n\n\nMar 30, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n\n\nLab 4\n\n\n\n\nIntroduction to Central Limit Theorem\n\n\n\n\n\n\nMar 30, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n\n\nLab 5\n\n\n\n\nIntroduction to Confidence Intervals and Hypothesis Testing\n\n\n\n\n\n\nMar 30, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ucla/stats10/normal_distribution.html",

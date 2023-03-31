@@ -11,7 +11,7 @@ comments: false
 ### University of California, Los Angeles
 
 - STATS 10: Introduction to Statistical Reasoning
-*(Fall 2022)*
+*(Fall 2022, Winter 2023)*
 - STATS 13: Introduction to Statistical Methods for Life \
 and Health Sciences *(Summer 2022)*
 

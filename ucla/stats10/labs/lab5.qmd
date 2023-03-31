@@ -22,8 +22,6 @@ The corresponding tutorials are listed below
 
 There is a lot of background material to cover in these tutorials which I am glossing over. For further details on confidence intervals and hypothesis testing for a proportion refer to notes from class.
 
-As a supplement here are some notes from a previous course I've thought <br>
-[[Foundations of Inference]](/docs/notes/Inference-Foundations.pdf "PDF")
 
 
 

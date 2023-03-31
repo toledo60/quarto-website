@@ -1,7 +1,7 @@
 ---
 title: "Welcome To STATS10"
 subtitle: "Introduction to Statistical Reasoning"
-description: "Below are useful links used in this course"
+description: "Below are links used in this course"
 image: stats.png
 listing:
   contents: "labs"
@@ -18,8 +18,10 @@ about:
       url: "https://campuswire.com"
       icon: mortarboard
     - text: Box Folder
-      url: "https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu"
+      url: "https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu"
       icon: box
+    - text: Lecture Recordings
+      url: "https://app.box.com/s/15zlq5pu06hqanx471ox7ep7yvw6r1i7"
 comments: false
 ---
 ::: {.column-page}
@@ -27,17 +29,16 @@ comments: false
 **Instructor:** Jose Toledo Luna
 
 **Discussions:** <br/>
-**4A** M/W: 12:00pm-12:50pm (Online)
+**3C** T/Th: 10am-10:50am (Online)
  <br/>
-**4B** M/W: 1:00pm-1:50pm (PAB 1749)
+**3D** T/Th: 11:00am-11:50am (PAB 1749)
 
 **Office Hours:** <br/>
-M/W: 12:00pm-12:50pm <br/>
+Monday: 11:00am-12:00pm <br/>
+Tuesday: 10:00am-10:50am <br/>
 @MS8349, Zoom or  [appointment](/email.qmd)
 
-
-
-Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/3pfoq99zhvyyi99wdc1kzoojsihgcoxu)
+Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu)
 
 For general questions or specific questions about the labs use [campuswire](https://campuswire.com). Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS
 
