@@ -131,7 +131,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#python" id="toc-python" class="nav-link active" data-scroll-target="#python">Python</a></li>
+  <li><a href="#setting-up-gitgithub" id="toc-setting-up-gitgithub" class="nav-link" data-scroll-target="#setting-up-gitgithub">Setting up Git/Github</a></li>
+  <li><a href="#setting-up-visual-studio-code" id="toc-setting-up-visual-studio-code" class="nav-link" data-scroll-target="#setting-up-visual-studio-code">Setting up Visual Studio Code</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -170,8 +178,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<p>To see if you already have <code>python</code> installed, open up your terminal application and type the following command,</p>
+<blockquote class="blockquote">
+<p>python</p>
+</blockquote>
+<p>if you are on Windows. If you are macOS then type the following command</p>
+<blockquote class="blockquote">
+<p>python3</p>
+</blockquote>
+<p>If python is not installed on your machine, you will see an error message stating Python cannot be found. Simply go to <a href="https://www.python.org/downloads/">Downloads</a> and install python for your operating sytem</p>
+</section>
+<section id="setting-up-gitgithub" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-gitgithub">Setting up Git/Github</h2>
+<p>To see if you already have <code>Git</code> installed, open up your terminal application and type the following command</p>
+<blockquote class="blockquote">
+<p>git version</p>
+</blockquote>
+<p>The output will either tell you which version of <code>Git</code> is installed, or it will alert you that git is an unknown command. If it is an unknown command, download <a href="https://git-scm.com/downloads">Git</a> for your respective operating system and follow the installation guide</p>
+<p>Once git is properly installed <em>(as shown below)</em>, <img src="git-installed.png" class="img-fluid" style="width:80.0%" alt="Git version"></p>
+<p>create an account for <a href="https://github.com">Github</a></p>
+<p>Once you have created your Github account, open your terminal and configure git user name and email address, so we can push our work to Github. On the terminal run the following commands</p>
+<pre><code>git config --global user.name "Jose Toledo"</code></pre>
+<p>Using the <strong>same</strong> email you used to create your Github account</p>
+<pre><code>git config --global user.email github_email@example.com</code></pre>
+</section>
+<section id="setting-up-visual-studio-code" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-visual-studio-code">Setting up Visual Studio Code</h2>
+<p>Download <a href="https://code.visualstudio.com/download">Visual Studio Code</a> for your respective operating system and install the following extensions</p>
+<ul>
+<li>Jupyter</li>
+<li>Pylance</li>
+<li>Python</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
