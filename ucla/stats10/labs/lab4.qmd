@@ -1,6 +1,6 @@
 ---
 author: Jose Toledo Luna
-date: today
+date: 2023-04-04
 title: Lab 4
 description: Introduction to Central Limit Theorem
 toc: true

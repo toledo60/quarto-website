@@ -20,8 +20,6 @@ about:
     - text: Box Folder
       url: "https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu"
       icon: box
-    - text: Lecture Recordings
-      url: "https://app.box.com/s/15zlq5pu06hqanx471ox7ep7yvw6r1i7"
 comments: false
 ---
 ::: {.column-page}
@@ -35,21 +33,25 @@ comments: false
 Tuesday: 10:00am-10:50am <br/>
 @MS8349, [Zoom](https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) or [appointment](/email.qmd)
 
+
+:::callout-warning
+May 8 - May 11 I will be attending a conference and will not be available.
+There will be no discussions or office hours, but I will be available through email. I will post videos for you to watch on your free time. Plan accordingly
+:::
+
+
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu)
 
 For general questions or specific questions about the labs use [campuswire](https://campuswire.com). Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS
 
-All lab assignments will be turned in directly on CANVAS
-
-Below are all the labs regrading this course. 
-In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.
-
+All lab assignments will be turned in directly on CANVAS,
+and will be completed using R and documented with R markdown.
 For reference, here is a quick [R markdown tutorial](https://ucla.zoom.us/rec/share/_p0VmzkiKDmdEtvoE9tBfj_h-nXcUcq9Js529BDGZU5Sgn1gmdvSKWfGm4RAbIhD.TQFT_varvPPXIs_j?startTime=1673635929000) 
 
+Below are all the labs regrading this course. 
+In labs, you will apply the concepts discussed in lectures but with a focus on computation. 
 
 
-::: callout-warning
-Lab tutorials are a work in progress and are constantly being updated
-:::
+
 
 :::

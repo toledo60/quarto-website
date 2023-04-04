@@ -5,7 +5,7 @@ comments: false
 ## Current Courses
 
 - UCLA STATS 10: [Introduction to Statistical Reasoning](/ucla/stats10/index.qmd) *(Spring 2023)*
-- UCLA STATS 21: [Python and Other Technologies](/ucla/stats21/index.qmd) *(Spring 2023)*
+- UCLA STATS 21: [Python and Other Technologies for Data Science](/ucla/stats21/index.qmd) *(Spring 2023)*
 
 ## Previous Courses
 

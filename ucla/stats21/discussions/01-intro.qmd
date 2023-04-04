@@ -1,0 +1,9 @@
+---
+author: Jose Toledo Luna
+date: 2023-04-04
+title: Getting Ready for STATS 21
+description:  Python Install, pip, Git, VS Code, Jupyter
+toc: true
+jupyter: python3
+---
+

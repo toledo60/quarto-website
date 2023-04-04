@@ -1,6 +1,6 @@
 ---
 author: Jose Toledo Luna
-date: today
+date: 2023-04-04
 title: Lab 2
 description: Logical Statements with Applications
 toc: true

@@ -1,10 +1,10 @@
 ---
 title: "Welcome To STATS21"
-subtitle: "Python and Other Technologies"
+subtitle: "Python and Other Technologies for Data Science"
 description: "Below are links used in this course"
-image: python.png
+image: data.jpg
 listing:
-  contents: "labs"
+  contents: "discussions"
 about:
   template: trestles
   links:
@@ -34,4 +34,11 @@ Tuesday: 6:00pm-6:50pm <br/>
 
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/97xd1gej7gsm4pbzwdpyv2zrxqsi9mk0)
 
+:::callout-warning
+May 8 - May 11 I will be attending a conference and will not be available.
+There will be no discussions or office hours, but I will be available through email. I will post videos for you to watch on your free time. Plan accordingly
 :::
+
+These tutorials cover the content of this course. However, as this is my first time teaching this course, the tutorials may not be as comprehensive as you may expect. Therefore, it is highly recommended that you attend the class
+:::
+

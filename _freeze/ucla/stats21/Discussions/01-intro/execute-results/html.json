@@ -1,0 +1,11 @@
+{
+  "hash": "7da918d6b50465c7d4d7e0a06173ac65",
+  "result": {
+    "markdown": "---\nauthor: Jose Toledo Luna\ndate: '2023-04-04'\ntitle: Getting Ready for STATS 21\ndescription: 'Python Install, pip, Git, VS Code, Jupyter'\ntoc: true\n---\n\n",
+    "supporting": [
+      "01-intro_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
