@@ -2,15 +2,14 @@
 comments: false
 ---
 
-
-My appointments typically last under 30 minutes, but if necessary, they can be extended to address any issues. Please note that while I am here to help, I cannot serve as your personal tutor. I encourage you to attend our assigned office hours, ask questions on our [campuswire](https://campuswire.com), and work with your classmates to resolve any difficulties you may be experiencing. If you still require assistance or are unable to resolve your concerns, please do not hesitate to schedule an appointment with me
+My appointments typically last under 30 minutes, but if necessary, they can be extended to address further issues. Please note that while I am here to help, I cannot serve as your personal tutor. I encourage you to attend our assigned office hours, ask questions on our [campuswire](https://campuswire.com), and work with your classmates to resolve any difficulties you may be experiencing. If you still require assistance or are unable to resolve your concerns, please do not hesitate to schedule an appointment with me
 
 
 :::callout-warning
 If you fail to follow the format of the **appropriate** email example, by 
 
 1. not including your available times
-2. not including images of code errors *(if its R code related only)*
+2. not including images of code errors *(if its code related only)*
 
 Then I will reply to your email with a link to this page so you can try again :)
 :::
@@ -20,7 +19,7 @@ Then I will reply to your email with a link to this page so you can try again :)
 
 Hello Jose,
 
-Briefly explain what you are struggling with and insert screenshots of error messages *(If its R code related)*
+Briefly explain what you are struggling with and insert screenshots of error messages *(If its code related)*
 
 My available times this week are
 

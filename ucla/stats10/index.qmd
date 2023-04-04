@@ -9,8 +9,8 @@ about:
   template: trestles
   links:
     - text: Zoom
-      url: "https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
-      icon: camera-video-fill
+      url: "https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
+      icon: camera-video
     - text: Email
       url: "mailto:toledo60@g.ucla.edu"
       icon: inbox-fill
@@ -29,14 +29,11 @@ comments: false
 **Instructor:** Jose Toledo Luna
 
 **Discussions:** <br/>
-**3C** T/Th: 10am-10:50am (Online)
- <br/>
 **3D** T/Th: 11:00am-11:50am (PAB 1749)
 
 **Office Hours:** <br/>
-Monday: 11:00am-12:00pm <br/>
 Tuesday: 10:00am-10:50am <br/>
-@MS8349, Zoom or  [appointment](/email.qmd)
+@MS8349, [Zoom](https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) or [appointment](/email.qmd)
 
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu)
 
@@ -46,6 +43,9 @@ All lab assignments will be turned in directly on CANVAS
 
 Below are all the labs regrading this course. 
 In labs, you will apply the concepts discussed in lectures but with a focus on computation. All labs will be completed using R and documented with R markdown.
+
+For reference, here is a quick [R markdown tutorial](https://ucla.zoom.us/rec/share/_p0VmzkiKDmdEtvoE9tBfj_h-nXcUcq9Js529BDGZU5Sgn1gmdvSKWfGm4RAbIhD.TQFT_varvPPXIs_j?startTime=1673635929000) 
+
 
 
 ::: callout-warning
