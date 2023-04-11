@@ -30,6 +30,8 @@ comments: false
 
 
 **Office Hours:** <br/>
+The following office hours are also with my STATS10 discussion
+
 Tuesday: 10:00am-10:50am <br/>
 Tuesday: 6:00pm-6:50pm <br/>
 Thursday: 9:00am-9:50am <br/>
@@ -41,6 +43,14 @@ Material from this course can be downloaded from this [Box Folder](https://app.b
 May 8 - May 11 I will be attending a conference and will not be available.
 There will be no discussions or office hours, but I will be available through email. I will post videos for you to watch on your free time. Plan accordingly
 :::
+
+
+**NO DISCUSSIONS**
+
+- May 02, Regular office hours still available
+- May 09, Regular office hours not available this week
+
+
 
 These tutorials cover the content of this course. However, as this is my first time teaching this course, the tutorials may not be as comprehensive as you may expect. Therefore, it is highly recommended that you attend the class
 :::

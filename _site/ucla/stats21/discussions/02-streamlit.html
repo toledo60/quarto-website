@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jose Toledo Luna">
-<meta name="dcterms.date" content="2023-04-04">
-<meta name="description" content="Introduction to R">
+<meta name="dcterms.date" content="2023-04-11">
+<meta name="description" content="Simple EDA application">
 
-<title>Jose Toledo Luna - Lab 1</title>
+<title>Jose Toledo Luna - Introduction to Streamlit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -198,8 +198,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview-of-births-dataset" id="toc-overview-of-births-dataset" class="nav-link active" data-scroll-target="#overview-of-births-dataset">Overview of Births Dataset</a></li>
-  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
+  <li><a href="#overview-of-project" id="toc-overview-of-project" class="nav-link active" data-scroll-target="#overview-of-project">Overview of Project</a></li>
+  <li><a href="#setting-up-your-project" id="toc-setting-up-your-project" class="nav-link" data-scroll-target="#setting-up-your-project">Setting up your project</a></li>
+  <li><a href="#installing-streamlit" id="toc-installing-streamlit" class="nav-link" data-scroll-target="#installing-streamlit">Installing Streamlit</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   </ul>
 </nav>
     </div>
@@ -208,12 +210,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 1</h1>
+<h1 class="title">Introduction to Streamlit</h1>
 </div>
 
 <div>
   <div class="description">
-    Introduction to R
+    Simple EDA application
   </div>
 </div>
 
@@ -230,7 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 4, 2023</p>
+      <p class="date">April 11, 2023</p>
     </div>
   </div>
   
@@ -240,101 +242,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<div class="cell">
-
+<section id="overview-of-project" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-project">Overview of Project</h2>
+<p>The goal of this project is for you to create a simple exploratory data analysis application (EDA). You will do so using the <a href="https://streamlit.io">streamlit</a> framework</p>
+<p>The structure of the EDA application is as follows:</p>
+<ul>
+<li><p>Have a <a href="https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader">file uploader button</a> which allows you to upload your own <code>csv</code> file</p></li>
+<li><p>Once the <code>csv</code> file has been uploaded display relevant statistics about the dataset, such as: number of rows, number of columns, how many categorical/numerical/bool variables are there <em>(other information you can think of, optional)</em></p></li>
+<li><p>An appropriate <a href="https://docs.streamlit.io/library/api-reference/widgets">input widget</a> to select a <strong>single</strong> column from the dataset. <em>(If you are a looking for a challenge select multiple columns, optional)</em></p></li>
+<li><p>Once the chosen column has been selected, if the column is numerical display in a table the <a href="https://en.wikipedia.org/wiki/Five-number_summary">five number summary</a>, create a distribution plot using matplotlib/seaborn. The plot should be highly customized, I recommend <a href="https://www.python-graph-gallery.com">The Python Graph Gallery</a> for examples and inspiration</p></li>
+<li><p>If the column selected is categorical, display in a table the proportions of each category level, and create a customized barplot</p></li>
+</ul>
+<p>I leave the customization of your streamlit application up to you. For example, the layout, theme, single or multiple pages, etc..</p>
+</section>
+<section id="setting-up-your-project" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-project">Setting up your project</h2>
+<p>We will use VScode throughout this tutorial. First create a folder with an appropriate name, in your desired destination. I will create a folder called <code>simple_EDA_app</code> in my <code>Desktop</code> directory</p>
+</section>
+<section id="installing-streamlit" class="level2">
+<h2 class="anchored" data-anchor-id="installing-streamlit">Installing Streamlit</h2>
+<p>You can follow the official <a href="https://docs.streamlit.io/library/get-started/installation">installation guide</a> if you prefer using virtual environments</p>
+<p>This guide assumes global installation</p>
+<p>On windows:</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install streamlit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr>
-<p>In this lab you will learn the fundamentals of programming in R. Start by reading over the following tutorials in order.</p>
-<ol type="1">
-<li><a href="../../../ucla/stats10/fundamentals.html">Fundamentals of R</a></li>
-<li><a href="../../../ucla/stats10/importing_data.html">Importing Data in R</a></li>
-</ol>
-<p>Once you’ve learned to properly import data into R, lets take a quick look at the <code>births</code> dataset located in our class website</p>
-<section id="overview-of-births-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="overview-of-births-dataset">Overview of Births Dataset</h2>
-<p>The <code>births</code> dataset is a sample of information about babies born in North Carolina. It is considered a data frame because it contains numeric information about each baby, as well as various pieces of categorical data such as the race of the parents, and whether the parents had a smoking habit.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>birth_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">"/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On macOS:</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip install streamlit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>birth_dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt;   Gender Premie weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits   Marital
-#&gt; 1   Male     No    124      8   31   25    13    14       1     13   Married
-#&gt; 2 Female     No    177      8   36   26     9    12       2     11 Unmarried
-#&gt; 3   Male     No    107      3   30   16    12     8       2     10 Unmarried
-#&gt; 4 Female     No    144      6   33   37    12    14       2     12 Unmarried
-#&gt; 5   Male     No    117      9   36   33    10    16       2     19   Married
-#&gt;   Racemom Racedad Hispmom Hispdad Gained     Habit MomPriorCond BirthDef
-#&gt; 1   White   White NotHisp NotHisp     40 NonSmoker         None     None
-#&gt; 2   White   White Mexican Mexican     20 NonSmoker         None     None
-#&gt; 3   White Unknown Mexican Unknown     70 NonSmoker At Least One     None
-#&gt; 4   White   White NotHisp NotHisp     50 NonSmoker         None     None
-#&gt; 5   White   Black NotHisp NotHisp     40 NonSmoker At Least One     None
-#&gt;      DelivComp BirthComp
-#&gt; 1 At Least One      None
-#&gt; 2 At Least One      None
-#&gt; 3 At Least One      None
-#&gt; 4 At Least One      None
-#&gt; 5         None      None</code></pre>
-</div>
-</div>
-<p>We can view the structure of our dataset using <code>str()</code> function</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(birth_dat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; 'data.frame':    1992 obs. of  21 variables:
-#&gt;  $ Gender      : chr  "Male" "Female" "Male" "Female" ...
-#&gt;  $ Premie      : chr  "No" "No" "No" "No" ...
-#&gt;  $ weight      : int  124 177 107 144 117 98 147 138 104 123 ...
-#&gt;  $ Apgar1      : int  8 8 3 6 9 4 8 9 9 9 ...
-#&gt;  $ Fage        : int  31 36 30 33 36 31 33 22 30 23 ...
-#&gt;  $ Mage        : int  25 26 16 37 33 29 30 20 21 18 ...
-#&gt;  $ Feduc       : int  13 9 12 12 10 14 12 14 12 12 ...
-#&gt;  $ Meduc       : int  14 12 8 14 16 16 9 14 12 12 ...
-#&gt;  $ TotPreg     : int  1 2 2 2 2 3 4 1 1 1 ...
-#&gt;  $ Visits      : int  13 11 10 12 19 20 16 10 30 16 ...
-#&gt;  $ Marital     : chr  "Married" "Unmarried" "Unmarried" "Unmarried" ...
-#&gt;  $ Racemom     : chr  "White" "White" "White" "White" ...
-#&gt;  $ Racedad     : chr  "White" "White" "Unknown" "White" ...
-#&gt;  $ Hispmom     : chr  "NotHisp" "Mexican" "Mexican" "NotHisp" ...
-#&gt;  $ Hispdad     : chr  "NotHisp" "Mexican" "Unknown" "NotHisp" ...
-#&gt;  $ Gained      : int  40 20 70 50 40 21 22 20 11 19 ...
-#&gt;  $ Habit       : chr  "NonSmoker" "NonSmoker" "NonSmoker" "NonSmoker" ...
-#&gt;  $ MomPriorCond: chr  "None" "None" "At Least One" "None" ...
-#&gt;  $ BirthDef    : chr  "None" "None" "None" "None" ...
-#&gt;  $ DelivComp   : chr  "At Least One" "At Least One" "At Least One" "At Least One" ...
-#&gt;  $ BirthComp   : chr  "None" "None" "None" "None" ...</code></pre>
-</div>
-</div>
-<p>There are 1992 rows and 21 columns, and we can see the datatypes for each variable <em>(column)</em>. Those with <code>int</code> are considered numerical variables and those with <code>chr</code> are considered categorical variables.</p>
-<p><em>Note:</em> While looking at the structure of the data using <code>str()</code> we primarily saw two types of variables: <code>chr</code> and <code>int</code> to denote character and integer data types, respectively. However we can also have <code>factor</code> and <code>double</code>.</p>
-<p><code>factor</code> will be considered as a categorical variable and <code>double</code> would be considered as a numerical variable.</p>
-<p>We can use the <code>$</code> operator to access values from a data frame column. For example, if we want to extract the values from the <code>Gender</code> column from our dataset, we run the following command</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] "Male"   "Female" "Male"   "Female" "Male"   "Female" "Male"   "Male"</code></pre>
-</div>
-</div>
-<p>If we save these values into a variable we will be able to manipulate them without altering the dataset itself.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>genders <span class="ot">&lt;-</span> birth_dat<span class="sc">$</span>Gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pip3 install streamlit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="exploratory-data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h2>
-<p>Once you have a solid understanding of the fundamental concepts, we can proceed with performing exploratory data analysis. Exploratory data analysis (EDA) is a statistical approach to analyzing data sets that involves summarizing the features of both numerical and categorical data using various data visualization methods.</p>
-<p>Below are tutorials for working with numerical and categorical data</p>
-<ul>
-<li><a href="../../../ucla/stats10/intro_numerical_variables.html">Summarizing and Visualzing Numerical Data</a></li>
-<li><a href="../../../ucla/stats10/intro_categorical_variables.html">Summarizing and Visualzing Categorical Data</a></li>
-</ul>
-<p>Both of these tutorials utilize the <code>births</code> dataset mentioned previously, but they are not interdependent. You can read either tutorial in any order without affecting your ability to understand the content</p>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<p>You will need a <code>requirements.txt</code> files in your project to let streamlit know which packages were used <em>(this is where a virtual environment is useful)</em>. We used <code>numpy</code>, <code>pandas</code>, <code>streamlit</code>, <code>matplotlib</code>, to check the version used for each of these packages run the following command</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pip show PACKAGE_NAME <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For example,</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pip show numpy <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Version: 1.21.5</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
+<p>So in our <code>requirements.txt</code> file we will add the entry</p>
+<blockquote class="blockquote">
+<p>numpy &gt;= 1.21.5</p>
+</blockquote>
 
 
 </section>

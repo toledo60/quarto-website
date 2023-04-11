@@ -1,0 +1,113 @@
+---
+author: Jose Toledo Luna
+date: 2023-04-11
+title: Introduction to Streamlit
+description:  Simple EDA application
+toc: true
+jupyter: python3
+comments: false
+---
+
+
+## Overview of Project
+
+The goal of this project is for you to create a simple exploratory data analysis application (EDA). You will do so using the [streamlit](https://streamlit.io) framework
+
+The structure of the EDA application is as follows:
+
+- Have a [file uploader button ](https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader) which allows you to upload your own `csv` file
+- Once the `csv` file has been uploaded display relevant statistics about the dataset, such as: number of rows, number of columns, how many categorical/numerical/bool variables are there *(other information you can think of, optional)*
+
+- An appropriate [input widget](https://docs.streamlit.io/library/api-reference/widgets) to select a **single** column from the dataset. *(If you are a looking for a challenge select multiple columns, optional)*
+
+- Once the chosen column has been selected, if the column is numerical display in a table the [five number summary](https://en.wikipedia.org/wiki/Five-number_summary), create a distribution plot using matplotlib/seaborn. The plot should be highly customized, I recommend [The Python Graph Gallery](https://www.python-graph-gallery.com) for examples and inspiration 
+
+- If the column selected is categorical, display in a table the proportions of each category level, and create a customized barplot
+
+
+I leave the customization of your streamlit application up to you. For example, the layout, theme, single or multiple pages, etc..
+
+## Setting up your project
+
+We will use VScode throughout this tutorial. First create a folder with an appropriate name, in your desired destination. I will create a folder called `simple_EDA_app` in my `Desktop` directory
+
+
+
+
+## Installing Streamlit
+
+You can follow the official [installation guide](https://docs.streamlit.io/library/get-started/installation) if you prefer using virtual environments
+
+This guide assumes global installation
+
+On windows:
+
+```{python}
+#| eval: false
+pip install streamlit
+```
+
+On macOS:
+
+```{python}
+#| eval: false
+pip install streamlit
+```
+
+or 
+
+```{python}
+#| eval: false
+pip3 install streamlit
+```
+
+
+
+
+## Requirements
+
+You will need a `requirements.txt` files in your project to let streamlit know which packages were used *(this is where a virtual environment is useful)*.
+We used `numpy`, `pandas`, `streamlit`, `matplotlib`, to check the version used for each of these packages run the following command 
+
+```{python}
+#| eval: false
+pip show PACKAGE_NAME | grep Version
+```
+
+For example,
+
+```{python}
+pip show numpy | grep Version
+```
+
+
+So in our `requirements.txt` file we will add the entry
+
+
+> numpy >= 1.21.5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,6 +4,7 @@ date: 2023-04-04
 title: Lab 3 
 description: Introduction to Linear Regression and Sampling
 toc: true
+comments: false
 ---
 
 ---

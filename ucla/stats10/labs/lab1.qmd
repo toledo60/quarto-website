@@ -4,6 +4,7 @@ date: 2023-04-04
 title: Lab 1 
 description: Introduction to R
 toc: true
+comments: false
 ---
 
 ```{r setup, include = FALSE}

@@ -4,6 +4,7 @@ date: 2023-04-04
 title: Lab 5
 description: Introduction to Confidence Intervals and Hypothesis Testing
 toc: true
+comments: false
 ---
 
 ---
