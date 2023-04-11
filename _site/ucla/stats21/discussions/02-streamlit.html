@@ -198,9 +198,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setting-up-your-project" id="toc-setting-up-your-project" class="nav-link active" data-scroll-target="#setting-up-your-project">Setting up your project</a></li>
-  <li><a href="#installing-streamlit" id="toc-installing-streamlit" class="nav-link" data-scroll-target="#installing-streamlit">Installing Streamlit</a></li>
+  <li><a href="#installing-streamlit" id="toc-installing-streamlit" class="nav-link active" data-scroll-target="#installing-streamlit">Installing Streamlit</a></li>
+  <li><a href="#structure-of-project" id="toc-structure-of-project" class="nav-link" data-scroll-target="#structure-of-project">Structure of Project</a>
+  <ul class="collapse">
+  <li><a href="#main-application" id="toc-main-application" class="nav-link" data-scroll-target="#main-application">Main Application</a></li>
+  <li><a href="#gitignore" id="toc-gitignore" class="nav-link" data-scroll-target="#gitignore">.gitignore</a></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -241,13 +245,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="setting-up-your-project" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-your-project">Setting up your project</h2>
-<p>We will use VScode throughout this tutorial. First create a folder with an appropriate name, in your desired destination. I will create a folder called <code>simple_app</code> in my <code>Desktop</code> directory</p>
-</section>
 <section id="installing-streamlit" class="level2">
 <h2 class="anchored" data-anchor-id="installing-streamlit">Installing Streamlit</h2>
-<p>You can follow the official <a href="https://docs.streamlit.io/library/get-started/installation">installation guide</a> if you prefer using virtual environments</p>
+<p>You can follow the official <a href="https://docs.streamlit.io/library/get-started/installation">installation guide</a> if you prefer using <a href="https://code.visualstudio.com/docs/python/environments">virtual environments</a></p>
 <p>This guide assumes global installation</p>
 <p>On Windows use <code>pip</code> and on macOS use <code>pip3</code></p>
 <div class="cell" data-execution_count="1">
@@ -273,15 +273,39 @@ Location of Packages
 </div>
 </details>
 </section>
-<section id="requirements" class="level2">
-<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
-<p>You will need a <code>requirements.txt</code> file in your project to let streamlit know which packages were used <em>(this is where a virtual environment is useful)</em>. We used <code>numpy</code>, <code>pandas</code>, <code>streamlit</code>, <code>matplotlib</code>, to check the version used for each of these packages run the following command</p>
+<section id="structure-of-project" class="level2">
+<h2 class="anchored" data-anchor-id="structure-of-project">Structure of Project</h2>
+<p>We will use VScode throughout this tutorial. First create a folder with an appropriate name, in your desired destination. I will create a folder called <code>simple_app</code> in my <code>Desktop</code> directory.</p>
+<p>Next, we initialize a git repository to upload our project to Github so streamlit can obtain access to it later on. We will need a <code>README.md</code> to give a quick overview of the project, and a <code>.gitignore</code> file to specify unnecessary files not to track</p>
+<p>Lastly, the contents of our app will be on <code>main.py</code> <em>(or whatever file name you want to call it)</em>. Our project structure should then look something like this</p>
+<pre><code>Desktop/
+  simple_app/
+    main.py
+    requirements.txt
+    README.md
+    .gitignore</code></pre>
+<hr>
+<section id="main-application" class="level3">
+<h3 class="anchored" data-anchor-id="main-application">Main Application</h3>
+<p>In our <code>main.py</code> file is where we put all of the code required to create our streamlit application</p>
+</section>
+<section id="gitignore" class="level3">
+<h3 class="anchored" data-anchor-id="gitignore">.gitignore</h3>
+<p>In our <code>.gitignore</code> we usually have the following <em>(but not limited to)</em></p>
+<pre><code>__pycache__
+.DS_Store
+.streamlit/
+.vscode/</code></pre>
+</section>
+<section id="requirements" class="level3">
+<h3 class="anchored" data-anchor-id="requirements">Requirements</h3>
+<p>You will need a <code>requirements.txt</code> file in your project to let streamlit know which packages were used <em>(this is where a virtual environment is useful)</em>. Let’s say we used <code>numpy</code>, <code>pandas</code>, <code>streamlit</code>, and <code>matplotlib</code>. To check the version used for each of these packages run the following command</p>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pip show PACKAGE_NAME <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pip show PACKAGE_NAME <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For example,</p>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pip show numpy <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pip show numpy <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Version: 1.21.5</code></pre>
 </div>
@@ -296,6 +320,7 @@ Location of Packages
 <p>We repeat the process for all of the packages used in our streamlit application</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
