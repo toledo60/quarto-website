@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles page-columns page-full">
+<div class="quarto-about-trestles">
   <div class="about-entity">
     <img src="data.jpg" class="about-image
   rounded " style="width: 20em;">
@@ -193,8 +193,7 @@ ul.task-list li input[type="checkbox"] {
   </a>
 </div>
   </div>
-  <div class="about-contents page-columns page-full"><main class="content page-columns page-full" id="quarto-document-content">
-<div class="column-page">
+  <div class="about-contents"><main class="content" id="quarto-document-content">
 <p><strong>Instructor:</strong> Jose Toledo Luna</p>
 <p><strong>Discussions:</strong> <br> <strong>1A</strong> Tuesday: 4:00pm-4:50pm (BOELTER 5436) <br> <strong>1B</strong> Tuesday: 5:00pm-5:50pm (BOELTER 5436)</p>
 <p><strong>Office Hours:</strong> <br> The following office hours are also with my STATS10 discussion</p>
@@ -218,11 +217,25 @@ Warning
 <li>May 02, Regular office hours still available</li>
 <li>May 09, Regular office hours not available this week</li>
 </ul>
+<details>
+<summary>
+Participation Project
+</summary>
+<p>The goal of this project is for you to create a simple exploratory data analysis application (EDA). You will do so using the <a href="https://streamlit.io">streamlit</a> framework</p>
+<p>The structure of the EDA application is as follows:</p>
+<ul>
+<li><p>Have a <a href="https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader">file uploader button</a> which allows you to upload your own <code>csv</code> file</p></li>
+<li><p>Once the <code>csv</code> file has been uploaded display relevant statistics about the dataset, such as: number of rows, number of columns, how many categorical/numerical/bool variables are there <em>(other information you can think of, optional)</em></p></li>
+<li><p>An appropriate <a href="https://docs.streamlit.io/library/api-reference/widgets">input widget</a> to select a <strong>single</strong> column from the dataset. <em>(If you are a looking for a challenge select multiple columns, optional)</em></p></li>
+<li><p>Once the chosen column has been selected, if the column is numerical display in a table the <a href="https://en.wikipedia.org/wiki/Five-number_summary">five number summary</a>, create a distribution plot using matplotlib/seaborn. The plot should be highly customized, I recommend <a href="https://www.python-graph-gallery.com">The Python Graph Gallery</a> for examples and inspiration</p></li>
+<li><p>If the column selected is categorical, display in a table the proportions of each category level, and create a customized barplot</p></li>
+</ul>
+<p>I leave the customization of your streamlit application up to you. For example, the layout, theme, single or multiple pages, etc..</p>
+<p>Once your EDA application is finished, fill out the following <a href="https://docs.google.com/spreadsheets/d/1z1eze2EMOcbPk91G5K4J6f3qkdgWW5PFjU5ttajm2o8/edit?usp=sharing">spreadsheet</a> with your information to get credit <strong>(Must use ucla email)</strong></p>
 <p>These tutorials cover the content of this course. However, as this is my first time teaching this course, the tutorials may not be as comprehensive as you may expect. Therefore, it is highly recommended that you attend the class</p>
-</div>
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+</details><div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1680629527617" data-listing-reading-time-sort="1.065">
 <div class="body">
@@ -245,7 +258,7 @@ Jose Toledo Luna
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1681232017961" data-listing-reading-time-sort="1.63">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1681234582705" data-listing-reading-time-sort="0.865">
 <div class="body">
 <a href="../../ucla/stats21/discussions/02-streamlit.html">
 <h3 class="no-anchor listing-title">

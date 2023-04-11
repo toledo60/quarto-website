@@ -20,7 +20,7 @@ about:
       icon: box
 comments: false
 ---
-::: {.column-page}
+
 
 **Instructor:** Jose Toledo Luna
 
@@ -51,7 +51,29 @@ There will be no discussions or office hours, but I will be available through em
 - May 09, Regular office hours not available this week
 
 
+<details>
+<summary> Participation Project </summary>
+
+The goal of this project is for you to create a simple exploratory data analysis application (EDA). You will do so using the [streamlit](https://streamlit.io) framework
+
+The structure of the EDA application is as follows:
+
+- Have a [file uploader button ](https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader) which allows you to upload your own `csv` file
+- Once the `csv` file has been uploaded display relevant statistics about the dataset, such as: number of rows, number of columns, how many categorical/numerical/bool variables are there *(other information you can think of, optional)*
+
+- An appropriate [input widget](https://docs.streamlit.io/library/api-reference/widgets) to select a **single** column from the dataset. *(If you are a looking for a challenge select multiple columns, optional)*
+
+- Once the chosen column has been selected, if the column is numerical display in a table the [five number summary](https://en.wikipedia.org/wiki/Five-number_summary), create a distribution plot using matplotlib/seaborn. The plot should be highly customized, I recommend [The Python Graph Gallery](https://www.python-graph-gallery.com) for examples and inspiration 
+
+- If the column selected is categorical, display in a table the proportions of each category level, and create a customized barplot
+
+I leave the customization of your streamlit application up to you. For example, the layout, theme, single or multiple pages, etc..
+
+
+Once your EDA application is finished, fill out the following [spreadsheet](https://docs.google.com/spreadsheets/d/1z1eze2EMOcbPk91G5K4J6f3qkdgWW5PFjU5ttajm2o8/edit?usp=sharing) with your information to get credit **(Must use ucla email)**
+
+</summary>
 
 These tutorials cover the content of this course. However, as this is my first time teaching this course, the tutorials may not be as comprehensive as you may expect. Therefore, it is highly recommended that you attend the class
-:::
+
 

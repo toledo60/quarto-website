@@ -198,8 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview-of-project" id="toc-overview-of-project" class="nav-link active" data-scroll-target="#overview-of-project">Overview of Project</a></li>
-  <li><a href="#setting-up-your-project" id="toc-setting-up-your-project" class="nav-link" data-scroll-target="#setting-up-your-project">Setting up your project</a></li>
+  <li><a href="#setting-up-your-project" id="toc-setting-up-your-project" class="nav-link active" data-scroll-target="#setting-up-your-project">Setting up your project</a></li>
   <li><a href="#installing-streamlit" id="toc-installing-streamlit" class="nav-link" data-scroll-target="#installing-streamlit">Installing Streamlit</a></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   </ul>
@@ -242,49 +241,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="overview-of-project" class="level2">
-<h2 class="anchored" data-anchor-id="overview-of-project">Overview of Project</h2>
-<p>The goal of this project is for you to create a simple exploratory data analysis application (EDA). You will do so using the <a href="https://streamlit.io">streamlit</a> framework</p>
-<p>The structure of the EDA application is as follows:</p>
-<ul>
-<li><p>Have a <a href="https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader">file uploader button</a> which allows you to upload your own <code>csv</code> file</p></li>
-<li><p>Once the <code>csv</code> file has been uploaded display relevant statistics about the dataset, such as: number of rows, number of columns, how many categorical/numerical/bool variables are there <em>(other information you can think of, optional)</em></p></li>
-<li><p>An appropriate <a href="https://docs.streamlit.io/library/api-reference/widgets">input widget</a> to select a <strong>single</strong> column from the dataset. <em>(If you are a looking for a challenge select multiple columns, optional)</em></p></li>
-<li><p>Once the chosen column has been selected, if the column is numerical display in a table the <a href="https://en.wikipedia.org/wiki/Five-number_summary">five number summary</a>, create a distribution plot using matplotlib/seaborn. The plot should be highly customized, I recommend <a href="https://www.python-graph-gallery.com">The Python Graph Gallery</a> for examples and inspiration</p></li>
-<li><p>If the column selected is categorical, display in a table the proportions of each category level, and create a customized barplot</p></li>
-</ul>
-<p>I leave the customization of your streamlit application up to you. For example, the layout, theme, single or multiple pages, etc..</p>
-</section>
 <section id="setting-up-your-project" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-your-project">Setting up your project</h2>
-<p>We will use VScode throughout this tutorial. First create a folder with an appropriate name, in your desired destination. I will create a folder called <code>simple_EDA_app</code> in my <code>Desktop</code> directory</p>
+<p>We will use VScode throughout this tutorial. First create a folder with an appropriate name, in your desired destination. I will create a folder called <code>simple_app</code> in my <code>Desktop</code> directory</p>
 </section>
 <section id="installing-streamlit" class="level2">
 <h2 class="anchored" data-anchor-id="installing-streamlit">Installing Streamlit</h2>
 <p>You can follow the official <a href="https://docs.streamlit.io/library/get-started/installation">installation guide</a> if you prefer using virtual environments</p>
 <p>This guide assumes global installation</p>
-<p>On windows:</p>
+<p>On Windows use <code>pip</code> and on macOS use <code>pip3</code></p>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install streamlit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>On macOS:</p>
+<details>
+<summary>
+Location of Packages
+</summary>
+<p>If you want to know where your packages are installed run the command</p>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip install streamlit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip show PACKAGE_NAME <span class="op">|</span> grep Location</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>or</p>
+<p>For example,</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pip3 install streamlit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pip show numpy <span class="op">|</span> grep Location</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Location: /Users/toledo60/opt/anaconda3/lib/python3.9/site-packages</code></pre>
 </div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
+</details>
 </section>
 <section id="requirements" class="level2">
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
-<p>You will need a <code>requirements.txt</code> files in your project to let streamlit know which packages were used <em>(this is where a virtual environment is useful)</em>. We used <code>numpy</code>, <code>pandas</code>, <code>streamlit</code>, <code>matplotlib</code>, to check the version used for each of these packages run the following command</p>
+<p>You will need a <code>requirements.txt</code> file in your project to let streamlit know which packages were used <em>(this is where a virtual environment is useful)</em>. We used <code>numpy</code>, <code>pandas</code>, <code>streamlit</code>, <code>matplotlib</code>, to check the version used for each of these packages run the following command</p>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pip show PACKAGE_NAME <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pip show PACKAGE_NAME <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For example,</p>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pip show numpy <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pip show numpy <span class="op">|</span> grep Version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Version: 1.21.5</code></pre>
 </div>
@@ -296,6 +293,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote class="blockquote">
 <p>numpy &gt;= 1.21.5</p>
 </blockquote>
+<p>We repeat the process for all of the packages used in our streamlit application</p>
 
 
 </section>
