@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-labs .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-labs'] = new List('listing-labs', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -199,6 +199,8 @@ ul.task-list li input[type="checkbox"] {
   </div>
   <div class="about-contents page-columns page-full"><main class="content page-columns page-full" id="quarto-document-content">
 <div class="column-page">
+<section id="class-overview" class="level2">
+<h2 data-anchor-id="class-overview">Class Overview</h2>
 <p><strong>Instructor:</strong> Jose Toledo Luna</p>
 <p><strong>Discussions:</strong> <br> <strong>3D</strong> Tuesday: 11:00am-11:50am (PAB 1749)</p>
 <p><strong>Office Hours:</strong> <br> The following office hours are also with my STATS21 discussion</p>
@@ -218,12 +220,12 @@ Warning
 </div>
 <p>Material from this course can be downloaded from this <a href="https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu">Box Folder</a></p>
 <p>For general questions or specific questions about the labs use <a href="https://campuswire.com">campuswire</a>. Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS</p>
+</section>
+<section id="labs" class="level2">
+<h2 data-anchor-id="labs">Labs</h2>
 <p>All lab assignments will be turned in directly on CANVAS, and will be completed using R and documented with R markdown. For reference, here is a quick <a href="https://app.box.com/s/u08jwhg4lmulx2yzncodme6nl0k9a9gz">R markdown tutorial</a></p>
 <p>Below are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation.</p>
-</div>
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div id="listing-labs" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226683264" data-listing-reading-time-sort="1.87">
 <div class="body">
@@ -349,7 +351,19 @@ Jose Toledo Luna
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main></div>
+</div>
+</section>
+<section id="participation-forms" class="level2">
+<h2 data-anchor-id="participation-forms">Participation Forms</h2>
+<p>You must use your ucla email to access the forms below</p>
+<ul>
+<li><a href="https://forms.gle/NN7ntX5n8Ff6EZ8V9">Week 2: R markdown</a></li>
+</ul>
+</section>
+</div>
+
+
+</main></div>
 </div>
  <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
