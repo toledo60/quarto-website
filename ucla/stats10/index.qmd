@@ -72,6 +72,7 @@ In labs, you will apply the concepts discussed in lectures but with a focus on c
 You must use your ucla email to access the forms below
 
 - [Week 2: R markdown](https://forms.gle/NN7ntX5n8Ff6EZ8V9)
+- [Week 3: Single Categorical Variable](https://forms.gle/tSC6ksZXiXPJGH2j9)
 
 
 
