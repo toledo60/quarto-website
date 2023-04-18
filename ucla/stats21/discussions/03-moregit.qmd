@@ -1,6 +1,6 @@
 ---
 author: Jose Toledo Luna
-date: 2023-04-17
+date: 2023-04-18
 title: Git/Github Overview
 description: a simple git/github overview
 toc: true
@@ -92,17 +92,31 @@ You should immediately be followed by the following page
 
 ![](create_repository.png){width=80%}
 
-Specify a name for your repository and choose whether to make it public or private
+Specify a name for your repository and choose whether to make it a public or private repository. Clcik on the create repository button to confirm your repository 
+
+![](create_repository_button.png){width=80%}
+
+You should immediately be followed by the following page
+
+![](setup_repository.png){width=80%}
+
+We will follow the **"create a new repository on the command line"** template without the `README.md`
+
+
+Let'ts go back to our `random_folder` project, open up the terminal and  run the following command. After `origin` make sure to change the url to your own repository
+*(highlighted in the red box)*
 
 ```{r,eval=FALSE}
 git remote add origin https://github.com/user_name/repository_name.git
 ```
 
+
+
 ```{r,eval=FALSE}
 git push -u origin main
 ```
 
-The `-u` flag creates a tracking reference for every branch that we successfully push onto the remote repository. The local branch we push is automatically linked with the remote branch. This allows us to use commands such as `git pull` without any arguments *(shown below)*
+The `-u` flag creates a tracking reference for every branch that we successfully push onto the remote repository. The local branch we push is automatically linked with the remote branch. This allows us to use commands such as `git pull` without any arguments
 
 All of the files in `random_folder` should have now been successfully pushed to our repository on Github
 `https://github.com/user_name/repository_name.git`
@@ -120,7 +134,9 @@ git commit -m "added file_4"
 git push
 ```
 
-Repeat the above process each time you want to stage changes of current/new files *(assuming you are only pushing to main repository)*
+If you are only pushing changes to the main repository without using any branches, you should follow the steps in **"Making Changes"** every time you want to stage changes to current or new files.
+
+However, it is recommended that you work on separate branches and merge them with the main branch after finishing and testing the changes before pushing them directly to the main branch.
 
 
 
