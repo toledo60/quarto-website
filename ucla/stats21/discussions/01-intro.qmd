@@ -4,7 +4,6 @@ date: 2023-04-04
 title: Getting Ready for STATS 21
 description:  Python Install, pip, Git, VS Code, Jupyter
 toc: true
-jupyter: python3
 ---
 
 
@@ -26,25 +25,28 @@ If python is not installed on your machine, you will see an error message statin
 
 To see if you already have `Git` installed, open up your terminal application and type the following command 
 
+```{r,eval=FALSE}
+git version
+```
 
-> git version
 
 The output will either tell you which version of `Git` is installed, or it will alert you that git is an unknown command. If it is an unknown command, download [Git](https://git-scm.com/downloads) for your respective operating system and follow the installation guide
 
-Once git is properly installed *(as shown below)*,
-![Git version](git-installed.png){width=80%} 
+Once git is properly installed *(as shown below)*
+
+![Git Version](git-installed.png){width=80%} 
 
 create an account for [Github](https://github.com)
 
 Once you have created your Github account, open your terminal and configure git user name and email address, so we can push our work to Github. On the terminal run the following commands 
 
-```
+```{r,eval=FALSE}
 git config --global user.name "Jose Toledo"
 ```
 
 Using the **same** email you used to create your Github account 
 
-```
+```{r,eval=FALSE}
 git config --global user.email github_email@example.com
 ```
 

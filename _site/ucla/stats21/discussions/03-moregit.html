@@ -356,7 +356,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="pushing-to-repository" class="level3">
 <h3 class="anchored" data-anchor-id="pushing-to-repository">Pushing to Repository</h3>
-<p>Now that all the files in <code>random_folder</code> have been staged, we can push them to our Github repository, say <code>https://github.com/user_name/repository_name.git</code></p>
+<p>Now that all the files in <code>random_folder</code> have been staged, we can push them to a new Github repository, say <code>https://github.com/user_name/repository_name.git</code></p>
+<p>On Github, go to your <code>profile</code> then <code>repositories</code> tab, and click on the <code>New</code> button</p>
+<p><img src="new_repository_button.png" class="img-fluid" style="width:80.0%"></p>
+<p>You should immediately be followed by the following page</p>
+<p><img src="create_repository.png" class="img-fluid" style="width:80.0%"></p>
+<p>Specify a name for your repository and choose whether to make it public or private</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git remote add origin https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>user_name<span class="sc">/</span>repository_name.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -365,6 +370,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>The <code>-u</code> flag creates a tracking reference for every branch that we successfully push onto the remote repository. The local branch we push is automatically linked with the remote branch. This allows us to use commands such as <code>git pull</code> without any arguments <em>(shown below)</em></p>
 <p>All of the files in <code>random_folder</code> should have now been successfully pushed to our repository on Github <code>https://github.com/user_name/repository_name.git</code></p>
+<p><img src="initial_commit.png" class="img-fluid" style="width:80.0%"></p>
 </section>
 <section id="making-changes" class="level3">
 <h3 class="anchored" data-anchor-id="making-changes">Making Changes</h3>

@@ -81,8 +81,18 @@ The `-M` flag automatically renames the master branch to main *(since the defaul
 
 ### Pushing to Repository
 
-Now that all the files in `random_folder` have been staged, we can push them to our Github repository, 
+Now that all the files in `random_folder` have been staged, we can push them to a new Github repository, 
 say `https://github.com/user_name/repository_name.git`
+
+On Github, go to your `profile` then `repositories` tab, and click on the `New` button
+
+![](new_repository_button.png){width=80%}
+
+You should immediately be followed by the following page
+
+![](create_repository.png){width=80%}
+
+Specify a name for your repository and choose whether to make it public or private
 
 ```{r,eval=FALSE}
 git remote add origin https://github.com/user_name/repository_name.git
@@ -96,6 +106,9 @@ The `-u` flag creates a tracking reference for every branch that we successfully
 
 All of the files in `random_folder` should have now been successfully pushed to our repository on Github
 `https://github.com/user_name/repository_name.git`
+
+![](initial_commit.png){width=80%}
+
 
 ### Making Changes
 

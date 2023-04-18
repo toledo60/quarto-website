@@ -1,11 +1,16 @@
 {
-  "hash": "b9812da25366815adba5f662e5690418",
+  "hash": "256e7576bcee44ac96a81634958eb4b5",
   "result": {
-    "markdown": "---\nauthor: Jose Toledo Luna\ndate: '2023-04-04'\ntitle: Getting Ready for STATS 21\ndescription: 'Python Install, pip, Git, VS Code, Jupyter'\ntoc: true\n---\n\n## Python\n\nTo see if you already have `python` installed, open up your terminal application and type the following command,\n\n> python\n\nif you are on Windows. If you are macOS then type the following command \n\n> python3\n\nIf python is not installed on your machine, you will see an error message stating Python cannot be found. Simply go to [Downloads](https://www.python.org/downloads/) and install python for your operating sytem\n\n\n\n## Setting up Git/Github\n\nTo see if you already have `Git` installed, open up your terminal application and type the following command \n\n\n> git version\n\nThe output will either tell you which version of `Git` is installed, or it will alert you that git is an unknown command. If it is an unknown command, download [Git](https://git-scm.com/downloads) for your respective operating system and follow the installation guide\n\nOnce git is properly installed *(as shown below)*,\n![Git version](git-installed.png){width=80%} \n\ncreate an account for [Github](https://github.com)\n\nOnce you have created your Github account, open your terminal and configure git user name and email address, so we can push our work to Github. On the terminal run the following commands \n\n```\ngit config --global user.name \"Jose Toledo\"\n```\n\nUsing the **same** email you used to create your Github account \n\n```\ngit config --global user.email github_email@example.com\n```\n\n## Setting up Visual Studio Code\n\nDownload [Visual Studio Code](https://code.visualstudio.com/download) for your respective operating system and install the following extensions\n\n- Jupyter\n- Pylance\n- Python\n\n",
+    "markdown": "---\nauthor: Jose Toledo Luna\ndate: 2023-04-04\ntitle: Getting Ready for STATS 21\ndescription:  Python Install, pip, Git, VS Code, Jupyter\ntoc: true\n---\n\n\n\n## Python\n\nTo see if you already have `python` installed, open up your terminal application and type the following command,\n\n> python\n\nif you are on Windows. If you are macOS then type the following command \n\n> python3\n\nIf python is not installed on your machine, you will see an error message stating Python cannot be found. Simply go to [Downloads](https://www.python.org/downloads/) and install python for your operating sytem\n\n\n\n## Setting up Git/Github\n\nTo see if you already have `Git` installed, open up your terminal application and type the following command \n\n\n::: {.cell}\n\n```{.r .cell-code}\ngit version\n```\n:::\n\n\n\nThe output will either tell you which version of `Git` is installed, or it will alert you that git is an unknown command. If it is an unknown command, download [Git](https://git-scm.com/downloads) for your respective operating system and follow the installation guide\n\nOnce git is properly installed *(as shown below)*\n\n![Git Version](git-installed.png){width=80%} \n\ncreate an account for [Github](https://github.com)\n\nOnce you have created your Github account, open your terminal and configure git user name and email address, so we can push our work to Github. On the terminal run the following commands \n\n\n::: {.cell}\n\n```{.r .cell-code}\ngit config --global user.name \"Jose Toledo\"\n```\n:::\n\n\nUsing the **same** email you used to create your Github account \n\n\n::: {.cell}\n\n```{.r .cell-code}\ngit config --global user.email github_email@example.com\n```\n:::\n\n\n## Setting up Visual Studio Code\n\nDownload [Visual Studio Code](https://code.visualstudio.com/download) for your respective operating system and install the following extensions\n\n- Jupyter\n- Pylance\n- Python\n\n\n\n\n\n\n",
     "supporting": [
       "01-intro_files"
     ],
-    "filters": [],
-    "includes": {}
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
   }
 }
