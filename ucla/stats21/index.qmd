@@ -82,9 +82,6 @@ The structure of the EDA application is as follows:
 I leave the customization of your streamlit application up to you. For example, the layout, theme, single or multiple pages, etc..
 
 
-Once your EDA application is finished, fill out the following [spreadsheet](https://docs.google.com/spreadsheets/d/1z1eze2EMOcbPk91G5K4J6f3qkdgWW5PFjU5ttajm2o8/edit?usp=sharing) with your information to get credit **(Must use ucla email)**
-
-
 :::
 
 
