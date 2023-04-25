@@ -92,7 +92,7 @@ You should immediately be followed by the following page
 
 ![](create_repository.png){width=80%}
 
-Specify a name for your repository and choose whether to make it a public or private repository. Clcik on the create repository button to confirm your repository 
+Specify a name for your repository and choose whether to make it a public or private repository. Click on the create repository button to confirm your repository 
 
 ![](create_repository_button.png){width=80%}
 
@@ -103,7 +103,7 @@ You should immediately be followed by the following page
 We will follow the **"create a new repository on the command line"** template without the `README.md`
 
 
-Let'ts go back to our `random_folder` project, open up the terminal and  run the following command. After `origin` make sure to change the url to your own repository
+Let's go back to our `random_folder` project, open up the terminal and  run the following command. After `origin` make sure to change the url to your own repository
 *(highlighted in the red box)*
 
 ```{r,eval=FALSE}

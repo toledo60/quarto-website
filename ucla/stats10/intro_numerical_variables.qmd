@@ -128,7 +128,7 @@ boxplot(father_eduction,mother_education,
 
 For boxplots its pretty straight forward to compare two numerical distributions using the syntax `boxplot(v1,v2,...)`. For histograms it requires a bit more work.
 
-We start by creating a histogram for the first variable, then creating another histrogam for the second variable but using the argument `add=TRUE`. We must specify a unique color for each histogram representing the variables. In order for both of the histograms to fit properly on the same plot we must take into account the lowest and highest values among the multiple numerical variables. 
+We start by creating a histogram for the first variable, then creating another histogram for the second variable but using the argument `add=TRUE`. We must specify a unique color for each histogram representing the variables. In order for both of the histograms to fit properly on the same plot we must take into account the lowest and highest values among the multiple numerical variables. 
 
 ```{r}
 low_x <- min(father_eduction,mother_education)

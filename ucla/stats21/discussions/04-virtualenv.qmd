@@ -24,7 +24,7 @@ pd.DataFrame(data = d)
 ```
 
 Using a virtual environment can help us avoid version conflicts between different packages, especially when working on projects that require specific versions of dependencies. In this case 
-`numpy > 1.17` to proprely use `default_rng()`.
+`numpy > 1.17` to properly use `default_rng()`.
 
 If you have multiple projects that use different versions of these libraries, you may run into version conflicts. By using a virtual environment, we can create an isolated environment with the specific versions of NumPy and Pandas that our project requires. This ensures that our code runs smoothly without any issues related to version incompatibilities. 
 
@@ -54,9 +54,9 @@ There are a few ways to manage our virtual environments
 1. Create a virtual environment inside each project/folder **(project-folder approach)**
 2. Create a single folder in your computer and keep all virtual environments there **(single-folder approach)**
 
-We will take the **project-folder approacgh** and create a virtual environment inside `random_folder`.
+We will take the **project-folder approach** and create a virtual environment inside `random_folder`.
 
-To do so, run the following command on the terminal insde the `random_folder` directory
+To do so, run the following command on the terminal inside the `random_folder` directory
 
 ```{python}
 python3 -m venv venv
@@ -71,6 +71,11 @@ random_folder/
   .gitignore
   venv/
 ```
+
+![](env_yes.png){width=80%}
+
+If you are using VS code then click on `Yes`
+
 
 ## Activating a virtual environment 
 
@@ -93,10 +98,13 @@ You must be in the current project directory for the above commands to work
 :::
 
 
-Once we see the name of our virtual environment *(venv)* in our  command prompt, 
+Once we see the name of our virtual environment *(venv)* in our command prompt,
 
-Then the virtual environment has been successfully been activated. Now we can install
-the external pacakges such as NumPy and pandas 
+
+![](venv_activate.png){width=80%}
+
+Then the virtual environment has been successfully been activated. 
+Now we can install the external packages such as NumPy and pandas 
 
 ```{python}
 pip install numpy pandas
@@ -147,13 +155,18 @@ pip install -r requirements.txt
 
 Run the following command 
 
-
 ```{python}
 deactivate
 ```
 
+Once you execute the `deactivate` command, your command prompt will return to its normal state, indicating that you have successfully exited the virtual environment. Any interactions with Python or pip from this point onward will be carried out using your globally configured Python environment, rather than the packages and dependencies installed in the virtual environment
 
-Once you execute the `deactivate` command, your command prompt will return to its normal state, indicating that you have successfully exited the virtual environment. Any interactions with Python or pip from this point onwards will be carried out using your globally configured Python environment, rather than the packages and dependencies installed in the virtual environment
+
+To ensure that you are working in the appropriate environment for your project, it is important to `activate the virtual environment` each time you start working on it. After activating the virtual environment, select it as the Python interpreter in your development environment to ensure that you are using the packages and dependencies specific to this project
+
+![](venv_interpreter.png){width=80%}
+
+
 
 
 

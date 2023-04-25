@@ -146,7 +146,7 @@ barplot(smoker_hispanic_dad,
 It is evident that the number of non-smokers exceeds that of smokers across all ethnicities. However, we may be able to obtain a more comprehensive understanding of the data by altering the grouping order of the bars. Specifically, we should examine which ethnic group has a higher count for each smoking category.
 
 
-We can change the order of our table by taking the *tranpose*, that is we swap the columns and rows. In R, we can transpose any table-like object using the function `t()`
+We can change the order of our table by taking the *transpose*, that is we swap the columns and rows. In R, we can transpose any table-like object using the function `t()`
 
 ```{r}
 t(smoker_hispanic_dad)

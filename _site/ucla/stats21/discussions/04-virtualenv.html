@@ -254,7 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(data <span class="op">=</span> d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Using a virtual environment can help us avoid version conflicts between different packages, especially when working on projects that require specific versions of dependencies. In this case <code>numpy &gt; 1.17</code> to proprely use <code>default_rng()</code>.</p>
+<p>Using a virtual environment can help us avoid version conflicts between different packages, especially when working on projects that require specific versions of dependencies. In this case <code>numpy &gt; 1.17</code> to properly use <code>default_rng()</code>.</p>
 <p>If you have multiple projects that use different versions of these libraries, you may run into version conflicts. By using a virtual environment, we can create an isolated environment with the specific versions of NumPy and Pandas that our project requires. This ensures that our code runs smoothly without any issues related to version incompatibilities.</p>
 <p>Additionally, virtual environments also help with reproducibility and flexibility, making it easy to switch between different environments for different projects</p>
 </section>
@@ -276,8 +276,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Create a virtual environment inside each project/folder <strong>(project-folder approach)</strong></li>
 <li>Create a single folder in your computer and keep all virtual environments there <strong>(single-folder approach)</strong></li>
 </ol>
-<p>We will take the <strong>project-folder approacgh</strong> and create a virtual environment inside <code>random_folder</code>.</p>
-<p>To do so, run the following command on the terminal insde the <code>random_folder</code> directory</p>
+<p>We will take the <strong>project-folder approach</strong> and create a virtual environment inside <code>random_folder</code>.</p>
+<p>To do so, run the following command on the terminal inside the <code>random_folder</code> directory</p>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>python3 <span class="op">-</span>m venv venv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -288,6 +288,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  .gitignore</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  venv<span class="op">/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><img src="env_yes.png" class="img-fluid" style="width:80.0%"></p>
+<p>If you are using VS code then click on <code>Yes</code></p>
 </section>
 <section id="activating-a-virtual-environment" class="level2">
 <h2 class="anchored" data-anchor-id="activating-a-virtual-environment">Activating a virtual environment</h2>
@@ -314,7 +316,8 @@ Warning
 </div>
 </div>
 <p>Once we see the name of our virtual environment <em>(venv)</em> in our command prompt,</p>
-<p>Then the virtual environment has been successfully been activated. Now we can install the external pacakges such as NumPy and pandas</p>
+<p><img src="venv_activate.png" class="img-fluid" style="width:80.0%"></p>
+<p>Then the virtual environment has been successfully been activated. Now we can install the external packages such as NumPy and pandas</p>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pip install numpy pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -355,7 +358,9 @@ Warning
 <div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>deactivate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Once you execute the <code>deactivate</code> command, your command prompt will return to its normal state, indicating that you have successfully exited the virtual environment. Any interactions with Python or pip from this point onwards will be carried out using your globally configured Python environment, rather than the packages and dependencies installed in the virtual environment</p>
+<p>Once you execute the <code>deactivate</code> command, your command prompt will return to its normal state, indicating that you have successfully exited the virtual environment. Any interactions with Python or pip from this point onward will be carried out using your globally configured Python environment, rather than the packages and dependencies installed in the virtual environment</p>
+<p>To ensure that you are working in the appropriate environment for your project, it is important to <code>activate the virtual environment</code> each time you start working on it. After activating the virtual environment, select it as the Python interpreter in your development environment to ensure that you are using the packages and dependencies specific to this project</p>
+<p><img src="venv_interpreter.png" class="img-fluid" style="width:80.0%"></p>
 
 
 </section>

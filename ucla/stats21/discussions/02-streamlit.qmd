@@ -43,7 +43,7 @@ pip show numpy | grep Location
 
 ## Structure of Project
 
-We will use VScode throughout this tutorial. First create a folder with an appropriate name, in your desired destination. I will create a folder called `simple_app` in my `Desktop` directory.
+We will use VS code throughout this tutorial. First create a folder with an appropriate name, in your desired destination. I will create a folder called `simple_app` in my `Desktop` directory.
 
 Next, we initialize a git repository to upload our project to Github so streamlit can obtain access to it later on. We will need a `README.md` to give a quick overview of the project, and a `.gitignore` file to specify unnecessary files not to track
 

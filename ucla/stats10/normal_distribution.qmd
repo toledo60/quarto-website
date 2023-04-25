@@ -272,13 +272,13 @@ plots <- p1+p2+p3+plot_layout(ncol = 3)+
 plots
 ```
 
-We can easily verify these results using `pnorm`. Assuming a standard Normal distribution if we were one stanard deviation away from the mean then 
+We can easily verify these results using `pnorm`. Assuming a standard Normal distribution if we were one standard deviation away from the mean then 
 
 ```{r}
 pnorm(1)-pnorm(-1)
 ```
 
-If we were two standard devations away from the mean
+If we were two standard deviations away from the mean
 
 ```{r}
 pnorm(2) - pnorm(-2)
@@ -350,7 +350,7 @@ qnorm(p=0.5)
 Going back to our example of the SAT-M scores.
 Suppose $X$ is the SAT-M score which has a normal distribution with a mean of 507 and standard deviation of 111.
 Recall the probability of obtaining a score less than 700 on the SAT-M was $P(X < 700) = 0.9589596$. 
-Therefore, if we were interesting in finidng the score or *(quantile)* which gives us a cumulative probability of roughly 96\% we can use `qnorm` as follows:
+Therefore, if we were interesting in finding the score or *(quantile)* which gives us a cumulative probability of roughly 96\% we can use `qnorm` as follows:
 
 ```{r}
 qnorm(0.9589596, mean=507, sd=111)
