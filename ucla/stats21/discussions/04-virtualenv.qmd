@@ -82,6 +82,10 @@ If you are using VS code then click on `Yes`
 
 Now our project has its own virtual environment, but we need to activate it each time we use initialize the project. Run the following command each time you want to activate the environment 
 
+:::callout-warning
+You must be in the current project directory for the above commands to work
+:::
+
 **macOS**
 ```{python}
 source venv/bin/activate
@@ -89,13 +93,19 @@ source venv/bin/activate
 
 **Windows**
 ```{python}
-venv\Scripts\activate
+venv/Scripts/Activate.ps1
 ```
 
+On Windows, If you get an error 
 
-:::callout-warning
-You must be in the current project directory for the above commands to work
-:::
+> "cannot be loaded because the execution of scripts is disabled on this system"
+
+open Windows PowerShell as Administrator and run the following command 
+
+```{python}
+Set-ExecutionPolicy Unrestricted -Force
+```
+
 
 
 Once we see the name of our virtual environment *(venv)* in our command prompt,
