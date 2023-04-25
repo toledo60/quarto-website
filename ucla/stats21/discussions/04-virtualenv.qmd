@@ -1,0 +1,161 @@
+---
+author: Jose Toledo Luna
+date: 2023-04-24
+title: Python Virtual Environments
+description: a quick tutorial on python virtual environments using VS code
+toc: true
+comments: false
+execute: 
+  eval: false
+---
+
+## Overview of virtual environment
+
+Lets say we had the following script `data_basics.py`. In this script, the code imports the NumPy and Pandas libraries and creates a random array using NumPy.
+
+```{python}
+import numpy as np
+import pandas as pd
+
+rng = np.random.default_rng(123)
+d = rng.random((3,2))
+
+pd.DataFrame(data = d)
+```
+
+Using a virtual environment can help us avoid version conflicts between different packages, especially when working on projects that require specific versions of dependencies. In this case 
+`numpy > 1.17` to proprely use `default_rng()`.
+
+If you have multiple projects that use different versions of these libraries, you may run into version conflicts. By using a virtual environment, we can create an isolated environment with the specific versions of NumPy and Pandas that our project requires. This ensures that our code runs smoothly without any issues related to version incompatibilities. 
+
+Additionally, virtual environments also help with reproducibility and flexibility, making it easy to switch between different environments for different projects
+
+
+## Creating a virtual environment 
+
+To begin working on a project, open the folder or directory in your preferred editor, such as VS Code. For this example, let's assume we'll be working with a folder called `random_folder`, which contains the following files
+
+```{python}       
+random_folder/
+  data_basics.py
+  .gitignore
+```
+
+In the `.gitignore` file add the following line 
+
+```{python}
+venv/
+```
+
+This will prevent `git` from tracking this subfolder, which will be explained briefly
+
+There are a few ways to manage our virtual environments
+
+1. Create a virtual environment inside each project/folder **(project-folder approach)**
+2. Create a single folder in your computer and keep all virtual environments there **(single-folder approach)**
+
+We will take the **project-folder approacgh** and create a virtual environment inside `random_folder`.
+
+To do so, run the following command on the terminal insde the `random_folder` directory
+
+```{python}
+python3 -m venv venv
+```
+
+Use `python3` for macOS and `python` for windows. After running the command, there should be a generated `venv` folder in our current directory 
+
+
+```{python}       
+random_folder/
+  data_basics.py
+  .gitignore
+  venv/
+```
+
+## Activating a virtual environment 
+
+
+Now our project has its own virtual environment, but we need to activate it each time we use initialize the project. Run the following command each time you want to activate the environment 
+
+**macOS**
+```{python}
+source venv/bin/activate
+```
+
+**Windows**
+```{python}
+venv\Scripts\activate
+```
+
+
+:::callout-warning
+You must be in the current project directory for the above commands to work
+:::
+
+
+Once we see the name of our virtual environment *(venv)* in our  command prompt, 
+
+Then the virtual environment has been successfully been activated. Now we can install
+the external pacakges such as NumPy and pandas 
+
+```{python}
+pip install numpy pandas
+```
+
+
+Running the command `pip list` will then show our current installed external packages *(and their dependencies)*
+
+```{python}
+Package         Version
+--------------- -------
+numpy           1.24.3
+pandas          2.0.1
+pip             22.0.4
+python-dateutil 2.8.2
+pytz            2023.3
+setuptools      58.1.0
+six             1.16.0
+tzdata          2023.3
+```
+
+It is generally not recommended to push the `venv` folder to GitHub because it can cause problems with version conflicts and unnecessarily bloat the repository. Instead, we will create a `requirements.txt` file that lists all the required dependencies and their versions. We can do so by running the following command 
+
+
+```{python}
+pip freeze > requirements.txt
+```
+
+In the generated `requirements.txt` file,  we should have something similar to *(versions will be different)*
+
+```{python}
+numpy==1.24.3
+pandas==2.0.1
+python-dateutil==2.8.2
+pytz==2023.3
+six==1.16.0
+tzdata==2023.3
+```
+
+This file can then be committed to Github and used to recreate the virtual environment on other systems using the following command 
+
+```{python}
+pip install -r requirements.txt
+```
+
+
+## Deactivating a virtual environment
+
+Run the following command 
+
+
+```{python}
+deactivate
+```
+
+
+Once you execute the `deactivate` command, your command prompt will return to its normal state, indicating that you have successfully exited the virtual environment. Any interactions with Python or pip from this point onwards will be carried out using your globally configured Python environment, rather than the packages and dependencies installed in the virtual environment
+
+
+
+
+
