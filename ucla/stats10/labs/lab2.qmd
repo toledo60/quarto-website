@@ -298,7 +298,7 @@ sum(gender_vec == 'Female')
 ```
 
 
-### Data frames
+### Data Frames
 
 Considering *example 4* in the [vectors](#vectors) section of subsetting, we are extracting solely the values from a specific column based on a given condition. However, in some scenarios we may want to preserve all other information *(columns)* from our dataset after subsetting our data.
 
@@ -427,6 +427,165 @@ Subset our data to include rows with babies with at least one defect, then selec
 mean( birth_dat[has_defect,'weight'] )
 ```
 *Interpretation: Average weight of babies with at least one birth defect*
+
+
+## Missing Data
+
+Missing data (or missing values) appear when no value is available in one or more variables of an observation. A common example can look something like this 
+
+
+```{r,echo=FALSE}
+student_dat <- data.frame(
+  'StudentID' = c('12345', '23456', '23405'),
+  'Major' = c("math",NA,"biology"),
+  'GPA' = c(3.8,3.2,NA))
+
+knitr::kable(student_dat)
+```
+
+where we do not know the major of the second student and we also do not know the major from the third student *(denoted by `NA`)*
+
+
+Identifying the rows and columns where missing values occur is necessary before addressing the issue of missingness. Although it is easy to observe in the example mentioned above, in most cases, dealing with larger datasets requires a more programmatic approach
+
+
+### Vectors
+
+In R, `NA` stands for "Not Available" and is used to represent missing values in a dataset. 
+`NA` can be used for any data type in R, such as numeric character, or logical.
+
+The type of `NA` is a logical value
+
+```{r}
+typeof(NA)
+```
+
+and can be coerced into any other data type. For example, consider the following numeric vector 
+
+```{r}
+typeof(c(1,2,3))
+```
+
+but now with a missing value as the third element, it will preserve the original data type 
+
+```{r}
+typeof(c(1,2,NA,4))
+```
+
+or even a character vector 
+
+```{r}
+typeof(c("a","b",NA,"c"))
+```
+
+In the following, we will show several examples how to find missing values. The most common approach is to use the function `is.na()`
+
+
+```{r}
+is.na(c(1,2,NA,4,NA))
+```
+*Interpretation: For each element does this element contain `NA`*
+
+
+
+which will return a logical vector of the same length as the input vector, `TRUE` in the 
+position which `NA` is located in. We can use the function `which()` in order to find out the actual position of `TRUE` 
+
+```{r}
+which( is.na(c(1,2,NA,4,NA)) )
+```
+*Interpretation: Which position(s) are the logical values `TRUE` located*
+
+
+The output will then be an integer vector denoting the positions in which there were missing values. Applying the concepts learned in **Subsetting**, we can exclude any values which are missing. For example,
+
+
+```{r}
+x <- c(1,2,NA,4,NA)
+is.na(x)
+```
+
+```{r}
+!is.na(x)
+```
+*Interpretation: For each element does this element NOT contain `NA`*
+
+```{r}
+x[!is.na(x)]
+```
+*Interpretation: Only keep the elements which DO NOT contain `NA`*
+
+If we only want to find out if there any `NA` values, we can utilize the function `anyNA()`
+
+```{r}
+anyNA(c(1,2,NA,4,NA))
+```
+
+The above command will output `TRUE` if there are any `NA` in the vector and `FALSE` if there is not a single missing value
+
+```{r}
+anyNA(c(1,2,3))
+```
+
+
+
+In conclusion, a common approach to check for missing data in R, we can use `is.na()` or `anyNA()`. If we want to know the position of the missing values, we should use `is.na()`. However, if we are only concerned with whether there are any missing values or not, and not their position, then we can use `anyNA()`
+
+
+
+### Data Frames
+
+Now, working with data frames we would like to verify if there are any missing observations 
+throughout the entire dataset
+
+```{r,eval=FALSE}
+student_dat <- data.frame(
+  'StudentID' = c('12345', '23456', '23405'),
+  'Major' = c("math",NA,"biology"),
+  'GPA' = c(3.8,3.2,NA))
+```
+
+```{r,echo=FALSE}
+student_dat
+```
+
+
+When the function `is.na()` is applied to a data frame, the output will be a matrix containing logical values. The logical values in the matrix will depend on whether there were any missing values or not in the data frame
+
+```{r}
+is.na(student_dat)
+```
+
+
+If we wanted to find out the position(s) of the missing values for each column we will utilize the `apply()`. The basic syntax for `apply()` is 
+
+`apply(X, MARGIN, FUN)`
+
+- `x`: an array or matrix
+
+- `MARGIN`:  take a value or range between 1 and 2 to define where to apply the function
+
+- `MARGIN=1`: the manipulation is performed on rows
+
+- `MARGIN=2`: the manipulation is performed on columns
+
+- `MARGIN=c(1,2)`: the manipulation is performed on rows and columns
+
+- `FUN`: tells which function to apply, according to the specified `MARGIN`
+
+
+```{r}
+apply(X = is.na(student_dat), MARGIN = 2, FUN = which)
+```
+*Interpretation: From each column `MARGIN =2`, which values `(FUN = which)` from student_dat are missing `is.na(student_dat)`*
+
+
+The output of using `apply(...,MARGIN =2)` will be a list containing the row(s) in which missing values were found from each `column`. 
+
+In our case there were no rows with missing data in the first column, the second row contained a missing value from the column *Major* and the third row contained a missing value from the column *GPA*
+
+
+
 
 
 

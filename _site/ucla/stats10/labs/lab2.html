@@ -206,7 +206,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting">Subsetting</a>
   <ul class="collapse">
   <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">Vectors</a></li>
-  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames">Data frames</a></li>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames">Data Frames</a></li>
+  </ul></li>
+  <li><a href="#missing-data" id="toc-missing-data" class="nav-link" data-scroll-target="#missing-data">Missing Data</a>
+  <ul class="collapse">
+  <li><a href="#vectors-1" id="toc-vectors-1" class="nav-link" data-scroll-target="#vectors-1">Vectors</a></li>
+  <li><a href="#data-frames-1" id="toc-data-frames-1" class="nav-link" data-scroll-target="#data-frames-1">Data Frames</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -617,7 +622,7 @@ Warning
 </div>
 </section>
 <section id="data-frames" class="level3">
-<h3 class="anchored" data-anchor-id="data-frames">Data frames</h3>
+<h3 class="anchored" data-anchor-id="data-frames">Data Frames</h3>
 <p>Considering <em>example 4</em> in the <a href="#vectors">vectors</a> section of subsetting, we are extracting solely the values from a specific column based on a given condition. However, in some scenarios we may want to preserve all other information <em>(columns)</em> from our dataset after subsetting our data.</p>
 <p>Data frames have the following structure <code>data[rows,columns]</code>. The first argument inside the brackets will specify the rows and the second argument will specify the columns. We can apply all of the subsetting techniques we covered in the <a href="#section">vectors</a> within the rows, columns, or both rows and columns <code>data[condition for rows, condition for columns]</code></p>
 <p>For example, if we wanted to subset the <code>births</code> dataset to only include females</p>
@@ -782,6 +787,181 @@ Note
 </div>
 </div>
 <p><em>Interpretation: Average weight of babies with at least one birth defect</em></p>
+</section>
+</section>
+<section id="missing-data" class="level2">
+<h2 class="anchored" data-anchor-id="missing-data">Missing Data</h2>
+<p>Missing data (or missing values) appear when no value is available in one or more variables of an observation. A common example can look something like this</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">StudentID</th>
+<th style="text-align: left;">Major</th>
+<th style="text-align: right;">GPA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">12345</td>
+<td style="text-align: left;">math</td>
+<td style="text-align: right;">3.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">23456</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">3.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">23405</td>
+<td style="text-align: left;">biology</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>where we do not know the major of the second student and we also do not know the major from the third student <em>(denoted by <code>NA</code>)</em></p>
+<p>Identifying the rows and columns where missing values occur is necessary before addressing the issue of missingness. Although it is easy to observe in the example mentioned above, in most cases, dealing with larger datasets requires a more programmatic approach</p>
+<section id="vectors-1" class="level3">
+<h3 class="anchored" data-anchor-id="vectors-1">Vectors</h3>
+<p>In R, <code>NA</code> stands for “Not Available” and is used to represent missing values in a dataset. <code>NA</code> can be used for any data type in R, such as numeric character, or logical.</p>
+<p>The type of <code>NA</code> is a logical value</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "logical"</code></pre>
+</div>
+</div>
+<p>and can be coerced into any other data type. For example, consider the following numeric vector</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "double"</code></pre>
+</div>
+</div>
+<p>but now with a missing value as the third element, it will preserve the original data type</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="cn">NA</span>,<span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "double"</code></pre>
+</div>
+</div>
+<p>or even a character vector</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="cn">NA</span>,<span class="st">"c"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "character"</code></pre>
+</div>
+</div>
+<p>In the following, we will show several examples how to find missing values. The most common approach is to use the function <code>is.na()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="cn">NA</span>,<span class="dv">4</span>,<span class="cn">NA</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] FALSE FALSE  TRUE FALSE  TRUE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: For each element does this element contain <code>NA</code></em></p>
+<p>which will return a logical vector of the same length as the input vector, <code>TRUE</code> in the position which <code>NA</code> is located in. We can use the function <code>which()</code> in order to find out the actual position of <code>TRUE</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>( <span class="fu">is.na</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="cn">NA</span>,<span class="dv">4</span>,<span class="cn">NA</span>)) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 3 5</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Which position(s) are the logical values <code>TRUE</code> located</em></p>
+<p>The output will then be an integer vector denoting the positions in which there were missing values. Applying the concepts learned in <strong>Subsetting</strong>, we can exclude any values which are missing. For example,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="cn">NA</span>,<span class="dv">4</span>,<span class="cn">NA</span>)</span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] FALSE FALSE  TRUE FALSE  TRUE</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span><span class="fu">is.na</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  TRUE  TRUE FALSE  TRUE FALSE</code></pre>
+</div>
+</div>
+<p><em>Interpretation: For each element does this element NOT contain <code>NA</code></em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">!</span><span class="fu">is.na</span>(x)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1 2 4</code></pre>
+</div>
+</div>
+<p><em>Interpretation: Only keep the elements which DO NOT contain <code>NA</code></em></p>
+<p>If we only want to find out if there any <code>NA</code> values, we can utilize the function <code>anyNA()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anyNA</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="cn">NA</span>,<span class="dv">4</span>,<span class="cn">NA</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] TRUE</code></pre>
+</div>
+</div>
+<p>The above command will output <code>TRUE</code> if there are any <code>NA</code> in the vector and <code>FALSE</code> if there is not a single missing value</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anyNA</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] FALSE</code></pre>
+</div>
+</div>
+<p>In conclusion, a common approach to check for missing data in R, we can use <code>is.na()</code> or <code>anyNA()</code>. If we want to know the position of the missing values, we should use <code>is.na()</code>. However, if we are only concerned with whether there are any missing values or not, and not their position, then we can use <code>anyNA()</code></p>
+</section>
+<section id="data-frames-1" class="level3">
+<h3 class="anchored" data-anchor-id="data-frames-1">Data Frames</h3>
+<p>Now, working with data frames we would like to verify if there are any missing observations throughout the entire dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a>student_dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">'StudentID'</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">'12345'</span>, <span class="st">'23456'</span>, <span class="st">'23405'</span>),</span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">'Major'</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"math"</span>,<span class="cn">NA</span>,<span class="st">"biology"</span>),</span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">'GPA'</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">3.8</span>,<span class="fl">3.2</span>,<span class="cn">NA</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   StudentID   Major GPA
+#&gt; 1     12345    math 3.8
+#&gt; 2     23456    &lt;NA&gt; 3.2
+#&gt; 3     23405 biology  NA</code></pre>
+</div>
+</div>
+<p>When the function <code>is.na()</code> is applied to a data frame, the output will be a matrix containing logical values. The logical values in the matrix will depend on whether there were any missing values or not in the data frame</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(student_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;      StudentID Major   GPA
+#&gt; [1,]     FALSE FALSE FALSE
+#&gt; [2,]     FALSE  TRUE FALSE
+#&gt; [3,]     FALSE FALSE  TRUE</code></pre>
+</div>
+</div>
+<p>If we wanted to find out the position(s) of the missing values for each column we will utilize the <code>apply()</code>. The basic syntax for <code>apply()</code> is</p>
+<p><code>apply(X, MARGIN, FUN)</code></p>
+<ul>
+<li><p><code>x</code>: an array or matrix</p></li>
+<li><p><code>MARGIN</code>: take a value or range between 1 and 2 to define where to apply the function</p></li>
+<li><p><code>MARGIN=1</code>: the manipulation is performed on rows</p></li>
+<li><p><code>MARGIN=2</code>: the manipulation is performed on columns</p></li>
+<li><p><code>MARGIN=c(1,2)</code>: the manipulation is performed on rows and columns</p></li>
+<li><p><code>FUN</code>: tells which function to apply, according to the specified <code>MARGIN</code></p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X =</span> <span class="fu">is.na</span>(student_dat), <span class="at">MARGIN =</span> <span class="dv">2</span>, <span class="at">FUN =</span> which)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; $StudentID
+#&gt; integer(0)
+#&gt; 
+#&gt; $Major
+#&gt; [1] 2
+#&gt; 
+#&gt; $GPA
+#&gt; [1] 3</code></pre>
+</div>
+</div>
+<p><em>Interpretation: From each column <code>MARGIN =2</code>, which values <code>(FUN = which)</code> from student_dat are missing <code>is.na(student_dat)</code></em></p>
+<p>The output of using <code>apply(...,MARGIN =2)</code> will be a list containing the row(s) in which missing values were found from each <code>column</code>.</p>
+<p>In our case there were no rows with missing data in the first column, the second row contained a missing value from the column <em>Major</em> and the third row contained a missing value from the column <em>GPA</em></p>
 
 
 </section>

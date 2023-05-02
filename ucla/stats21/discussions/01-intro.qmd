@@ -17,7 +17,7 @@ if you are on Windows. If you are macOS then type the following command
 
 > python3
 
-If python is not installed on your machine, you will see an error message stating Python cannot be found. Simply go to [Downloads](https://www.python.org/downloads/) and install python for your operating sytem
+If python is not installed on your machine, you will see an error message stating Python cannot be found. Simply go to [Downloads](https://www.python.org/downloads/) and install python for your operating system
 
 
 
