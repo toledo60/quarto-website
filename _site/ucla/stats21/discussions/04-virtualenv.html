@@ -315,7 +315,10 @@ Warning
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>venv<span class="op">/</span>Scripts<span class="op">/</span>Activate.ps1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>On Windows, If you get an error</p>
+<details>
+<summary>
+Possible Error for Windows
+</summary>
 <blockquote class="blockquote">
 <p>“cannot be loaded because the execution of scripts is disabled on this system”</p>
 </blockquote>
@@ -323,6 +326,7 @@ Warning
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Set<span class="op">-</span>ExecutionPolicy Unrestricted <span class="op">-</span>Force</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</details>
 <p>Once we see the name of our virtual environment <em>(venv)</em> in our command prompt,</p>
 <p><img src="venv_activate.png" class="img-fluid" style="width:80.0%"></p>
 <p>Then the virtual environment has been successfully been activated. Now we can install the external packages such as NumPy and pandas</p>

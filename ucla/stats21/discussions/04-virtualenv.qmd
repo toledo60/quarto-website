@@ -96,7 +96,8 @@ source venv/bin/activate
 venv/Scripts/Activate.ps1
 ```
 
-On Windows, If you get an error 
+<details>
+<summary> Possible Error for Windows </summary>
 
 > "cannot be loaded because the execution of scripts is disabled on this system"
 
@@ -106,7 +107,7 @@ open Windows PowerShell as Administrator and run the following command
 Set-ExecutionPolicy Unrestricted -Force
 ```
 
-
+</details>
 
 Once we see the name of our virtual environment *(venv)* in our command prompt,
 
