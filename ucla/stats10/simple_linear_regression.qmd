@@ -25,7 +25,7 @@ Loading the library will now give us access to the penguins dataset
 library(palmerpenguins)
 ```
 
-see `?penguins`  or @palmer, for more info on this dataset
+see `?penguins` for more info on this dataset
 
 
 ## Simple Linear Regression
