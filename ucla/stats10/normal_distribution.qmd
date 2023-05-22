@@ -262,7 +262,7 @@ p3 <- ggplot(data.frame(x = x_limits), aes(x)) +
 
 ```{r}
 plots <- p1+p2+p3+plot_layout(ncol = 3)+
-  plot_annotation(title = '69-95-98.7 Rule')
+  plot_annotation(title = '68-95-98.7 Rule')
 
 ```
 
