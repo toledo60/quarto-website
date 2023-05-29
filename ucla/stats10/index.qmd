@@ -73,6 +73,7 @@ You must use your UCLA email to access the forms below
 - [Week 6: Simple Linear Regression](https://forms.gle/S1i9cUgbMnrd9vNV9)
 - [Week 7: Sampling and Simulation](https://forms.gle/ccGZrKtYkkZPXfLn7)
 - [Week 8: Normal Distribution](https://forms.gle/QrqhMbhvqGZTPx3f9)
+- [Week 9: Introduction to CLT](https://forms.gle/AXvgnAcBH98Lj6477)
 
 
 :::
