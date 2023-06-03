@@ -74,6 +74,7 @@ You must use your UCLA email to access the forms below
 - [Week 7: Sampling and Simulation](https://forms.gle/ccGZrKtYkkZPXfLn7)
 - [Week 8: Normal Distribution](https://forms.gle/QrqhMbhvqGZTPx3f9)
 - [Week 9: Introduction to CLT](https://forms.gle/AXvgnAcBH98Lj6477)
+- [Week 10: Introduction to Confidence Intervals and Hypothesis Testing](https://forms.gle/bMcdh3Wr1EPJquCW9)
 
 
 :::
