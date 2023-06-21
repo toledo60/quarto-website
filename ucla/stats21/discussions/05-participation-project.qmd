@@ -7,12 +7,6 @@ toc: true
 comments: false
 ---
 
----
-
-Fill out the following form whenever you are finished with your streamlit application 
-
-[Streamlit Form](https://forms.gle/7vySC5GUGrfNhRsK9)
----
 
 The goal of this project is for you to create a simple exploratory data analysis application (EDA). You will do so using the [streamlit](https://streamlit.io) framework
 
