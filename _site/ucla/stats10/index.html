@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Below are links used in this course">
 
 <title>Jose Toledo Luna - Welcome To STATS10</title>
 <style>
@@ -18,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -57,7 +56,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -90,6 +90,7 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
@@ -106,51 +107,51 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Jose Toledo Luna</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html">
+    <a class="nav-link" href="../../research.html" rel="" target="">
  <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching.html">
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
  <span class="menu-text">Teaching</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
       <i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
         <li>
-    <a class="dropdown-item" href="https://github.com/toledo60/quarto-website">
+    <a class="dropdown-item" href="https://github.com/toledo60/quarto-website" rel="" target="">
  <span class="dropdown-text">Website Source Code</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/toledo60">
+    <a class="dropdown-item" href="https://github.com/toledo60" rel="" target="">
  <span class="dropdown-text">Github Profile</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -170,30 +171,13 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Welcome To STATS10</h1>
 <p class="subtitle lead">Introduction to Statistical Reasoning</p>
 </div>
-<div>
-  <div class="description">
-    Below are links used in this course
-  </div>
-</div>
 <div class="quarto-title-meta">
   </div>
 </header>
     <div class="about-links">
-  <a href="https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09" class="about-link">
-    <i class="bi bi-camera-video"></i>
-     <span class="about-link-text">Zoom</span>
-  </a>
-  <a href="mailto:toledo60@g.ucla.edu" class="about-link">
+  <a href="mailto:toledo60@g.ucla.edu" class="about-link" rel="" target="">
     <i class="bi bi-inbox-fill"></i>
      <span class="about-link-text">Email</span>
-  </a>
-  <a href="https://campuswire.com" class="about-link">
-    <i class="bi bi-mortarboard"></i>
-     <span class="about-link-text">CampusWire</span>
-  </a>
-  <a href="https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu" class="about-link">
-    <i class="bi bi-box"></i>
-     <span class="about-link-text">Box Folder</span>
   </a>
 </div>
   </div>
@@ -201,12 +185,27 @@ ul.task-list li input[type="checkbox"] {
 <div class="column-page">
 <section id="class-overview" class="level2">
 <h2 data-anchor-id="class-overview">Class Overview</h2>
-<p><strong>Instructor:</strong> Jose Toledo Luna</p>
-<p><strong>Discussions:</strong> <br> <strong>3D</strong> Tuesday: 11:00am-11:50am (PAB 1749)</p>
-<p><strong>Office Hours:</strong> <br> The following office hours are also with my STATS21 discussion</p>
-<p>Tuesday: 10:00am-10:50am <br> Tuesday: 6:00pm-6:50pm <br> Thursday: 9:00am-9:50am <br> <span class="citation" data-cites="MS8349">@MS8349</span>, <a href="https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09">Zoom</a> or <a href="../../email.html">appointment</a></p>
-<p>Material from this course can be downloaded from this <a href="https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu">Box Folder</a></p>
-<p>For general questions or specific questions about the labs use <a href="https://campuswire.com">campuswire</a>. Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS</p>
+<p><strong>Instructor:</strong> Jose Toledo Luna <!---
+**Discussions:** <br/>
+**3D** Tuesday: 11:00am-11:50am (PAB 1749)
+**Office Hours:** <br/>
+The following office hours are also with my STATS21 discussion
+Tuesday: 10:00am-10:50am <br/>
+Tuesday: 6:00pm-6:50pm <br/>
+Thursday: 9:00am-9:50am <br/>
+@MS8349, [Zoom](https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) or [appointment](/email.qmd)
+    - text: CampusWire
+      url: "https://campuswire.com"
+      icon: mortarboard
+    - text: Box Folder
+      url: "https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu"
+      icon: box
+    - text: Zoom
+      url: "https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
+      icon: camera-video
+Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu)
+For general questions or specific questions about the labs use [campuswire](https://campuswire.com). Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS
+---></p>
 </section>
 <section id="labs" class="level2">
 <h2 data-anchor-id="labs">Labs</h2>
@@ -214,7 +213,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Below are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation.</p>
 <div id="listing-labs" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226683264" data-listing-reading-time-sort="1.87">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226683264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="../../ucla/stats10/labs/lab1.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
 <div class="body">
 <a href="../../ucla/stats10/labs/lab1.html">
 <h3 class="no-anchor listing-title">
@@ -238,7 +240,10 @@ Jose Toledo Luna
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1682924400000" data-listing-file-modified-sort="1683136575961" data-listing-reading-time-sort="23.075">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1682924400000" data-listing-file-modified-sort="1683136575961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24">
+<div class="thumbnail">
+<p><a href="../../ucla/stats10/labs/lab2.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
 <div class="body">
 <a href="../../ucla/stats10/labs/lab2.html">
 <h3 class="no-anchor listing-title">
@@ -262,7 +267,10 @@ Jose Toledo Luna
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226707309" data-listing-reading-time-sort="0.16">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226707309" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../../ucla/stats10/labs/lab3.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
 <div class="body">
 <a href="../../ucla/stats10/labs/lab3.html">
 <h3 class="no-anchor listing-title">
@@ -286,7 +294,10 @@ Jose Toledo Luna
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226712652" data-listing-reading-time-sort="0.165">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226712652" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../../ucla/stats10/labs/lab4.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
 <div class="body">
 <a href="../../ucla/stats10/labs/lab4.html">
 <h3 class="no-anchor listing-title">
@@ -310,7 +321,10 @@ Jose Toledo Luna
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226717928" data-listing-reading-time-sort="0.335">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1681226717928" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../../ucla/stats10/labs/lab5.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
 <div class="body">
 <a href="../../ucla/stats10/labs/lab5.html">
 <h3 class="no-anchor listing-title">
@@ -366,9 +380,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -433,6 +461,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -475,6 +589,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">© 2023, Jose Toledo Luna</div>
   </div>
 </footer>

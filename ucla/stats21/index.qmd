@@ -8,18 +8,14 @@ listing:
   contents: "discussions"
   fields: [date, title, author]
   sort: "date"
+  exclude:
+    title: ["Participation Project","Introduction to Streamlit"]
 about:
   template: trestles
   links:
-    - text: Zoom
-      url: "https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
-      icon: camera-video
     - text: Email
       url: "mailto:toledo60@g.ucla.edu"
       icon: inbox-fill
-    - text: Box Folder
-      url: "https://app.box.com/s/97xd1gej7gsm4pbzwdpyv2zrxqsi9mk0"
-      icon: box
 comments: false
 ---
 ::: {.column-page}
@@ -27,21 +23,6 @@ comments: false
 ## Class Overview
 
 **Instructor:** Jose Toledo Luna
-
-**Discussions:** <br/>
-**1A** Tuesday: 4:00pm-4:50pm (BOELTER 5436) <br/>
-**1B** Tuesday: 5:00pm-5:50pm (BOELTER 5436)
-
-
-**Office Hours:** <br/>
-The following office hours are also with my STATS10 discussion
-
-Tuesday: 10:00am-10:50am <br/>
-Tuesday: 6:00pm-6:50pm <br/>
-Thursday: 9:00am-9:50am <br/>
-@MS8349, [Zoom](https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) or [appointment](/email.qmd)
-
-Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/97xd1gej7gsm4pbzwdpyv2zrxqsi9mk0)
 
 
 

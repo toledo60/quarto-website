@@ -4,8 +4,8 @@ comments: false
 
 ## Current Courses
 
-- STATS 100B: Introduction to Mathematical Statistics
-- STATS 100C: Linear Models
+- UCLA STATS 100B: Introduction to Mathematical Statistics *(Summer 2023)*
+- UCLA STATS 100C: Linear Models *(Summer 2023)*
 
 
 ## Previous Courses
@@ -16,7 +16,7 @@ comments: false
 *(Fall 2022, Winter 2023, Spring 2023)*
 - STATS 13: Introduction to Statistical Methods for Life \
 and Health Sciences *(Summer 2022)*
-- UCLA STATS 21: [Python and Other Technologies for Data Science](/ucla/stats21/index.qmd) *(Spring 2023)*
+- STATS 21: [Python and Other Technologies for Data Science](/ucla/stats21/index.qmd) *(Spring 2023)*
 
 ### California State University, Fullerton
 

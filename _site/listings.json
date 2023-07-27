@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/ucla/stats21/index.html",
+    "items": [
+      "/ucla/stats21/discussions/01-intro.html",
+      "/ucla/stats21/discussions/03-git.html",
+      "/ucla/stats21/discussions/04-virtualenv.html"
+    ]
+  },
+  {
     "listing": "/ucla/stats10/index.html",
     "items": [
       "/ucla/stats10/labs/lab1.html",
@@ -7,16 +15,6 @@
       "/ucla/stats10/labs/lab3.html",
       "/ucla/stats10/labs/lab4.html",
       "/ucla/stats10/labs/lab5.html"
-    ]
-  },
-  {
-    "listing": "/ucla/stats21/index.html",
-    "items": [
-      "/ucla/stats21/discussions/01-intro.html",
-      "/ucla/stats21/discussions/02-streamlit.html",
-      "/ucla/stats21/discussions/03-git.html",
-      "/ucla/stats21/discussions/04-virtualenv.html",
-      "/ucla/stats21/discussions/05-participation-project.html"
     ]
   }
 ]

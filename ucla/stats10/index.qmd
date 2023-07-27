@@ -1,7 +1,6 @@
 ---
 title: "Welcome To STATS10"
 subtitle: "Introduction to Statistical Reasoning"
-description: "Below are links used in this course"
 image: stats.png
 listing:
   id: labs
@@ -9,18 +8,10 @@ listing:
 about:
   template: trestles
   links:
-    - text: Zoom
-      url: "https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
-      icon: camera-video
     - text: Email
       url: "mailto:toledo60@g.ucla.edu"
       icon: inbox-fill
-    - text: CampusWire
-      url: "https://campuswire.com"
-      icon: mortarboard
-    - text: Box Folder
-      url: "https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu"
-      icon: box
+
 comments: false
 toc: true
 ---
@@ -29,7 +20,7 @@ toc: true
 ## Class Overview
 
 **Instructor:** Jose Toledo Luna
-
+<!---
 **Discussions:** <br/>
 **3D** Tuesday: 11:00am-11:50am (PAB 1749)
 
@@ -41,11 +32,20 @@ Tuesday: 6:00pm-6:50pm <br/>
 Thursday: 9:00am-9:50am <br/>
 @MS8349, [Zoom](https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) or [appointment](/email.qmd)
 
+    - text: CampusWire
+      url: "https://campuswire.com"
+      icon: mortarboard
+    - text: Box Folder
+      url: "https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu"
+      icon: box
+    - text: Zoom
+      url: "https://ucla.zoom.us/my/jose.toledo.luna?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
+      icon: camera-video
 
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/nzlbh6mhk8pkye8vx4eu5do72cqfu9uu)
 
 For general questions or specific questions about the labs use [campuswire](https://campuswire.com). Otherwise, you can email me personally. The class code to join campuswire is posted on CANVAS
-
+--->
 
 ## Labs 
 

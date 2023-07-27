@@ -7,7 +7,7 @@ toc: true
 comments: false
 ---
 
-
+<!---
 The goal of this project is for you to create a simple exploratory data analysis application (EDA). You will do so using the [streamlit](https://streamlit.io) framework
 
 
@@ -39,7 +39,7 @@ see [Introduction to Streamlit](/ucla/stats21/discussions/02-streamlit.qmd) and
 
 - a `requirements.txt` file specifying all of the packages used for your streamlit application. I recommend using a [virtual environment](/ucla/stats21/discussions/04-virtualenv.qmd)
 
-
+--->
 
 
 
