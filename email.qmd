@@ -2,10 +2,11 @@
 comments: false
 ---
 
-My appointments typically last under 30 minutes, but if necessary, they can be extended to address further issues. Please note that while I am here to help, I cannot serve as your personal tutor. I encourage you to attend our assigned office hours, ask questions on our [campuswire](https://campuswire.com), and work with your classmates to resolve any difficulties you may be experiencing. If you still require assistance or are unable to resolve your concerns, please do not hesitate to schedule an appointment with me
+My appointments typically last under 30 minutes, but if necessary, they can be extended to address further issues. Please note that while I am here to help, I cannot serve as your personal tutor. I encourage you to attend our assigned office hours, ask questions, and work with your classmates to resolve any difficulties you may be experiencing. If you still require assistance or are unable to resolve your concerns, please do not hesitate to schedule an appointment with me
 
 
 :::callout-warning
+## Important
 If you fail to follow the format of the **appropriate** email example, by 
 
 1. not including your available times

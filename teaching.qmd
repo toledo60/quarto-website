@@ -4,8 +4,8 @@ comments: false
 
 ## Current Courses
 
-- STATS 13: Introduction to Statistical Methods for Life \
-and Health Sciences *(Fall 2023)*
+- STATS 13: [Introduction to Statistical Methods for Life \
+and Health Sciences](/ucla/stats13/index.qmd) *(Fall 2023)*
 
 
 ## Previous Courses
