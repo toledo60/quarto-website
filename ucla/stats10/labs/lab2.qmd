@@ -151,12 +151,17 @@ c(TRUE,TRUE,FALSE,FALSE) | c(TRUE,FALSE,TRUE,FALSE)
 
 *Element-wise* will return a vector of logical values, one for each pair of logicals combined. Whereas, *single comparison* only compares the first two elements of the logical vectors and will return a single logical value.
 
-```{r}
+```{r,eval=FALSE}
 c(TRUE,TRUE,FALSE,FALSE) || c(TRUE,FALSE,TRUE,FALSE)
 ```
-*Interpretation: TRUE or TRUE*
 
-The above will output `TRUE` since it only considers the first elements of the respective vectors, but it will warn us that the length of the vectors have more than one element.  A better example for single comparisons would be as follows
+The above will output the following error
+```
+Error in c(TRUE, TRUE, FALSE, FALSE) || c(TRUE, FALSE, TRUE, FALSE) : 
+  'length = 4' in coercion to 'logical(1)'
+```
+
+A better example for single comparisons would be as follows
 
 ```{r}
 age <- 20
@@ -258,7 +263,7 @@ Next we use the `birth` dataset for the following examples
 **4. How many females were in this dataset?**
 
 ```{r}
-birth_dat <- read.csv(file = "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv")
+birth_dat <- read.csv(file = "/Users/toledo60/Desktop/Projects/personal-website/data/births.csv")
 ```
 
 First we extract the values from the `Gender` column and store them in a variable called `gender_vec`

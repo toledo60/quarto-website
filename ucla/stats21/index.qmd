@@ -8,8 +8,6 @@ listing:
   contents: "discussions"
   fields: [date, title, author]
   sort: "date"
-  exclude:
-    title: ["Participation Project","Introduction to Streamlit"]
 about:
   template: trestles
   links:

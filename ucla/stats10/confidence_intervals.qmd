@@ -201,7 +201,7 @@ We will use the `pawnee` dataset in our class website to illustrate this procedu
 A brief description of the dataset
 
 ```{r}
-pawnee <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/pawnee.csv")
+pawnee <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/data/pawnee.csv")
 ```
 
 

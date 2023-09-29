@@ -9,7 +9,9 @@
   },
   {
     "listing": "/ucla/stats13/index.html",
-    "items": []
+    "items": [
+      "/ucla/stats13/labs/lab1.html"
+    ]
   },
   {
     "listing": "/ucla/stats10/index.html",

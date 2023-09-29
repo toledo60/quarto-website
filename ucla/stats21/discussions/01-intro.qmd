@@ -35,7 +35,7 @@ The output will either tell you which version of `Git` is installed, or it will 
 
 Once git is properly installed *(as shown below)*
 
-![Git Version](git-installed.png){width=80%} 
+![Git Version](figures/git-installed.png){width=80%} 
 
 create an account for [Github](https://github.com)
 

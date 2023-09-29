@@ -35,7 +35,7 @@ Here are some general steps to performing an inference procedure
 We carry out this procedure in the following scenario using the `flint` dataset in our class website
 
 ```{r}
-flint <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/flint.csv")
+flint <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/data/flint.csv")
 ```
 
 Below is a preview of `flint` alongside its dimensions

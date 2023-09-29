@@ -6,7 +6,7 @@ We will use the `births` data set to summarize and visualize numerical variables
 
 
 ```{r, echo=FALSE}
-birth_dat <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv")
+birth_dat <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/data/births.csv")
 ```
 
 Numerical data refers to data that can be measured and expressed as a number, such as age, height, weight, and temperature. Numerical data can be *discrete* or *continuous*

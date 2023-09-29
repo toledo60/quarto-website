@@ -4,7 +4,7 @@ toc: true
 
 
 ```{r, echo=FALSE}
-birth_dat <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv")
+birth_dat <- read.csv(file="/Users/toledo60/Desktop/Projects/personal-website/data/births.csv")
 ```
 
 

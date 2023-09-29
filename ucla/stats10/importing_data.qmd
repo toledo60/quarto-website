@@ -37,7 +37,7 @@ Therefore, to read the `births` data set I would copy/paste the directory of the
 
 
 ```{r}
-birth_dat <- read.csv(file = "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/births.csv")
+birth_dat <- read.csv(file = "/Users/toledo60/Desktop/Projects/personal-website/data/births.csv")
 ```
 
 
@@ -74,7 +74,7 @@ ozone_data_location
 we can copy/paste the path as follows
 
 ```{r}
-ozone_dat <- read.table(file = "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/ozone.txt", 
+ozone_dat <- read.table(file = "/Users/toledo60/Desktop/Projects/personal-website/data/ozone.txt", 
                         header =TRUE)
 ```
 
@@ -92,7 +92,7 @@ You will notice we now used an additional argument `header = TRUE` in our `read.
 If we forget to use `header=TRUE`, the first line of the text file will be treated as a row of the dataset and `read.table` will automatically create the variable names for us
 
 ```{r}
-wrong_ozone_dat <- read.table(file = "/Users/toledo60/Desktop/Projects/personal-website/ucla/stats10/data/ozone.txt")
+wrong_ozone_dat <- read.table(file = "/Users/toledo60/Desktop/Projects/personal-website/data/ozone.txt")
 ```
 
 ```{r,eval=FALSE}
