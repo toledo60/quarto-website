@@ -37,8 +37,16 @@ Wednesday: 5:00pm -6:00pm
 [Zoom Only](https://zoom.us/j/8496165634?pwd=dVFLRDF5WkdyRVBZY2NaVmVMa0NEQT09) or [appointment](/email.qmd)
 
 
-
 Material from this course can be downloaded from this [Box Folder](https://app.box.com/s/f4411gds9cchiz72ewx2rari1xgu67ne)
+
+## Homework 
+
+[Problem Sets for STATS13](/ucla/stats13/hw.qmd)
+
+The problems can be found at the end of each chapter in the textbook. You do not need to write the questions in your homework. Please show your work. All work must be your own.
+
+Make sure to write your full name, student ID number, and section number on your homework. You can handwrite or type your homework. 
+Document needs to be uploaded as 1 PDF only. **NO LATE WORK WILL BE ACCEPTED!**
 
 
 ## Labs 
