@@ -10,11 +10,15 @@ comments: false
 
 ## Homework 1
 
+Due Sunday 10/8 at 11:59pm on Bruin Learn
+
 **Chapter P Problems:**
 
 - **P.1.2** (a-e)
 - **P.1.8** (a-c)
-- **P.1.10** (a-d) *For part (c), refer to the first graph with men/women. For part (d), refer to second graph with cities*
+- **P.1.10** (a-d) <br/> 
+*For part (c), refer to the first graph with men/women* <br/> 
+*For part (d), refer to second graph with cities*
 - **P.1.16** (a-c)
 - **P.2.2** (a-b)
 - **P.2.6**

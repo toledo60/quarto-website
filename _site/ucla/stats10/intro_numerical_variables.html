@@ -187,20 +187,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>  weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits Gained
-1    124      8   31   25    13    14       1     13     40
-2    177      8   36   26     9    12       2     11     20
-3    107      3   30   16    12     8       2     10     70
-4    144      6   33   37    12    14       2     12     50
-5    117      9   36   33    10    16       2     19     40</code></pre>
+<pre><code>  X weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits Gained
+1 1    116      9   28   34     6     3       2     10     30
+2 2    126      8   30   18    12    12       1     14     50
+3 3    161      8   28   29    12    12       3     14     65
+4 4    133      9   26   23     8     9       3     10      8
+5 5    119      8   30   19    12    12       2     12     20</code></pre>
 </div>
 </div>
 <p>The names of the numerical columns can be obtained using <code>colnames()</code> function in combination with the above statement</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">Filter</span>(is.numeric,birth_dat) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "weight"  "Apgar1"  "Fage"    "Mage"    "Feduc"   "Meduc"   "TotPreg"
-[8] "Visits"  "Gained" </code></pre>
+<pre><code> [1] "X"       "weight"  "Apgar1"  "Fage"    "Mage"    "Feduc"   "Meduc"  
+ [8] "TotPreg" "Visits"  "Gained" </code></pre>
 </div>
 </div>
 <p>We will only consider the <code>weight</code> variable from our dataset to demonstrate methods to summarize and visualize a numerical variable.</p>
@@ -258,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 116.0512</code></pre>
+<pre><code>[1] 116.0536</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(birth_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

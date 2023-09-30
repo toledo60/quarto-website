@@ -188,18 +188,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>  Gender Premie   Marital Racemom Racedad Hispmom Hispdad     Habit
-1   Male     No   Married   White   White NotHisp NotHisp NonSmoker
-2 Female     No Unmarried   White   White Mexican Mexican NonSmoker
-3   Male     No Unmarried   White Unknown Mexican Unknown NonSmoker
-4 Female     No Unmarried   White   White NotHisp NotHisp NonSmoker
-5   Male     No   Married   White   Black NotHisp NotHisp NonSmoker
+<pre><code>  Gender Premie   Marital Racemom Racedad   Hispmom   Hispdad     Habit
+1   Male     No   Married   White   White   Mexican   Mexican NonSmoker
+2   Male     No Unmarried   White Unknown   NotHisp   Unknown    Smoker
+3   Male     No   Married   White   White OtherHisp OtherHisp NonSmoker
+4   Male     No   Married   White   White   Mexican   Mexican NonSmoker
+5 Female     No Unmarried   Black Unknown   NotHisp   Unknown NonSmoker
   MomPriorCond BirthDef    DelivComp BirthComp
-1         None     None At Least One      None
-2         None     None At Least One      None
-3 At Least One     None At Least One      None
+1         None     None         None      None
+2 At Least One     None         None      None
+3         None     None At Least One      None
 4         None     None At Least One      None
-5 At Least One     None         None      None</code></pre>
+5         None     None         None      None</code></pre>
 </div>
 </div>
 <p>The names of the character columns can be obtained using <code>colnames()</code> function in combination with the above statement</p>
@@ -222,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>hispanic_mom
   Mexican   NotHisp OtherHisp 
-      215      1693        84 </code></pre>
+      216      1697        85 </code></pre>
 </div>
 </div>
 <p>From the above frequency table we observe there were 25 mom who were Mexican, 1693 non Hispanic, and 84 were other types of Hispanic. We can easily convert the frequency table into a frequency table of proportions using <code>prop.table()</code>. The input for <code>prop.table()</code> is a table created using <code>table()</code>.</p>
@@ -231,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>hispanic_mom
    Mexican    NotHisp  OtherHisp 
-0.10793173 0.84989960 0.04216867 </code></pre>
+0.10810811 0.84934935 0.04254254 </code></pre>
 </div>
 </div>
 <p>Now, we observe roughly 10.79% of moms were Mexican, 84.99% were non Hispanic and 4.22% were other types of Hispanic. Note that all of the proportions should add up to 1.</p>
@@ -247,7 +247,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>X
   Mexican   NotHisp OtherHisp 
-      215      1693        84 </code></pre>
+      216      1697        85 </code></pre>
 </div>
 </div>
 <p>If we want frequency tables of proportions, we need to use the argument <code>format</code> and specify <code>format = 'proportion'</code>. There are other formats such as <code>'count'</code>, <code>'percent'</code> etc.. for more details run <code>?mosaicCore::tally()</code></p>
@@ -256,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>X
    Mexican    NotHisp  OtherHisp 
-0.10793173 0.84989960 0.04216867 </code></pre>
+0.10810811 0.84934935 0.04254254 </code></pre>
 </div>
 </div>
 <p>To plot a single categorical variable we can use <code>barplot()</code>. The input for <code>barplot()</code> when dealing with categorical data is a <code>table</code>, like the ones we created above</p>
@@ -287,6 +287,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>           
             Mexican NotHisp OtherHisp Unknown
+                  0       4         0       2
   NonSmoker     184    1236        78     307
   Smoker          5     117         2      63</code></pre>
 </div>
@@ -298,8 +299,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>           
                 Mexican     NotHisp   OtherHisp     Unknown
-  NonSmoker 0.092369478 0.620481928 0.039156627 0.154116466
-  Smoker    0.002510040 0.058734940 0.001004016 0.031626506</code></pre>
+            0.000000000 0.002002002 0.000000000 0.001001001
+  NonSmoker 0.092092092 0.618618619 0.039039039 0.153653654
+  Smoker    0.002502503 0.058558559 0.001001001 0.031531532</code></pre>
 </div>
 </div>
 <p>Now, lets plot the results of our table using the default <code>barplot</code> settings</p>
@@ -337,11 +339,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(smoker_hispanic_dad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           
-            NonSmoker Smoker
-  Mexican         184      5
-  NotHisp        1236    117
-  OtherHisp        78      2
-  Unknown         307     63</code></pre>
+                 NonSmoker Smoker
+  Mexican      0       184      5
+  NotHisp      4      1236    117
+  OtherHisp    0        78      2
+  Unknown      2       307     63</code></pre>
 </div>
 </div>
 <p>From this point of view, we can observe the number of counts in each smoking habit category for each ethnicity. For example, there were 184 Mexican fathers who are non-smokers and 5 Mexican fathers that did smoke. Similar, interpretations can be made for other ethnic groups.</p>

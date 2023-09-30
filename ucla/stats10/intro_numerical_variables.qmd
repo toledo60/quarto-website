@@ -2,7 +2,7 @@
 toc: true
 ---
 
-We will use the `births` data set to summarize and visualize numerical variables using the *base R* approach
+We will use the `births` data set to summarize and visualize numerical variables using the *base R* approach 
 
 
 ```{r, echo=FALSE}
