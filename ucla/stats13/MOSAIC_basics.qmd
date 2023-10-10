@@ -1,0 +1,100 @@
+---
+toc: true
+css: styles.css
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4,
+  eval = TRUE
+)
+```
+
+
+## MOSAIC library
+
+
+The goal of the `mosaic` package is to make effective computation accessible to university-level students at an introductory level.
+
+The following packages from the `mosaic suite` will be used throughout the labs.
+
+- `{mosaic}`
+  - `{mosaicCore}`
+  - `{mosaicData}`
+
+You can the above packages by running the following command in the **Console**
+
+```{r, eval=FALSE}
+install.packages('mosaic')
+```
+
+
+If you are installing the package for the first time, please be aware that it might take some time since there are numerous dependencies that need to be installed beforehand (this is done automatically)
+
+You can see the remaining packages part of the `mosaic suite` on the [Project MOSAIC Homepage](http://www.mosaic-web.org/R-packages.html), but they will not be used for this course
+
+If you have successfully installed `mosaic` package you should be able to run the following command 
+without any errors. 
+
+
+```{r,message=FALSE,warning=FALSE}
+library(mosaic)
+```
+
+
+```{r}
+#| classes: styled-output
+#| code-summary: Show Messages
+#| code-fold: true
+#| eval: false
+
+library(mosaic)
+
+#> Registered S3 method overwritten by 'mosaic':
+#>   method                           from   
+#>   fortify.SpatialPolygonsDataFrame ggplot2
+#> 
+#> The 'mosaic' package masks several functions from core packages in order to add 
+#> additional features.  The original behavior of these functions should not be affected by this.
+#> 
+#> Attaching package: 'mosaic'
+#> The following objects are masked from 'package:dplyr':
+#> 
+#>     count, do, tally
+#> The following object is masked from 'package:Matrix':
+#> 
+#>     mean
+#> The following object is masked from 'package:ggplot2':
+#> 
+#>     stat
+#> The following objects are masked from 'package:stats':
+#> 
+#>     binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,
+#>     quantile, sd, t.test, var
+#>     
+#> The following objects are masked from 'package:base':
+#> 
+#>     max, mean, min, prod, range, sample, sum
+```
+
+
+The above output are simply messages when initially starting up the package warning you about masking of functions with the same name as different packages
+
+
+For example, the function `binom.test()` is used in two different packages `mosaic` and `stats`. If two packages use the same function name, then the package loaded last will hide the function from earlier packages. This is called **masking**. 
+
+While in general, the order of packages being loaded does not matter, if you are using multiple packages which have functions with the exact same name it is better to explicitly call the function name using `package_name::function`
+
+
+```{r,eval=FALSE}
+mosaic::binom.test()
+stats::binom.test()
+```
+
+
+
+
+

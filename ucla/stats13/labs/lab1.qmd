@@ -1,6 +1,6 @@
 ---
 author: Jose Toledo Luna
-date: 2023-09-29
+date: 2023-10-10
 title: Lab 1 
 description: Introduction to R
 toc: true
@@ -25,7 +25,7 @@ The tutorial will help you get started with
 2. [Importing Data in R](/ucla/stats10/importing_data.qmd)
 3. [Summarizing and Visualzing Numerical Data](/ucla/stats10/intro_numerical_variables.qmd)
 4. [Summarizing and Visualzing Categorical Data](/ucla/stats10/intro_categorical_variables.qmd)
-
+5. [Basics of MOSAIC Package](/ucla/stats13/MOSAIC_basics.qmd)
 
 
 
