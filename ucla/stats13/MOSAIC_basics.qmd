@@ -17,6 +17,9 @@ knitr::opts_chunk$set(
 ## MOSAIC library
 
 
+### Installation
+
+
 The goal of the `mosaic` package is to make effective computation accessible to university-level students at an introductory level.
 
 The following packages from the `mosaic suite` will be used throughout the labs.
@@ -41,8 +44,9 @@ without any errors.
 
 
 ```{r,message=FALSE,warning=FALSE}
-library(mosaic)
+library(mosaic) # <1>
 ```
+1. Make sure to load `mosiac` package first, you only have to do this once at the beginning of your script. Proceeding, this tutorial will assume you have loaded the `mosaic` package
 
 
 ```{r}
@@ -93,6 +97,53 @@ While in general, the order of packages being loaded does not matter, if you are
 mosaic::binom.test()
 stats::binom.test()
 ```
+
+
+
+### Basics
+
+
+
+For **numerical summaries**, the following functions are `mosaic` specific
+
+```{r, eval=FALSE}
+library(mosaic) 
+tally() 
+favstats()
+diffmean()
+prop()       
+perc()
+```
+
+
+While the following functions are in `base R`, `MOSAIC` provides equivalent functions with a `formula interface`. 
+
+
+```{r,eval=FALSE}
+mosaic::mean()
+mosaic::median()
+mosaic::sd()
+```
+
+If you are going to use say the function `mean` make sure to specify it is the `mosaic` version. For example, `mosaic::mean()`. If you want to know the differences between `base R` version \newline 
+run `?base::mean()` or `?mosaic::mean()`
+
+
+
+
+**Randomization/Simulation**
+
+For randomization or simulations procedures we will primarily use the following `mosaic` functions
+
+```{r,eval=FALSE}
+rflip()
+do() 
+```
+
+
+For a quick overview of the basic of MOSAIC package, refer to [Minimal R for Intro Stats](https://cran.r-project.org/web/packages/mosaic/vignettes/MinimalRgg.pdf) tutorial. Note, we will not use all of the functions in the `mosaic` package
+
+
 
 
 
