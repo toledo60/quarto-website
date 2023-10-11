@@ -136,6 +136,8 @@ For a quick overview of the basic of MOSAIC package, refer to [Minimal R for Int
 
 ## Examples
 
+### Numerical Summaries
+
 Consider the following vector containing various types of animals (mostly pets)
 
 ```{r}
@@ -173,6 +175,114 @@ c("count", "proportion", "percent", "data.frame", "sparse", "default")
 ```{r}
 tally(animals, format = 'percent')
 ```
+
+
+### Simulation
+
+
+For simulation the `do()` function from `mosaic` provides a natural syntax for repetition tuned to assist with replication and resampling methods. Consider the following example
+
+```{r}
+do_hello <- do(3) * 'hello' #<1>
+do_hello
+```
+1. Interpretation: write 'hello' three times
+
+
+We are going to "do" the word three times `do(3)` using the operator `*` not to confuse with multiplication 
+
+```{r}
+str(do_hello)
+```
+
+`do` returns class `do.data.frame` and `data.frame` where each row is the output after performing the task after the `*` operator one time
+
+```{r}
+do_hello$hello
+```
+
+If you want to extract the values from the generated data.frame, we can use the `$` operator
+
+
+In the next example, we are going to write the numbers `1:4` five times
+
+```{r}
+do(5) * 1:4
+```
+
+again the output will be a data.frame where each row is the numbers 1:4, you can think of each row as a replication of the desired task. In some way, it is similar to the base R approach of using `replicate`
+
+```{r}
+replicate(n=5, 1:4)
+```
+
+
+
+
+Another function from `mosaic` to consider is `rflip()`. The function `rflip`
+simulates coin tosses, with heads as success and tails as failures.
+
+```{r}
+coin_toss <- rflip(n=5) #<1>
+coin_toss
+```
+1. Flip a fair coin five times
+
+
+```{r}
+str(coin_toss)
+```
+
+The output of `rflip` is a `cointoss` object, which displays the number of heads alongside the corresponding proportion of heads. We can change the probability of obtaining heads making the coin unfair. For example,
+
+```{r}
+rflip(n = 10, prob = 0.3) #<1>
+```
+1. Flip 10 unfair coins, in this case it is less likely to obtain a head for each toss
+
+
+we can summarize the above output and return a `data.frame` which we can extract information from 
+
+```{r}
+coin_toss_data <- rflip(n = 10, prob = 0.3, summarize = TRUE)
+```
+
+```{r,echo=FALSE}
+coin_toss_data
+```
+
+```{r}
+str(coin_toss_data)
+```
+
+
+:::vertical-space
+:::
+
+**Combining `do()` and `rflip()`**
+
+Consider the following example,
+
+```{r}
+result <- do(2) * rflip(n=5) #<1>
+result
+```
+1. Randomly flip a coin 5 times and replicate this procedure two times
+
+
+Recall the output after performing a `do()` statement will be a data.frame where each row is a replication of the procedure following the `*` operator. The first row shows the number of tosses, how many heads/tails where obtained and the corresponding proportion of heaads after `n` tosses
+
+```{r,echo=FALSE}
+str(result)
+```
+
+
+
+
+
+
+
+
 
 
 

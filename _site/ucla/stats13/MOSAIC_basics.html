@@ -173,7 +173,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#commonly-used-functions" id="toc-commonly-used-functions" class="nav-link" data-scroll-target="#commonly-used-functions">Commonly used functions</a></li>
   </ul></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
+  <ul class="collapse">
+  <li><a href="#numerical-summaries" id="toc-numerical-summaries" class="nav-link" data-scroll-target="#numerical-summaries">Numerical Summaries</a></li>
+  <li><a href="#simulation" id="toc-simulation" class="nav-link" data-scroll-target="#simulation">Simulation</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -295,6 +299,8 @@ Warning
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<section id="numerical-summaries" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-summaries">Numerical Summaries</h3>
 <p>Consider the following vector containing various types of animals (mostly pets)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"fish"</span>, <span class="st">"cat"</span>,  <span class="st">"fish"</span>, <span class="st">"cat"</span>  ,<span class="st">"bird"</span> ,<span class="st">"fish"</span> ,<span class="st">"bird"</span> ,</span>
@@ -340,8 +346,179 @@ Warning
 #&gt;   25   30   25   20</code></pre>
 </div>
 </div>
+</section>
+<section id="simulation" class="level3">
+<h3 class="anchored" data-anchor-id="simulation">Simulation</h3>
+<p>For simulation the <code>do()</code> function from <code>mosaic</code> provides a natural syntax for repetition tuned to assist with replication and resampling methods. Consider the following example</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-11"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-11-1" class="code-annotation-target"><a href="#annotated-cell-11-1" aria-hidden="true" tabindex="-1"></a>do_hello <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">3</span>) <span class="sc">*</span> <span class="st">'hello'</span></span>
+<span id="annotated-cell-11-2"><a href="#annotated-cell-11-2" aria-hidden="true" tabindex="-1"></a>do_hello</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-11" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-11">Interpretation: write ‘hello’ three times</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   hello
+#&gt; 1 hello
+#&gt; 2 hello
+#&gt; 3 hello</code></pre>
+</div>
+</div>
+<p>We are going to “do” the word three times <code>do(3)</code> using the operator <code>*</code> not to confuse with multiplication</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(do_hello)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; Classes 'do.data.frame' and 'data.frame':    3 obs. of  1 variable:
+#&gt;  $ hello: chr  "hello" "hello" "hello"
+#&gt;  - attr(*, "lazy")= language ~"hello"
+#&gt;   ..- attr(*, ".Environment")=&lt;environment: R_EmptyEnv&gt; 
+#&gt;  - attr(*, "culler")=function (object, ...)</code></pre>
+</div>
+</div>
+<p><code>do</code> returns class <code>do.data.frame</code> and <code>data.frame</code> where each row is the output after performing the task after the <code>*</code> operator one time</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>do_hello<span class="sc">$</span>hello</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "hello" "hello" "hello"</code></pre>
+</div>
+</div>
+<p>If you want to extract the values from the generated data.frame, we can use the <code>$</code> operator</p>
+<p>In the next example, we are going to write the numbers <code>1:4</code> five times</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">do</span>(<span class="dv">5</span>) <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   V1 V2 V3 V4
+#&gt; 1  1  2  3  4
+#&gt; 2  1  2  3  4
+#&gt; 3  1  2  3  4
+#&gt; 4  1  2  3  4
+#&gt; 5  1  2  3  4</code></pre>
+</div>
+</div>
+<p>again the output will be a data.frame where each row is the numbers 1:4, you can think of each row as a replication of the desired task. In some way, it is similar to the base R approach of using <code>replicate</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">replicate</span>(<span class="at">n=</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;      [,1] [,2] [,3] [,4] [,5]
+#&gt; [1,]    1    1    1    1    1
+#&gt; [2,]    2    2    2    2    2
+#&gt; [3,]    3    3    3    3    3
+#&gt; [4,]    4    4    4    4    4</code></pre>
+</div>
+</div>
+<p>Another function from <code>mosaic</code> to consider is <code>rflip()</code>. The function <code>rflip</code> simulates coin tosses, with heads as success and tails as failures.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-16"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-16" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-16-1" class="code-annotation-target"><a href="#annotated-cell-16-1" aria-hidden="true" tabindex="-1"></a>coin_toss <span class="ot">&lt;-</span> <span class="fu">rflip</span>(<span class="at">n=</span><span class="dv">5</span>)</span>
+<span id="annotated-cell-16-2"><a href="#annotated-cell-16-2" aria-hidden="true" tabindex="-1"></a>coin_toss</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-16" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-16">Flip a fair coin five times</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 
+#&gt; Flipping 5 coins [ Prob(Heads) = 0.5 ] ...
+#&gt; 
+#&gt; T H H T H
+#&gt; 
+#&gt; Number of Heads: 3 [Proportion Heads: 0.6]</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(coin_toss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;  'cointoss' int 3
+#&gt;  - attr(*, "n")= num 5
+#&gt;  - attr(*, "prob")= num 0.5
+#&gt;  - attr(*, "sequence")= chr [1:5] "T" "H" "H" "T" ...
+#&gt;  - attr(*, "verbose")= logi TRUE</code></pre>
+</div>
+</div>
+<p>The output of <code>rflip</code> is a <code>cointoss</code> object, which displays the number of heads alongside the corresponding proportion of heads. We can change the probability of obtaining heads making the coin unfair. For example,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-18"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-18-1" class="code-annotation-target"><a href="#annotated-cell-18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rflip</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.3</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-18" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-18">Flip 10 unfair coins, in this case it is less likely to obtain a head for each toss</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 
+#&gt; Flipping 10 coins [ Prob(Heads) = 0.3 ] ...
+#&gt; 
+#&gt; T T T H H T T T T T
+#&gt; 
+#&gt; Number of Heads: 2 [Proportion Heads: 0.2]</code></pre>
+</div>
+</div>
+<p>we can summarize the above output and return a <code>data.frame</code> which we can extract information from</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>coin_toss_data <span class="ot">&lt;-</span> <span class="fu">rflip</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.3</span>, <span class="at">summarize =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;    n heads tails prob
+#&gt; 1 10     6     4  0.3</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(coin_toss_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 'data.frame':    1 obs. of  4 variables:
+#&gt;  $ n    : num 10
+#&gt;  $ heads: int 6
+#&gt;  $ tails: num 4
+#&gt;  $ prob : num 0.3</code></pre>
+</div>
+</div>
+<div class="vertical-space">
+
+</div>
+<p><strong>Combining <code>do()</code> and <code>rflip()</code></strong></p>
+<p>Consider the following example,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-21"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-21-1" class="code-annotation-target"><a href="#annotated-cell-21-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">2</span>) <span class="sc">*</span> <span class="fu">rflip</span>(<span class="at">n=</span><span class="dv">5</span>)</span>
+<span id="annotated-cell-21-2"><a href="#annotated-cell-21-2" aria-hidden="true" tabindex="-1"></a>result</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-21" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-21">Randomly flip a coin 5 times and replicate this procedure two times</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   n heads tails prop
+#&gt; 1 5     3     2  0.6
+#&gt; 2 5     3     2  0.6</code></pre>
+</div>
+</div>
+<p>Recall the output after performing a <code>do()</code> statement will be a data.frame where each row is a replication of the procedure following the <code>*</code> operator. The first row shows the number of tosses, how many heads/tails where obtained and the corresponding proportion of heaads after <code>n</code> tosses</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; Classes 'do.data.frame' and 'data.frame':    2 obs. of  4 variables:
+#&gt;  $ n    : num  5 5
+#&gt;  $ heads: num  3 3
+#&gt;  $ tails: num  2 2
+#&gt;  $ prop : num  0.6 0.6
+#&gt;  - attr(*, "lazy")= language ~rflip(n = 5)
+#&gt;   ..- attr(*, ".Environment")=&lt;environment: R_GlobalEnv&gt; 
+#&gt;  - attr(*, "culler")=function (object, ...)</code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
