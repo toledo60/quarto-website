@@ -13,6 +13,13 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{=html}
+<style>
+  .vertical-space {
+    margin-bottom: 30px;
+  }
+</style>
+```
 
 ## MOSAIC library
 
@@ -20,7 +27,7 @@ knitr::opts_chunk$set(
 ### Installation
 
 
-The goal of the `mosaic` package is to make effective computation accessible to university-level students at an introductory level.
+The goal of the `mosaic` package is to make effective computation accessible to university-level students at an introductory level
 
 The following packages from the `mosaic suite` will be used throughout the labs.
 
@@ -35,60 +42,49 @@ install.packages('mosaic')
 ```
 
 
+:::callout-warning
 If you are installing the package for the first time, please be aware that it might take some time since there are numerous dependencies that need to be installed beforehand (this is done automatically)
+:::
 
 You can see the remaining packages part of the `mosaic suite` on the [Project MOSAIC Homepage](http://www.mosaic-web.org/R-packages.html), but they will not be used for this course
 
-If you have successfully installed `mosaic` package you should be able to run the following command 
-without any errors. 
+::: vertical-space
+:::
+
+
+If you have successfully installed `mosaic` package you should be able to run the command  `library(mosaic)` in the console without any errors. However, you will see the following *messages*
 
 
 ```{r,message=FALSE,warning=FALSE}
-library(mosaic) # <1>
-```
-1. Make sure to load `mosiac` package first, you only have to do this once at the beginning of your script. Proceeding, this tutorial will assume you have loaded the `mosaic` package
+#| eval: true
 
-
-```{r}
-#| classes: styled-output
-#| code-summary: Show Messages
-#| code-fold: true
-#| eval: false
-
-library(mosaic)
-
+library(mosaic) #<1>
 #> Registered S3 method overwritten by 'mosaic':
 #>   method                           from   
 #>   fortify.SpatialPolygonsDataFrame ggplot2
 #> 
 #> The 'mosaic' package masks several functions from core packages in order to add 
-#> additional features.  The original behavior of these functions should not be affected by this.
+#> additional features.  The original behavior of these functions should not be affected by this.  #<2>
 #> 
 #> Attaching package: 'mosaic'
 #> The following objects are masked from 'package:dplyr':
-#> 
 #>     count, do, tally
 #> The following object is masked from 'package:Matrix':
-#> 
 #>     mean
 #> The following object is masked from 'package:ggplot2':
-#> 
 #>     stat
 #> The following objects are masked from 'package:stats':
-#> 
 #>     binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,
 #>     quantile, sd, t.test, var
 #>     
 #> The following objects are masked from 'package:base':
-#> 
 #>     max, mean, min, prod, range, sample, sum
 ```
+1. Make sure to load `mosiac` package first, you only have to do this once at the beginning of your script. Proceeding, this tutorial will assume you have loaded the `mosaic` package
+2. The output above are simply messages when initially starting up the package warning you about masking of functions with the same name as different packages
 
 
-The above output are simply messages when initially starting up the package warning you about masking of functions with the same name as different packages
-
-
-For example, the function `binom.test()` is used in two different packages `mosaic` and `stats`. If two packages use the same function name, then the package loaded last will hide the function from earlier packages. This is called **masking**. 
+For example, the function `binom.test()` is used in two different packages `mosaic` and `stats`. If two packages use the same function name, then the package loaded last will hide the function from earlier packages. This is called **masking**
 
 While in general, the order of packages being loaded does not matter, if you are using multiple packages which have functions with the exact same name it is better to explicitly call the function name using `package_name::function`
 
@@ -99,24 +95,22 @@ stats::binom.test()
 ```
 
 
+:::vertical-space
+:::
 
-### Basics
+### Commonly used functions
 
-
-
-For **numerical summaries**, the following functions are `mosaic` specific
-
-```{r, eval=FALSE}
-library(mosaic) 
-tally() 
-favstats()
-diffmean()
-prop()       
-perc()
-```
+For **numerical summaries**, the following functions are `mosaic` specific and will be used throughout the course
 
 
-While the following functions are in `base R`, `MOSAIC` provides equivalent functions with a `formula interface`. 
+- `tally()`: tabulate categorical data
+- `favstats()`: numerical summaries including: min, Q1, media, Q3, max, mean, sd, number of observations and missing values
+- `diffmean()`: difference in means
+- `prop()`: computes proportions for a single level
+- `perc()`: computes percents for a single level
+
+
+While the following functions are in base R, `MOSAIC` provides equivalent functions with a `formula interface`
 
 
 ```{r,eval=FALSE}
@@ -125,27 +119,60 @@ mosaic::median()
 mosaic::sd()
 ```
 
-If you are going to use say the function `mean` make sure to specify it is the `mosaic` version. For example, `mosaic::mean()`. If you want to know the differences between `base R` version \newline 
+If you are going to use say the function `mean` make sure to specify it is the `mosaic` version. For example, `mosaic::mean()`. If you want to know the differences between base R version \newline 
 run `?base::mean()` or `?mosaic::mean()`
-
-
 
 
 **Randomization/Simulation**
 
 For randomization or simulations procedures we will primarily use the following `mosaic` functions
 
-```{r,eval=FALSE}
-rflip()
-do() 
-```
+- `rflip()`: simulates coin tosses for individuals not yet familiarized with the binomial distribution or just like this syntax and verbosity better.
+- `do()`: provides a natural syntax for repetition tuned to assist with replication and resampling methods
 
 
 For a quick overview of the basic of MOSAIC package, refer to [Minimal R for Intro Stats](https://cran.r-project.org/web/packages/mosaic/vignettes/MinimalRgg.pdf) tutorial. Note, we will not use all of the functions in the `mosaic` package
 
 
+## Examples
+
+Consider the following vector containing various types of animals (mostly pets)
+
+```{r}
+animals <- c("fish", "cat",  "fish", "cat"  ,"bird" ,"fish" ,"bird" ,
+             "bird" ,"dog"  ,"cat"  ,"dog"  ,"dog"  ,"cat", "dog",  
+             "dog",  "cat",  "bird", "cat" , "bird", "fish")
+```
+
+loading the `mosaic` package and using the `tally()` function
+
+```{r}
+tally(animals)
+```
+
+we can obtain the counts for each animal. By default `tally()` gives us counts, but we can also display the proportions using the `format` argument
+
+```{r}
+tally(animals, format = 'proportion')
+```
+
+which is more readable than using base R
+
+```{r}
+prop.table(table(animals))
+```
 
 
+Reading the documentation `?mosaicCore::tally`, format can take one of the following types
+
+```{r,eval=FALSE}
+c("count", "proportion", "percent", "data.frame", "sparse", "default")
+```
+
+
+```{r}
+tally(animals, format = 'percent')
+```
 
 
 

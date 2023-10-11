@@ -171,8 +171,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#mosaic-library" id="toc-mosaic-library" class="nav-link active" data-scroll-target="#mosaic-library">MOSAIC library</a>
   <ul class="collapse">
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics">Basics</a></li>
+  <li><a href="#commonly-used-functions" id="toc-commonly-used-functions" class="nav-link" data-scroll-target="#commonly-used-functions">Commonly used functions</a></li>
   </ul></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul>
 </nav>
     </div>
@@ -181,11 +182,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<style>
+  .vertical-space {
+    margin-bottom: 30px;
+  }
+</style>
 <section id="mosaic-library" class="level2">
 <h2 class="anchored" data-anchor-id="mosaic-library">MOSAIC library</h2>
 <section id="installation" class="level3">
 <h3 class="anchored" data-anchor-id="installation">Installation</h3>
-<p>The goal of the <code>mosaic</code> package is to make effective computation accessible to university-level students at an introductory level.</p>
+<p>The goal of the <code>mosaic</code> package is to make effective computation accessible to university-level students at an introductory level</p>
 <p>The following packages from the <code>mosaic suite</code> will be used throughout the labs.</p>
 <ul>
 <li><code>{mosaic}</code>
@@ -198,88 +204,144 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'mosaic'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>If you are installing the package for the first time, please be aware that it might take some time since there are numerous dependencies that need to be installed beforehand (this is done automatically)</p>
+</div>
+</div>
 <p>You can see the remaining packages part of the <code>mosaic suite</code> on the <a href="http://www.mosaic-web.org/R-packages.html">Project MOSAIC Homepage</a>, but they will not be used for this course</p>
-<p>If you have successfully installed <code>mosaic</code> package you should be able to run the following command without any errors.</p>
+<div class="vertical-space">
+
+</div>
+<p>If you have successfully installed <code>mosaic</code> package you should be able to run the command <code>library(mosaic)</code> in the console without any errors. However, you will see the following <em>messages</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mosaic)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mosaic)</span>
+<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Registered S3 method overwritten by 'mosaic':</span></span>
+<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   method                           from   </span></span>
+<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   fortify.SpatialPolygonsDataFrame ggplot2</span></span>
+<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The 'mosaic' package masks several functions from core packages in order to add </span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-2-7" class="code-annotation-target"><a href="#annotated-cell-2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; additional features.  The original behavior of these functions should not be affected by this.</span></span>
+<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="annotated-cell-2-9"><a href="#annotated-cell-2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Attaching package: 'mosaic'</span></span>
+<span id="annotated-cell-2-10"><a href="#annotated-cell-2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:dplyr':</span></span>
+<span id="annotated-cell-2-11"><a href="#annotated-cell-2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     count, do, tally</span></span>
+<span id="annotated-cell-2-12"><a href="#annotated-cell-2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:Matrix':</span></span>
+<span id="annotated-cell-2-13"><a href="#annotated-cell-2-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     mean</span></span>
+<span id="annotated-cell-2-14"><a href="#annotated-cell-2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
+<span id="annotated-cell-2-15"><a href="#annotated-cell-2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     stat</span></span>
+<span id="annotated-cell-2-16"><a href="#annotated-cell-2-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
+<span id="annotated-cell-2-17"><a href="#annotated-cell-2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,</span></span>
+<span id="annotated-cell-2-18"><a href="#annotated-cell-2-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     quantile, sd, t.test, var</span></span>
+<span id="annotated-cell-2-19"><a href="#annotated-cell-2-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     </span></span>
+<span id="annotated-cell-2-20"><a href="#annotated-cell-2-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span id="annotated-cell-2-21"><a href="#annotated-cell-2-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     max, mean, min, prod, range, sample, sum</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
 <span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-2">Make sure to load <code>mosiac</code> package first, you only have to do this once at the beginning of your script. Proceeding, this tutorial will assume you have loaded the <code>mosaic</code> package</span>
 </dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-annotation="2" data-code-lines="7" data-code-cell="annotated-cell-2">The output above are simply messages when initially starting up the package warning you about masking of functions with the same name as different packages</span>
+</dd>
 </dl>
 </div>
 </div>
-<div class="cell styled-output">
-<details>
-<summary>Show Messages</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mosaic)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Registered S3 method overwritten by 'mosaic':</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   method                           from   </span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   fortify.SpatialPolygonsDataFrame ggplot2</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The 'mosaic' package masks several functions from core packages in order to add </span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; additional features.  The original behavior of these functions should not be affected by this.</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Attaching package: 'mosaic'</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:dplyr':</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     count, do, tally</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:Matrix':</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     mean</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     stat</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     quantile, sd, t.test, var</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     </span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     max, mean, min, prod, range, sample, sum</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>The above output are simply messages when initially starting up the package warning you about masking of functions with the same name as different packages</p>
-<p>For example, the function <code>binom.test()</code> is used in two different packages <code>mosaic</code> and <code>stats</code>. If two packages use the same function name, then the package loaded last will hide the function from earlier packages. This is called <strong>masking</strong>.</p>
+<p>For example, the function <code>binom.test()</code> is used in two different packages <code>mosaic</code> and <code>stats</code>. If two packages use the same function name, then the package loaded last will hide the function from earlier packages. This is called <strong>masking</strong></p>
 <p>While in general, the order of packages being loaded does not matter, if you are using multiple packages which have functions with the exact same name it is better to explicitly call the function name using <code>package_name::function</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">binom.test</span>()</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>stats<span class="sc">::</span><span class="fu">binom.test</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">binom.test</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stats<span class="sc">::</span><span class="fu">binom.test</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="vertical-space">
+
 </div>
 </section>
-<section id="basics" class="level3">
-<h3 class="anchored" data-anchor-id="basics">Basics</h3>
-<p>For <strong>numerical summaries</strong>, the following functions are <code>mosaic</code> specific</p>
+<section id="commonly-used-functions" class="level3">
+<h3 class="anchored" data-anchor-id="commonly-used-functions">Commonly used functions</h3>
+<p>For <strong>numerical summaries</strong>, the following functions are <code>mosaic</code> specific and will be used throughout the course</p>
+<ul>
+<li><code>tally()</code>: tabulate categorical data</li>
+<li><code>favstats()</code>: numerical summaries including: min, Q1, media, Q3, max, mean, sd, number of observations and missing values</li>
+<li><code>diffmean()</code>: difference in means</li>
+<li><code>prop()</code>: computes proportions for a single level</li>
+<li><code>perc()</code>: computes percents for a single level</li>
+</ul>
+<p>While the following functions are in base R, <code>MOSAIC</code> provides equivalent functions with a <code>formula interface</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mosaic) </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tally</span>() </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">favstats</span>()</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">diffmean</span>()</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">prop</span>()       </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">perc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">mean</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">median</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">sd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>While the following functions are in <code>base R</code>, <code>MOSAIC</code> provides equivalent functions with a <code>formula interface</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">mean</span>()</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">median</span>()</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>mosaic<span class="sc">::</span><span class="fu">sd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>If you are going to use say the function <code>mean</code> make sure to specify it is the <code>mosaic</code> version. For example, <code>mosaic::mean()</code>. If you want to know the differences between <code>base R</code> version run <code>?base::mean()</code> or <code>?mosaic::mean()</code></p>
+<p>If you are going to use say the function <code>mean</code> make sure to specify it is the <code>mosaic</code> version. For example, <code>mosaic::mean()</code>. If you want to know the differences between base R version run <code>?base::mean()</code> or <code>?mosaic::mean()</code></p>
 <p><strong>Randomization/Simulation</strong></p>
 <p>For randomization or simulations procedures we will primarily use the following <code>mosaic</code> functions</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rflip</span>()</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">do</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<ul>
+<li><code>rflip()</code>: simulates coin tosses for individuals not yet familiarized with the binomial distribution or just like this syntax and verbosity better.</li>
+<li><code>do()</code>: provides a natural syntax for repetition tuned to assist with replication and resampling methods</li>
+</ul>
 <p>For a quick overview of the basic of MOSAIC package, refer to <a href="https://cran.r-project.org/web/packages/mosaic/vignettes/MinimalRgg.pdf">Minimal R for Intro Stats</a> tutorial. Note, we will not use all of the functions in the <code>mosaic</code> package</p>
-
-
 </section>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p>Consider the following vector containing various types of animals (mostly pets)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"fish"</span>, <span class="st">"cat"</span>,  <span class="st">"fish"</span>, <span class="st">"cat"</span>  ,<span class="st">"bird"</span> ,<span class="st">"fish"</span> ,<span class="st">"bird"</span> ,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>             <span class="st">"bird"</span> ,<span class="st">"dog"</span>  ,<span class="st">"cat"</span>  ,<span class="st">"dog"</span>  ,<span class="st">"dog"</span>  ,<span class="st">"cat"</span>, <span class="st">"dog"</span>,  </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>             <span class="st">"dog"</span>,  <span class="st">"cat"</span>,  <span class="st">"bird"</span>, <span class="st">"cat"</span> , <span class="st">"bird"</span>, <span class="st">"fish"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>loading the <code>mosaic</code> package and using the <code>tally()</code> function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tally</span>(animals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; X
+#&gt; bird  cat  dog fish 
+#&gt;    5    6    5    4</code></pre>
+</div>
+</div>
+<p>we can obtain the counts for each animal. By default <code>tally()</code> gives us counts, but we can also display the proportions using the <code>format</code> argument</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tally</span>(animals, <span class="at">format =</span> <span class="st">'proportion'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; X
+#&gt; bird  cat  dog fish 
+#&gt; 0.25 0.30 0.25 0.20</code></pre>
+</div>
+</div>
+<p>which is more readable than using base R</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(animals))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; animals
+#&gt; bird  cat  dog fish 
+#&gt; 0.25 0.30 0.25 0.20</code></pre>
+</div>
+</div>
+<p>Reading the documentation <code>?mosaicCore::tally</code>, format can take one of the following types</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"count"</span>, <span class="st">"proportion"</span>, <span class="st">"percent"</span>, <span class="st">"data.frame"</span>, <span class="st">"sparse"</span>, <span class="st">"default"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tally</span>(animals, <span class="at">format =</span> <span class="st">'percent'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; X
+#&gt; bird  cat  dog fish 
+#&gt;   25   30   25   20</code></pre>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
