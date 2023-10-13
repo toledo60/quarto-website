@@ -182,53 +182,11 @@
     "text": "Examples\n\nNumerical Summaries\nConsider the following vector containing various types of animals (mostly pets)\n\nanimals &lt;- c(\"fish\", \"cat\",  \"fish\", \"cat\"  ,\"bird\" ,\"fish\" ,\"bird\" ,\n             \"bird\" ,\"dog\"  ,\"cat\"  ,\"dog\"  ,\"dog\"  ,\"cat\", \"dog\",  \n             \"dog\",  \"cat\",  \"bird\", \"cat\" , \"bird\", \"fish\")\n\nloading the mosaic package and using the tally() function\n\ntally(animals)\n\n#&gt; X\n#&gt; bird  cat  dog fish \n#&gt;    5    6    5    4\n\n\nwe can obtain the counts for each animal. By default tally() gives us counts, but we can also display the proportions using the format argument\n\ntally(animals, format = 'proportion')\n\n#&gt; X\n#&gt; bird  cat  dog fish \n#&gt; 0.25 0.30 0.25 0.20\n\n\nwhich is more readable than using base R\n\nprop.table(table(animals))\n\n#&gt; animals\n#&gt; bird  cat  dog fish \n#&gt; 0.25 0.30 0.25 0.20\n\n\nReading the documentation ?mosaicCore::tally, format can take one of the following types\n\nc(\"count\", \"proportion\", \"percent\", \"data.frame\", \"sparse\", \"default\")\n\n\ntally(animals, format = 'percent')\n\n#&gt; X\n#&gt; bird  cat  dog fish \n#&gt;   25   30   25   20\n\n\n\n\nSimulation\nFor simulation the do() function from mosaic provides a natural syntax for repetition tuned to assist with replication and resampling methods. Consider the following example\n\n1do_hello &lt;- do(3) * 'hello'\ndo_hello\n\n\n1\n\nInterpretation: write ‘hello’ three times\n\n\n\n\n#&gt;   hello\n#&gt; 1 hello\n#&gt; 2 hello\n#&gt; 3 hello\n\n\nWe are going to “do” the word three times do(3) using the operator * not to confuse with multiplication\n\nstr(do_hello)\n\n#&gt; Classes 'do.data.frame' and 'data.frame':    3 obs. of  1 variable:\n#&gt;  $ hello: chr  \"hello\" \"hello\" \"hello\"\n#&gt;  - attr(*, \"lazy\")= language ~\"hello\"\n#&gt;   ..- attr(*, \".Environment\")=&lt;environment: R_EmptyEnv&gt; \n#&gt;  - attr(*, \"culler\")=function (object, ...)\n\n\ndo returns class do.data.frame and data.frame where each row is the output after performing the task after the * operator one time\n\ndo_hello$hello\n\n#&gt; [1] \"hello\" \"hello\" \"hello\"\n\n\nIf you want to extract the values from the generated data.frame, we can use the $ operator\nIn the next example, we are going to write the numbers 1:4 five times\n\ndo(5) * 1:4\n\n#&gt;   V1 V2 V3 V4\n#&gt; 1  1  2  3  4\n#&gt; 2  1  2  3  4\n#&gt; 3  1  2  3  4\n#&gt; 4  1  2  3  4\n#&gt; 5  1  2  3  4\n\n\nagain the output will be a data.frame where each row is the numbers 1:4, you can think of each row as a replication of the desired task. In some way, it is similar to the base R approach of using replicate\n\nreplicate(n=5, 1:4)\n\n#&gt;      [,1] [,2] [,3] [,4] [,5]\n#&gt; [1,]    1    1    1    1    1\n#&gt; [2,]    2    2    2    2    2\n#&gt; [3,]    3    3    3    3    3\n#&gt; [4,]    4    4    4    4    4\n\n\nAnother function from mosaic to consider is rflip(). The function rflip simulates coin tosses, with heads as success and tails as failures.\n\n1coin_toss &lt;- rflip(n=5)\ncoin_toss\n\n\n1\n\nFlip a fair coin five times\n\n\n\n\n#&gt; \n#&gt; Flipping 5 coins [ Prob(Heads) = 0.5 ] ...\n#&gt; \n#&gt; T H H T H\n#&gt; \n#&gt; Number of Heads: 3 [Proportion Heads: 0.6]\n\n\n\nstr(coin_toss)\n\n#&gt;  'cointoss' int 3\n#&gt;  - attr(*, \"n\")= num 5\n#&gt;  - attr(*, \"prob\")= num 0.5\n#&gt;  - attr(*, \"sequence\")= chr [1:5] \"T\" \"H\" \"H\" \"T\" ...\n#&gt;  - attr(*, \"verbose\")= logi TRUE\n\n\nThe output of rflip is a cointoss object, which displays the number of heads alongside the corresponding proportion of heads. We can change the probability of obtaining heads making the coin unfair. For example,\n\n1rflip(n = 10, prob = 0.3)\n\n\n1\n\nFlip 10 unfair coins, in this case it is less likely to obtain a head for each toss\n\n\n\n\n#&gt; \n#&gt; Flipping 10 coins [ Prob(Heads) = 0.3 ] ...\n#&gt; \n#&gt; T T T H H T T T T T\n#&gt; \n#&gt; Number of Heads: 2 [Proportion Heads: 0.2]\n\n\nwe can summarize the above output and return a data.frame which we can extract information from\n\ncoin_toss_data &lt;- rflip(n = 10, prob = 0.3, summarize = TRUE)\n\n\n\n#&gt;    n heads tails prob\n#&gt; 1 10     6     4  0.3\n\n\n\nstr(coin_toss_data)\n\n#&gt; 'data.frame':    1 obs. of  4 variables:\n#&gt;  $ n    : num 10\n#&gt;  $ heads: int 6\n#&gt;  $ tails: num 4\n#&gt;  $ prob : num 0.3\n\n\n\n\n\nCombining do() and rflip()\nConsider the following example,\n\n1result &lt;- do(2) * rflip(n=5)\nresult\n\n\n1\n\nRandomly flip a coin 5 times and replicate this procedure two times\n\n\n\n\n#&gt;   n heads tails prop\n#&gt; 1 5     3     2  0.6\n#&gt; 2 5     3     2  0.6\n\n\nRecall the output after performing a do() statement will be a data.frame where each row is a replication of the procedure following the * operator. The first row shows the number of tosses, how many heads/tails where obtained and the corresponding proportion of heaads after n tosses\n\n\n#&gt; Classes 'do.data.frame' and 'data.frame':    2 obs. of  4 variables:\n#&gt;  $ n    : num  5 5\n#&gt;  $ heads: num  3 3\n#&gt;  $ tails: num  2 2\n#&gt;  $ prop : num  0.6 0.6\n#&gt;  - attr(*, \"lazy\")= language ~rflip(n = 5)\n#&gt;   ..- attr(*, \".Environment\")=&lt;environment: R_GlobalEnv&gt; \n#&gt;  - attr(*, \"culler\")=function (object, ...)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jose Toledo Luna",
+    "objectID": "ucla/stats13/labs/lab1.html",
+    "href": "ucla/stats13/labs/lab1.html",
+    "title": "Lab 1",
     "section": "",
-    "text": "I am currently a third year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Jose Toledo Luna",
-    "section": "",
-    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [PDF]"
-  },
-  {
-    "objectID": "research.html#publications",
-    "href": "research.html#publications",
-    "title": "Jose Toledo Luna",
-    "section": "",
-    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [PDF]"
-  },
-  {
-    "objectID": "research.html#software",
-    "href": "research.html#software",
-    "title": "Jose Toledo Luna",
-    "section": "Software",
-    "text": "Software\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Jose Toledo Luna",
-    "section": "",
-    "text": "STATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Fall 2023)"
-  },
-  {
-    "objectID": "teaching.html#current-courses",
-    "href": "teaching.html#current-courses",
-    "title": "Jose Toledo Luna",
-    "section": "",
-    "text": "STATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Fall 2023)"
-  },
-  {
-    "objectID": "teaching.html#previous-courses",
-    "href": "teaching.html#previous-courses",
-    "title": "Jose Toledo Luna",
-    "section": "Previous Courses",
-    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\nSTATS 10: Introduction to Statistical Reasoning (Fall 2022, Winter 2023, Spring 2023)\nSTATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Summer 2022)\nSTATS 21: Python and Other Technologies for Data Science (Spring 2023)\nSTATS 100B: Introduction to Mathematical Statistics (Summer 2023)\nSTATS 100C: Linear Models (Summer 2023)\n\n\n\nCalifornia State University, Fullerton\n\nMath 115: College Algebra (Fall 2019)\nMath 120: Elementary Statistics (Spring 2020, Fall 2020)\nMath 338: Statistics Applied to Natural Sciences (Spring 2021)"
+    "text": "In this lab you will learn the fundamentals of programming in R. Start by reading over the following tutorials from STATS10 Lab 1\nThe tutorial will help you get started with\n\nFundamentals of R\nImporting Data in R\nSummarizing and Visualzing Numerical Data\nSummarizing and Visualzing Categorical Data\nBasics of MOSAIC Package"
   },
   {
     "objectID": "email.html",
@@ -252,11 +210,67 @@
     "text": "Not Appropriate Email\nHello Jose,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
   },
   {
-    "objectID": "ucla/stats13/labs/lab1.html",
-    "href": "ucla/stats13/labs/lab1.html",
-    "title": "Lab 1",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Jose Toledo Luna",
     "section": "",
-    "text": "In this lab you will learn the fundamentals of programming in R. Start by reading over the following tutorials from STATS10 Lab 1\nThe tutorial will help you get started with\n\nFundamentals of R\nImporting Data in R\nSummarizing and Visualzing Numerical Data\nSummarizing and Visualzing Categorical Data\nBasics of MOSAIC Package"
+    "text": "STATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Fall 2023)"
+  },
+  {
+    "objectID": "teaching.html#current-courses",
+    "href": "teaching.html#current-courses",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "STATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Fall 2023)"
+  },
+  {
+    "objectID": "teaching.html#previous-courses",
+    "href": "teaching.html#previous-courses",
+    "title": "Jose Toledo Luna",
+    "section": "Previous Courses",
+    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\nSTATS 10: Introduction to Statistical Reasoning (Fall 2022, Winter 2023, Spring 2023)\nSTATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Summer 2022)\nSTATS 21: Python and Other Technologies for Data Science (Spring 2023)\nSTATS 100B: Introduction to Mathematical Statistics (Summer 2023)\nSTATS 100C: Linear Models (Summer 2023)\n\n\n\nCalifornia State University, Fullerton\n\nMath 115: College Algebra (Fall 2019)\nMath 120: Elementary Statistics (Spring 2020, Fall 2020)\nMath 338: Statistics Applied to Natural Sciences (Spring 2021)"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [PDF]"
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [PDF]"
+  },
+  {
+    "objectID": "research.html#software",
+    "href": "research.html#software",
+    "title": "Jose Toledo Luna",
+    "section": "Software",
+    "text": "Software\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "I am currently a third year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
+  },
+  {
+    "objectID": "ucla/stats13/labs/lab2.html",
+    "href": "ucla/stats13/labs/lab2.html",
+    "title": "Lab 2",
+    "section": "",
+    "text": "In this lab we will learn about logical statements and their applications such as subsetting"
+  },
+  {
+    "objectID": "ucla/stats13/labs/lab2.html#for-loops",
+    "href": "ucla/stats13/labs/lab2.html#for-loops",
+    "title": "Lab 2",
+    "section": "For Loops",
+    "text": "For Loops\n\nUsing a For-Loop on a vector\nA for-loop serves the purpose of cycling through a collection of objects, such as a vector, list, matrix, or dataframe, and consistently applying a specific set of operations to each element within the data structure.\nUtilizing for-loops helps maintain code cleanliness and prevents unnecessary duplication of code blocks.\n\nfor(index in indexing_set) {\n  code block\n}\n\nTo start with a very simple example, consider printing the numbers from 1 to 6 inclusive\n\nfor (index in 1:6){\n  print(index)\n}\n\n#&gt; [1] 1\n#&gt; [1] 2\n#&gt; [1] 3\n#&gt; [1] 4\n#&gt; [1] 5\n#&gt; [1] 6\n\n\nindex can be any variable name, usually in the context of the problem. For example, this can be anything from car,letters, months, etc.., in most cases usually the variable name i suffices. Our code block or expression is simply to print() the current index\n\nfor(i in 1:6){\n  print(i*2)\n}\n\n#&gt; [1] 2\n#&gt; [1] 4\n#&gt; [1] 6\n#&gt; [1] 8\n#&gt; [1] 10\n#&gt; [1] 12\n\n\nIn this scenario, we begin by printing the numbers from 1 to 6 and then doubling each number before printing it. You can see this in the line of code: print(i * 2).\nHowever, there are scenarios where we not only want to print these values but also store them after each iteration. To do that, we need to start by creating an empty object. This object can be new or an existing one, but it’s important to keep in mind that after each iteration, the object may be modified\nThe function numeric() creates a numeric vector of all 0 of a specified length. Here the length, should be the the same size as the indexing_set\n\nvec &lt;- numeric(length = 5)\n\n\nvec\n\n#&gt; [1] 0 0 0 0 0\n\n\n\nfor(i in 1:5){\n1  print(paste0('Current Iteration: ',i) )\n  \n2  vec[i] &lt;- (i*2)\n  \n3  print(vec)\n}\n\n\n1\n\nPrint the current iteration\n\n2\n\nUpdate the \\(i\\)th element of the vector vec by doubling the current index\n\n3\n\nPrint the updated vector vec\n\n\n\n\n#&gt; [1] \"Current Iteration: 1\"\n#&gt; [1] 2 0 0 0 0\n#&gt; [1] \"Current Iteration: 2\"\n#&gt; [1] 2 4 0 0 0\n#&gt; [1] \"Current Iteration: 3\"\n#&gt; [1] 2 4 6 0 0\n#&gt; [1] \"Current Iteration: 4\"\n#&gt; [1] 2 4 6 8 0\n#&gt; [1] \"Current Iteration: 5\"\n#&gt; [1]  2  4  6  8 10\n\n\nHere is the resulting vector\n\nvec\n\n#&gt; [1]  2  4  6  8 10\n\n\n\n\n\n\n\n\nWarning\n\n\n\nIn R, for-loops tend to be slow. To mitigate the performance issues associated with for-loops, it is often recommended to use vectorized operations or apply functions\n\n\nFor example,\n\nvec &lt;- 2*(1:5)\nvec\n\n#&gt; [1]  2  4  6  8 10\n\n\nIn this example, there was no need to use a for-loop. It was simply for teaching purposes\nWe don’t need to iterate sequentially from a regular sequence 1:N, as in the previous example. We can iterate through the elements of an existing object. For example,\n\nfor(index in c(2,3,4)){\n  print(index)\n}\n\n#&gt; [1] 2\n#&gt; [1] 3\n#&gt; [1] 4\n\n\n\nfor(pet in c('dog','cat','hamster','turtle')){\n  print(pet)\n}\n\n#&gt; [1] \"dog\"\n#&gt; [1] \"cat\"\n#&gt; [1] \"hamster\"\n#&gt; [1] \"turtle\"\n\n\nHowever, if you are trying to update the \\(i\\)th element of an object this approach might not be the best\n\nvec3 &lt;- numeric(3)\nvec3\n\n#&gt; [1] 0 0 0\n\nfor(index in c(2,4,6) ){\n  print( vec3[index] )\n}\n\n#&gt; [1] 0\n#&gt; [1] NA\n#&gt; [1] NA\n\n\nAn NA is produced because are vector v3 has three elements and we are trying to access the 4th and 6th element which do not exist. Instead use the function seq_along(x) which will create a regular sequence from 1:length(x)\n\nseq_along(c(2,4,6))\n\n#&gt; [1] 1 2 3\n\n\n\nseq_along(c('dog','cat','hamster','turtle'))\n\n#&gt; [1] 1 2 3 4\n\n\n\nfor(index in seq_along(c(2,4,6)) ){\n  print(index)\n}\n\n#&gt; [1] 1\n#&gt; [1] 2\n#&gt; [1] 3"
   },
   {
     "objectID": "ucla/stats13/index.html",
@@ -431,7 +445,7 @@
     "href": "ucla/stats10/intro_numerical_variables.html#single-numerical-variable",
     "title": "Jose Toledo Luna",
     "section": "Single numerical variable",
-    "text": "Single numerical variable\nOne way to extract all the numerical columns is using both Filter and is.numeric functions. Below are the first five rows of all the numerical columns in birth_dat\n\nFilter(is.numeric,birth_dat)\n\n\n\n  X weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits Gained\n1 1    116      9   28   34     6     3       2     10     30\n2 2    126      8   30   18    12    12       1     14     50\n3 3    161      8   28   29    12    12       3     14     65\n4 4    133      9   26   23     8     9       3     10      8\n5 5    119      8   30   19    12    12       2     12     20\n\n\nThe names of the numerical columns can be obtained using colnames() function in combination with the above statement\n\ncolnames(Filter(is.numeric,birth_dat) )\n\n [1] \"X\"       \"weight\"  \"Apgar1\"  \"Fage\"    \"Mage\"    \"Feduc\"   \"Meduc\"  \n [8] \"TotPreg\" \"Visits\"  \"Gained\" \n\n\nWe will only consider the weight variable from our dataset to demonstrate methods to summarize and visualize a numerical variable.\nFunctions for numerical summaries include, but not limited to,\n\n\n\n\n\n\n\nFunction\nDescription\n\n\n\n\nmean()\nmean\n\n\nmedian()\nmedian\n\n\nmode()\nmode\n\n\nsd()\nstandard deviation\n\n\nvar()\nvariance\n\n\nmin()\nminimum\n\n\nmax()\nmaximum\n\n\nsummary()\nComputes the following: Minimum ,1st Quartile, Median,Mean ,3rd Quartile,Maximum\n\n\n\nNext, we’ll save the values from weight column into a separate variable and compute several numerical summaries listed above\n\nbirth_weight &lt;- birth_dat$weight\n\n\nmean(birth_weight)\n\n[1] 116.0536\n\nmedian(birth_weight)\n\n[1] 117\n\nmin(birth_weight)\n\n[1] 14\n\nmax(birth_weight)\n\n[1] 177\n\n\n\nsummary(birth_weight)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   14.0   106.0   117.0   116.1   129.0   177.0 \n\n\nWhile summary() give us a quick numerical summary of our distribution, it is important to also visualize the overall distribution using a plot such as a boxplot\n\nboxplot(birth_weight)\n\n\n\n\nor a histogram\n\nhist(birth_weight)\n\n\n\n\nFrom the histogram above, while the overall distribution of the birth weights is symmetrical there are outliers causing the distribution to be skewed to the left.\nFor boxplot() and hist() we used the default settings, while they are informative we can alter their appearance to be more professional.\nFor example, we changed the x-axis label and y-axis label using xlab,ylab arguments,respectively. We changed the title with main and the color of the boxplot with col. The col argument can take values such as red,blue or any HEX code, see ?boxplot for further customization.\n\nboxplot(birth_weight,\n        main='Boxplot of Birth Weights',\n        xlab ='birth weights', ylab='ounces',\n        col='#61b1ed')\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nFor a collection of R colors by name refer to Rcolors. Another approach is to search ‘color picker’ in google and copy/paste the hex code\n\n\nWe can apply similar customization to our histogram\n\nhist(birth_weight,\n     main='Histogram of Birth Weights',\n     xlab ='birth weights',\n     col='#d1584f',\n     breaks=20)\n\n\n\n\nThe hist function uses the Sturges method by default to determine the number of breaks on the histogram. We can manually change the number of breaks, but we should be careful not to specify a low or high number of breaks. Usually the default setting is appropriate for most scenarios."
+    "text": "Single numerical variable\nOne way to extract all the numerical columns is using both Filter and is.numeric functions. Below are the first five rows of all the numerical columns in birth_dat\n\nFilter(is.numeric,birth_dat)\n\n\n\n  X weight Apgar1 Fage Mage Feduc Meduc TotPreg Visits Gained\n1 1    116      9   28   34     6     3       2     10     30\n2 2    126      8   30   18    12    12       1     14     50\n3 3    161      8   28   29    12    12       3     14     65\n4 4    133      9   26   23     8     9       3     10      8\n5 5    119      8   30   19    12    12       2     12     20\n\n\nThe names of the numerical columns can be obtained using colnames() function in combination with the above statement\n\ncolnames(Filter(is.numeric,birth_dat) )\n\n [1] \"X\"       \"weight\"  \"Apgar1\"  \"Fage\"    \"Mage\"    \"Feduc\"   \"Meduc\"  \n [8] \"TotPreg\" \"Visits\"  \"Gained\" \n\n\nWe will only consider the weight variable from our dataset to demonstrate methods to summarize and visualize a numerical variable.\nFunctions for numerical summaries include, but not limited to,\n\n\n\n\n\n\n\nFunction\nDescription\n\n\n\n\nmean()\nmean\n\n\nmedian()\nmedian\n\n\nmode()\nmode\n\n\nsd()\nstandard deviation\n\n\nvar()\nvariance\n\n\nmin()\nminimum\n\n\nmax()\nmaximum\n\n\nsummary()\nComputes the following: Minimum ,1st Quartile, Median,Mean ,3rd Quartile,Maximum\n\n\n\nNext, we’ll save the values from weight column into a separate variable and compute several numerical summaries listed above\n\nbirth_weight &lt;- birth_dat$weight\n\n\nmean(birth_weight)\n\n[1] 116.0536\n\nmedian(birth_weight)\n\n[1] 117\n\nmin(birth_weight)\n\n[1] 14\n\nmax(birth_weight)\n\n[1] 177\n\n\n\nsummary(birth_weight)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   14.0   106.0   117.0   116.1   129.0   177.0 \n\n\nWhile summary() give us a quick numerical summary of our distribution, it is important to also visualize the overall distribution using a plot such as a boxplot\n\nboxplot(birth_weight)\n\n\n\n\nor a histogram\n\nhist(birth_weight)\n\n\n\n\nFrom the histogram above, while the overall distribution of the birth weights is symmetrical there are outliers causing the distribution to be skewed to the left.\nFor boxplot() and hist() we used the default settings, while they are informative we can alter their appearance to be more professional.\nFor example, we changed the x-axis label and y-axis label using xlab,ylab arguments,respectively. We changed the title with main and the color of the boxplot with col. The col argument can take values such as red,blue or any HEX code, see ?boxplot for further customization.\n\nboxplot(birth_weight,\n        main='Boxplot of Birth Weights',\n        xlab ='birth weights', ylab='ounces',\n        col='#61b1ed')\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nSearch ‘color picker’ in Google and copy/paste the generated hex code\n\n\nWe can apply similar customization to our histogram\n\nhist(birth_weight,\n     main='Histogram of Birth Weights',\n     xlab ='birth weights',\n     col='#d1584f',\n     breaks=20)\n\n\n\n\nThe hist function uses the Sturges method by default to determine the number of breaks on the histogram. We can manually change the number of breaks, but we should be careful not to specify a low or high number of breaks. Usually the default setting is appropriate for most scenarios."
   },
   {
     "objectID": "ucla/stats10/intro_numerical_variables.html#two-numerical-variables",
@@ -439,19 +453,5 @@
     "title": "Jose Toledo Luna",
     "section": "Two numerical variables",
     "text": "Two numerical variables\nWe consider the following two numerical variables: Feduc and Meduc, which is the highest education for fathers and mothers in this dataset, respectively.\n\nfather_eduction &lt;- birth_dat$Feduc\nmother_education &lt;- birth_dat$Meduc\n\nWe can compare their distributions in a single plot as we did in Section 2 with boxplots\n\nboxplot(father_eduction,mother_education,\n        names = c('father','mother'),\n        col=c('#f5d376','#f5767c'),\n        main = 'Highest Education for Parernts',\n        ylab = 'Year')\n\n\n\n\nFor boxplots its pretty straight forward to compare two numerical distributions using the syntax boxplot(v1,v2,...). For histograms it requires a bit more work.\nWe start by creating a histogram for the first variable, then creating another histogram for the second variable but using the argument add=TRUE. We must specify a unique color for each histogram representing the variables. In order for both of the histograms to fit properly on the same plot we must take into account the lowest and highest values among the multiple numerical variables.\n\nlow_x &lt;- min(father_eduction,mother_education)\nhigh_x &lt;- max(father_eduction,mother_education)\n\nLastly, we must specify a legend to appropriately distinguish the multiple histograms using the function legend().\n\nhist(father_eduction, col='lightcoral',\n     xlim=c(low_x,high_x),\n     main='Education for Parents', xlab='Year')\nhist(mother_education, col='lightblue', add=TRUE)\nlegend('topright', legend = c('father', 'mother'), \n       fill=c('lightcoral', 'lightblue'))\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWhen using legend() it is important that you specify the correct ordering of colors for each group, otherwise the legend would be incorrect. For example, in our first histogram we chose “lightcoral” to represent “father” and “lightblue” to represent “mother” distributions. Which is why we used the arguments: legend=c('father','mother'), fill = c('lightcoral','lightblue') in that order\n\n\nWe can also consider a scatter plot to visualize the relationship between two numerical variables. We consider the two numerical variables Gained and weight. Gained describes the weight gained during the pregnancy term and weight describe the weight of the baby at birth.\n\nplot(x = birth_dat$Gained,y = birth_dat$weight,\n     main = 'Baby weight vs pregnancy weight gain',\n     xlab = 'weight gained during pregnancy',\n     ylab = 'Baby weight (oz.)',\n     col='lightcoral')"
-  },
-  {
-    "objectID": "ucla/stats13/labs/lab2.html",
-    "href": "ucla/stats13/labs/lab2.html",
-    "title": "Lab 2",
-    "section": "",
-    "text": "In this lab we will learn about logical statements and their applications such as subsetting"
-  },
-  {
-    "objectID": "ucla/stats13/labs/lab2.html#for-loops",
-    "href": "ucla/stats13/labs/lab2.html#for-loops",
-    "title": "Lab 2",
-    "section": "For Loops",
-    "text": "For Loops\n\nUsing a For-Loop on a vector\nA for-loop serves the purpose of cycling through a collection of objects, such as a vector, list, matrix, or dataframe, and consistently applying a specific set of operations to each element within the data structure.\nUtilizing for-loops helps maintain code cleanliness and prevents unnecessary duplication of code blocks.\n\nfor(index in indexing_set) {\n  code block\n}\n\nTo start with a very simple example, consider printing the numbers from 1 to 6 inclusive\n\nfor (index in 1:6){\n  print(index)\n}\n\n#&gt; [1] 1\n#&gt; [1] 2\n#&gt; [1] 3\n#&gt; [1] 4\n#&gt; [1] 5\n#&gt; [1] 6\n\n\nindex can be any variable name, usually in the context of the problem. For example, this can be anything from car,letters, months, etc.., in most cases usually the variable name i suffices. Our code block or expression is simply to print() the current index\n\nfor(i in 1:6){\n  print(i*2)\n}\n\n#&gt; [1] 2\n#&gt; [1] 4\n#&gt; [1] 6\n#&gt; [1] 8\n#&gt; [1] 10\n#&gt; [1] 12\n\n\nIn this scenario, we begin by printing the numbers from 1 to 6 and then doubling each number before printing it. You can see this in the line of code: print(i * 2).\nHowever, there are scenarios where we not only want to print these values but also store them after each iteration. To do that, we need to start by creating an empty object. This object can be new or an existing one, but it’s important to keep in mind that after each iteration, the object may be modified\nThe function numeric() creates a numeric vector of all 0 of a specified length. Here the length, should be the the same size as the indexing_set\n\nvec &lt;- numeric(length = 5)\n\n\nvec\n\n#&gt; [1] 0 0 0 0 0\n\n\n\nfor(i in 1:5){\n1  print(paste0('Current Iteration: ',i) )\n  \n2  vec[i] &lt;- (i*2)\n  \n3  print(vec)\n}\n\n\n1\n\nPrint the current iteration\n\n2\n\nUpdate the \\(i\\)th element of the vector vec by doubling the current index\n\n3\n\nPrint the updated vector vec\n\n\n\n\n#&gt; [1] \"Current Iteration: 1\"\n#&gt; [1] 2 0 0 0 0\n#&gt; [1] \"Current Iteration: 2\"\n#&gt; [1] 2 4 0 0 0\n#&gt; [1] \"Current Iteration: 3\"\n#&gt; [1] 2 4 6 0 0\n#&gt; [1] \"Current Iteration: 4\"\n#&gt; [1] 2 4 6 8 0\n#&gt; [1] \"Current Iteration: 5\"\n#&gt; [1]  2  4  6  8 10\n\n\nHere is the resulting vector\n\nvec\n\n#&gt; [1]  2  4  6  8 10\n\n\n\n\n\n\n\n\nWarning\n\n\n\nIn R, for-loops tend to be slow. To mitigate the performance issues associated with for-loops, it is often recommended to use vectorized operations or apply functions\n\n\nFor example,\n\nvec &lt;- 2*(1:5)\nvec\n\n#&gt; [1]  2  4  6  8 10\n\n\nIn this example, there was no need to use a for-loop. It was simply for teaching purposes\nWe don’t need to iterate sequentially from a regular sequence 1:N, as in the previous example. We can iterate through the elements of an existing object. For example,\n\nfor(index in c(2,3,4)){\n  print(index)\n}\n\n#&gt; [1] 2\n#&gt; [1] 3\n#&gt; [1] 4\n\n\n\nfor(pet in c('dog','cat','hamster','turtle')){\n  print(pet)\n}\n\n#&gt; [1] \"dog\"\n#&gt; [1] \"cat\"\n#&gt; [1] \"hamster\"\n#&gt; [1] \"turtle\"\n\n\nHowever, if you are trying to update the \\(i\\)th element of an object this approach might not be the best\n\nvec3 &lt;- numeric(3)\nvec3\n\n#&gt; [1] 0 0 0\n\nfor(index in c(2,4,6) ){\n  print( vec3[index] )\n}\n\n#&gt; [1] 0\n#&gt; [1] NA\n#&gt; [1] NA\n\n\nAn NA is produced because are vector v3 has three elements and we are trying to access the 4th and 6th element which do not exist. Instead use the function seq_along(x) which will create a regular sequence from 1:length(x)\n\nseq_along(c(2,4,6))\n\n#&gt; [1] 1 2 3\n\n\n\nseq_along(c('dog','cat','hamster','turtle'))\n\n#&gt; [1] 1 2 3 4\n\n\n\nfor(index in seq_along(c(2,4,6)) ){\n  print(index)\n}\n\n#&gt; [1] 1\n#&gt; [1] 2\n#&gt; [1] 3"
   }
 ]

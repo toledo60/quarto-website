@@ -90,7 +90,7 @@ boxplot(birth_weight,
 ```
 
 :::callout-tip
-For a collection of R colors by name refer to [Rcolors](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). Another approach is to search 'color picker' in google and copy/paste the hex code
+Search 'color picker' in Google and copy/paste the generated hex code
 :::
 
 We can apply similar customization to our histogram
