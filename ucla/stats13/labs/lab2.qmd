@@ -81,9 +81,9 @@ for(i in 1:5){
   print(vec) #<3>
 }
 ```
-1. Print the current iteration
+1. Print the current iteration *(optional)*
 2. Update the $i$th element of the vector `vec` by doubling the current index
-3. Print the updated vector `vec`
+3. Print the updated vector `vec` *(optional)*
 
 
 Here is the resulting vector
@@ -133,7 +133,7 @@ for(index in c(2,4,6) ){
 }
 ```
 
-An `NA` is produced because are vector `v3` has three elements and we are trying to access the 4th and 6th element which do not exist. Instead use the function `seq_along(x)` which will create a regular sequence from `1:length(x)`
+An `NA` is produced because our vector `v3` has three elements and we are trying to access the 4th and 6th element which do not exist. Instead use the function `seq_along(x)` which will create a regular sequence from `1:length(x)`
 
 ```{r}
 seq_along(c(2,4,6))

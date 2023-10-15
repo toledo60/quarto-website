@@ -149,31 +149,20 @@ c(TRUE,TRUE,FALSE,FALSE) | c(TRUE,FALSE,TRUE,FALSE)
 ```
 *Interpretation: TRUE or FALSE, TRUE or FALSE, FALSE or TRUE, FALSE or FALSE*
 
-*Element-wise* will return a vector of logical values, one for each pair of logicals combined. Whereas, *single comparison* only compares the first two elements of the logical vectors and will return a single logical value.
+*Element-wise* will return a vector of logical values, one for each pair of logicals combined. Whereas, *single comparison* only compares the first two elements of the logical vectors and will return a single logical value
 
-```{r,eval=FALSE}
-c(TRUE,TRUE,FALSE,FALSE) || c(TRUE,FALSE,TRUE,FALSE)
-```
-
-The above will output the following error
-```
-Error in c(TRUE, TRUE, FALSE, FALSE) || c(TRUE, FALSE, TRUE, FALSE) : 
-  'length = 4' in coercion to 'logical(1)'
-```
-
-A better example for single comparisons would be as follows
 
 ```{r}
 age <- 20
-age > 10 && age < 30
-```
-*Interpretation: Is age greater than AND less than 30?*
-
-
-```{r}
 age == 18 || age <= 21
 ```
 *Interpretation: Is age 18 OR less than or equal to 21 ?*
+
+
+```{r}
+age > 10 && age < 30
+```
+*Interpretation: Is age greater than AND less than 30?*
 
 
 Consider a more complicated example of holding office in the United States.
