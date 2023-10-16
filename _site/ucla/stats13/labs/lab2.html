@@ -219,16 +219,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="for-loops">For Loops</h2>
 <section id="using-a-for-loop-on-a-vector" class="level3">
 <h3 class="anchored" data-anchor-id="using-a-for-loop-on-a-vector">Using a For-Loop on a vector</h3>
-<p>A for-loop serves the purpose of cycling through a collection of objects, such as a vector, list, matrix, or dataframe, and consistently applying a specific set of operations to each element within the data structure.</p>
-<p>Utilizing for-loops helps maintain code cleanliness and prevents unnecessary duplication of code blocks.</p>
+<p>A for-loop serves the purpose of cycling through a collection of objects, such as a vector, list, matrix, or dataframe, and consistently applying a specific set of operations to each element within the data structure</p>
+<p>The syntax of a for-loop in R consists of a <code>variable</code> which takes items from the <code>iterable</code> one by one, where the <code>iterable</code> is the collection of objects provided <em>(vector, list, matrix, etc..)</em></p>
+<p>Lastly, inside the for-loop within the curly braces <code>{ }</code> is the <code>loop body</code> which are statements that are executed once for each item in the <code>iterable</code> provided</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(index <span class="cf">in</span> indexing_set) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  code block</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(variable <span class="cf">in</span> iterable) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  loop body</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>To start with a very simple example, consider printing the numbers from 1 to 6 inclusive</p>
+<p>Utilizing for-loops helps maintain code cleanliness and prevents unnecessary duplication of code blocks</p>
+<p>To start with a basic example, consider printing the numbers from <code>1 to 5</code> inclusive, this is our <code>iterable</code> and is constructed using any sequence operator. This can be <code>a:b</code> or the built-in function <code>seq()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (index <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>){</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (index <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(index)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -236,13 +238,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #&gt; [1] 2
 #&gt; [1] 3
 #&gt; [1] 4
-#&gt; [1] 5
-#&gt; [1] 6</code></pre>
+#&gt; [1] 5</code></pre>
 </div>
 </div>
-<p><code>index</code> can be any variable name, usually in the context of the problem. For example, this can be anything from <code>car</code>,<code>letters</code>, <code>months</code>, etc.., in most cases usually the variable name <code>i</code> suffices. Our <code>code block</code> or expression is simply to <code>print()</code> the current index</p>
+<p>Here <code>index</code> is our <code>variable</code>, the variable name can be anything but it is usually in the context of the problem</p>
+<p>For example, this can be anything from <code>car</code>,<code>letters</code>, <code>months</code>, etc.., in most cases usually the variable name <code>i</code> suffices</p>
+<p>Our <code>loop body</code> is simply to <code>print()</code> the current index</p>
+<p>In the next example, we will print the numbers from <code>1 to 5</code> and then double each number before printing it</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>){</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i<span class="sc">*</span><span class="dv">2</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -250,13 +254,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #&gt; [1] 4
 #&gt; [1] 6
 #&gt; [1] 8
-#&gt; [1] 10
-#&gt; [1] 12</code></pre>
+#&gt; [1] 10</code></pre>
 </div>
 </div>
-<p>In this scenario, we begin by printing the numbers from <code>1 to 6</code> and then doubling each number before printing it. You can see this in the line of code: <code>print(i * 2)</code>.</p>
 <p>However, there are scenarios where we not only want to print these values but also store them after each iteration. To do that, we need to start by creating an empty object. This object can be new or an existing one, but it’s important to keep in mind that after each iteration, the object may be modified</p>
-<p>The function <code>numeric()</code> creates a numeric vector of all <code>0</code> of a specified <code>length</code>. Here the <code>length</code>, should be the the same size as the <code>indexing_set</code></p>
+<p>The function <code>numeric()</code> creates a numeric vector of all <code>0</code> of a specified <code>length</code>. Here the <code>length</code>, should be the the same size as the <code>iterable</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -278,15 +280,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-6" data-code-lines="2" data-code-annotation="1">Print the current iteration <em>(optional)</em></span>
+<span data-code-annotation="1" data-code-lines="2" data-code-cell="annotated-cell-6">Print the current iteration <em>(optional)</em></span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-6" data-code-lines="4" data-code-annotation="2">Update the <span class="math inline">\(i\)</span>th element of the vector <code>vec</code> by doubling the current index</span>
+<span data-code-annotation="2" data-code-lines="4" data-code-cell="annotated-cell-6">Update the <span class="math inline">\(i\)</span>th element of the vector <code>vec</code> by doubling the current index</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-6" data-code-lines="6" data-code-annotation="3">Print the updated vector <code>vec</code> <em>(optional)</em></span>
+<span data-code-annotation="3" data-code-lines="6" data-code-cell="annotated-cell-6">Print the updated vector <code>vec</code> <em>(optional)</em></span>
 </dd>
 </dl>
 </div>
@@ -331,22 +333,36 @@ Warning
 <pre><code>#&gt; [1]  2  4  6  8 10</code></pre>
 </div>
 </div>
-<p>In this example, there was no need to use a for-loop. It was simply for teaching purposes</p>
-<p>We don’t need to iterate sequentially from a regular sequence <code>1:N</code>, as in the previous example. We can iterate through the elements of an existing object. For example,</p>
+<p>It is clear there was no need to use a for-loop in the previous example it was simply for teaching purposes</p>
+<p>We don’t need to iterate sequentially from a regular sequence <code>1:N</code>. We can iterate through the elements of an existing object. For example,</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(index <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)){</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(index)</span>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>){</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 2
-#&gt; [1] 3
-#&gt; [1] 4</code></pre>
+<pre><code>#&gt; [1] 3
+#&gt; [1] 4
+#&gt; [1] 5
+#&gt; [1] 6</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(pet <span class="cf">in</span> <span class="fu">c</span>(<span class="st">'dog'</span>,<span class="st">'cat'</span>,<span class="st">'hamster'</span>,<span class="st">'turtle'</span>)){</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(pet)</span>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">11</span>, <span class="at">by =</span> <span class="dv">2</span>)){</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1
+#&gt; [1] 3
+#&gt; [1] 5
+#&gt; [1] 7
+#&gt; [1] 9
+#&gt; [1] 11</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(pet <span class="cf">in</span> <span class="fu">c</span>(<span class="st">'dog'</span>,<span class="st">'cat'</span>,<span class="st">'hamster'</span>,<span class="st">'turtle'</span>)){</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(pet)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] "dog"
 #&gt; [1] "cat"
@@ -356,21 +372,19 @@ Warning
 </div>
 <p>However, if you are trying to update the <span class="math inline">\(i\)</span>th element of an object this approach might not be the best</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>vec3 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">3</span>)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>vec3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0 0 0</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(index <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) ){</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>( vec3[index] )</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length=</span><span class="dv">3</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(index <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) ){</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>( vec[index] )</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 0
 #&gt; [1] NA
 #&gt; [1] NA</code></pre>
 </div>
 </div>
-<p>An <code>NA</code> is produced because our vector <code>v3</code> has three elements and we are trying to access the 4th and 6th element which do not exist. Instead use the function <code>seq_along(x)</code> which will create a regular sequence from <code>1:length(x)</code></p>
+<p>An <code>NA</code> is produced because our vector <code>vec</code> has three elements and we are trying to access the 4th and 6th element which do not exist</p>
+<p>Instead use the function <code>seq_along(x)</code> which will create a regular sequence from <code>1:length(x)</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq_along</span>(<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
