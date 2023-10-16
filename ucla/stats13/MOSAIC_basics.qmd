@@ -1,6 +1,8 @@
 ---
+author: Jose Toledo Luna
+title: MOSAIC Library
 toc: true
-css: styles.css
+date: 2023-10-16
 ---
 
 
@@ -20,8 +22,6 @@ knitr::opts_chunk$set(
   }
 </style>
 ```
-
-## MOSAIC library
 
 
 ### Installation
@@ -238,7 +238,7 @@ The output of `rflip` is a `cointoss` object, which displays the number of heads
 ```{r}
 rflip(n = 10, prob = 0.3) #<1>
 ```
-1. Flip 10 unfair coins, in this case it is less likely to obtain a head for each toss
+1. Flip 10 coins, each with probability of 0.3 of landing on heads
 
 
 we can summarize the above output and return a `data.frame` which we can extract information from 
@@ -267,7 +267,7 @@ Consider the following example,
 result <- do(2) * rflip(n=5) #<1>
 result
 ```
-1. Randomly flip a coin 5 times and replicate this procedure two times
+1. Randomly flip a fair coin 5 times and replicate this procedure two times
 
 
 Recall the output after performing a `do()` statement will be a data.frame where each row is a replication of the procedure following the `*` operator. The first row shows the number of tosses, how many heads/tails where obtained and the corresponding proportion of heaads after `n` tosses

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jose Toledo Luna">
+<meta name="dcterms.date" content="2023-10-16">
 
-<title>Jose Toledo Luna – mosaic_basics</title>
+<title>Jose Toledo Luna - MOSAIC Library</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,7 +98,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -168,11 +169,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mosaic-library" id="toc-mosaic-library" class="nav-link active" data-scroll-target="#mosaic-library">MOSAIC library</a>
-  <ul class="collapse">
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#commonly-used-functions" id="toc-commonly-used-functions" class="nav-link" data-scroll-target="#commonly-used-functions">Commonly used functions</a></li>
-  </ul></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
   <ul class="collapse">
   <li><a href="#numerical-summaries" id="toc-numerical-summaries" class="nav-link" data-scroll-target="#numerical-summaries">Numerical Summaries</a></li>
@@ -184,15 +182,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">MOSAIC Library</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jose Toledo Luna </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 16, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
 
 <style>
   .vertical-space {
     margin-bottom: 30px;
   }
 </style>
-<section id="mosaic-library" class="level2">
-<h2 class="anchored" data-anchor-id="mosaic-library">MOSAIC library</h2>
 <section id="installation" class="level3">
 <h3 class="anchored" data-anchor-id="installation">Installation</h3>
 <p>The goal of the <code>mosaic</code> package is to make effective computation accessible to university-level students at an introductory level</p>
@@ -252,11 +275,11 @@ Warning
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-2">Make sure to load <code>mosiac</code> package first, you only have to do this once at the beginning of your script. Proceeding, this tutorial will assume you have loaded the <code>mosaic</code> package</span>
+<span data-code-lines="1" data-code-cell="annotated-cell-2" data-code-annotation="1">Make sure to load <code>mosiac</code> package first, you only have to do this once at the beginning of your script. Proceeding, this tutorial will assume you have loaded the <code>mosaic</code> package</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="7" data-code-annotation="2" data-code-cell="annotated-cell-2">The output above are simply messages when initially starting up the package warning you about masking of functions with the same name as different packages</span>
+<span data-code-lines="7" data-code-cell="annotated-cell-2" data-code-annotation="2">The output above are simply messages when initially starting up the package warning you about masking of functions with the same name as different packages</span>
 </dd>
 </dl>
 </div>
@@ -295,7 +318,6 @@ Warning
 <li><code>do()</code>: provides a natural syntax for repetition tuned to assist with replication and resampling methods</li>
 </ul>
 <p>For a quick overview of the basic of MOSAIC package, refer to <a href="https://cran.r-project.org/web/packages/mosaic/vignettes/MinimalRgg.pdf">Minimal R for Intro Stats</a> tutorial. Note, we will not use all of the functions in the <code>mosaic</code> package</p>
-</section>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
@@ -357,7 +379,7 @@ Warning
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-11" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-11">Interpretation: write ‘hello’ three times</span>
+<span data-code-lines="1" data-code-cell="annotated-cell-11" data-code-annotation="1">Interpretation: write ‘hello’ three times</span>
 </dd>
 </dl>
 </div>
@@ -418,7 +440,7 @@ Warning
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-16" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-16">Flip a fair coin five times</span>
+<span data-code-lines="1" data-code-cell="annotated-cell-16" data-code-annotation="1">Flip a fair coin five times</span>
 </dd>
 </dl>
 </div>
@@ -426,18 +448,18 @@ Warning
 <pre><code>#&gt; 
 #&gt; Flipping 5 coins [ Prob(Heads) = 0.5 ] ...
 #&gt; 
-#&gt; T H H T H
+#&gt; T T T T T
 #&gt; 
-#&gt; Number of Heads: 3 [Proportion Heads: 0.6]</code></pre>
+#&gt; Number of Heads: 0 [Proportion Heads: 0]</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(coin_toss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt;  'cointoss' int 3
+<pre><code>#&gt;  'cointoss' int 0
 #&gt;  - attr(*, "n")= num 5
 #&gt;  - attr(*, "prob")= num 0.5
-#&gt;  - attr(*, "sequence")= chr [1:5] "T" "H" "H" "T" ...
+#&gt;  - attr(*, "sequence")= chr [1:5] "T" "T" "T" "T" ...
 #&gt;  - attr(*, "verbose")= logi TRUE</code></pre>
 </div>
 </div>
@@ -448,7 +470,7 @@ Warning
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-18" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-18">Flip 10 unfair coins, in this case it is less likely to obtain a head for each toss</span>
+<span data-code-lines="1" data-code-cell="annotated-cell-18" data-code-annotation="1">Flip 10 coins, each with probability of 0.3 of landing on heads</span>
 </dd>
 </dl>
 </div>
@@ -456,7 +478,7 @@ Warning
 <pre><code>#&gt; 
 #&gt; Flipping 10 coins [ Prob(Heads) = 0.3 ] ...
 #&gt; 
-#&gt; T T T H H T T T T T
+#&gt; T H T T T T H T T T
 #&gt; 
 #&gt; Number of Heads: 2 [Proportion Heads: 0.2]</code></pre>
 </div>
@@ -468,7 +490,7 @@ Warning
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;    n heads tails prob
-#&gt; 1 10     6     4  0.3</code></pre>
+#&gt; 1 10     3     7  0.3</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -476,8 +498,8 @@ Warning
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 'data.frame':    1 obs. of  4 variables:
 #&gt;  $ n    : num 10
-#&gt;  $ heads: int 6
-#&gt;  $ tails: num 4
+#&gt;  $ heads: int 3
+#&gt;  $ tails: num 7
 #&gt;  $ prob : num 0.3</code></pre>
 </div>
 </div>
@@ -493,14 +515,14 @@ Warning
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-21" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-21">Randomly flip a coin 5 times and replicate this procedure two times</span>
+<span data-code-lines="1" data-code-cell="annotated-cell-21" data-code-annotation="1">Randomly flip a fair coin 5 times and replicate this procedure two times</span>
 </dd>
 </dl>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;   n heads tails prop
-#&gt; 1 5     3     2  0.6
-#&gt; 2 5     3     2  0.6</code></pre>
+#&gt; 1 5     2     3  0.4
+#&gt; 2 5     1     4  0.2</code></pre>
 </div>
 </div>
 <p>Recall the output after performing a <code>do()</code> statement will be a data.frame where each row is a replication of the procedure following the <code>*</code> operator. The first row shows the number of tosses, how many heads/tails where obtained and the corresponding proportion of heaads after <code>n</code> tosses</p>
@@ -508,9 +530,9 @@ Warning
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; Classes 'do.data.frame' and 'data.frame':    2 obs. of  4 variables:
 #&gt;  $ n    : num  5 5
-#&gt;  $ heads: num  3 3
-#&gt;  $ tails: num  2 2
-#&gt;  $ prop : num  0.6 0.6
+#&gt;  $ heads: num  2 1
+#&gt;  $ tails: num  3 4
+#&gt;  $ prop : num  0.4 0.2
 #&gt;  - attr(*, "lazy")= language ~rflip(n = 5)
 #&gt;   ..- attr(*, ".Environment")=&lt;environment: R_GlobalEnv&gt; 
 #&gt;  - attr(*, "culler")=function (object, ...)</code></pre>
