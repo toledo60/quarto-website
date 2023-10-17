@@ -24,5 +24,6 @@ In this lab we will learn about logical statements and their applications such a
 1. [Logical Statements and Applications](/ucla/stats10/labs/lab2.qmd)
 2. [For-Loops](/ucla/stats13/for-loops.qmd)
 3. [Introduction to Sampling and Simulation](/ucla/stats10/sampling_simulation.qmd)
+4. [Null Distribution of Sample Proportions](/ucla/stats13/null_proportion.qmd)
 
 
