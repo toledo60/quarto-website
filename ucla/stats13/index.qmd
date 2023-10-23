@@ -54,9 +54,6 @@ Document needs to be uploaded as 1 PDF only. **NO LATE WORK WILL BE ACCEPTED!**
 All lab assignments will be turned in directly on CANVAS,
 and will be completed using R and documented with R markdown.
 
-<!---
-For reference, here is a quick [R markdown tutorial](https://app.box.com/s/u08jwhg4lmulx2yzncodme6nl0k9a9gz) 
---->
 
 Below are all the labs regrading this course. 
 In labs, you will apply the concepts discussed in lectures but with a focus on computation. 

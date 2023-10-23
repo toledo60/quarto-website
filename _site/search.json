@@ -168,11 +168,18 @@
     "text": "Homework 3\nChapter 2 Problems:\n\n2.1.8 (a-d)\n2.1.26 (a-b)\n2.1.28 (a-d)\n2.1.29 (a-b)\n2.1.30 (a-c)\n2.2.6 (a-c)\n2.3.18 (a-c)"
   },
   {
+    "objectID": "ucla/stats13/hw.html#homework-4",
+    "href": "ucla/stats13/hw.html#homework-4",
+    "title": "Homeworks",
+    "section": "Homework 4",
+    "text": "Homework 4\nChapter 3 Problems:\n\n3.1.18 (a-b)\n3.1.20\n3.1.22 (a-f) for part e, can use either 2SD approach or theory\n3.2.6\n3.2.24\n3.3.15 (a-c)\n3.3.18 (a-f)"
+  },
+  {
     "objectID": "ucla/stats13/index.html",
     "href": "ucla/stats13/index.html",
     "title": "Welcome To STATS13",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nDiscussions:  1A Wednesday/Friday: 8am-8:50am (Kaufman Hall 101)  1B Wednesday/Friday: 9am-9:50am (Kaufman Hall 101)\nOffice Hours:  Monday: 10:00am-11:00am  Wednesday: 5:00pm -6:00pm Zoom Only or appointment\nMaterial from this course can be downloaded from this Box Folder\n\n\n\nProblem Sets for STATS13\nThe problems can be found at the end of each chapter in the textbook. You do not need to write the questions in your homework. Please show your work. All work must be your own.\nMake sure to write your full name, student ID number, and section number on your homework. You can handwrite or type your homework. Document needs to be uploaded as 1 PDF only. NO LATE WORK WILL BE ACCEPTED!\n\n\n\nAll lab assignments will be turned in directly on CANVAS, and will be completed using R and documented with R markdown.\n\nBelow are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation.\n\n\n\n\n  \n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\nOct 10, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\nIntroduction to logical statements, for-loops, and simulation\n\n\n\n\n\n\nOct 16, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\nNo matching items"
+    "text": "Instructor: Jose Toledo Luna\nDiscussions:  1A Wednesday/Friday: 8am-8:50am (Kaufman Hall 101)  1B Wednesday/Friday: 9am-9:50am (Kaufman Hall 101)\nOffice Hours:  Monday: 10:00am-11:00am  Wednesday: 5:00pm -6:00pm Zoom Only or appointment\nMaterial from this course can be downloaded from this Box Folder\n\n\n\nProblem Sets for STATS13\nThe problems can be found at the end of each chapter in the textbook. You do not need to write the questions in your homework. Please show your work. All work must be your own.\nMake sure to write your full name, student ID number, and section number on your homework. You can handwrite or type your homework. Document needs to be uploaded as 1 PDF only. NO LATE WORK WILL BE ACCEPTED!\n\n\n\nAll lab assignments will be turned in directly on CANVAS, and will be completed using R and documented with R markdown.\nBelow are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation.\n\n\n\n\n  \n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\nOct 10, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\nIntroduction to logical statements, for-loops, and simulation\n\n\n\n\n\n\nOct 16, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ucla/stats13/index.html#class-overview",
@@ -193,7 +200,7 @@
     "href": "ucla/stats13/index.html#labs",
     "title": "Welcome To STATS13",
     "section": "",
-    "text": "All lab assignments will be turned in directly on CANVAS, and will be completed using R and documented with R markdown.\n\nBelow are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation.\n\n\n\n\n  \n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\nOct 10, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\nIntroduction to logical statements, for-loops, and simulation\n\n\n\n\n\n\nOct 16, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\nNo matching items"
+    "text": "All lab assignments will be turned in directly on CANVAS, and will be completed using R and documented with R markdown.\nBelow are all the labs regrading this course. In labs, you will apply the concepts discussed in lectures but with a focus on computation.\n\n\n\n\n  \n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\nOct 10, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\nIntroduction to logical statements, for-loops, and simulation\n\n\n\n\n\n\nOct 16, 2023\n\n\nJose Toledo Luna\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ucla/stats13/MOSAIC_basics.html",
