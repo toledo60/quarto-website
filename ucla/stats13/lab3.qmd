@@ -1,0 +1,28 @@
+---
+author: Jose Toledo Luna
+date: 2023-10-24
+title: Lab 3
+description: Sampling Distributions and Central Limit Theorem
+toc: true
+comments: false
+---
+
+In this lab you will:
+
+- Reinforce understanding of simulating and random sampling
+- Be introduced to Central Limit Theorem and its applications
+
+
+For a review of sampling and simulation refer back to the following tutorial from [Lab 2](/ucla/stats13/labs/lab2.qmd)
+
+-  [Introduction to Sampling and Simulation](/ucla/stats10/sampling_simulation.qmd)
+
+Otherwise, you can proceed to these tutorials in the following order
+
+1. [Normal Distribution](/ucla/stats10/normal_distribution.qmd)
+2. [Central Limit Theorem](/ucla/stats10/CLT.qmd)
+
+
+
+
+
