@@ -2,9 +2,6 @@
 title: "Welcome To STATS13"
 subtitle: "Introduction to Statistical Methods for Life and Health Sciences"
 image: HLS-logo.png
-listing:
-  id: labs
-  contents: "labs"
 about:
   template: trestles
   links:
@@ -58,9 +55,6 @@ and will be completed using R and documented with R markdown.
 Below are all the labs regrading this course. 
 In labs, you will apply the concepts discussed in lectures but with a focus on computation. 
 
-
-::: {#labs}
-:::
 
 
 
