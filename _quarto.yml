@@ -6,6 +6,10 @@ website:
   title: "Jose Toledo Luna"
   reader-mode: true
   navbar:
+    title: false
+    background: white
+    foreground: "gray-800"
+    collapse-below: sm  
     left:
       - href: index.qmd
         text: About
@@ -26,12 +30,17 @@ website:
     utterances:
       repo: toledo60/quarto-website
     
+# Format-specific Metadata
 format:
   html:
-    theme: simplex
-    css: styles.css
-    linkcolor: "#ba303e"
+    theme:
+      - sandstone
+      - styles.scss
     toc: false
+    published-title: "last updated"
+    reference-location: document
+    code-fold: false
+    code-summary: ""
 
 execute:
   freeze: auto
