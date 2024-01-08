@@ -23,6 +23,32 @@ comments: false
 
 **Instructor:** Jose Toledo Luna
 
+
+
+## Resources
+
+1. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) 
+2. [A Handbook of Statistical Analyses Using R (3rd Edition)](https://cran.r-project.org/web/packages/HSAUR3/)
+3. [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/) 
+
+
+## Schedule
+
+| **Date** | **Topic** | **TLTT Reading** |
+| ---- | ---- | ---- |
+| Week 1 (1/8) | First Day business; Team Fundamentals | Chapters 1-8 + The Author's Preface |
+| **Week 2 (1/15)** | **Holiday**; Résumés and CVs | Chapters 9-18 |
+| Week 3 (1/22) | A of Consulting; Asking Questions; Guest Speaker with (mini) Analysis | Chapters 19-25 |
+| Week 4 (1/29) | Z of Consulting; 7D Assessment | Chapters 26-28 + Afterward + Timeline |
+| Week 5 (2/5) | Review (on Zoom); Midterm 2/7 |  |
+| Week 6 (2/12) | Data For Discussion; Check Your List |  |
+| **Week 7 (2/19)** | **Holiday**; EDA |  |
+| Week 8 (2/26) | Editing Reports; Posters (on Zoom) |  |
+| Week 9 (3/4) | Dashboards (recording); Team Check-In |  |
+| Week 10 (3/11) | Team Presentations (both days - attendance is recorded and graded) |  |
+
+
+
 :::
 
 
