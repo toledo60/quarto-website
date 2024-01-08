@@ -4,7 +4,7 @@ comments: false
 
 ## Current Courses
 
-- STATS 140XP: Practice of Statistical Consulting *(Winter 2024)*
+- STATS 140XP: [Practice of Statistical Consulting](/teaching/stats140xp.qmd) *(Winter 2024)*
 
 
 ## Previous Courses

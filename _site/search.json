@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "teaching/stats140xp.html",
+    "href": "teaching/stats140xp.html",
+    "title": "Welcome To STATS140XP",
+    "section": "",
+    "text": "Instructor: Jose Toledo Luna"
+  },
+  {
+    "objectID": "teaching/stats140xp.html#class-overview",
+    "href": "teaching/stats140xp.html#class-overview",
+    "title": "Welcome To STATS140XP",
+    "section": "",
+    "text": "Instructor: Jose Toledo Luna"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "I am currently a third year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
+    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [PDF]"
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [PDF]"
+  },
+  {
+    "objectID": "research.html#software",
+    "href": "research.html#software",
+    "title": "Jose Toledo Luna",
+    "section": "Software",
+    "text": "Software\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
   },
   {
     "objectID": "teaching.html",
@@ -28,24 +56,10 @@
     "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\nSTATS 10: Introduction to Statistical Reasoning (Fall 2022, Winter 2023, Spring 2023)\nSTATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Summer 2022, Fall 2023)\nSTATS 21: Python and Other Technologies for Data Science (Spring 2023)\nSTATS 100B: Introduction to Mathematical Statistics (Summer 2023)\nSTATS 100C: Linear Models (Summer 2023)\n\n\n\nCalifornia State University, Fullerton\n\nMath 115: College Algebra (Fall 2019)\nMath 120: Elementary Statistics (Spring 2020, Fall 2020)\nMath 338: Statistics Applied to Natural Sciences (Spring 2021)"
   },
   {
-    "objectID": "research.html",
-    "href": "research.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [PDF]"
-  },
-  {
-    "objectID": "research.html#publications",
-    "href": "research.html#publications",
-    "title": "Jose Toledo Luna",
-    "section": "",
-    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18 [PDF]"
-  },
-  {
-    "objectID": "research.html#software",
-    "href": "research.html#software",
-    "title": "Jose Toledo Luna",
-    "section": "Software",
-    "text": "Software\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
+    "text": "I am currently a third year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
   }
 ]

@@ -1,0 +1,29 @@
+---
+title: "Welcome To STATS140XP"
+subtitle: "Practice of Statistical Consulting"
+description: "Below are links used in this course"
+image: stats140xp.png
+about:
+  template: trestles
+  links:
+    - text: Zoom
+      url: "https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
+      icon: camera-video
+    - text: Email
+      url: "mailto:toledo60@g.ucla.edu"
+      icon: inbox-fill
+    - text: Campuswire
+      url: "https://campuswire.com"
+      icon: people
+comments: false
+---
+::: {.column-page}
+
+## Class Overview
+
+**Instructor:** Jose Toledo Luna
+
+:::
+
+
+
