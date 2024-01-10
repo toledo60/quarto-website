@@ -4,14 +4,21 @@
     "href": "teaching/stats140xp.html",
     "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\n\n\n\n\nFundamentals of Data Visualization\nA Handbook of Statistical Analyses Using R (3rd Edition)\nCHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R\n\n\n\n\n\n\n\n\n\n\n\n\nDate\nTopic\nTLTT Reading\n\n\n\n\nWeek 1 (1/8)\nFirst Day business; Team Fundamentals\nChapters 1-8 + The Author’s Preface\n\n\nWeek 2 (1/15)\nHoliday; Résumés and CVs\nChapters 9-18\n\n\nWeek 3 (1/22)\nA of Consulting; Asking Questions; Guest Speaker with (mini) Analysis\nChapters 19-25\n\n\nWeek 4 (1/29)\nZ of Consulting; 7D Assessment\nChapters 26-28 + Afterward + Timeline\n\n\nWeek 5 (2/5)\nReview (on Zoom); Midterm 2/7\n\n\n\nWeek 6 (2/12)\nData For Discussion; Check Your List\n\n\n\nWeek 7 (2/19)\nHoliday; EDA\n\n\n\nWeek 8 (2/26)\nEditing Reports; Posters (on Zoom)\n\n\n\nWeek 9 (3/4)\nDashboards (recording); Team Check-In\n\n\n\nWeek 10 (3/11)\nTeam Presentations (both days - attendance is recorded and graded)"
+    "text": "Instructor: Jose Toledo Luna\nDiscussion: Wednesday 2:00pm - 3:00pm  Office Hours: Thursday 9:00am - 10:00am\nBoth office hours and discussion will be held online through Zoom\n\n\n\nMake sure to sign up or download the following software (in order)\n\nLaTeX\nOverleaf: Online \\(\\LaTeX\\) editor\nR/R Studio\nQuarto: An open-source scientific and technical publishing system\nCiteDrive: Online reference manager which integrates well with Quarto and Overleaf\nGit and Github: Version control\n\n\nWe will get to this towards the end of the quarter\n\nNetlify: Website hosting service (sign up using Github account)\n\n\n\n\n\n\nFundamentals of Data Visualization\nA Handbook of Statistical Analyses Using R (3rd Edition)\nCHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R\n\n\n\n\n\n\n\n\n\n\n\n\n\nDate\nTopic\nTLTT Reading\n\n\n\n\nWeek 1 (1/8)\nFirst Day business; Team Fundamentals\nChapters 1-8 + The Author’s Preface\n\n\nWeek 2 (1/15)\nHoliday; Résumés and CVs\nChapters 9-18\n\n\nWeek 3 (1/22)\nA of Consulting; Asking Questions; Guest Speaker with (mini) Analysis\nChapters 19-25\n\n\nWeek 4 (1/29)\nZ of Consulting; 7D Assessment\nChapters 26-28 + Afterward + Timeline\n\n\nWeek 5 (2/5)\nReview (on Zoom); Midterm 2/7\n\n\n\nWeek 6 (2/12)\nData For Discussion; Check Your List\n\n\n\nWeek 7 (2/19)\nHoliday; EDA\n\n\n\nWeek 8 (2/26)\nEditing Reports; Posters (on Zoom)\n\n\n\nWeek 9 (3/4)\nDashboards (recording); Team Check-In\n\n\n\nWeek 10 (3/11)\nTeam Presentations (both days - attendance is recorded and graded)"
   },
   {
     "objectID": "teaching/stats140xp.html#class-overview",
     "href": "teaching/stats140xp.html#class-overview",
     "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna"
+    "text": "Instructor: Jose Toledo Luna\nDiscussion: Wednesday 2:00pm - 3:00pm  Office Hours: Thursday 9:00am - 10:00am\nBoth office hours and discussion will be held online through Zoom"
+  },
+  {
+    "objectID": "teaching/stats140xp.html#required-technology",
+    "href": "teaching/stats140xp.html#required-technology",
+    "title": "Welcome To STATS140XP",
+    "section": "",
+    "text": "Make sure to sign up or download the following software (in order)\n\nLaTeX\nOverleaf: Online \\(\\LaTeX\\) editor\nR/R Studio\nQuarto: An open-source scientific and technical publishing system\nCiteDrive: Online reference manager which integrates well with Quarto and Overleaf\nGit and Github: Version control\n\n\nWe will get to this towards the end of the quarter\n\nNetlify: Website hosting service (sign up using Github account)"
   },
   {
     "objectID": "teaching/stats140xp.html#resources",
