@@ -51,11 +51,11 @@ We will get to this towards the end of the quarter
 
 ## Resources
 
-1.  [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+-  [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 
-2.  [A Handbook of Statistical Analyses Using R (3rd Edition)](https://cran.r-project.org/web/packages/HSAUR3/)
+-  [A Handbook of Statistical Analyses Using R (3rd Edition)](https://cran.r-project.org/web/packages/HSAUR3/)
 
-3.  [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/)
+-  [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/)
 
 ------------------------------------------------------------------------
 
