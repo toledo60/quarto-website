@@ -41,9 +41,7 @@ Make sure to sign up or download the following software *(in order)*
 
 5.  [CiteDrive](https://app.citedrive.com): Online reference manager which integrates well with Quarto and Overleaf
 
-6.  
-
-    ## [Git](https://git-scm.com/downloads) and [Github](https://github.com): Version control
+6.  [Git](https://git-scm.com/downloads) and [Github](https://github.com): Version control
 
 We will get to this towards the end of the quarter
 
