@@ -17,63 +17,62 @@ about:
       icon: people
 comments: false
 ---
-::: {.column-page}
 
+::: column-page
 ## Class Overview
 
 **Instructor:** Jose Toledo Luna
 
-**Discussion**: Wednesday 2:00pm - 3:00pm <br/>
-**Office Hours:** Thursday 9:00am - 10:00am 
+**Discussion**: Wednesday 2:00pm - 3:00pm <br/> **Office Hours:** Thursday 9:00am - 10:00am
 
 Both office hours and discussion will be held online through [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
-
 
 ## Required Technology
 
 Make sure to sign up or download the following software *(in order)*
 
-1. [LaTeX](https://www.latex-project.org/get/)
-2. [Overleaf](https://www.overleaf.com): Online $\LaTeX$ editor
-3. [R/R Studio](https://posit.co/download/rstudio-desktop/)
-4. [Quarto](https://quarto.org): An open-source scientific and technical publishing system 
-5. [CiteDrive](https://app.citedrive.com): Online reference manager which integrates well with Quarto and Overleaf 
-6. [Git](https://git-scm.com/downloads) and [Github](https://github.com): Version control
----
+1.  [LaTeX](https://www.latex-project.org/get/)
+
+2.  [Overleaf](https://www.overleaf.com): Online $\LaTeX$ editor
+
+3.  [R/R Studio](https://posit.co/download/rstudio-desktop/)
+
+4.  [Quarto](https://quarto.org): An open-source scientific and technical publishing system
+
+5.  [CiteDrive](https://app.citedrive.com): Online reference manager which integrates well with Quarto and Overleaf
+
+6.  
+
+    ## [Git](https://git-scm.com/downloads) and [Github](https://github.com): Version control
 
 We will get to this towards the end of the quarter
 
-7. [Netlify](https://www.netlify.com): Website hosting service *(sign up using Github account)*
+7.  [Netlify](https://www.netlify.com): Website hosting service *(sign up using Github account)*
 
----
+------------------------------------------------------------------------
 
 ## Resources
 
-1. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) 
-2. [A Handbook of Statistical Analyses Using R (3rd Edition)](https://cran.r-project.org/web/packages/HSAUR3/)
-3. [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/) 
+1.  [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 
+2.  [A Handbook of Statistical Analyses Using R (3rd Edition)](https://cran.r-project.org/web/packages/HSAUR3/)
 
----
+3.  [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/)
+
+------------------------------------------------------------------------
 
 ## Schedule
 
-| **Date** | **Topic** | **TLTT Reading** |
-| ---- | ---- | ---- |
-| Week 1 (1/8) | First Day business; Team Fundamentals | Chapters 1-8 + The Author's Preface |
-| **Week 2 (1/15)** | **Holiday**; Résumés and CVs | Chapters 9-18 |
-| Week 3 (1/22) | A of Consulting; Asking Questions; Guest Speaker with (mini) Analysis | Chapters 19-25 |
-| Week 4 (1/29) | Z of Consulting; 7D Assessment | Chapters 26-28 + Afterward + Timeline |
-| Week 5 (2/5) | Review (on Zoom); Midterm 2/7 |  |
-| Week 6 (2/12) | Data For Discussion; Check Your List |  |
-| **Week 7 (2/19)** | **Holiday**; EDA |  |
-| Week 8 (2/26) | Editing Reports; Posters (on Zoom) |  |
-| Week 9 (3/4) | Dashboards (recording); Team Check-In |  |
-| Week 10 (3/11) | Team Presentations (both days - attendance is recorded and graded) |  |
-
-
-
+| **Date**          | Recordings                                                                                                                                            |
+|------------------------|------------------------------------------------|
+| Week 1 (1/10)     | [Introduction, Installing Software](https://ucla.zoom.us/rec/share/MPUg4L6xX3uA6G3tmiaSZ0PFMBdAHBoxzM6681FQgH52F2h6UNtcwULDqBNlRqb-.sxcyH0Uo4wZ-SJgb) |
+| **Week 2 (1/17)** |                                                                                                                                                       |
+| Week 3 (1/24)     |                                                                                                                                                       |
+| Week 4 (1/31)     |                                                                                                                                                       |
+| Week 5 (2/7)      |                                                                                                                                                       |
+| Week 6 (2/14)     |                                                                                                                                                       |
+| **Week 7 (2/21)** |                                                                                                                                                       |
+| Week 8 (2/28)     |                                                                                                                                                       |
+| Week 9 (3/6)      |                                                                                                                                                       |
+| Week 10 (3/13)    |                                                                                                                                                       |
 :::
-
-
-
