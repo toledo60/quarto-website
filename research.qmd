@@ -12,4 +12,4 @@ comments: false
 
 1. [ggDoE](https://ggdoe.netlify.app/index.html): Create commonly used graphs in Design of Experiments with *ggplot2*
 
-2. [pyLHD](https://pylhd.netlify.app/docs/): Latin Hypercube Designs for Python
+2. [pyLHD](https://pylhd.netlify.app): Latin Hypercube Designs for Python
