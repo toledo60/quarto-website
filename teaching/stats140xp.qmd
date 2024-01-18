@@ -49,7 +49,39 @@ We will get to this towards the end of the quarter
 
 ------------------------------------------------------------------------
 
+
 ## Resources
+
+**LaTeX Template**
+
+<details>
+<summary>Show Code </summary>
+```{r,eval=FALSE}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm, bm}
+\usepackage{indentfirst,setspace}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\setlength\parindent{0pt}
+\renewcommand{\baselinestretch}{1.1}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\begin{flushleft}
+NAME \hfill CLASS
+\rule{\textwidth}{.5pt}
+\end{flushleft}
+
+
+
+\end{document}
+```
+</details>
+
+### Links
 
 -   [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 
@@ -62,7 +94,7 @@ We will get to this towards the end of the quarter
 ## Schedule
 
 | **Date**          | Recordings                                                                                                                                            |
-|------------------------|-----------------------------------------------|
+|-------------------------|-----------------------------------------------|
 | Week 1 (1/10)     | [Introduction, Installing Software](https://ucla.zoom.us/rec/share/MPUg4L6xX3uA6G3tmiaSZ0PFMBdAHBoxzM6681FQgH52F2h6UNtcwULDqBNlRqb-.sxcyH0Uo4wZ-SJgb) |
 | **Week 2 (1/17)** | [Intro to LaTeX](https://ucla.zoom.us/rec/share/tkUdRGTTeuL99eNX8VZoFdHbJ2p30HjMDpYTs5XLQ3ppTWI8VUmhlvlXpUsPnxMo.ioLfQQv7kS1LkBLQ)                    |
 | Week 3 (1/24)     |                                                                                                                                                       |
