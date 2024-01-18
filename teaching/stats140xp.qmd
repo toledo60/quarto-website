@@ -23,8 +23,7 @@ comments: false
 
 **Instructor:** Jose Toledo Luna
 
-**Discussion**: Wednesday 2:00pm - 3:00pm <br/> 
-**Office Hours:** Tuesday 9:00am - 10:00am
+**Discussion**: Wednesday 2:00pm - 3:00pm <br/> **Office Hours:** Tuesday 9:00am - 10:00am
 
 Both office hours and discussion will be held online through [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
 
@@ -52,20 +51,20 @@ We will get to this towards the end of the quarter
 
 ## Resources
 
--  [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+-   [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 
--  [A Handbook of Statistical Analyses Using R (3rd Edition)](https://cran.r-project.org/web/packages/HSAUR3/)
+-   [A Handbook of Statistical Analyses Using R (3rd Edition)](https://cran.r-project.org/web/packages/HSAUR3/)
 
--  [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/)
+-   [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/)
 
 ------------------------------------------------------------------------
 
 ## Schedule
 
 | **Date**          | Recordings                                                                                                                                            |
-|------------------------|------------------------------------------------|
+|------------------------|-----------------------------------------------|
 | Week 1 (1/10)     | [Introduction, Installing Software](https://ucla.zoom.us/rec/share/MPUg4L6xX3uA6G3tmiaSZ0PFMBdAHBoxzM6681FQgH52F2h6UNtcwULDqBNlRqb-.sxcyH0Uo4wZ-SJgb) |
-| **Week 2 (1/17)** |                                                                                                                                                       |
+| **Week 2 (1/17)** | [Intro to LaTeX](https://ucla.zoom.us/rec/share/tkUdRGTTeuL99eNX8VZoFdHbJ2p30HjMDpYTs5XLQ3ppTWI8VUmhlvlXpUsPnxMo.ioLfQQv7kS1LkBLQ)                    |
 | Week 3 (1/24)     |                                                                                                                                                       |
 | Week 4 (1/31)     |                                                                                                                                                       |
 | Week 5 (2/7)      |                                                                                                                                                       |
