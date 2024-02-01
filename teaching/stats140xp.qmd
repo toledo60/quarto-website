@@ -51,11 +51,11 @@ We will get to this towards the end of the quarter
 
 ## Resources
 
-**LaTeX Template**
+### LaTeX Templates
 
 <details>
 
-<summary>Show Code</summary>
+<summary>Documment Template</summary>
 
 ```{r,eval=FALSE}
 \documentclass[11pt,letterpaper]{article}
@@ -66,7 +66,6 @@ We will get to this towards the end of the quarter
 \usepackage{enumitem}
 \setlength\parindent{0pt}
 \renewcommand{\baselinestretch}{1.1}
-\usepackage{hyperref}
 
 
 \begin{document}
@@ -82,6 +81,14 @@ NAME \hfill CLASS
 ```
 
 </details>
+
+
+
+[Presentation Template](https://www.overleaf.com/latex/templates/simpleplus-beamertheme/wfmfjhdcrdfx)
+
+
+
+
 
 ### Links
 
