@@ -100,7 +100,7 @@ NAME \hfill CLASS
 | Week 1 (1/10)     | [Introduction, Installing Software](https://ucla.zoom.us/rec/share/MPUg4L6xX3uA6G3tmiaSZ0PFMBdAHBoxzM6681FQgH52F2h6UNtcwULDqBNlRqb-.sxcyH0Uo4wZ-SJgb)           |
 | **Week 2 (1/17)** | [Intro to LaTeX](https://ucla.zoom.us/rec/share/tkUdRGTTeuL99eNX8VZoFdHbJ2p30HjMDpYTs5XLQ3ppTWI8VUmhlvlXpUsPnxMo.ioLfQQv7kS1LkBLQ)                              |
 | Week 3 (1/24)     | [Referencing on LaTeX, CiteDrive, R Projects](https://ucla.zoom.us/rec/share/Jjpatc7CLNpisJ2wCCD0LsR5So3NXznjcPWPBKIt4JRFEmsLMp_3aYTM_COYHIyX.XSHAAkaHBZNLqBJ-) |
-| Week 4 (1/31)     |                                                                                                                                                                 |
+| Week 4 (1/31)     | [Setting up Git/Github for R Studio](https://ucla.zoom.us/rec/share/8qzl7jhK2jm2aAt4aR6IVngpDjIk1FhFNvi_FrQonz5HQZCYtaazBxkS8qwaRss._dutcJTTbi-Dmc1h)           |
 | Week 5 (2/7)      |                                                                                                                                                                 |
 | Week 6 (2/14)     |                                                                                                                                                                 |
 | **Week 7 (2/21)** |                                                                                                                                                                 |
