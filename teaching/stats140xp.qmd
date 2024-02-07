@@ -87,16 +87,12 @@ NAME \hfill CLASS
 [Presentation Template](https://www.overleaf.com/latex/templates/simpleplus-beamertheme/wfmfjhdcrdfx)
 
 
+### Quarto
+
+[Quarto CV Template](https://github.com/mps9506/quarto-cv)
 
 
 
-### Links
-
--   [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
-
--   [A Handbook of Statistical Analyses Using R (3rd Edition)](https://cran.r-project.org/web/packages/HSAUR3/)
-
--   [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/)
 
 ------------------------------------------------------------------------
 
