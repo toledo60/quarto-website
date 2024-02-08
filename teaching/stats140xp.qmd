@@ -82,17 +82,11 @@ NAME \hfill CLASS
 
 </details>
 
-
-
 [Presentation Template](https://www.overleaf.com/latex/templates/simpleplus-beamertheme/wfmfjhdcrdfx)
-
 
 ### Quarto
 
 [Quarto CV Template](https://github.com/mps9506/quarto-cv)
-
-
-
 
 ------------------------------------------------------------------------
 
@@ -104,7 +98,7 @@ NAME \hfill CLASS
 | **Week 2 (1/17)** | [Intro to LaTeX](https://ucla.zoom.us/rec/share/tkUdRGTTeuL99eNX8VZoFdHbJ2p30HjMDpYTs5XLQ3ppTWI8VUmhlvlXpUsPnxMo.ioLfQQv7kS1LkBLQ)                              |
 | Week 3 (1/24)     | [Referencing on LaTeX, CiteDrive, R Projects](https://ucla.zoom.us/rec/share/Jjpatc7CLNpisJ2wCCD0LsR5So3NXznjcPWPBKIt4JRFEmsLMp_3aYTM_COYHIyX.XSHAAkaHBZNLqBJ-) |
 | Week 4 (1/31)     | [Setting up Git/Github for R Studio](https://ucla.zoom.us/rec/share/8qzl7jhK2jm2aAt4aR6IVngpDjIk1FhFNvi_FrQonz5HQZCYtaazBxkS8qwaRss._dutcJTTbi-Dmc1h)           |
-| Week 5 (2/7)      |                                                                                                                                                                 |
+| Week 5 (2/7)      | [CV with Quarto](https://ucla.zoom.us/rec/share/sZSvm8pgvYkL1zGG3EyT7vXDPWpbX5sBXRpBji5Y6FTC7C9W1_aIuIKaSPRtSWgQ.-cDZWyLAIRKHbznc)                              |
 | Week 6 (2/14)     |                                                                                                                                                                 |
 | **Week 7 (2/21)** |                                                                                                                                                                 |
 | Week 8 (2/28)     |                                                                                                                                                                 |
