@@ -99,7 +99,7 @@ NAME \hfill CLASS
 | Week 3 (1/24)     | [Referencing on LaTeX, CiteDrive, R Projects](https://ucla.zoom.us/rec/share/Jjpatc7CLNpisJ2wCCD0LsR5So3NXznjcPWPBKIt4JRFEmsLMp_3aYTM_COYHIyX.XSHAAkaHBZNLqBJ-) |
 | Week 4 (1/31)     | [Setting up Git/Github for R Studio](https://ucla.zoom.us/rec/share/8qzl7jhK2jm2aAt4aR6IVngpDjIk1FhFNvi_FrQonz5HQZCYtaazBxkS8qwaRss._dutcJTTbi-Dmc1h)           |
 | Week 5 (2/7)      | [CV with Quarto](https://ucla.zoom.us/rec/share/sZSvm8pgvYkL1zGG3EyT7vXDPWpbX5sBXRpBji5Y6FTC7C9W1_aIuIKaSPRtSWgQ.-cDZWyLAIRKHbznc)                              |
-| Week 6 (2/14)     |                                                                                                                                                                 |
+| Week 6 (2/14)     | [Setting up Personal Website](https://ucla.zoom.us/rec/share/FCAjlayGSJ5fSn5oL_qjuYhdsBpWiNkip8yRenmAnlftnsipGuyGEnwrg-x0_yln.zT9eZMDluPe94CEr)                 |
 | **Week 7 (2/21)** |                                                                                                                                                                 |
 | Week 8 (2/28)     |                                                                                                                                                                 |
 | Week 9 (3/6)      |                                                                                                                                                                 |
