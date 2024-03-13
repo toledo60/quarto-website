@@ -101,7 +101,4 @@ NAME \hfill CLASS
 | Week 5 (2/7)      | [CV with Quarto](https://ucla.zoom.us/rec/share/sZSvm8pgvYkL1zGG3EyT7vXDPWpbX5sBXRpBji5Y6FTC7C9W1_aIuIKaSPRtSWgQ.-cDZWyLAIRKHbznc)                              |
 | Week 6 (2/14)     | [Setting up Personal Website](https://ucla.zoom.us/rec/share/FCAjlayGSJ5fSn5oL_qjuYhdsBpWiNkip8yRenmAnlftnsipGuyGEnwrg-x0_yln.zT9eZMDluPe94CEr)                 |
 | **Week 7 (2/21)** | [Adding Content to Website](https://ucla.zoom.us/rec/share/JXP7N70ZucvY84cI5DyY1XFi0kYmbjR0BnkGGJvpgDsQRRkX1U65v4gN-94r0HX2.yeNIk7dPkga5Wd3v)                   |
-| Week 8 (2/28)     |                                                                                                                                                                 |
-| Week 9 (3/6)      |                                                                                                                                                                 |
-| Week 10 (3/13)    |                                                                                                                                                                 |
 :::
