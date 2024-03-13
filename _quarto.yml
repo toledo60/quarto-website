@@ -41,6 +41,7 @@ format:
     reference-location: document
     code-fold: false
     code-summary: ""
+    fontsize: 1.3em
 
 execute:
   freeze: auto
