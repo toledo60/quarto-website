@@ -4,7 +4,7 @@ comments: false
 
 ## Current Courses
 
-- STATS 140XP: [Practice of Statistical Consulting](/teaching/stats140xp.qmd) *(Winter 2024)*
+- STATS 141XP: [Practice of Statistical Consulting](/teaching/stats140xp.qmd) *(Spring 2024)*
 
 
 ## Previous Courses
@@ -21,6 +21,9 @@ and Health Sciences](https://ucla-stats13.netlify.app) *(Summer 2022, Fall 2023)
 - STATS 100B: Introduction to Mathematical Statistics *(Summer 2023)*
 
 - STATS 100C: Linear Models *(Summer 2023)*
+
+- STATS 140XP: Practice of Statistical Consulting *(Winter 2024)*
+
 
 ### California State University, Fullerton
 

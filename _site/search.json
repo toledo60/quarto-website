@@ -2,35 +2,35 @@
   {
     "objectID": "teaching/stats140xp.html",
     "href": "teaching/stats140xp.html",
-    "title": "Welcome To STATS140XP",
+    "title": "Welcome To STATS141XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nDiscussion: Wednesday 2:00pm - 3:00pm  Office Hours: Tuesday 9:00am - 10:00am\nBoth office hours and discussion will be held online through Zoom\n\n\n\nMake sure to sign up or download the following software (in order)\n\nLaTeX\nOverleaf: Online \\(\\LaTeX\\) editor\nR/R Studio\nQuarto: An open-source scientific and technical publishing system\nCiteDrive: Online reference manager which integrates well with Quarto and Overleaf\nGit and Github: Version control\n\nWe will get to this towards the end of the quarter\n\nNetlify: Website hosting service (sign up using Github account)\n\n\n\n\n\n\n\n\n\nDocumment Template\n\n\n\\documentclass[11pt,letterpaper]{article}\n\\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}\n\\usepackage{amsmath,amsfonts,amssymb,amsthm, bm}\n\\usepackage{indentfirst,setspace}\n\\usepackage{graphicx}\n\\usepackage{enumitem}\n\\setlength\\parindent{0pt}\n\\renewcommand{\\baselinestretch}{1.1}\n\n\n\\begin{document}\n\n\\begin{flushleft}\nNAME \\hfill CLASS\n\\rule{\\textwidth}{.5pt}\n\\end{flushleft}\n\n\n\n\\end{document}\n\n\nPresentation Template\n\n\n\nQuarto CV Template\n\n\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1 (1/10)\nIntroduction, Installing Software\n\n\nWeek 2 (1/17)\nIntro to LaTeX\n\n\nWeek 3 (1/24)\nReferencing on LaTeX, CiteDrive, R Projects\n\n\nWeek 4 (1/31)\nSetting up Git/Github for R Studio\n\n\nWeek 5 (2/7)\nCV with Quarto\n\n\nWeek 6 (2/14)\nSetting up Personal Website\n\n\nWeek 7 (2/21)\nAdding Content to Website"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Friday 12:00pm - 1:00pm \nBoth office hours and discussion will be held online through Zoom\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1 (1/10)\nIntroduction, Installing Software\n\n\nWeek 2 (1/17)\nIntro to LaTeX\n\n\nWeek 3 (1/24)\nReferencing on LaTeX, CiteDrive, R Projects\n\n\nWeek 4 (1/31)\nSetting up Git/Github for R Studio\n\n\nWeek 5 (2/7)\nCV with Quarto\n\n\nWeek 6 (2/14)\nSetting up Personal Website\n\n\nWeek 7 (2/21)\nAdding Content to Website"
   },
   {
     "objectID": "teaching/stats140xp.html#class-overview",
     "href": "teaching/stats140xp.html#class-overview",
-    "title": "Welcome To STATS140XP",
+    "title": "Welcome To STATS141XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nDiscussion: Wednesday 2:00pm - 3:00pm  Office Hours: Tuesday 9:00am - 10:00am\nBoth office hours and discussion will be held online through Zoom"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Friday 12:00pm - 1:00pm \nBoth office hours and discussion will be held online through Zoom"
   },
   {
     "objectID": "teaching/stats140xp.html#required-technology",
     "href": "teaching/stats140xp.html#required-technology",
-    "title": "Welcome To STATS140XP",
+    "title": "Welcome To STATS141XP",
     "section": "",
     "text": "Make sure to sign up or download the following software (in order)\n\nLaTeX\nOverleaf: Online \\(\\LaTeX\\) editor\nR/R Studio\nQuarto: An open-source scientific and technical publishing system\nCiteDrive: Online reference manager which integrates well with Quarto and Overleaf\nGit and Github: Version control\n\nWe will get to this towards the end of the quarter\n\nNetlify: Website hosting service (sign up using Github account)"
   },
   {
     "objectID": "teaching/stats140xp.html#resources",
     "href": "teaching/stats140xp.html#resources",
-    "title": "Welcome To STATS140XP",
+    "title": "Welcome To STATS141XP",
     "section": "",
     "text": "Documment Template\n\n\n\\documentclass[11pt,letterpaper]{article}\n\\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}\n\\usepackage{amsmath,amsfonts,amssymb,amsthm, bm}\n\\usepackage{indentfirst,setspace}\n\\usepackage{graphicx}\n\\usepackage{enumitem}\n\\setlength\\parindent{0pt}\n\\renewcommand{\\baselinestretch}{1.1}\n\n\n\\begin{document}\n\n\\begin{flushleft}\nNAME \\hfill CLASS\n\\rule{\\textwidth}{.5pt}\n\\end{flushleft}\n\n\n\n\\end{document}\n\n\nPresentation Template\n\n\n\nQuarto CV Template"
   },
   {
     "objectID": "teaching/stats140xp.html#schedule",
     "href": "teaching/stats140xp.html#schedule",
-    "title": "Welcome To STATS140XP",
+    "title": "Welcome To STATS141XP",
     "section": "",
     "text": "Date\nRecordings\n\n\n\n\nWeek 1 (1/10)\nIntroduction, Installing Software\n\n\nWeek 2 (1/17)\nIntro to LaTeX\n\n\nWeek 3 (1/24)\nReferencing on LaTeX, CiteDrive, R Projects\n\n\nWeek 4 (1/31)\nSetting up Git/Github for R Studio\n\n\nWeek 5 (2/7)\nCV with Quarto\n\n\nWeek 6 (2/14)\nSetting up Personal Website\n\n\nWeek 7 (2/21)\nAdding Content to Website"
   },
@@ -60,21 +60,21 @@
     "href": "teaching.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "STATS 140XP: Practice of Statistical Consulting (Winter 2024)"
+    "text": "STATS 141XP: Practice of Statistical Consulting (Spring 2024)"
   },
   {
     "objectID": "teaching.html#current-courses",
     "href": "teaching.html#current-courses",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "STATS 140XP: Practice of Statistical Consulting (Winter 2024)"
+    "text": "STATS 141XP: Practice of Statistical Consulting (Spring 2024)"
   },
   {
     "objectID": "teaching.html#previous-courses",
     "href": "teaching.html#previous-courses",
     "title": "Jose Toledo Luna",
     "section": "Previous Courses",
-    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\nSTATS 10: Introduction to Statistical Reasoning (Fall 2022, Winter 2023, Spring 2023)\nSTATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Summer 2022, Fall 2023)\nSTATS 21: Python and Other Technologies for Data Science (Spring 2023)\nSTATS 100B: Introduction to Mathematical Statistics (Summer 2023)\nSTATS 100C: Linear Models (Summer 2023)\n\n\n\nCalifornia State University, Fullerton\n\nMath 115: College Algebra (Fall 2019)\nMath 120: Elementary Statistics (Spring 2020, Fall 2020)\nMath 338: Statistics Applied to Natural Sciences (Spring 2021)"
+    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\nSTATS 10: Introduction to Statistical Reasoning (Fall 2022, Winter 2023, Spring 2023)\nSTATS 13: Introduction to Statistical Methods for Life\nand Health Sciences (Summer 2022, Fall 2023)\nSTATS 21: Python and Other Technologies for Data Science (Spring 2023)\nSTATS 100B: Introduction to Mathematical Statistics (Summer 2023)\nSTATS 100C: Linear Models (Summer 2023)\nSTATS 140XP: Practice of Statistical Consulting (Winter 2024)\n\n\n\nCalifornia State University, Fullerton\n\nMath 115: College Algebra (Fall 2019)\nMath 120: Elementary Statistics (Spring 2020, Fall 2020)\nMath 338: Statistics Applied to Natural Sciences (Spring 2021)"
   },
   {
     "objectID": "index.html",
@@ -82,5 +82,19 @@
     "title": "Jose Toledo Luna",
     "section": "",
     "text": "I am currently a third year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
+  },
+  {
+    "objectID": "meetings.html",
+    "href": "meetings.html",
+    "title": "Statistics Tutoring",
+    "section": "",
+    "text": "Boost your statistics knowledge with my tailored tutoring, grounded in a solid academic foundation with bachelor’s and master’s degrees in statistics, and currently advancing through a PhD in the same field. My teaching experience includes notable universities such as the University of California, Los Angeles, and California State University, Fullerton, covering a wide range of subjects from introductory statistics and college algebra to data science programming, mathematical statistics, and applied statistics in various sciences. I prioritize personalized learning, designing sessions to meet your specific goals and challenges. To explore more about my qualifications and teaching philosophy, I invite you to visit my personal website"
+  },
+  {
+    "objectID": "teaching/stats140xp.html#stats140xp---recordings",
+    "href": "teaching/stats140xp.html#stats140xp---recordings",
+    "title": "Welcome To STATS141XP",
+    "section": "",
+    "text": "Date\nRecordings\n\n\n\n\nWeek 1 (1/10)\nIntroduction, Installing Software\n\n\nWeek 2 (1/17)\nIntro to LaTeX\n\n\nWeek 3 (1/24)\nReferencing on LaTeX, CiteDrive, R Projects\n\n\nWeek 4 (1/31)\nSetting up Git/Github for R Studio\n\n\nWeek 5 (2/7)\nCV with Quarto\n\n\nWeek 6 (2/14)\nSetting up Personal Website\n\n\nWeek 7 (2/21)\nAdding Content to Website"
   }
 ]
