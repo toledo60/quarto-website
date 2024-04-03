@@ -1,5 +1,5 @@
 ---
-title: "Welcome To STATS140XP"
+title: "Welcome To STATS141XP"
 subtitle: "Practice of Statistical Consulting"
 description: "Below are links used in this course"
 image: stats140xp.png
@@ -23,74 +23,12 @@ comments: false
 
 **Instructor:** Jose Toledo Luna
 
-**Discussion**: Wednesday 2:00pm - 3:00pm <br/> **Office Hours:** Tuesday 9:00am - 10:00am
+**Office Hours**: Friday 12:00pm - 1:00pm <br/>
 
 Both office hours and discussion will be held online through [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
 
-## Required Technology
 
-Make sure to sign up or download the following software *(in order)*
-
-1.  [LaTeX](https://www.latex-project.org/get/)
-
-2.  [Overleaf](https://www.overleaf.com): Online $\LaTeX$ editor
-
-3.  [R/R Studio](https://posit.co/download/rstudio-desktop/)
-
-4.  [Quarto](https://quarto.org): An open-source scientific and technical publishing system
-
-5.  [CiteDrive](https://app.citedrive.com): Online reference manager which integrates well with Quarto and Overleaf
-
-6.  [Git](https://git-scm.com/downloads) and [Github](https://github.com): Version control
-
-We will get to this towards the end of the quarter
-
-7.  [Netlify](https://www.netlify.com): Website hosting service *(sign up using Github account)*
-
-------------------------------------------------------------------------
-
-## Resources
-
-### LaTeX Templates
-
-<details>
-
-<summary>Documment Template</summary>
-
-```{r,eval=FALSE}
-\documentclass[11pt,letterpaper]{article}
-\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
-\usepackage{amsmath,amsfonts,amssymb,amsthm, bm}
-\usepackage{indentfirst,setspace}
-\usepackage{graphicx}
-\usepackage{enumitem}
-\setlength\parindent{0pt}
-\renewcommand{\baselinestretch}{1.1}
-
-
-\begin{document}
-
-\begin{flushleft}
-NAME \hfill CLASS
-\rule{\textwidth}{.5pt}
-\end{flushleft}
-
-
-
-\end{document}
-```
-
-</details>
-
-[Presentation Template](https://www.overleaf.com/latex/templates/simpleplus-beamertheme/wfmfjhdcrdfx)
-
-### Quarto
-
-[Quarto CV Template](https://github.com/mps9506/quarto-cv)
-
-------------------------------------------------------------------------
-
-## Schedule
+## STATS140XP - Recordings
 
 | **Date**          | Recordings                                                                                                                                                      |
 |-------------------------|-----------------------------------------------|
