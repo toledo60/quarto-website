@@ -1,24 +1,52 @@
 [
   {
-    "objectID": "teaching/stats140xp.html",
-    "href": "teaching/stats140xp.html",
-    "title": "Welcome To STATS141XP",
+    "objectID": "teaching/appointments.html",
+    "href": "teaching/appointments.html",
+    "title": "Setting up an Appointment",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Friday 12:00pm - 1:00pm \nBoth office hours and discussion will be held online through Zoom\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1 (1/10)\nIntroduction, Installing Software\n\n\nWeek 2 (1/17)\nIntro to LaTeX\n\n\nWeek 3 (1/24)\nReferencing on LaTeX, CiteDrive, R Projects\n\n\nWeek 4 (1/31)\nSetting up Git/Github for R Studio\n\n\nWeek 5 (2/7)\nCV with Quarto\n\n\nWeek 6 (2/14)\nSetting up Personal Website\n\n\nWeek 7 (2/21)\nAdding Content to Website"
+    "text": "My appointments typically last under 30 minutes, but if necessary, they can be extended to address further issues. Please note that while I am here to help, I cannot serve as your personal tutor. I encourage you to attend our assigned office hours, ask questions, and work with your classmates to resolve any difficulties you may be experiencing. If you still require assistance or are unable to resolve your concerns, please do not hesitate to schedule an appointment with me"
   },
   {
-    "objectID": "teaching/stats140xp.html#class-overview",
-    "href": "teaching/stats140xp.html#class-overview",
-    "title": "Welcome To STATS141XP",
-    "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Friday 12:00pm - 1:00pm \nBoth office hours and discussion will be held online through Zoom"
+    "objectID": "teaching/appointments.html#appropriate-email",
+    "href": "teaching/appointments.html#appropriate-email",
+    "title": "Setting up an Appointment",
+    "section": "Appropriate Email",
+    "text": "Appropriate Email\nHello NAME,\nBriefly explain what you are struggling with and/or insert screenshots of error messages (If its code related)\nMy available times this week are\n\nMonday: ANYTIME\nTuesday: 10am-12pm, 2-3pm\nWednesday: 10am-1pm\nThursday: ANYTIME\nFriday, 8am-2pm\n\nDo any of these times work for you?\nyour signature"
   },
   {
-    "objectID": "teaching/stats140xp.html#stats140xp---recordings",
-    "href": "teaching/stats140xp.html#stats140xp---recordings",
-    "title": "Welcome To STATS141XP",
+    "objectID": "teaching/appointments.html#not-appropriate-email",
+    "href": "teaching/appointments.html#not-appropriate-email",
+    "title": "Setting up an Appointment",
+    "section": "Not Appropriate Email",
+    "text": "Not Appropriate Email\nHello NAME,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Date\nRecordings\n\n\n\n\nWeek 1 (1/10)\nIntroduction, Installing Software\n\n\nWeek 2 (1/17)\nIntro to LaTeX\n\n\nWeek 3 (1/24)\nReferencing on LaTeX, CiteDrive, R Projects\n\n\nWeek 4 (1/31)\nSetting up Git/Github for R Studio\n\n\nWeek 5 (2/7)\nCV with Quarto\n\n\nWeek 6 (2/14)\nSetting up Personal Website\n\n\nWeek 7 (2/21)\nAdding Content to Website"
+    "text": "I am currently a fourth year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "CSUF Math 120: Elementary Statistics (Fall 2024)\nCSUF Math 338: Statistics Applied to Natural Science (Fall 2024)"
+  },
+  {
+    "objectID": "teaching.html#current-courses",
+    "href": "teaching.html#current-courses",
+    "title": "Jose Toledo Luna",
+    "section": "",
+    "text": "CSUF Math 120: Elementary Statistics (Fall 2024)\nCSUF Math 338: Statistics Applied to Natural Science (Fall 2024)"
+  },
+  {
+    "objectID": "teaching.html#previous-courses",
+    "href": "teaching.html#previous-courses",
+    "title": "Jose Toledo Luna",
+    "section": "Previous Courses",
+    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life\nand Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 140XP/ 141XP\nPractice of Statistical Consulting\nWinter 2024, Spring 2024\n\n\n\n\n\nCalifornia State University, Fullerton\n\n\n\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021"
   },
   {
     "objectID": "research.html",
@@ -42,31 +70,24 @@
     "text": "Software\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Jose Toledo Luna",
+    "objectID": "teaching/stats140xp.html",
+    "href": "teaching/stats140xp.html",
+    "title": "Welcome To STATS141XP",
     "section": "",
-    "text": "STATS 20: Introduction to Statistical Programming with R (Summer 2024)"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Friday 12:00pm - 1:00pm \nBoth office hours and discussion will be held online through Zoom\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1 (1/10)\nIntroduction, Installing Software\n\n\nWeek 2 (1/17)\nIntro to LaTeX\n\n\nWeek 3 (1/24)\nReferencing on LaTeX, CiteDrive, R Projects\n\n\nWeek 4 (1/31)\nSetting up Git/Github for R Studio\n\n\nWeek 5 (2/7)\nCV with Quarto\n\n\nWeek 6 (2/14)\nSetting up Personal Website\n\n\nWeek 7 (2/21)\nAdding Content to Website"
   },
   {
-    "objectID": "teaching.html#current-courses",
-    "href": "teaching.html#current-courses",
-    "title": "Jose Toledo Luna",
+    "objectID": "teaching/stats140xp.html#class-overview",
+    "href": "teaching/stats140xp.html#class-overview",
+    "title": "Welcome To STATS141XP",
     "section": "",
-    "text": "STATS 20: Introduction to Statistical Programming with R (Summer 2024)"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Friday 12:00pm - 1:00pm \nBoth office hours and discussion will be held online through Zoom"
   },
   {
-    "objectID": "teaching.html#previous-courses",
-    "href": "teaching.html#previous-courses",
-    "title": "Jose Toledo Luna",
-    "section": "Previous Courses",
-    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life\nand Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 140XP/ 141XP\nPractice of Statistical Consulting\nWinter 2024, Spring 2024\n\n\n\n\n\nCalifornia State University, Fullerton\n\n\n\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jose Toledo Luna",
+    "objectID": "teaching/stats140xp.html#stats140xp---recordings",
+    "href": "teaching/stats140xp.html#stats140xp---recordings",
+    "title": "Welcome To STATS141XP",
     "section": "",
-    "text": "I am currently a third year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
+    "text": "Date\nRecordings\n\n\n\n\nWeek 1 (1/10)\nIntroduction, Installing Software\n\n\nWeek 2 (1/17)\nIntro to LaTeX\n\n\nWeek 3 (1/24)\nReferencing on LaTeX, CiteDrive, R Projects\n\n\nWeek 4 (1/31)\nSetting up Git/Github for R Studio\n\n\nWeek 5 (2/7)\nCV with Quarto\n\n\nWeek 6 (2/14)\nSetting up Personal Website\n\n\nWeek 7 (2/21)\nAdding Content to Website"
   }
 ]

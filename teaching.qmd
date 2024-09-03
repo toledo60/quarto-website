@@ -4,7 +4,9 @@ comments: false
 
 ## Current Courses
 
--   STATS 20: Introduction to Statistical Programming with R *(Summer 2024)*
+-   CSUF Math 120: Elementary Statistics *(Fall 2024)*
+
+-   CSUF Math 338: [Statistics Applied to Natural Science](https://csuf-math338.netlify.app) *(Fall 2024)*
 
 ## Previous Courses
 
@@ -18,13 +20,15 @@ comments: false
 | STATS 13           | [Introduction to Statistical Methods for Life](https://ucla-stats13.netlify.app)[\ | *Summer 2022, Fall 2023*              |
 |                    | ](#0)[and Health Sciences](https://ucla-stats13.netlify.app)                       |                                       |
 +--------------------+------------------------------------------------------------------------------------+---------------------------------------+
+| STATS 20           | Introduction to Statistical Programming with R                                     | *Summer 2024*                         |
++--------------------+------------------------------------------------------------------------------------+---------------------------------------+
 | STATS 21           | Python and Other Technologies for Data Science                                     | *Spring 2023*                         |
 +--------------------+------------------------------------------------------------------------------------+---------------------------------------+
 | STATS 100B         | Introduction to Mathematical Statistics                                            | *Summer 2023*                         |
 +--------------------+------------------------------------------------------------------------------------+---------------------------------------+
 | STATS 100C         | Linear Models                                                                      | *Summer 2023*                         |
 +--------------------+------------------------------------------------------------------------------------+---------------------------------------+
-| STATS 140XP/ 141XP | [Practice of Statistical Consulting](/teaching/stats140xp.qmd)                     | *Winter 2024,* *Spring 2024*          |
+| STATS 140XP/ 141XP | Practice of Statistical Consulting                                                 | *Winter 2024,* *Spring 2024*          |
 +--------------------+------------------------------------------------------------------------------------+---------------------------------------+
 
 ### California State University, Fullerton

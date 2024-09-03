@@ -26,9 +26,9 @@ website:
             url:  https://github.com/toledo60
   page-footer:
     right: "&copy; 2024, Jose Toledo Luna"
-  comments:
-    utterances:
-      repo: toledo60/quarto-website
+#  comments:
+#    utterances:
+#      repo: toledo60/quarto-website
     
 # Format-specific Metadata
 format:

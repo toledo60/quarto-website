@@ -1,0 +1,17 @@
+{
+  "hash": "24335f1cf030eae53d47bd45504bc252",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Welcome To Math 338\"\nsubtitle: \"Statistics Applied to Natural Science\"\ndescription: \"Below are links used in this course\"\nabout:\n  template: trestles\n  links:\n    - text: Zoom\n      url: \"https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09\"\n      icon: camera-video\n    - text: Email\n      url: \"mailto:toledo60@g.ucla.edu\"\n      icon: inbox-fill\ncomments: false\nfig-height: 6\n---\n\n\n\n::: column-page\n## Class Overview\n\n**Instructor:** Jose Toledo Luna\n\n**Office Hours**: <br/>\nM/W 1:00pm - 2:00pm <br/>\nT/Th 10:00am - 11:00am <br/>\nor by [setting up an appointment](/teaching/appointments.qmd). \n\nFor reference here is my schedule\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](math338_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n:::",
+    "supporting": [
+      "math338_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
