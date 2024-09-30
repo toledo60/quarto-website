@@ -1,5 +1,5 @@
 ---
-title: "Welcome To STATS141XP"
+title: "Welcome To STATS140XP"
 subtitle: "Practice of Statistical Consulting"
 description: "Below are links used in this course"
 image: stats140xp.png
@@ -29,13 +29,13 @@ Both office hours and discussion will be held online through [Zoom](https://ucla
 
 ## STATS140XP - Discussions
 
-| **Date**   | Recordings                             |
-|------------|----------------------------------------|
-| Week 1     | Introduction, Installing Software      |
-| Week 2     | Intro to LaTeX                         |
-| Week 3     | Additional LaTeX Resources, R Projects |
-| Week 4     | Setting up Git/Github for R Studio     |
-| Week 5     | CV with Quarto                         |
-| Week 6     | Setting up Personal Website            |
-| Week 7     | Adding Content to Website              |
+| **Date** | Recordings                             |
+|----------|----------------------------------------|
+| Week 1   | Introduction, Installing Software      |
+| Week 2   | Intro to LaTeX                         |
+| Week 3   | Additional LaTeX Resources, R Projects |
+| Week 4   | Setting up Git/Github for R Studio     |
+| Week 5   | CV with Quarto                         |
+| Week 6   | Setting up Personal Website            |
+| Week 7   | Adding Content to Website              |
 :::
