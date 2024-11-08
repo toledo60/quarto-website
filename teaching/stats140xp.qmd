@@ -56,6 +56,6 @@ Both office hours and discussion will be held online through [Zoom](https://ucla
 | Week 2 | [Intro to LaTeX](https://ucla.zoom.us/rec/share/PUlJVkRorxp3nzr7ycgmAJiHJwTMtwrroxKH-6IzdQTiTpuxLGIHseC9ar7hEoKV.DxBaxP9tsbAB8vgC) |
 | Week 3 | [Setting up Git/Github for R Studio](https://ucla.zoom.us/rec/share/ajlYx1uDi_QlQWm8jPXYs7VOV6-0BjpcIV87PlMi7fcIATCwu_Os3gL9DzZyQmpL.VCoulOWZ15uJKSbD) |
 | Week 4 | [CV with Quarto](https://ucla.zoom.us/rec/share/19PxebgS9pQ891cCOE-nA3fqcuMR72g4h4lXg79MgGhiCs1I3fvYCFngMa_lGMY.3TMW_2CmI815mleU) |
-| Week - | Setting up Personal Website |
+| Week 5 | [Setting up Personal Website](https://ucla.zoom.us/rec/share/zBNCofH9Z-KFvKTQEdmPYAT2MEx4amtd8Fdfs6frYSVpnKfmSfrMjCsKeXkXeXGo.3VKqPd3uwZ8u__nQ) |
 | Week - | Adding Content to Website |
 :::
