@@ -44,6 +44,15 @@ Both office hours and discussion will be held online through [Zoom](https://ucla
 [Simple Beamer Template](https://www.overleaf.com/latex/templates/simpleplus-beamertheme/wfmfjhdcrdfx)
 
 [Quarto CV Template](https://github.com/mps9506/quarto-cv?tab=readme-ov-file)
+
+[Quarto Website Examples](https://quarto.org/docs/gallery/#websites)
+
+[STATS13 Quarto Website Source Code](https://github.com/toledo60/ucla-stats13)
+
+[My Personal Website Source Code](https://github.com/toledo60/quarto-website)
+
+[Quarto Websites Guide](https://quarto.org/docs/websites/)
+
 </details>
 
 
