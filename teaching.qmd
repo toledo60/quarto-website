@@ -4,10 +4,6 @@ comments: false
 
 ## Current Courses
 
--   **CSUF Math 120:** Elementary Statistics *(Fall 2024)*
-
--   **CSUF Math 338:** [Statistics Applied to Natural Science](https://csuf-math338.netlify.app) *(Fall 2024)*
-
 -   **UCLA Stats 140XP:** [Practice of Statistical Consulting](/teaching/stats140xp.qmd)
 
 ## Previous Courses
@@ -30,7 +26,7 @@ comments: false
 +--------------------+------------------------------------------------------------------------------------+---------------------------------------+
 | STATS 100C         | Linear Models                                                                      | *Summer 2023*                         |
 +--------------------+------------------------------------------------------------------------------------+---------------------------------------+
-| STATS 140XP/ 141XP | Practice of Statistical Consulting                                                 | *Winter 2024,* *Spring 2024*          |
+| STATS 140XP/ 141XP | Practice of Statistical Consulting                                                 | *Winter 2024,Spring 2024, Fall 2024*  |
 +--------------------+------------------------------------------------------------------------------------+---------------------------------------+
 
 ### California State University, Fullerton
@@ -38,5 +34,5 @@ comments: false
 | Course Number | Course Name | Terms |
 |----|----|----|
 | Math 115 | College Algebra | *Fall 2019* |
-| Math 120 | Elementary Statistics | *Spring 2020, Fall 2020* |
-| Math 338 | Statistics Applied to Natural Science | *Spring 2021* |
+| Math 120 | Elementary Statistics | *Spring 2020, Fall 2020, Fall 2024* |
+| Math 338 | [Statistics Applied to Natural Science](https://csuf-math338.netlify.app)  | *Spring 2021, Fall 2024* |

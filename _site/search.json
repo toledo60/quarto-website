@@ -32,21 +32,21 @@
     "href": "teaching.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "CSUF Math 120: Elementary Statistics (Fall 2024)\nCSUF Math 338: Statistics Applied to Natural Science (Fall 2024)\nUCLA Stats 140XP: Practice of Statistical Consulting"
+    "text": "UCLA Stats 140XP: Practice of Statistical Consulting"
   },
   {
     "objectID": "teaching.html#current-courses",
     "href": "teaching.html#current-courses",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "CSUF Math 120: Elementary Statistics (Fall 2024)\nCSUF Math 338: Statistics Applied to Natural Science (Fall 2024)\nUCLA Stats 140XP: Practice of Statistical Consulting"
+    "text": "UCLA Stats 140XP: Practice of Statistical Consulting"
   },
   {
     "objectID": "teaching.html#previous-courses",
     "href": "teaching.html#previous-courses",
     "title": "Jose Toledo Luna",
     "section": "Previous Courses",
-    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life\nand Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 140XP/ 141XP\nPractice of Statistical Consulting\nWinter 2024, Spring 2024\n\n\n\n\n\nCalifornia State University, Fullerton\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021"
+    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life\nand Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 140XP/ 141XP\nPractice of Statistical Consulting\nWinter 2024,Spring 2024, Fall 2024\n\n\n\n\n\nCalifornia State University, Fullerton\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
   },
   {
     "objectID": "research.html",
@@ -74,14 +74,14 @@
     "href": "teaching/stats140xp.html",
     "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Thursday 11:00am - 12:00pm \nBoth office hours and discussion will be held online through Zoom\nSubmit website using the following Google Form\n(must use @g.ucla.edu email)\n\n\n\n\n\nShow Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\nQuarto CV Template\nQuarto Website Examples\nSTATS13 Quarto Website Source Code\nMy Personal Website Source Code\nQuarto Websites Guide\n\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Thursday 11:00am - 12:00pm \nBoth office hours and discussion will be held online through Zoom\n\n\n\n\n\nShow Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\nQuarto CV Template\nQuarto Website Examples\nSTATS13 Quarto Website Source Code\nMy Personal Website Source Code\nQuarto Websites Guide\n\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
   },
   {
     "objectID": "teaching/stats140xp.html#class-overview",
     "href": "teaching/stats140xp.html#class-overview",
     "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Thursday 11:00am - 12:00pm \nBoth office hours and discussion will be held online through Zoom\nSubmit website using the following Google Form\n(must use @g.ucla.edu email)"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Thursday 11:00am - 12:00pm \nBoth office hours and discussion will be held online through Zoom"
   },
   {
     "objectID": "teaching/stats140xp.html#resources",
