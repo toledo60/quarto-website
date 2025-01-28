@@ -1,0 +1,27 @@
+---
+title: "Welcome To Math 534"
+subtitle: "Statistical Computing"
+description: "Below are links used in this course"
+image: comp-stats.jpg
+about:
+  template: trestles
+  links:
+    - text: Zoom
+      url: "https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
+      icon: camera-video
+    - text: Email
+      url: "mailto:toledo60@g.ucla.edu"
+      icon: inbox-fill
+comments: false
+---
+
+Instructor: Jose Toledo Luna
+
+Office Hours: Monday 5:00pm - 6:00pm
+
+## Discussions
+
+| **Date** | Recordings |
+|----|----|
+| Week 1 | [Introduction to R markdown](https://app.box.com/s/c6vndj7l1qho4ipn4i8kq69y7jp6kqj5) |
+| Week 2| |
