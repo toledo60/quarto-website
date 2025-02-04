@@ -60,7 +60,7 @@ Both office hours and discussion will be held online through [Zoom](https://ucla
 | Week 2 | [Intro to LaTeX](https://app.box.com/s/kjdcjh0zo584atddzsbr76akvwjmi3b9) |
 | Week 3 | [Setting up Git/Github for R Studio](https://app.box.com/s/v2ywyy0df2gq8puoualnj2vflte2c9nt) |
 | Week 4 | [CV with Quarto](https://app.box.com/s/xi01k1rhz66j9b7kej3tcm1rvms2bl0p) |
-| Week 5 | Setting up Personal Website |
+| Week 5 | [Setting up Personal Website](https://app.box.com/s/ho35gvsawhvavrwc0xc4q30bq73tpw7f) |
 | Week 6 | Adding Content to Website |
 | Week 7 | Wrapping up Website |
 

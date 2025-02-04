@@ -24,4 +24,4 @@ Office Hours: Monday 5:00pm - 6:00pm
 | **Date** | Recordings |
 |----|----|
 | Week 1 | [Introduction to R markdown](https://ucla.zoom.us/rec/share/QnNfjnWvKHQjK9jAylwjlFf9TMHN45kSscYopm9hbcE3IfgU3EV_tVTDufbR2dTc.HoSMTCEiaDbWy9NZ) |
-| Week 2| |
+| Week 2| [Using here::here() and R markdown tips](https://ucla.zoom.us/rec/share/OV33z9c0dyAjOdRwkyv3NmTgXfsEfZF5IaEu8sDTl7GW0N7MRUh6tv4xx58doD7-.QfdyKDeSBJNPrjXm)|
