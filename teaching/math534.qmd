@@ -25,3 +25,4 @@ Office Hours: Monday 5:00pm - 6:00pm
 |----|----|
 | Week 1 | [Introduction to R markdown](https://ucla.zoom.us/rec/share/QnNfjnWvKHQjK9jAylwjlFf9TMHN45kSscYopm9hbcE3IfgU3EV_tVTDufbR2dTc.HoSMTCEiaDbWy9NZ) |
 | Week 2| [Using here::here() and R markdown tips](https://ucla.zoom.us/rec/share/OV33z9c0dyAjOdRwkyv3NmTgXfsEfZF5IaEu8sDTl7GW0N7MRUh6tv4xx58doD7-.QfdyKDeSBJNPrjXm)|
+| Week 3| [MLE: Poisson using Newton's Method](https://ucla.zoom.us/rec/share/8cQUcgjT3I9sHP_ldY46g1cplK38bXXU8Y_PUV1ZfEnUBWCjNAl3St-0MAlnl3yY.ZvqFaINBeD-q8dmZ) |
