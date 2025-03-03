@@ -25,6 +25,29 @@ comments: false
 Both office hours and discussion will be held online through [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
 
 
+## Website Submission
+
+Must use your `user@g.ucla.edu` email in order to submit your webiste on the following 
+[Google Form](https://forms.gle/fENswd7YZ5WAQbw27)
+
+**Deadline:** March 14 @ 11:59pm.
+
+:::callout-important
+Late submissions will be penalized, anything submitted past **March 19 @ 11:59pm** will receive no credit (unless with a documented reason).
+:::
+
+### Rubric
+
+Your website must include at least the following
+
+- Profile Picture
+- About page
+- Resume/CV pdf attached
+- Work/research experience tab, include projects (pdf, github repositories, slides, etc...)
+
+This is your personal website so customize and add anything else that makes you stand out.
+
+
 ## Resources
 
 <details>

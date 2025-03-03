@@ -21,32 +21,32 @@
     "text": "Not Appropriate Email\nHello NAME,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
   },
   {
-    "objectID": "teaching/stats140xp.html",
-    "href": "teaching/stats140xp.html",
-    "title": "Welcome To STATS140XP",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Thursday 10:00am - 10:50pm \nBoth office hours and discussion will be held online through Zoom\n\n\n\n\n\nShow Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\nQuarto CV Template\nQuarto Website Examples\nSTATS13 Quarto Website Source Code\nMy Personal Website Source Code\nQuarto Websites Guide\n\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
+    "text": "I am currently a fourth year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
   },
   {
-    "objectID": "teaching/stats140xp.html#class-overview",
-    "href": "teaching/stats140xp.html#class-overview",
-    "title": "Welcome To STATS140XP",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Thursday 10:00am - 10:50pm \nBoth office hours and discussion will be held online through Zoom"
+    "text": "UCLA Stats 140XP: Practice of Statistical Consulting"
   },
   {
-    "objectID": "teaching/stats140xp.html#resources",
-    "href": "teaching/stats140xp.html#resources",
-    "title": "Welcome To STATS140XP",
+    "objectID": "teaching.html#current-courses",
+    "href": "teaching.html#current-courses",
+    "title": "Jose Toledo Luna",
     "section": "",
-    "text": "Show Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\nQuarto CV Template\nQuarto Website Examples\nSTATS13 Quarto Website Source Code\nMy Personal Website Source Code\nQuarto Websites Guide"
+    "text": "UCLA Stats 140XP: Practice of Statistical Consulting"
   },
   {
-    "objectID": "teaching/stats140xp.html#stats140xp---discussions",
-    "href": "teaching/stats140xp.html#stats140xp---discussions",
-    "title": "Welcome To STATS140XP",
-    "section": "",
-    "text": "Date\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
+    "objectID": "teaching.html#previous-courses",
+    "href": "teaching.html#previous-courses",
+    "title": "Jose Toledo Luna",
+    "section": "Previous Courses",
+    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life\nand Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 140XP/ 141XP\nPractice of Statistical Consulting\nWinter 2024,Spring 2024, Fall 2024\n\n\n\n\n\nCalifornia State University, Fullerton\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
   },
   {
     "objectID": "research.html",
@@ -70,45 +70,38 @@
     "text": "Software\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Jose Toledo Luna",
+    "objectID": "teaching/stats140xp.html",
+    "href": "teaching/stats140xp.html",
+    "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "UCLA Stats 140XP: Practice of Statistical Consulting\nCSUF Math 534: Statistical Computing"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Thursday 10:00am - 10:50pm \nBoth office hours and discussion will be held online through Zoom\n\n\n\nMust use your user@g.ucla.edu email in order to submit your webiste on the following Google Form\nDeadline: March 14 @ 11:59pm.\n\n\n\n\n\n\nImportant\n\n\n\nLate submissions will be penalized, anything submitted past March 19 @ 11:59pm will receive no credit (unless with a documented reason).\n\n\n\n\nYour website must include at least the following\n\nProfile Picture\nAbout page\nResume/CV pdf attached\nWork/research experience tab, include projects (pdf, github repositories, slides, etc…)\n\nThis is your personal website so customize and add anything else that makes you stand out.\n\n\n\n\n\n\nShow Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\nQuarto CV Template\nQuarto Website Examples\nSTATS13 Quarto Website Source Code\nMy Personal Website Source Code\nQuarto Websites Guide\n\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
   },
   {
-    "objectID": "teaching.html#current-courses",
-    "href": "teaching.html#current-courses",
-    "title": "Jose Toledo Luna",
+    "objectID": "teaching/stats140xp.html#class-overview",
+    "href": "teaching/stats140xp.html#class-overview",
+    "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "UCLA Stats 140XP: Practice of Statistical Consulting\nCSUF Math 534: Statistical Computing"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Thursday 10:00am - 10:50pm \nBoth office hours and discussion will be held online through Zoom"
   },
   {
-    "objectID": "teaching.html#previous-courses",
-    "href": "teaching.html#previous-courses",
-    "title": "Jose Toledo Luna",
-    "section": "Previous Courses",
-    "text": "Previous Courses\n\nUniversity of California, Los Angeles\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life\nand Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 140XP/ 141XP\nPractice of Statistical Consulting\nWinter 2024,Spring 2024, Fall 2024\n\n\n\n\n\nCalifornia State University, Fullerton\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jose Toledo Luna",
+    "objectID": "teaching/stats140xp.html#website-submission",
+    "href": "teaching/stats140xp.html#website-submission",
+    "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "I am currently a fourth year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
+    "text": "Must use your user@g.ucla.edu email in order to submit your webiste on the following Google Form\nDeadline: March 14 @ 11:59pm.\n\n\n\n\n\n\nImportant\n\n\n\nLate submissions will be penalized, anything submitted past March 19 @ 11:59pm will receive no credit (unless with a documented reason).\n\n\n\n\nYour website must include at least the following\n\nProfile Picture\nAbout page\nResume/CV pdf attached\nWork/research experience tab, include projects (pdf, github repositories, slides, etc…)\n\nThis is your personal website so customize and add anything else that makes you stand out."
   },
   {
-    "objectID": "teaching/math534.html",
-    "href": "teaching/math534.html",
-    "title": "Welcome To Math 534",
+    "objectID": "teaching/stats140xp.html#resources",
+    "href": "teaching/stats140xp.html#resources",
+    "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Monday 5:00pm - 6:00pm"
+    "text": "Show Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\nQuarto CV Template\nQuarto Website Examples\nSTATS13 Quarto Website Source Code\nMy Personal Website Source Code\nQuarto Websites Guide"
   },
   {
-    "objectID": "teaching/math534.html#discussions",
-    "href": "teaching/math534.html#discussions",
-    "title": "Welcome To Math 534",
-    "section": "Discussions",
-    "text": "Discussions\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1\nIntroduction to R markdown\n\n\nWeek 2\nUsing here::here() and R markdown tips\n\n\nWeek 3\nMLE: Poisson using Newton’s Method"
+    "objectID": "teaching/stats140xp.html#stats140xp---discussions",
+    "href": "teaching/stats140xp.html#stats140xp---discussions",
+    "title": "Welcome To STATS140XP",
+    "section": "",
+    "text": "Date\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
   }
 ]

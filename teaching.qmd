@@ -6,9 +6,6 @@ comments: false
 
 - **UCLA Stats 140XP:** [Practice of Statistical Consulting](/teaching/stats140xp.qmd)
 
-- **CSUF Math 534:** [Statistical Computing](/teaching/math534.qmd)
-
-
 ## Previous Courses
 
 ### University of California, Los Angeles
