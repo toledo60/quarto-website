@@ -1,5 +1,5 @@
 ---
-title: "Welcome To STATS140XP"
+title: "Welcome To STATS141XP"
 subtitle: "Practice of Statistical Consulting"
 description: "Below are links used in this course"
 image: stats140xp.png
@@ -20,32 +20,10 @@ comments: false
 
 **Instructor:** Jose Toledo Luna
 
-**Office Hours**: Thursday 10:00am - 10:50pm <br/>
+**Office Hours**: Friday 3:00pm - 3:50pm <br/>
 
 Both office hours and discussion will be held online through [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
 
-
-## Website Submission
-
-Must use your `user@g.ucla.edu` email in order to submit your webiste on the following 
-[Google Form](https://forms.gle/fENswd7YZ5WAQbw27)
-
-**Deadline:** March 14 @ 11:59pm.
-
-:::callout-important
-Late submissions will be penalized, anything submitted past **March 19 @ 11:59pm** will receive no credit (unless with a documented reason).
-:::
-
-### Rubric
-
-Your website must include at least the following
-
-- Profile Picture
-- About page
-- Resume/CV pdf attached
-- Work/research experience tab, include projects (pdf, github repositories, slides, etc...)
-
-This is your personal website so customize and add anything else that makes you stand out.
 
 
 ## Resources
@@ -73,8 +51,6 @@ This is your personal website so customize and add anything else that makes you 
 
 </details>
 
-
-
 ## STATS140XP - Discussions
 
 | **Date** | Recordings |
@@ -87,21 +63,4 @@ This is your personal website so customize and add anything else that makes you 
 | Week 6 | [Adding Content to Website](https://app.box.com/s/5ckx6l5f5i7swgr3sspdg141ybpu9lux) |
 | Week 7 | [Wrapping up Website](https://app.box.com/s/hth5sgopt5ri5cppjy2akwwjnkef4o42) |
 
-
-
-
-
-<!-- STATS140XP - Discussions
-
-| **Date** | Recordings |
-|----|----|
-| Week 1 | [Introduction, Installing Software](https://ucla.zoom.us/rec/share/MixJYNJv8TUs9l0JvDOq6Ena-arEsF4AjIHqiEq8O6KfEoe4HLAg-KOYbVvAXe6x.EnR01kn_xm9mtamD) |
-| Week 2 | [Intro to LaTeX](https://ucla.zoom.us/rec/share/PUlJVkRorxp3nzr7ycgmAJiHJwTMtwrroxKH-6IzdQTiTpuxLGIHseC9ar7hEoKV.DxBaxP9tsbAB8vgC) |
-| Week 3 | [Setting up Git/Github for R Studio](https://ucla.zoom.us/rec/share/ajlYx1uDi_QlQWm8jPXYs7VOV6-0BjpcIV87PlMi7fcIATCwu_Os3gL9DzZyQmpL.VCoulOWZ15uJKSbD) |
-| Week 4 | [CV with Quarto](https://ucla.zoom.us/rec/share/19PxebgS9pQ891cCOE-nA3fqcuMR72g4h4lXg79MgGhiCs1I3fvYCFngMa_lGMY.3TMW_2CmI815mleU) |
-| Week 5 | [Setting up Personal Website](https://ucla.zoom.us/rec/share/zBNCofH9Z-KFvKTQEdmPYAT2MEx4amtd8Fdfs6frYSVpnKfmSfrMjCsKeXkXeXGo.3VKqPd3uwZ8u__nQ) |
-| Week 6 | [Adding Content to Website](https://ucla.zoom.us/rec/share/262CqtZjVogjAdnjYRemIlaTbvrzYIIOE5d8NcZ7NbcWatgok__Q6MTViqtShRFv.wNsZMXQ0nAsQG-Hn) |
-| Week 7 | [Wrapping up Website](https://ucla.zoom.us/rec/share/AoEfl1Nv9ZC6DSrfpVt7gX0TzfKprUIDbAZQS2j2-CsOWNSxfNziRYpKK7ndr_Al.lzYMXh9ybTrlwWNR) |
-
--->
 :::
