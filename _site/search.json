@@ -25,14 +25,14 @@
     "href": "index.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "I am currently a fourth year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
+    "text": "I am currently a fifth year Statistics Ph.D. student at University of California, Los Angeles (UCLA) working with Hongquan Xu. Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my CV\nI am gratefully funded by the Eugene V. Cota-Robles Fellowship\nEmail: toledo60@g.ucla.edu"
   },
   {
     "objectID": "teaching.html",
     "href": "teaching.html",
     "title": "Jose Toledo Luna",
     "section": "",
-    "text": "University of California, Los Angeles\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life\nand Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/ 141XP\nPractice of Statistical Consulting\nWinter 2024, Spring 2024, Fall 2024, Winter 2025, Spring 2025\n\n\n\n\n\nCalifornia State University, Fullerton\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
+    "text": "University of California, Los Angeles\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life\nand Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/ 141XP\nPractice of Statistical Consulting\nWinter 2024, Spring 2024, Fall 2024, Winter 2025, Spring 2025, Fall 2025\n\n\n\n\n\nCalifornia State University, Fullerton\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
   },
   {
     "objectID": "research.html",
@@ -58,29 +58,29 @@
   {
     "objectID": "teaching/stats141xp.html",
     "href": "teaching/stats141xp.html",
-    "title": "Welcome To STATS141XP",
+    "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Friday 3:00pm - 3:50pm \nBoth office hours and discussion will be held online through Zoom\n\n\n\n\n\nShow Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\nQuarto CV Template\nQuarto Website Examples\nSTATS13 Quarto Website Source Code\nMy Personal Website Source Code\nQuarto Websites Guide\n\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Wednesday 1:00pm - 1:50pm \nBoth office hours and discussion will be held online through Zoom\n\n\n\n\n\nShow Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\n\nQuarto Website Examples\n\n\nQuarto Websites Guide\n\n\n\n\n\n\n\nDate\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software"
   },
   {
     "objectID": "teaching/stats141xp.html#class-overview",
     "href": "teaching/stats141xp.html#class-overview",
-    "title": "Welcome To STATS141XP",
+    "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Friday 3:00pm - 3:50pm \nBoth office hours and discussion will be held online through Zoom"
+    "text": "Instructor: Jose Toledo Luna\nOffice Hours: Wednesday 1:00pm - 1:50pm \nBoth office hours and discussion will be held online through Zoom"
   },
   {
     "objectID": "teaching/stats141xp.html#resources",
     "href": "teaching/stats141xp.html#resources",
-    "title": "Welcome To STATS141XP",
+    "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Show Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\nQuarto CV Template\nQuarto Website Examples\nSTATS13 Quarto Website Source Code\nMy Personal Website Source Code\nQuarto Websites Guide"
+    "text": "Show Latex Template\n\n\n\n\n\nShow Links\n\nSimple Beamer Template\n\nQuarto Website Examples\n\n\nQuarto Websites Guide"
   },
   {
     "objectID": "teaching/stats141xp.html#stats140xp---discussions",
     "href": "teaching/stats141xp.html#stats140xp---discussions",
-    "title": "Welcome To STATS141XP",
+    "title": "Welcome To STATS140XP",
     "section": "",
-    "text": "Date\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
+    "text": "Date\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software"
   }
 ]
