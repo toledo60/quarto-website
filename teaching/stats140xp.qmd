@@ -44,7 +44,7 @@ Both office hours and discussion will be held online through [Zoom](https://ucla
 
 [Quarto Website Examples](https://quarto.org/docs/gallery/#websites)
 
-<!-- [Quarto CV Template](https://github.com/mps9506/quarto-cv?tab=readme-ov-file) -->
+[Quarto CV Template](https://github.com/mps9506/quarto-cv?tab=readme-ov-file)
 
 <!-- [STATS13 Quarto Website Source Code](https://github.com/toledo60/ucla-stats13) -->
 
@@ -61,13 +61,14 @@ Both office hours and discussion will be held online through [Zoom](https://ucla
 | Week 1 | [Introduction, Installing Software](https://app.box.com/s/c6vndj7l1qho4ipn4i8kq69y7jp6kqj5) |
 | Week 2 | [Intro to LaTeX](https://app.box.com/s/kjdcjh0zo584atddzsbr76akvwjmi3b9) |
 | Week 3 | [Setting up Git/Github for R Studio](https://app.box.com/s/v2ywyy0df2gq8puoualnj2vflte2c9nt) |
+| Week 4 | [CV with Quarto](https://app.box.com/s/xi01k1rhz66j9b7kej3tcm1rvms2bl0p) |
 :::
 
 
 
 ```{=html}
 <!--
-| Week 4 | [CV with Quarto](https://app.box.com/s/xi01k1rhz66j9b7kej3tcm1rvms2bl0p) |
+
 | Week 5 | [Setting up Personal Website](https://app.box.com/s/ho35gvsawhvavrwc0xc4q30bq73tpw7f) |
 | Week 6 | [Adding Content to Website](https://app.box.com/s/5ckx6l5f5i7swgr3sspdg141ybpu9lux) |
 | Week 7 | [Wrapping up Website](https://app.box.com/s/hth5sgopt5ri5cppjy2akwwjnkef4o42) | -->
