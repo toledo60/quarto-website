@@ -1,15 +1,25 @@
 ---
 comments: false
+image: toledo.jpg
+about:
+  template: trestles
+  image-width: 15em
+  image-shape: rounded
+  links:
+    - text: Google Scholar
+      icon: google
+      url: "https://scholar.google.com/citations?user=grF2Zc4AAAAJ&hl=en&oi=ao"
+    - text: Email
+      icon: inbox
+      url: "mailto:toledo60@g.ucla.edu"
+    - text: CV
+      url: "/docs/CV/CV.pdf" 
 ---
 
-<!---
-[<img src="https://avatars.githubusercontent.com/u/33768064?v=4" style="max-width:25%;min-width:25px;float:right;" alt="Github repo" />](https://github.com/toledo60/)
---->
-
+::: {.column-page}
 I am currently a fifth year Statistics Ph.D. student at University of California, Los Angeles *(UCLA)* working with [Hongquan Xu](http://www.stat.ucla.edu/~hqxu/). Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my [CV](/docs/CV/CV.pdf "CV")
 
 
 I am gratefully funded by the [Eugene V. Cota-Robles Fellowship](https://grad.ucla.edu/funding/financial-aid/funding-for-entering-students/eugene-v-cota-robles-fellowship/)
+:::
 
-
-**Email**: [toledo60@g.ucla.edu](mailto:toledo60@g.ucla.edu) <br/>
