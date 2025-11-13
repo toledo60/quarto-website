@@ -1,5 +1,6 @@
 ---
 comments: false
+title: "Jose Toledo Luna"
 image: toledo.jpg
 about:
   template: trestles
