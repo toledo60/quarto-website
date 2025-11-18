@@ -46,9 +46,9 @@ Both office hours and discussion will be held online through [Zoom](https://ucla
 
 [Quarto CV Template](https://github.com/mps9506/quarto-cv?tab=readme-ov-file)
 
-<!-- [STATS13 Quarto Website Source Code](https://github.com/toledo60/ucla-stats13) -->
+[STATS13 Quarto Website Source Code](https://github.com/toledo60/ucla-stats13)
 
-<!-- [My Personal Website Source Code](https://github.com/toledo60/quarto-website) -->
+[My Personal Website Source Code](https://github.com/toledo60/quarto-website)
 
 [Quarto Websites Guide](https://quarto.org/docs/websites/)
 
@@ -64,14 +64,7 @@ Both office hours and discussion will be held online through [Zoom](https://ucla
 | Week 4 | [CV with Quarto](https://app.box.com/s/xi01k1rhz66j9b7kej3tcm1rvms2bl0p) |
 | Week 5 | [Setting up Personal Website](https://app.box.com/s/ho35gvsawhvavrwc0xc4q30bq73tpw7f) |
 | Week 6 | [Adding Content to Website](https://app.box.com/s/5ckx6l5f5i7swgr3sspdg141ybpu9lux) |
+| Week 7 | [Wrapping up Website](https://app.box.com/s/hth5sgopt5ri5cppjy2akwwjnkef4o42) |
 :::
 
-
-
-```{=html}
-<!--
-
-
-
-| Week 7 | [Wrapping up Website](https://app.box.com/s/hth5sgopt5ri5cppjy2akwwjnkef4o42) | -->
-```
+ 
