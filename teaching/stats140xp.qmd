@@ -6,9 +6,9 @@ image: stats140xp.png
 about:
   template: trestles
   links:
-    - text: Zoom
-      url: "https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
-      icon: camera-video
+    # - text: Zoom
+    #   url: "https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
+    #   icon: camera-video
     - text: Email
       url: "mailto:toledo60@g.ucla.edu"
       icon: inbox-fill
@@ -22,7 +22,7 @@ comments: false
 
 **Office Hours**: Wednesday 1:00pm - 1:50pm <br/>
 
-Both office hours and discussion will be held online through [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09)
+<!-- Both office hours and discussion will be held online through [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) -->
 
 
 ## Submission
