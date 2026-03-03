@@ -21,6 +21,27 @@
     "text": "Not Appropriate Email\nHello NAME,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nJose Toledo Luna\n",
+    "section": "",
+    "text": "Jose Toledo Luna\n\n\nStatistics Ph.D. Candidate @ UCLA\n\n\nStatistics Ph.D. student at University of California, Los Angeles advised by Hongquan Xu.\n\n\n   Research  \n   Teaching  \n   Curriculum Vitae (CV)  \n   GitHub  @toledo60 \n   Email  toledo60@g.ucla.edu"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Links",
+    "section": "",
+    "text": "Course Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life and Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/141XP\nPractice of Statistical Consulting\nWinter 2024, Spring 2024, Fall 2024, Winter 2025, Spring 2025, Fall 2025\n\n\nSTATS 419\nExperimental Design\nWinter 2026"
+  },
+  {
+    "objectID": "teaching.html#california-state-university-fullerton",
+    "href": "teaching.html#california-state-university-fullerton",
+    "title": "Links",
+    "section": "California State University, Fullerton",
+    "text": "California State University, Fullerton\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
+  },
+  {
     "objectID": "research.html",
     "href": "research.html",
     "title": "Links",
@@ -40,27 +61,6 @@
     "title": "Links",
     "section": "",
     "text": "ggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Links",
-    "section": "",
-    "text": "Course Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life and Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/141XP\nPractice of Statistical Consulting\nWinter 2024, Spring 2024, Fall 2024, Winter 2025, Spring 2025, Fall 2025\n\n\nSTATS 419\nExperimental Design\nWinter 2026"
-  },
-  {
-    "objectID": "teaching.html#california-state-university-fullerton",
-    "href": "teaching.html#california-state-university-fullerton",
-    "title": "Links",
-    "section": "California State University, Fullerton",
-    "text": "California State University, Fullerton\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "\nJose Toledo Luna\n",
-    "section": "",
-    "text": "Jose Toledo Luna\n\n\nStatistics Ph.D. Student @ UCLA\n\n\nFifth year Statistics Ph.D. student at University of California, Los Angeles working with Hongquan Xu.\n\n\n   Research  \n   Teaching  \n   Curriculum Vitae (CV)  \n\nSocials\n   GitHub  @toledo60 \n   Google Scholar  \n   Email  toledo60@g.ucla.edu"
   },
   {
     "objectID": "teaching/stats140xp.html",
