@@ -9,10 +9,10 @@ title: ""
 <img class="avatar" src="toledo.jpg" alt="Avatar" />
 
 <h1 class="name">Jose Toledo Luna</h1>
-<div class="role">Statistics Ph.D. Candidate @ UCLA</div>
+<!---<div class="role">Statistics Ph.D. Candidate @ UCLA</div>--->
 
 <p class="blurb">
-Statistics Ph.D. student at University of California, Los Angeles advised by
+Statistics Ph.D. Candidate at University of California, Los Angeles advised by
 [Hongquan Xu](https://statistics.ucla.edu/index.php/people1/all-faculty/7809-2/?smid=8823).
 </p>
 
