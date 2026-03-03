@@ -2,14 +2,26 @@
 comments: false
 ---
 
+<div class="bio-shell">
+
+<div class="bio-card-research">
+
+<a class="link-btn" href="https://scholar.google.com/citations?user=grF2Zc4AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">
+  <span class="left">
+    <i class="bi bi-google"></i>
+    <span class="label">Google Scholar</span>
+  </span>
+</a>
+
 ## Publications
 
-1.  **Luna, J**. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. [Statistics in Medicine](https://onlinelibrary.wiley.com/doi/10.1002/sim.9423). 2022; 1- 18 [[PDF]](/docs/publications/Orthogonal array composite designs for drug combination experiments.pdf "PDF")
+1.  **Luna, J**. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. [Statistics in Medicine](https://onlinelibrary.wiley.com/doi/10.1002/sim.9423). 2022; 1- 18
+<a class="inline-btn" href="/docs/publications/Orthogonal array composite designs for drug combination experiments.pdf" target="_blank" rel="noopener">
+  <i class="bi bi-file-earmark-pdf"></i> PDF
+</a>
 
-
-## Software 
+## Software
 
 
 1. [ggDoE](https://ggdoe.netlify.app/index.html): Create commonly used graphs in Design of Experiments with *ggplot2*
-
 2. [pyLHD](https://pylhd.netlify.app): Latin Hypercube Designs for Python

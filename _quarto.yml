@@ -1,48 +1,24 @@
 project:
   type: website
-  execute-dir: project
+  output-dir: _site
 
 website:
-  title: "Jose Toledo Luna"
-  reader-mode: true
-  navbar:
-    title: false
-    background: white
-    foreground: "gray-800"
-    collapse-below: sm  
-    left:
-      - href: index.qmd
-        text: About
-      - href: research.qmd
-        text: Research
-      - href: teaching.qmd
-        text: Teaching
-    right: 
-      - icon: github
-        menu:
-          - text: Website Source Code
-            url:  https://github.com/toledo60/quarto-website
-          - text: Github Profile
-            url:  https://github.com/toledo60
-  page-footer:
-    right: "&copy; 2026, Jose Toledo Luna"
-#  comments:
-#    utterances:
-#      repo: toledo60/quarto-website
-    
-# Format-specific Metadata
-format:
-  html:
-    theme:
-      - sandstone
-      - styles.scss
-    toc: false
-    published-title: "last updated"
-    reference-location: document
-    code-fold: false
-    code-summary: ""
-    fontsize: 1.3em
+  title: "Links"
+  navbar: false
+  page-footer: ""
 
 execute:
   freeze: auto
 
+format:
+  html:
+    theme:
+      light: [cosmo]
+    css: styles.css
+    toc: false
+    smooth-scroll: true
+    page-layout: full
+    include-in-header:
+      text: |
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">

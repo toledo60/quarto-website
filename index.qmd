@@ -1,26 +1,70 @@
 ---
-comments: false
-title: "Jose Toledo Luna"
-image: toledo.jpg
-about:
-  template: trestles
-  image-width: 15em
-  image-shape: rounded
-  links:
-    - text: Google Scholar
-      icon: google
-      url: "https://scholar.google.com/citations?user=grF2Zc4AAAAJ&hl=en&oi=ao"
-    - text: Email
-      icon: inbox
-      url: "mailto:toledo60@g.ucla.edu"
-    - text: CV
-      url: "/docs/CV/CV.pdf" 
+title: ""
 ---
 
-::: {.column-page}
-I am currently a fifth year Statistics Ph.D. student at University of California, Los Angeles *(UCLA)* working with [Hongquan Xu](http://www.stat.ucla.edu/~hqxu/). Prior to joining UCLA, I obtained my BA and MS degrees in Statistics from California State University, Fullerton. You can learn more about me from my [CV](/docs/CV/CV.pdf "CV")
+<div class="bio-shell">
+
+<div class="bio-card">
+
+<img class="avatar" src="toledo.jpg" alt="Avatar" />
+
+<h1 class="name">Jose Toledo Luna</h1>
+<div class="role">Statistics Ph.D. Student @ UCLA</div>
+
+<p class="blurb">
+Fifth year Statistics Ph.D. student at University of California, Los Angeles working with
+[Hongquan Xu](https://statistics.ucla.edu/index.php/people1/all-faculty/7809-2/?smid=8823).
+</p>
+
+<div class="links">
+
+<a class="link-btn" href="research.qmd">
+  <span class="left">
+    <i class="bi bi-mortarboard"></i>
+    <span class="label">Research</span>
+  </span>
+</a>
+
+<a class="link-btn" href="teaching.qmd">
+  <span class="left">
+    <i class="bi bi-person-workspace"></i>
+    <span class="label">Teaching</span>
+  </span>
+</a>
 
 
-I am gratefully funded by the [Eugene V. Cota-Robles Fellowship](https://grad.ucla.edu/funding/financial-aid/funding-for-entering-students/eugene-v-cota-robles-fellowship/)
-:::
+<a class="link-btn" href="docs/CV/CV.pdf">
+  <span class="left">
+    <i class="bi bi-file-earmark-pdf"></i>
+    <span class="label">Curriculum Vitae (CV)</span>
+  </span>
+</a>
 
+### Socials
+
+<a class="link-btn" href="https://github.com/toledo60" target="_blank" rel="noopener">
+  <span class="left">
+    <i class="bi bi-github"></i>
+    <span class="label">GitHub</span>
+  </span>
+  <span class="hint">@toledo60</span>
+</a>
+
+
+<a class="link-btn" href="https://scholar.google.com/citations?user=grF2Zc4AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">
+  <span class="left">
+    <i class="bi bi-google"></i>
+    <span class="label">Google Scholar</span>
+  </span>
+</a>
+
+
+<a class="link-btn" href="mailto:toledo60@g.ucla.edu" target="_blank" rel="noopener">
+  <span class="left">
+    <i class="bi bi-envelope"></i>
+    <span class="label">Email</span>
+  </span>
+  <span class="hint">toledo60@g.ucla.edu</span>
+</a>
+
+</div>
