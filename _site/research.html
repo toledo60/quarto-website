@@ -93,8 +93,24 @@ ul.task-list li input[type="checkbox"] {
 <section id="publications" class="level2">
 <h2 class="anchored" data-anchor-id="publications">Publications</h2>
 <ol type="1">
-<li><strong>Luna, J</strong>. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. <a href="https://onlinelibrary.wiley.com/doi/10.1002/sim.9423">Statistics in Medicine</a>. 2022; 1- 18 <a class="inline-btn" href="./docs/publications/Orthogonal array composite designs for drug combination experiments.pdf" target="_blank" rel="noopener"> <i class="bi bi-file-earmark-pdf"></i> PDF </a></li>
+<li><strong>Luna, J</strong>. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. <a href="https://onlinelibrary.wiley.com/doi/10.1002/sim.9423">Statistics in Medicine</a>. 2022; 1- 18 <a class="inline-btn" href="./docs/publications/Orthogonal array composite designs for drug combination experiments.pdf" target="_blank" rel="noopener"> <i class="bi bi-file-earmark-pdf"></i> PDF </a> <button class="inline-btn" onclick="toggleBibtex('bibtex-oacd')"> <i class="bi bi-quote"></i> BibTeX </button></li>
 </ol>
+<div id="bibtex-oacd" class="bibtex-box">
+<div class="bibtex-header">
+<p><span>BibTeX</span> <button class="bibtex-copy" onclick="copyBibtex('bibtex-oacd')"> <i class="bi bi-clipboard"></i> <span class="copy-label">Copy</span> </button></p>
+</div>
+<pre>@article{luna2022orthogonal,
+  title={Orthogonal array composite designs for drug combination experiments with applications for tuberculosis},
+  author={Luna, Jose and Jaynes, Jessica and Xu, Hongquan and Wong, Weng Kee},
+  journal={Statistics in medicine},
+  volume={41},
+  number={17},
+  pages={3380--3397},
+  year={2022},
+  publisher={Wiley Online Library}
+}
+</pre>
+</div>
 </section>
 <section id="software" class="level2">
 <h2 class="anchored" data-anchor-id="software">Software</h2>
@@ -102,6 +118,24 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://ggdoe.netlify.app/index.html">ggDoE</a>: Create commonly used graphs in Design of Experiments with <em>ggplot2</em></li>
 <li><a href="https://pylhd.netlify.app">pyLHD</a>: Latin Hypercube Designs for Python</li>
 </ol>
+<script>
+function toggleBibtex(id){
+  const box = document.getElementById(id);
+  box.classList.toggle("show");
+}
+
+function copyBibtex(id){
+
+  const text = document.querySelector(`#${id} pre`).innerText;
+  navigator.clipboard.writeText(text);
+  const label = document.querySelector(`#${id} .copy-label`);
+  label.innerText = "Copied!";
+
+  setTimeout(() => {
+    label.innerText = "Copy";
+  }, 1500);
+}
+</script>
 
 
 </section>

@@ -46,14 +46,14 @@
     "href": "research.html",
     "title": "Links",
     "section": "",
-    "text": "Google Scholar  \n\n\n\nLuna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18   PDF \n\n\n\n\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
+    "text": "Google Scholar  \n\n\n\nLuna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18   PDF    BibTeX \n\n\n\nBibTeX   Copy \n\n@article{luna2022orthogonal,\n  title={Orthogonal array composite designs for drug combination experiments with applications for tuberculosis},\n  author={Luna, Jose and Jaynes, Jessica and Xu, Hongquan and Wong, Weng Kee},\n  journal={Statistics in medicine},\n  volume={41},\n  number={17},\n  pages={3380--3397},\n  year={2022},\n  publisher={Wiley Online Library}\n}\n\n\n\n\n\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
   },
   {
     "objectID": "research.html#publications",
     "href": "research.html#publications",
     "title": "Links",
     "section": "",
-    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18   PDF"
+    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18   PDF    BibTeX \n\n\n\nBibTeX   Copy \n\n@article{luna2022orthogonal,\n  title={Orthogonal array composite designs for drug combination experiments with applications for tuberculosis},\n  author={Luna, Jose and Jaynes, Jessica and Xu, Hongquan and Wong, Weng Kee},\n  journal={Statistics in medicine},\n  volume={41},\n  number={17},\n  pages={3380--3397},\n  year={2022},\n  publisher={Wiley Online Library}\n}"
   },
   {
     "objectID": "research.html#software",

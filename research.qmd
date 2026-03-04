@@ -19,9 +19,57 @@ comments: false
 <a class="inline-btn" href="/docs/publications/Orthogonal array composite designs for drug combination experiments.pdf" target="_blank" rel="noopener">
   <i class="bi bi-file-earmark-pdf"></i> PDF
 </a>
+<button class="inline-btn" onclick="toggleBibtex('bibtex-oacd')">
+  <i class="bi bi-quote"></i> BibTeX
+</button>
+
+<div id="bibtex-oacd" class="bibtex-box">
+<div class="bibtex-header">
+  <span>BibTeX</span>
+  <button class="bibtex-copy" onclick="copyBibtex('bibtex-oacd')">
+    <i class="bi bi-clipboard"></i>
+    <span class="copy-label">Copy</span>
+  </button>
+</div>
+<pre>
+@article{luna2022orthogonal,
+  title={Orthogonal array composite designs for drug combination experiments with applications for tuberculosis},
+  author={Luna, Jose and Jaynes, Jessica and Xu, Hongquan and Wong, Weng Kee},
+  journal={Statistics in medicine},
+  volume={41},
+  number={17},
+  pages={3380--3397},
+  year={2022},
+  publisher={Wiley Online Library}
+}
+</pre>
+</div>
+
+
 
 ## Software
 
 
 1. [ggDoE](https://ggdoe.netlify.app/index.html): Create commonly used graphs in Design of Experiments with *ggplot2*
 2. [pyLHD](https://pylhd.netlify.app): Latin Hypercube Designs for Python
+
+
+
+<script>
+function toggleBibtex(id){
+  const box = document.getElementById(id);
+  box.classList.toggle("show");
+}
+
+function copyBibtex(id){
+
+  const text = document.querySelector(`#${id} pre`).innerText;
+  navigator.clipboard.writeText(text);
+  const label = document.querySelector(`#${id} .copy-label`);
+  label.innerText = "Copied!";
+
+  setTimeout(() => {
+    label.innerText = "Copy";
+  }, 1500);
+}
+</script>
