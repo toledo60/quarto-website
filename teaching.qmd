@@ -5,7 +5,10 @@ comments: false
 ```{r}
 #| echo: false
 #| message: false
+#| include: false
 library(dplyr)
+library(knitr)
+library(kableExtra) 
 
 make_table <- function(path) {
   df <- read.csv(path, stringsAsFactors = FALSE)
@@ -15,7 +18,7 @@ make_table <- function(path) {
       `Course Name` = ifelse(
         is.na(link) | link == "",
         course_name,
-        paste0('<a href="', link, '">', course_name, "</a>")
+        paste0('<a href="', link, '" class="course-link">', course_name, "</a>")
       ),
       Terms = paste0("<em>", terms, "</em>")
     ) |>
@@ -28,10 +31,18 @@ make_table <- function(path) {
   knitr::kable(
     df,
     format = "html",
-    align = "l",
+    align = c("l", "l", "l"),
     escape = FALSE,
-    table.attr = 'class="courses-table"'
-  )
+    table.attr = 'class="courses-table glass-table"'
+  ) |>
+    kableExtra::kable_styling(
+      full_width = TRUE,
+      bootstrap_options = NULL,
+      position = "left"
+    ) |>
+    kableExtra::column_spec(1, width = "13em") |>
+    kableExtra::column_spec(2, width = "44%") |>
+    kableExtra::column_spec(3, width = "43%")
 }
 ```
 

@@ -1,0 +1,92 @@
+.courses-table.glass-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(140, 140, 160, 0.22);
+  border-radius: 18px;
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.05),
+    0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.courses-table.glass-table thead th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 650;
+  color: #374151;
+  background: rgba(255, 255, 255, 0.34);
+  border-bottom: 1px solid rgba(140, 140, 160, 0.22);
+}
+
+.courses-table.glass-table tbody td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(140, 140, 160, 0.12);
+  background: transparent;
+}
+
+.courses-table.glass-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.courses-table.glass-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.courses-table.glass-table tbody td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #374151;
+}
+
+.courses-table.glass-table tbody td:nth-child(2) {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.courses-table.glass-table tbody td:last-child {
+  color: #4b5563;
+}
+
+.courses-table .course-link,
+.courses-table .course-link:visited {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.courses-table .course-link:hover {
+  color: #1d4ed8;
+  border-bottom-color: currentColor;
+}
+
+.courses-table.glass-table thead th:first-child {
+  border-top-left-radius: 18px;
+}
+
+.courses-table.glass-table thead th:last-child {
+  border-top-right-radius: 18px;
+}
+
+.courses-table.glass-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 18px;
+}
+
+.courses-table.glass-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 18px;
+}
+
+@media (max-width: 768px) {
+  .courses-table.glass-table thead th,
+  .courses-table.glass-table tbody td {
+    padding: 11px 12px;
+    font-size: 0.95rem;
+  }
+}

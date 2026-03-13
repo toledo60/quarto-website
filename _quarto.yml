@@ -14,7 +14,9 @@ format:
   html:
     theme:
       light: [cosmo]
-    css: styles.css
+    css:
+      - styles.css
+      - tables.css
     toc: false
     smooth-scroll: true
     page-layout: full
