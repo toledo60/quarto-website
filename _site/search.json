@@ -1,66 +1,24 @@
 [
   {
-    "objectID": "teaching/appointments.html",
-    "href": "teaching/appointments.html",
-    "title": "Setting up an Appointment",
+    "objectID": "teaching/stats10.html",
+    "href": "teaching/stats10.html",
+    "title": "Welcome To STATS10",
     "section": "",
-    "text": "My appointments typically last under 30 minutes, but if necessary, they can be extended to address further issues. Please note that while I am here to help, I cannot serve as your personal tutor. I encourage you to attend our assigned office hours, ask questions, and work with your classmates to resolve any difficulties you may be experiencing. If you still require assistance or are unable to resolve your concerns, please do not hesitate to schedule an appointment with me"
+    "text": "Instructor: Jose Toledo Luna \nDiscussion: Thursday 4:00pm - 4:50pm @ PAB 1749 Office Hours: Thursday 1:00pm - 1:50pm @ MS 8349 or Zoom \nMaterial: Please use the Box Folder to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn"
   },
   {
-    "objectID": "teaching/appointments.html#appropriate-email",
-    "href": "teaching/appointments.html#appropriate-email",
-    "title": "Setting up an Appointment",
-    "section": "Appropriate Email",
-    "text": "Appropriate Email\nHello NAME,\nBriefly explain what you are struggling with and/or insert screenshots of error messages (If its code related)\nMy available times this week are\n\nMonday: ANYTIME\nTuesday: 10am-12pm, 2-3pm\nWednesday: 10am-1pm\nThursday: ANYTIME\nFriday, 8am-2pm\n\nDo any of these times work for you?\nyour signature"
-  },
-  {
-    "objectID": "teaching/appointments.html#not-appropriate-email",
-    "href": "teaching/appointments.html#not-appropriate-email",
-    "title": "Setting up an Appointment",
-    "section": "Not Appropriate Email",
-    "text": "Not Appropriate Email\nHello NAME,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "\nJose Toledo Luna\n",
+    "objectID": "teaching/stats10.html#class-overview",
+    "href": "teaching/stats10.html#class-overview",
+    "title": "Welcome To STATS10",
     "section": "",
-    "text": "Jose Toledo Luna\n\n\n\nStatistics Ph.D. Candidate at University of California, Los Angeles advised by Hongquan Xu.\n\n\n   Research  \n   Teaching  \n   Curriculum Vitae (CV)  \n   GitHub  @toledo60 \n   Email  toledo60@g.ucla.edu"
+    "text": "Instructor: Jose Toledo Luna \nDiscussion: Thursday 4:00pm - 4:50pm @ PAB 1749 Office Hours: Thursday 1:00pm - 1:50pm @ MS 8349 or Zoom \nMaterial: Please use the Box Folder to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn"
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Links",
-    "section": "",
-    "text": "Course Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life and Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/141XP\nPractice of Statistical Consulting\nWinter 2024--Fall 2025\n\n\nSTATS 419\nExperimental Design\nWinter 2026"
-  },
-  {
-    "objectID": "teaching.html#california-state-university-fullerton",
-    "href": "teaching.html#california-state-university-fullerton",
-    "title": "Links",
-    "section": "California State University, Fullerton",
-    "text": "California State University, Fullerton\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Links",
-    "section": "",
-    "text": "Google Scholar  \n\n\n\nLuna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18   PDF    BibTeX \n\n\n\nBibTeX   Copy \n\n@article{luna2022orthogonal,\n  title={Orthogonal array composite designs for drug combination experiments with applications for tuberculosis},\n  author={Luna, Jose and Jaynes, Jessica and Xu, Hongquan and Wong, Weng Kee},\n  journal={Statistics in medicine},\n  volume={41},\n  number={17},\n  pages={3380--3397},\n  year={2022},\n  publisher={Wiley Online Library}\n}\n\n\n\n\n\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
-  },
-  {
-    "objectID": "research.html#publications",
-    "href": "research.html#publications",
-    "title": "Links",
-    "section": "",
-    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18   PDF    BibTeX \n\n\n\nBibTeX   Copy \n\n@article{luna2022orthogonal,\n  title={Orthogonal array composite designs for drug combination experiments with applications for tuberculosis},\n  author={Luna, Jose and Jaynes, Jessica and Xu, Hongquan and Wong, Weng Kee},\n  journal={Statistics in medicine},\n  volume={41},\n  number={17},\n  pages={3380--3397},\n  year={2022},\n  publisher={Wiley Online Library}\n}"
-  },
-  {
-    "objectID": "research.html#software",
-    "href": "research.html#software",
-    "title": "Links",
-    "section": "",
-    "text": "ggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
+    "objectID": "teaching/stats10.html#discussions",
+    "href": "teaching/stats10.html#discussions",
+    "title": "Welcome To STATS10",
+    "section": "Discussions",
+    "text": "Discussions\n\n\n\n\n\nDiscussion\nNotes\n\n\n\n\nWeek 1\n\n\n\nWeek 2\n\n\n\nWeek 3\n\n\n\nWeek 4\n\n\n\nWeek 5"
   },
   {
     "objectID": "teaching/stats140xp.html",
@@ -96,5 +54,68 @@
     "title": "Welcome To STATS140XP",
     "section": "",
     "text": "Date\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Links",
+    "section": "",
+    "text": "Google Scholar  \n\n\n\nLuna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18   PDF    BibTeX \n\n\n\nBibTeX   Copy \n\n@article{luna2022orthogonal,\n  title={Orthogonal array composite designs for drug combination experiments with applications for tuberculosis},\n  author={Luna, Jose and Jaynes, Jessica and Xu, Hongquan and Wong, Weng Kee},\n  journal={Statistics in medicine},\n  volume={41},\n  number={17},\n  pages={3380--3397},\n  year={2022},\n  publisher={Wiley Online Library}\n}\n\n\n\n\n\n\nggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Links",
+    "section": "",
+    "text": "Luna, J. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. Statistics in Medicine. 2022; 1- 18   PDF    BibTeX \n\n\n\nBibTeX   Copy \n\n@article{luna2022orthogonal,\n  title={Orthogonal array composite designs for drug combination experiments with applications for tuberculosis},\n  author={Luna, Jose and Jaynes, Jessica and Xu, Hongquan and Wong, Weng Kee},\n  journal={Statistics in medicine},\n  volume={41},\n  number={17},\n  pages={3380--3397},\n  year={2022},\n  publisher={Wiley Online Library}\n}"
+  },
+  {
+    "objectID": "research.html#software",
+    "href": "research.html#software",
+    "title": "Links",
+    "section": "",
+    "text": "ggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Links",
+    "section": "",
+    "text": "Course Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023, Spring 2026\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life and Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/141XP\nPractice of Statistical Consulting\nWinter 2024--Fall 2025\n\n\nSTATS 419\nExperimental Design\nWinter 2026"
+  },
+  {
+    "objectID": "teaching.html#california-state-university-fullerton",
+    "href": "teaching.html#california-state-university-fullerton",
+    "title": "Links",
+    "section": "California State University, Fullerton",
+    "text": "California State University, Fullerton\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nJose Toledo Luna\n",
+    "section": "",
+    "text": "Jose Toledo Luna\n\n\n\nStatistics Ph.D. Candidate at University of California, Los Angeles advised by Hongquan Xu.\n\n\n   Research  \n   Teaching  \n   Curriculum Vitae (CV)  \n   GitHub  @toledo60 \n   Email  toledo60@g.ucla.edu"
+  },
+  {
+    "objectID": "teaching/appointments.html",
+    "href": "teaching/appointments.html",
+    "title": "Setting up an Appointment",
+    "section": "",
+    "text": "My appointments typically last under 30 minutes, but if necessary, they can be extended to address further issues. Please note that while I am here to help, I cannot serve as your personal tutor. I encourage you to attend our assigned office hours, ask questions, and work with your classmates to resolve any difficulties you may be experiencing. If you still require assistance or are unable to resolve your concerns, please do not hesitate to schedule an appointment with me"
+  },
+  {
+    "objectID": "teaching/appointments.html#appropriate-email",
+    "href": "teaching/appointments.html#appropriate-email",
+    "title": "Setting up an Appointment",
+    "section": "Appropriate Email",
+    "text": "Appropriate Email\nHello NAME,\nBriefly explain what you are struggling with and/or insert screenshots of error messages (If its code related)\nMy available times this week are\n\nMonday: ANYTIME\nTuesday: 10am-12pm, 2-3pm\nWednesday: 10am-1pm\nThursday: ANYTIME\nFriday, 8am-2pm\n\nDo any of these times work for you?\nyour signature"
+  },
+  {
+    "objectID": "teaching/appointments.html#not-appropriate-email",
+    "href": "teaching/appointments.html#not-appropriate-email",
+    "title": "Setting up an Appointment",
+    "section": "Not Appropriate Email",
+    "text": "Not Appropriate Email\nHello NAME,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
   }
 ]

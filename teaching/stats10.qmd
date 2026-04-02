@@ -1,0 +1,69 @@
+---
+title: "Welcome To STATS10"
+subtitle: "Introduction to Statistical Reasoning"
+description: "Below are links used in this course"
+image: stats.png
+about:
+  template: trestles
+  links:
+    - text: Zoom
+      url: "https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09"
+      icon: camera-video
+    - text: Email
+      url: "mailto:toledo60@g.ucla.edu"
+      icon: inbox-fill
+    - text: Box
+      url: "https://app.box.com/s/ya2efsp646p282ekcdaqeaofjvlnp6xj"
+      icon: bi-cloud
+comments: false
+---
+
+
+## Class Overview
+
+**Instructor:** Jose Toledo Luna <br/>
+
+**Discussion**: Thursday 4:00pm - 4:50pm @ PAB 1749<br/>
+**Office Hours**: Thursday 1:00pm - 1:50pm @ MS 8349 or [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) <br/>
+
+
+**Material**: Please use the [Box Folder](https://app.box.com/s/ya2efsp646p282ekcdaqeaofjvlnp6xj) to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn
+
+
+## Discussions
+
+```{r}
+#| echo: false
+titles <- c("")
+links <- c("")
+
+df <- tibble::tibble(
+  Discussion = paste("Week", 1:5),
+  Notes = ifelse(
+    links == "",
+    titles,
+    paste0('<a href="', links, '" class="course-link">', titles, "</a>")
+  )
+)
+```
+
+```{r}
+#| echo: false
+knitr::kable(
+  df,
+  format = "html",
+  align = c("l", "l"),
+  escape = FALSE,
+  table.attr = 'class="courses-table glass-table"'
+) |>
+  kableExtra::kable_styling(
+    full_width = TRUE,
+    bootstrap_options = NULL,
+    position = "left"
+  ) |>
+  kableExtra::column_spec(1, width = "13em") |>
+  kableExtra::column_spec(2, width = "87%")
+```
+
+
+ 

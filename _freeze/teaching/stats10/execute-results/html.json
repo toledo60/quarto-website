@@ -1,0 +1,19 @@
+{
+  "hash": "283cda1f1c6e8c1a6098e0a2cea5a036",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Welcome To STATS10\"\nsubtitle: \"Introduction to Statistical Reasoning\"\ndescription: \"Below are links used in this course\"\nimage: stats.png\nabout:\n  template: trestles\n  links:\n    - text: Zoom\n      url: \"https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09\"\n      icon: camera-video\n    - text: Email\n      url: \"mailto:toledo60@g.ucla.edu\"\n      icon: inbox-fill\n    - text: Box\n      url: \"https://app.box.com/s/ya2efsp646p282ekcdaqeaofjvlnp6xj\"\n      icon: bi-cloud\ncomments: false\n---\n\n\n\n\n## Class Overview\n\n**Instructor:** Jose Toledo Luna <br/>\n\n**Discussion**: Thursday 4:00pm - 4:50pm @ PAB 1749<br/>\n**Office Hours**: Thursday 1:00pm - 1:50pm @ MS 8349 or [Zoom](https://ucla.zoom.us/j/4285433918?pwd=TVpIRndYYmZSeTg0NUUvYlhTWllUQT09) <br/>\n\n\n**Material**: Please use the [Box Folder](https://app.box.com/s/ya2efsp646p282ekcdaqeaofjvlnp6xj) to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn\n\n\n## Discussions\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n`````{=html}\n<table class=\"courses-table glass-table table\" style=\"\">\n <thead>\n  <tr>\n   <th style=\"text-align:left;\"> Discussion </th>\n   <th style=\"text-align:left;\"> Notes </th>\n  </tr>\n </thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:left;width: 13em; \"> Week 1 </td>\n   <td style=\"text-align:left;width: 87%; \">  </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 13em; \"> Week 2 </td>\n   <td style=\"text-align:left;width: 87%; \">  </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 13em; \"> Week 3 </td>\n   <td style=\"text-align:left;width: 87%; \">  </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 13em; \"> Week 4 </td>\n   <td style=\"text-align:left;width: 87%; \">  </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 13em; \"> Week 5 </td>\n   <td style=\"text-align:left;width: 87%; \">  </td>\n  </tr>\n</tbody>\n</table>\n\n`````\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../site_libs/kePrint-0.0.1/kePrint.js\"></script>\n<link href=\"../site_libs/lightable-0.0.1/lightable.css\" rel=\"stylesheet\" />\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
