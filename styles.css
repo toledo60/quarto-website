@@ -66,9 +66,9 @@ body {
 
 /* ===== Avatar + text ===== */
 .avatar {
-  width: 112px;
-  height: 112px;
-  border-radius: 999px;
+  width: 155px; /* 112 */
+  height: 180px;
+  border-radius: 20px; /*999*/
   object-fit: cover;
   display: block;
   margin: 0 auto 14px auto;

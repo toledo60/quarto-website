@@ -6,7 +6,7 @@ title: ""
 
 <div class="bio-card">
 
-<img class="avatar" src="toledo.jpg" alt="Avatar" />
+<img class="avatar" src="toledo_profile.JPG" alt="Avatar" />
 
 <h1 class="name">Jose Toledo Luna</h1>
 <!---<div class="role">Statistics Ph.D. Candidate @ UCLA</div>--->
