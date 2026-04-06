@@ -16,6 +16,18 @@ about:
       url: "https://app.box.com/s/ya2efsp646p282ekcdaqeaofjvlnp6xj"
       icon: bi-cloud
 comments: false
+listing:
+  - id: notes-listing
+    contents: 
+      - "/stats10/*.qmd"
+    sort: false
+    sort-ui: false
+    filter-ui: false
+    type: table
+    fields: 
+      - title
+      - date
+    categories: false 
 ---
 
 
@@ -32,38 +44,5 @@ comments: false
 
 ## Discussions
 
-```{r}
-#| echo: false
-titles <- c("")
-links <- c("")
-
-df <- tibble::tibble(
-  Discussion = paste("Week", 1:5),
-  Notes = ifelse(
-    links == "",
-    titles,
-    paste0('<a href="', links, '" class="course-link">', titles, "</a>")
-  )
-)
-```
-
-```{r}
-#| echo: false
-knitr::kable(
-  df,
-  format = "html",
-  align = c("l", "l"),
-  escape = FALSE,
-  table.attr = 'class="courses-table glass-table"'
-) |>
-  kableExtra::kable_styling(
-    full_width = TRUE,
-    bootstrap_options = NULL,
-    position = "left"
-  ) |>
-  kableExtra::column_spec(1, width = "13em") |>
-  kableExtra::column_spec(2, width = "87%")
-```
-
-
- 
+:::notes-listing
+:::

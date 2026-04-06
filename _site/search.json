@@ -1,24 +1,24 @@
 [
   {
-    "objectID": "teaching/stats10.html",
-    "href": "teaching/stats10.html",
-    "title": "Welcome To STATS10",
+    "objectID": "teaching/stats10/week2.html",
+    "href": "teaching/stats10/week2.html",
+    "title": "Lab 1 Notes",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna \nDiscussion: Thursday 4:00pm - 4:50pm @ PAB 1749 Office Hours: Thursday 1:00pm - 1:50pm @ MS 8349 or Zoom \nMaterial: Please use the Box Folder to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn"
+    "text": "Develop basic R programming skills (e.g., creating vectors, performing operations, installing and using packages) ￼\nApply fundamental statistical functions such as mean, median, minimum, maximum, and standard deviation ￼\nLearn to visualize data using graphs\nWork with and analyze different types of data (quantitative and categorical)\nUse R to summarize and explore datasets effectively ￼"
   },
   {
-    "objectID": "teaching/stats10.html#class-overview",
-    "href": "teaching/stats10.html#class-overview",
-    "title": "Welcome To STATS10",
+    "objectID": "teaching/stats10/week2.html#learning-objectives",
+    "href": "teaching/stats10/week2.html#learning-objectives",
+    "title": "Lab 1 Notes",
     "section": "",
-    "text": "Instructor: Jose Toledo Luna \nDiscussion: Thursday 4:00pm - 4:50pm @ PAB 1749 Office Hours: Thursday 1:00pm - 1:50pm @ MS 8349 or Zoom \nMaterial: Please use the Box Folder to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn"
+    "text": "Develop basic R programming skills (e.g., creating vectors, performing operations, installing and using packages) ￼\nApply fundamental statistical functions such as mean, median, minimum, maximum, and standard deviation ￼\nLearn to visualize data using graphs\nWork with and analyze different types of data (quantitative and categorical)\nUse R to summarize and explore datasets effectively ￼"
   },
   {
-    "objectID": "teaching/stats10.html#discussions",
-    "href": "teaching/stats10.html#discussions",
-    "title": "Welcome To STATS10",
-    "section": "Discussions",
-    "text": "Discussions\n\n\n\n\n\nDiscussion\nNotes\n\n\n\n\nWeek 1\n\n\n\nWeek 2\n\n\n\nWeek 3\n\n\n\nWeek 4\n\n\n\nWeek 5"
+    "objectID": "teaching/stats10/week2.html#notes",
+    "href": "teaching/stats10/week2.html#notes",
+    "title": "Lab 1 Notes",
+    "section": "Notes",
+    "text": "Notes\nWe will use the following notes to cover material for Lab 1\n\nFundamentals of R\nImporting Data in R\nSummarizing Numerical Data\nSummarizing Categorical Data"
   },
   {
     "objectID": "teaching/stats140xp.html",
@@ -98,24 +98,24 @@
     "text": "Jose Toledo Luna\n\n\n\nStatistics Ph.D. Candidate at University of California, Los Angeles advised by Hongquan Xu.\n\n\n   Research  \n   Teaching  \n   Curriculum Vitae (CV)  \n   GitHub  @toledo60 \n   Email  toledo60@g.ucla.edu"
   },
   {
-    "objectID": "teaching/appointments.html",
-    "href": "teaching/appointments.html",
-    "title": "Setting up an Appointment",
+    "objectID": "teaching/stats10.html",
+    "href": "teaching/stats10.html",
+    "title": "Welcome To STATS10",
     "section": "",
-    "text": "My appointments typically last under 30 minutes, but if necessary, they can be extended to address further issues. Please note that while I am here to help, I cannot serve as your personal tutor. I encourage you to attend our assigned office hours, ask questions, and work with your classmates to resolve any difficulties you may be experiencing. If you still require assistance or are unable to resolve your concerns, please do not hesitate to schedule an appointment with me"
+    "text": "Instructor: Jose Toledo Luna \nDiscussion: Thursday 4:00pm - 4:50pm @ PAB 1749 Office Hours: Thursday 1:00pm - 1:50pm @ MS 8349 or Zoom \nMaterial: Please use the Box Folder to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn"
   },
   {
-    "objectID": "teaching/appointments.html#appropriate-email",
-    "href": "teaching/appointments.html#appropriate-email",
-    "title": "Setting up an Appointment",
-    "section": "Appropriate Email",
-    "text": "Appropriate Email\nHello NAME,\nBriefly explain what you are struggling with and/or insert screenshots of error messages (If its code related)\nMy available times this week are\n\nMonday: ANYTIME\nTuesday: 10am-12pm, 2-3pm\nWednesday: 10am-1pm\nThursday: ANYTIME\nFriday, 8am-2pm\n\nDo any of these times work for you?\nyour signature"
+    "objectID": "teaching/stats10.html#class-overview",
+    "href": "teaching/stats10.html#class-overview",
+    "title": "Welcome To STATS10",
+    "section": "",
+    "text": "Instructor: Jose Toledo Luna \nDiscussion: Thursday 4:00pm - 4:50pm @ PAB 1749 Office Hours: Thursday 1:00pm - 1:50pm @ MS 8349 or Zoom \nMaterial: Please use the Box Folder to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn"
   },
   {
-    "objectID": "teaching/appointments.html#not-appropriate-email",
-    "href": "teaching/appointments.html#not-appropriate-email",
-    "title": "Setting up an Appointment",
-    "section": "Not Appropriate Email",
-    "text": "Not Appropriate Email\nHello NAME,\nCan we setup an appointment? Im struggling with the assignment\n\nIn the appropriate email example, you have inserted images of your errors and sometimes issues can be resolved through email without even having to meet. If the issue can not be easily resolved through email I now have your schedule and can easily setup an appointment to meet.\nIn the not appropriate email email example, I reply yes then give you my available times, afterwards you reply you can’t meet during those times so you send me your available times, and then I proceed to agree with those times etc… This long and tedious process can be avoided from the start if you just follow the first example :)"
+    "objectID": "teaching/stats10.html#discussions",
+    "href": "teaching/stats10.html#discussions",
+    "title": "Welcome To STATS10",
+    "section": "Discussions",
+    "text": "Discussions"
   }
 ]

@@ -1,0 +1,32 @@
+---
+title: "Lab 1 Notes"
+author: Jose Toledo Luna
+toc: false
+date: today
+---
+
+## Learning Objectives
+
+- Develop basic R programming skills (e.g., creating vectors, performing operations, installing and using packages) 
+ ￼
+- Apply fundamental statistical functions such as mean, median, minimum, maximum, and standard deviation  ￼
+
+- Learn to visualize data using graphs
+
+- Work with and analyze different types of data (quantitative and categorical)
+
+- Use R to summarize and explore datasets effectively  ￼
+
+
+## Notes
+
+We will use the following notes to cover material for Lab 1
+
+1. [Fundamentals of R](https://ucla-stats13.netlify.app/notes/01-fundamentals)
+2. [Importing Data in R](https://ucla-stats13.netlify.app/notes/02-importing_data)
+3. [Summarizing Numerical Data](https://ucla-stats13.netlify.app/notes/03-intro_numerical_variables)
+4. [Summarizing Categorical Data](https://ucla-stats13.netlify.app/notes/04-intro_categorical_variables)
+
+
+
+

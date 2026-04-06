@@ -7,8 +7,6 @@ comments: false
 #| message: false
 #| include: false
 library(dplyr)
-library(knitr)
-library(kableExtra) 
 
 make_table <- function(path) {
   df <- read.csv(path, stringsAsFactors = FALSE)
