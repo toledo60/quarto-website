@@ -42,6 +42,11 @@ listing:
 **Material**: Please use the [Box Folder](https://app.box.com/s/ya2efsp646p282ekcdaqeaofjvlnp6xj) to access the lab material for this course. All other material regarding STATS 10 can be found on BruinLearn
 
 
+::: {.callout-important}
+Discussion for Week 8: May 19/May 21 will be recorded. I will be traveling to a conference.
+:::
+
+
 ## Discussions
 
 :::notes-listing
