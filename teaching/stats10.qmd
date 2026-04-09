@@ -45,7 +45,7 @@ listing:
 ::: {.callout-important}
 Discussion for Week 8: May 19/May 21 will be recorded. I will be traveling to a conference.
 :::
-q
+
 
 ## Discussions
 

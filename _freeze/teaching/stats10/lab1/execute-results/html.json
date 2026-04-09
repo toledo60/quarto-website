@@ -1,0 +1,15 @@
+{
+  "hash": "bbb13b28c454047a0974596a39b54de6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 1 Notes\"\nauthor: Jose Toledo Luna\ntoc: false\ndate: today\n---\n\n\n\n## Learning Objectives\n\n- Develop basic R programming skills (e.g., creating vectors, performing operations, installing and using packages) \n ￼\n- Apply fundamental statistical functions such as mean, median, minimum, maximum, and standard deviation  ￼\n\n## Notes\n\nWe will use the following notes to cover material for Lab 1\n\n1. [Fundamentals of R](https://ucla-stats13.netlify.app/notes/01-fundamentals)\n2. [Stats 10 Lab 1 Handout](https://app.box.com/s/af91nv5gy97atmdt6uwsghnzce6znfmd)\n\n<!-- 2. [Importing Data in R](https://ucla-stats13.netlify.app/notes/02-importing_data)\n3. [Summarizing Numerical Data](https://ucla-stats13.netlify.app/notes/03-intro_numerical_variables)\n4. [Summarizing Categorical Data](https://ucla-stats13.netlify.app/notes/04-intro_categorical_variables) -->\n\n\n## Questions\n\n1.  Create a code chunk below this question and print the statement:\n    \"`My name is (your name) and my UID is (your UID). I am looking forward to Stats 10!`\"\n\n2.  Create a vector named `titles` and fill it with at least 3 book\n    titles. Print the vector `titles`.\n\n3.  Run the code chunk below using `titles`. Read the error message and\n    explain why an error occurs.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nsum(titles)\n```\n:::\n\n\n\n4.  Create a vector named vector_log and make it hold the values `TRUE`,\n    `FALSE, TRUE, FALSE`. Try multiplying the values by 2 and using the\n    `mean()` function. Explain your results and how R treats logical\n    values.\n\n\n5.  You are given a vector containing the scores of 50 students on a\n    recent exam. Find the minimum, maximum, mean, and standard deviation\n    of the scores. Print each value (for example, print \"Mean: \\_\\_\\_\").\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# You do not have to change this code\nset.seed(123456789)\nscores <- sample(0:100, 50, replace = TRUE)\nprint(scores)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n [1]  65  15  43  44  85  38  11  31   8  43   9  25  20  22  37  57  14  43  69\n[20]  67  12  45   8  31  65 100  19  92   6  44  76  51  48  71   0  72  78  66\n[39]  79  44  14  82  12  84  48  42  22  45  45  38\n```\n\n\n:::\n:::\n\n\n\n\n6.  Using the `scores` vector, find the mean value without using the\n    `mean()` function. (Hint: The mean is calculated by finding the sum of all values and dividing by the total number of values.)\n\n\n-   Explain whether there is a difference between the means found in #5\n    and #6 and why it does or does not exist.\n\n7.  Knit the file into a PDF and name it \"*yourname_yourUID Stats 10 Lab\n    1*\". Submit the file into Canvas.\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
