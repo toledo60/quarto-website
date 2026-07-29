@@ -13,6 +13,13 @@ comments: false
   </span>
 </a>
 
+<a class="link-btn" href="https://orcid.org/0000-0001-8559-0027" target="_blank" rel="noopener">
+  <span class="left">
+    <i class="fa-brands fa-orcid"></i>
+    <span class="label">ORCID</span>
+  </span>
+</a>
+
 ## Publications
 
 1.  **Luna, J**. , Jaynes, J. , Xu, H. , Wong, WK. Orthogonal array composite designs for drug combination experiments with applications for tuberculosis. [Statistics in Medicine](https://onlinelibrary.wiley.com/doi/10.1002/sim.9423). 2022; 1- 18
@@ -46,14 +53,11 @@ comments: false
 </div>
 
 
-
 ## Software
 
 
 1. [ggDoE](https://ggdoe.netlify.app/index.html): Create commonly used graphs in Design of Experiments with *ggplot2*
 2. [pyLHD](https://pylhd.netlify.app): Latin Hypercube Designs for Python
-
-
 
 <script>
 function toggleBibtex(id){
@@ -73,3 +77,6 @@ function copyBibtex(id){
   }, 1500);
 }
 </script>
+
+</div>
+</div>
