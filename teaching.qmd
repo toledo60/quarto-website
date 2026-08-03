@@ -38,14 +38,21 @@ make_table <- function(path) {
       bootstrap_options = NULL,
       position = "left"
     ) |>
-    kableExtra::column_spec(1, width = "13em") |>
+    kableExtra::column_spec(1, width = "16em") |>
     kableExtra::column_spec(2, width = "44%") |>
     kableExtra::column_spec(3, width = "43%")
 }
 ```
 
+## University of California, Irvine
 
-### University of California, Los Angeles
+```{r}
+#| echo: false
+make_table("data/courses-uci.csv")
+```
+
+
+## University of California, Los Angeles
 
 ```{r}
 #| echo: false

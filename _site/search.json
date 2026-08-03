@@ -35,34 +35,6 @@
     "text": "Date\nRecordings\n\n\n\n\nWeek 1\nIntroduction, Installing Software\n\n\nWeek 2\nIntro to LaTeX\n\n\nWeek 3\nSetting up Git/Github for R Studio\n\n\nWeek 4\nCV with Quarto\n\n\nWeek 5\nSetting up Personal Website\n\n\nWeek 6\nAdding Content to Website\n\n\nWeek 7\nWrapping up Website"
   },
   {
-    "objectID": "teaching.knit.html",
-    "href": "teaching.knit.html",
-    "title": "Links",
-    "section": "",
-    "text": "Course Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023, Spring 2026\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life and Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/141XP\nPractice of Statistical Consulting\nWinter 2024--Fall 2025\n\n\nSTATS 419\nExperimental Design\nWinter 2026"
-  },
-  {
-    "objectID": "teaching.knit.html#california-state-university-fullerton",
-    "href": "teaching.knit.html#california-state-university-fullerton",
-    "title": "Links",
-    "section": "California State University, Fullerton",
-    "text": "California State University, Fullerton\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024, Fall 2025\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Links",
-    "section": "",
-    "text": "Course Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023, Spring 2026\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life and Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/141XP\nPractice of Statistical Consulting\nWinter 2024--Fall 2025\n\n\nSTATS 419\nExperimental Design\nWinter 2026"
-  },
-  {
-    "objectID": "teaching.html#california-state-university-fullerton",
-    "href": "teaching.html#california-state-university-fullerton",
-    "title": "Links",
-    "section": "California State University, Fullerton",
-    "text": "California State University, Fullerton\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024, Fall 2025\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
-  },
-  {
     "objectID": "research.html",
     "href": "research.html",
     "title": "Links",
@@ -84,10 +56,38 @@
     "text": "ggDoE: Create commonly used graphs in Design of Experiments with ggplot2\npyLHD: Latin Hypercube Designs for Python"
   },
   {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Links",
+    "section": "",
+    "text": "Course Number\nCourse Name\nTerms\n\n\n\n\nSTATS 8\nIntroduction to Biological Statistics\nFall 2026"
+  },
+  {
+    "objectID": "teaching.html#california-state-university-fullerton",
+    "href": "teaching.html#california-state-university-fullerton",
+    "title": "Links",
+    "section": "California State University, Fullerton",
+    "text": "California State University, Fullerton\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nMath 115\nCollege Algebra\nFall 2019\n\n\nMath 120\nElementary Statistics\nSpring 2020, Fall 2020, Fall 2024, Fall 2025\n\n\nMath 338\nStatistics Applied to Natural Science\nSpring 2021, Fall 2024"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "\nJose Toledo Luna\n",
     "section": "",
     "text": "Jose Toledo Luna\n\n\n\nStatistics Ph.D. Candidate at University of California, Los Angeles advised by Hongquan Xu.\n\n\n   Research  \n   Teaching  \n   Curriculum Vitae (CV)  \n   GitHub  @toledo60 \n   Email  toledo60@g.ucla.edu"
+  },
+  {
+    "objectID": "teaching.html#university-of-california-irvine",
+    "href": "teaching.html#university-of-california-irvine",
+    "title": "Links",
+    "section": "",
+    "text": "Course Number\nCourse Name\nTerms\n\n\n\n\nSTATS 8\nIntroduction to Biological Statistics\nFall 2026"
+  },
+  {
+    "objectID": "teaching.html#university-of-california-los-angeles",
+    "href": "teaching.html#university-of-california-los-angeles",
+    "title": "Links",
+    "section": "University of California, Los Angeles",
+    "text": "University of California, Los Angeles\n\n\n\n\n\nCourse Number\nCourse Name\nTerms\n\n\n\n\nSTATS 10\nIntroduction to Statistical Reasoning\nFall 2022, Winter 2023, Spring 2023, Spring 2026\n\n\nSTATS 13\nIntroduction to Statistical Methods for Life and Health Sciences\nSummer 2022, Fall 2023\n\n\nSTATS 20\nIntroduction to Statistical Programming with R\nSummer 2024\n\n\nSTATS 21\nPython and Other Technologies for Data Science\nSpring 2023\n\n\nSTATS 100B\nIntroduction to Mathematical Statistics\nSummer 2023\n\n\nSTATS 100C\nLinear Models\nSummer 2023\n\n\nSTATS 102A\nIntroduction to Computational Statistics with R\nWinter 2025\n\n\nSTATS 140XP/141XP\nPractice of Statistical Consulting\nWinter 2024--Fall 2025\n\n\nSTATS 419\nExperimental Design\nWinter 2026"
   }
 ]
