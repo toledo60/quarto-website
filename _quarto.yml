@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  pre-render:
+    - python3 scripts/generate_publications.py
 
 website:
   title: "Links"
