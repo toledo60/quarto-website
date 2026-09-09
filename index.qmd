@@ -13,51 +13,13 @@ title: ""
 
 <p class="blurb">
 Statistics Ph.D. Candidate at University of California, Los Angeles advised by
-[Hongquan Xu](https://statistics.ucla.edu/index.php/people1/all-faculty/7809-2/?smid=8823).
+[Hongquan Xu](https://statistics.ucla.edu/index.php/people1/all-faculty/7809-2/?smid=8823). <br>
+Lecturer at University of California, Irvine
 </p>
 
 <div class="links">
 
-<a class="link-btn" href="research.qmd">
-  <span class="left">
-    <i class="bi bi-mortarboard"></i>
-    <span class="label">Research</span>
-  </span>
-</a>
-
-<a class="link-btn" href="teaching.qmd">
-  <span class="left">
-    <i class="bi bi-person-workspace"></i>
-    <span class="label">Teaching</span>
-  </span>
-</a>
-
-
-<a class="link-btn" href="docs/CV/CV.pdf">
-  <span class="left">
-    <i class="bi bi-file-earmark-pdf"></i>
-    <span class="label">Curriculum Vitae (CV)</span>
-  </span>
-</a>
-
-
-<a class="link-btn" href="https://github.com/toledo60" target="_blank" rel="noopener">
-  <span class="left">
-    <i class="bi bi-github"></i>
-    <span class="label">GitHub</span>
-  </span>
-  <span class="hint">@toledo60</span>
-</a>
-
-
-<a class="link-btn" href="mailto:toledo60@g.ucla.edu" target="_blank" rel="noopener">
-  <span class="left">
-    <i class="bi bi-envelope"></i>
-    <span class="label">Email</span>
-  </span>
-  <span class="hint">toledo60@g.ucla.edu</span>
-</a>
-
+{{< include _generated/links.html >}}
 </div> 
 
 </div>

@@ -1,0 +1,24 @@
+links:
+  - label: Research
+    href: research.qmd
+    icon: bi-mortarboard
+
+  - label: Teaching
+    href: teaching.qmd
+    icon: bi-person-workspace
+
+  - label: Curriculum Vitae (CV)
+    href: docs/CV.pdf
+    icon: bi-file-earmark-pdf
+
+  - label: GitHub
+    href: https://github.com/toledo60
+    icon: bi-github
+    hint: "@toledo60"
+    target: _blank
+
+  - label: Email
+    href: mailto:jtoledol@uci.edu
+    icon: bi-envelope
+    hint: jtoledol@uci.edu
+    target: _blank

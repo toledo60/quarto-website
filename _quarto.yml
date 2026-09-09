@@ -3,6 +3,7 @@ project:
   output-dir: _site
   pre-render:
     - python3 scripts/generate_publications.py
+    - python3 scripts/generate_links.py
 
 website:
   title: "Links"
